@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
@@ -10,9 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-</head>
 
+</head>
 <body>
+
 <!-- Cabecera -->
 <div class="jumbotron jumbotron-fluid p-3 my-3 bg-dark text-white text-center">
     <!-- Se agrega una imagen en la cabecera -->
@@ -38,72 +38,36 @@
 </div>
 <!-- FIN Cabecera -->
 
-<div id="canvas-container" style="width:40%;">
-    <canvas id="chart" width="500" height="350"></canvas>
+<div id="canvas-container" style="width:25%;">
+    <canvas id="myChart" width="500" height="350"></canvas>
 </div>
 
 </body>
-
 <script>
-
-    var datos = {
-        labels : ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
-        datasets : [{
-            label : "datos 1",
-            backgroundColor : "rgba(220,220,220,0.5)",
-            data : [4, 12, 9, 7, 5]
+    var ctx= document.getElementById("myChart").getContext("2d");
+    var myChart= new Chart(ctx,{
+        type:"pie",
+        data:{
+            labels:['col1','col2','col3'],
+            datasets:[{
+                label:'Num datos',
+                data:[10,9,15],
+                backgroundColor:[
+                    'rgb(66, 134, 244,0.5)',
+                    'rgb(74, 135, 72,0.5)',
+                    'rgb(229, 89, 50,0.5)'
+                ]
+            }]
         },
-            {
-
-                label : "datos 2",
-                backgroundColor : "rgba(151,187,205,0.5)",
-                data : [10,7,-5,6,5]
-            },
-            {
-                label : "datos 3",
-                backgroundColor : "rgba(151,100,205,0.5)",
-                data : [9,6,15,6,17]
-            }
-        ]
-    };
-
-    var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
-        type : "bar",
-        data : datos,
-        options : {
-            elements : {
-                rectangle : {
-                    borderWidth : 1,
-                    borderColor : "rgb(0,255,0)",
-                    borderSkipped : 'bottom'
-                }
-            },
-            responsive : true,
-            title : {
-                display : true,
-                text : "Prueba de grafico de barras"
+        options:{
+            scales:{
+                yAxes:[{
+                    ticks:{
+                        beginAtZero:true
+                    }
+                }]
             }
         }
     });
-
-    setInterval(function(){
-        var newData = [
-            [getRandom(),getRandom(),getRandom(),getRandom()*-1,getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-        ];
-
-        $.each(datos.datasets, function(i, dataset){
-            dataset.data = newData[i];
-        });
-        window.bar.update();
-    }, 5000);
-    function getRandom(){
-        return Math.round(Math.random() * 100);
-    }
-
 </script>
-
-
 </html>

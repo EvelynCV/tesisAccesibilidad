@@ -9,17 +9,21 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-/*
-  @Get('HolaMundo')
-    getPrueba1(@Response()res){
-    return res.render('HolaMundo')
-  }
-*/
+
   @Get('prueba')
   getPrueba(@Response()res){
     return res.render('prueba')
   }
 
+  @Get('HolaMundo')
+  getHolaMundo(@Response()res){
+    return res.render('HolaMundo')
+  }
+
+  @Get('informacion')
+  getInformacion(@Response()res){
+    return res.render('informacion')
+  }
 
 }
 

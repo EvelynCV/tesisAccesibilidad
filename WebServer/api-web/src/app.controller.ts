@@ -25,6 +25,13 @@ export class AppController {
     return res.render('informacion')
   }
 
+
+    @Get('bargraph')
+    getbargraph(@Response()res){
+        return res.render('bargraph')
+    }
+
+
 }
 
 

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-        url: "http://localhost:3000/api/bargraph.ejs",
+  //      url: "http://localhost:3000/api/bargraph.ejs",
 
 
         method: "GET",

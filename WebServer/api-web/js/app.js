@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-  //      url: "http://localhost:3000/api/bargraph.ejs",
-
+      //  url: "http://localhost:3000/api/bargraph.ejs",
 
         method: "GET",
         success: function(data) {
@@ -10,8 +9,8 @@ $(document).ready(function(){
             var nom_norm = [];
 
             for(var i in data) {
-                cod_norm .push("Player " + data[i].cod_norm);
-                nom_norm.push(data[i].nom_morma);
+                cod_norm .push("Norma" + data[i].cod_norm);
+                nom_norm.push(data[i].nom_norma);
             }
 
             var chartdata = {

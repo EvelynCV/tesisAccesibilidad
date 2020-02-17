@@ -29,7 +29,7 @@ mysqli_close($con);
 	    die("Conexión falló: " . $conn->connect_error);
 	}
 ?>*/
-/*
+
 <?php
 //setting header to json
 header('Content-Type: application/json');
@@ -109,11 +109,12 @@ $mysqli->close();
 print json_encode($data);
 
 //var_dump($data);
-*/
+
+/*
 <?php
 header('Content-Type: application/json');
 
-$conn = mysqli_connect("localhost","root","test","mydb");
+$conn = mysqli_connect("localhost","root","","mydb");
 
 $sqlQuery = "SELECT playerid, score FROM score";
 
@@ -128,3 +129,4 @@ mysqli_close($conn);
 
 echo json_encode($data);
 ?>
+*/

@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     $.ajax({
-       // url: "http://localhost/chartjs/data.php",
+        url: "../data.php",
         method: "GET",
         success: function(data) {
             console.log(data);
@@ -27,7 +27,7 @@ $(document).ready(function(){
                 ]
             };
 
-            var ctx = $("#mycanvas");
+            var ctx = $("#graphCanvas");
 
             var barGraph = new Chart(ctx, {
                 type: 'bar',

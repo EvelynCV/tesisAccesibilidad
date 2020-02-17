@@ -11,7 +11,6 @@ import * as favicon from 'serve-favicon';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule ) as NestExpressApplication;
 
-
    app.setViewEngine('ejs');
    app.setBaseViewsDir(join(__dirname, '..', 'views'));
 

@@ -29,7 +29,7 @@ mysqli_close($con);
 	    die("Conexión falló: " . $conn->connect_error);
 	}
 ?>*/
-
+/*
 <?php
 //setting header to json
 header('Content-Type: application/json');
@@ -68,6 +68,7 @@ $mysqli->close();
 
 //now print the data
 print json_encode($data);
+*/
 /*
 <?php
 // Seteamos la cabecera a JSON
@@ -109,8 +110,8 @@ $mysqli->close();
 print json_encode($data);
 
 //var_dump($data);
+*/
 
-/*
 <?php
 header('Content-Type: application/json');
 
@@ -129,4 +130,3 @@ mysqli_close($conn);
 
 echo json_encode($data);
 ?>
-*/

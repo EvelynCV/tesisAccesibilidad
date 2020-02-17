@@ -1,28 +1,28 @@
+
 $(document).ready(function(){
     $.ajax({
-      //  url: "http://localhost:3000/api/bargraph.ejs",
-
+       // url: "http://localhost/chartjs/data.php",
         method: "GET",
         success: function(data) {
             console.log(data);
-            var cod_norm = [];
-            var nom_norm = [];
+            var player = [];
+            var score = [];
 
             for(var i in data) {
-                cod_norm .push("Norma" + data[i].cod_norm);
-                nom_norm.push(data[i].nom_norma);
+                player.push("Player " + data[i].playerid);
+                score.push(data[i].score);
             }
 
             var chartdata = {
-                labels: cod_norm,
+                labels: player,
                 datasets : [
                     {
-                        label: 'Codigo Norma',
+                        label: 'Player Score',
                         backgroundColor: 'rgba(200, 200, 200, 0.75)',
                         borderColor: 'rgba(200, 200, 200, 0.75)',
                         hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
                         hoverBorderColor: 'rgba(200, 200, 200, 1)',
-                        data: nom_norm
+                        data: score
                     }
                 ]
             };

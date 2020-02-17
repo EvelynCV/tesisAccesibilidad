@@ -18,6 +18,7 @@ async function bootstrap() {
     app.use(express.static('imagenes'));
     app.use(express.static('js'));
     app.use(express.static('librerias'));
+    app.use(express.static('php'));
 
     await app.listen(30000);
     //app.use(favicon(path.join(__dirname,'..','imagenes')));

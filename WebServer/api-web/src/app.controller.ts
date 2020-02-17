@@ -31,7 +31,6 @@ export class AppController {
         return res.render('bargraph')
     }
 
-
 }
 
 

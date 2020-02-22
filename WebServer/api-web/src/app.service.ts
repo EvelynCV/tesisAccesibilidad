@@ -1,28 +1,27 @@
 import { Injectable } from '@nestjs/common';
-import {Formulario} from "./Formulario/formulario";
-import {Institucion} from "./Institucion/institucion";
+import {Formulario} from './Formulario/formulario';
+import {Institucion} from './Institucion/institucion';
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    var mysql = require('mysql');
-    var sqlFormulario = 'SELECT * FROM formulario';
-    var sqlInstitucion = 'SELECT * FROM institucion';
+    const mysql = require('mysql');
+    const sqlFormulario = 'SELECT * FROM formulario';
+    const sqlInstitucion = 'SELECT * FROM institucion';
 
-
-    var con = mysql.createConnection({
-      host: "localhost",
-      user: "root",
-      password: "",
-      database : 'bd_formulario'
+    const con = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database : 'bd_formulario',
     });
 
     con.connect(function(err) {
-      if (err) throw err;
-      console.log("Connected!");
-      con.query(sqlFormulario, function (err, result) {
-        if (err) throw err;
-        console.log("Result: " + result);
+      if (err) { throw err; }
+      console.log('Connected!');
+      con.query(sqlFormulario, function(err, result) {
+        if (err) { throw err; }
+        console.log('Result: ' + result);
       });
     });
 
@@ -31,39 +30,37 @@ export class AppService {
   }
 
   consultaBD(): string {
-    var mysql = require('mysql');
-    var sqlFormulario = 'SELECT * FROM formulario';
-    var sqlInstitucion = 'SELECT * FROM institucion';
-    var myJSON, myJSON2;
-//Conexion de la BD
-    var con = mysql.createConnection({
-      host: "localhost",
-      user: "root",
-      password: "",
-      database : 'bd_formulario'
+    const mysql = require('mysql');
+    const sqlFormulario = 'SELECT * FROM formulario';
+    const sqlInstitucion = 'SELECT * FROM institucion';
+    let myJSON, myJSON2;
+// Conexion de la BD
+    const con = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database : 'bd_formulario',
     });
-//consulta a la tabla Formulario
+// consulta a la tabla Formulario
 
     con.connect(function(err) {
-      if (err) throw err;
-      console.log("Connected!");
-      con.query(sqlFormulario, function (err, result) {
-        if (err) throw err;
-        myJSON=JSON.stringify(result);
-        console.log("Result: " + myJSON);
+      if (err) { throw err; }
+      console.log('Connected!');
+      con.query(sqlFormulario, function(err, result) {
+        if (err) { throw err; }
+        myJSON = JSON.stringify(result);
+        console.log('Result: ' + myJSON);
       });
-        con.query(sqlInstitucion, function (err, result2) {
-          if (err) throw err;
-          myJSON2=JSON.stringify(result2);
-          console.log("Result: " + myJSON2);
+      con.query(sqlInstitucion, function(err, result2) {
+          if (err) { throw err; }
+          myJSON2 = JSON.stringify(result2);
+          console.log('Result: ' + myJSON2);
 
       });
     });
 
-return myJSON;
-//return myJSON2;
+    return myJSON;
+// return myJSON2;
 
   }
 }
-
-

@@ -147,10 +147,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 
+    <script>
+        console.log(<%- JSON.stringify(instituciones) %>)
+        var instituciones = JSON.parse(<%- JSON.stringify(instituciones) %>)
+        console.log(instituciones)
+        console.log('holaaaa')
+
+    </script>
 </head>
 
 <body>
 <!-- Cabecera -->
+
+<% instituciones.forEach( (institucion)=> { %>
+    <p><%= institucion.nomIns %></p>
+<% }); %>
 
 <div class="jumbotron jumbotron-fluid p-3 my-3 bg-dark text-white text-center">
     <!-- Se agrega una imagen en la cabecera -->
@@ -197,7 +208,7 @@
 <script>
 
     var datos = {
-        labels : ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+        labels : [instituciones],
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",

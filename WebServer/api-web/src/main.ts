@@ -20,5 +20,6 @@ async function bootstrap() {
 
   await app.listen(3001);
     // app.use(favicon(path.join(__dirname,'..','imagenes')));
+
 }
 bootstrap();

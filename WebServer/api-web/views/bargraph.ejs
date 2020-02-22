@@ -147,10 +147,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 
+
 </head>
 
 <body>
 <!-- Cabecera -->
+
 
 <div class="jumbotron jumbotron-fluid p-3 my-3 bg-dark text-white text-center">
     <!-- Se agrega una imagen en la cabecera -->
@@ -196,26 +198,55 @@
 
 <script>
 
+
+    /*
+    setInterval(function(){
+        var newData = [
+            [instituciones],
+            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
+            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
+        ];
+
+        $.each(datos.datasets, function(i, dataset){
+            dataset.data = newData[i];
+        });
+        window.bar.update();
+    }, 5000);
+    */
+
+
+
+</script>
+
+<script>
+    console.log(<%- JSON.stringify(instituciones) %>)
+    var instituciones = <%- JSON.stringify(instituciones) %>
+    console.log(instituciones)
+    console.log('holaaaa')
+
+    var nombreInstituciones = instituciones.map(
+        function (institucion) {
+            return institucion.nomIns;
+        }
+    )
+
+    var valoresInstituciones = instituciones.map(
+        function (institucion) {
+            return institucion.idIns;
+        }
+    )
+
     var datos = {
-        labels : ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+        labels : nombreInstituciones,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : [4, 12, 9, 7, 5]
-        },
-            {
-
-                label : "datos 2",
-                backgroundColor : "rgba(151,187,205,0.5)",
-                data : [10,7,-5,6,5]
-            },
-            {
-                label : "datos 3",
-                backgroundColor : "rgba(151,100,205,0.5)",
-                data : [9,6,15,6,17]
-            }
+            data : valoresInstituciones
+        }
         ]
     };
+
+    console.log(datos)
 
     var canvas = document.getElementById('chart').getContext('2d');
     window.bar = new Chart(canvas, {
@@ -236,22 +267,6 @@
             }
         }
     });
-
-    setInterval(function(){
-        var newData = [
-            [getRandom(),getRandom(),getRandom(),getRandom()*-1,getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-        ];
-
-        $.each(datos.datasets, function(i, dataset){
-            dataset.data = newData[i];
-        });
-        window.bar.update();
-    }, 5000);
-    function getRandom(){
-        return Math.round(Math.random() * 100);
-    }
 
 </script>
 

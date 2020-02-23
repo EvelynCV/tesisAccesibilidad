@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+
+</head>
+
+<body>
+<!-- Cabecera -->
+
+
+<div class="jumbotron jumbotron-fluid p-3 my-3 bg-dark text-white text-center">
+    <!-- Se agrega una imagen en la cabecera -->
+    <br><br><img href="imagenes/accesibilidad1.jpg" class=" img-responsive img-thumbnail mx-auto d-block" width="475" height="128"><br><br>
+
+    <!-- Titulo principal -->
+    <h1>ACCESIBILIDAD DE LAS PERSONAS AL MEDIO FISICO</h1>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center bg-dark ">
+        <ul class="navbar-nav ">
+            <li class="nav-item ">
+                <button type="button" class="btn btn-outline-primary"><a class="nav-link" href="prueba"><h3> &nbsp;&nbsp; Inicio &nbsp;&nbsp;</h3></a></button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-outline-primary"> <a class="nav-link" href="HolaMundo"><h3>&nbsp;&nbsp; Acerca de &nbsp;&nbsp;</h3></a></button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-outline-primary"><a class="nav-link" href="informacion"><h3>&nbsp;&nbsp; Información &nbsp;&nbsp;</h3></a></button>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- FIN Cabecera -->
+
+<!-- CHART.JS -->
+
+<div id="canvas-container" style="width:40%;">
+    <canvas id="chart2" width="500" height="350"></canvas>
+</div>
+
+<!-- jQuery -->
+
+<script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Chart JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+
+</body>
+
+<script>
+
+
+    /*
+    setInterval(function(){
+        var newData = [
+            [instituciones],
+            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
+            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
+        ];
+
+        $.each(datos.datasets, function(i, dataset){
+            dataset.data = newData[i];
+        });
+        window.bar.update();
+    }, 5000);
+    */
+
+
+
+</script>
+
+<script>
+    console.log(<%- JSON.stringify(formulario) %>)
+    var formulario = <%- JSON.stringify(formulario) %>
+        console.log(formulario)
+    console.log('holaaaa')
+
+
+    var idFormulario = formulario.map(
+        function (formulario) {
+            return formulario.idFor;
+        }
+    )
+
+
+    var valoresFormulario = formulario.map(
+        function (formulario) {
+            return formulario.id_ins;
+
+        }
+    )
+
+    var datos = {
+        labels : idFormulario,
+        datasets : [{
+            label : "datos 1",
+            backgroundColor : "rgba(220,220,220,0.5)",
+            data : valoresFormulario
+        }
+        ]
+    };
+
+    console.log(datos)
+
+    var canvas = document.getElementById('chart2').getContext('2d');
+    window.bar = new Chart(canvas, {
+        type : "bar",
+        data : datos,
+        options : {
+            elements : {
+                rectangle : {
+                    borderWidth : 1,
+                    borderColor : "rgb(0,255,0)",
+                    borderSkipped : 'bottom'
+                }
+            },
+            responsive : true,
+            title : {
+                display : true,
+                text : "Prueba de grafico de barras"
+            }
+        }
+    });
+
+</script>
+
+</html>

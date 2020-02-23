@@ -4,11 +4,13 @@ import * as Joi from '@hapi/joi';
 import {Formulario} from './Formulario/formulario';
 import {Institucion} from './Institucion/institucion';
 import {InstitucionService} from "./Institucion/institucion.service";
+import {FormularioService} from "./Formulario/formulario.service";
 
 @Controller('api')
 export class AppController {
   constructor(private readonly appService: AppService,
-              private readonly institucionService: InstitucionService) {
+              private readonly institucionService: InstitucionService,
+              private readonly formularioService: FormularioService) {
 
      }
 /*
@@ -34,12 +36,25 @@ export class AppController {
 
     @Get('bargraph')
     async getbargraph(@Response()res) {
-      const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-      console.log(respuesta)
+      //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+      //console.log(respuesta)
       const instituciones = await this.institucionService._repositorioUsuario.find();
       return res.render('bargraph', {
         instituciones:instituciones
       });
+
+
     }
+  @Get('formulario')
+  async getformulario(@Response()res) {
+    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+    //console.log(respuesta)
+
+    const formulario = await this.formularioService._repositorioUsuario.find();
+    return res.render('formulario', {
+      formulario:formulario
+    });
+
+  }
 
 }

@@ -1,6 +1,6 @@
-import {Column, Entity, Index, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
 
-@Entity('institucion_2')
+@Entity('institucion')
 export class InstitucionEntity {
     @PrimaryGeneratedColumn({
         name: 'id_ins',

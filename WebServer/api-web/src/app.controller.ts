@@ -34,12 +34,12 @@ export class AppController {
     return res.render('informacion');
   }
 
-    @Get('bargraph')
-    async getbargraph(@Response()res) {
+    @Get('institucion')
+    async getinstitucion(@Response()res) {
       //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
       //console.log(respuesta)
       const instituciones = await this.institucionService._repositorioUsuario.find();
-      return res.render('bargraph', {
+      return res.render('institucion', {
         instituciones:instituciones
       });
 
@@ -53,6 +53,18 @@ export class AppController {
     const formulario = await this.formularioService._repositorioUsuario.find();
     return res.render('formulario', {
       formulario:formulario
+    });
+
+  }
+
+  @Get('norma')
+  async getnorma(@Response()res) {
+    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+    //console.log(respuesta)
+
+    const norma = await this.formularioService._repositorioUsuario.find();
+    return res.render('norma', {
+      norma:norma
     });
 
   }

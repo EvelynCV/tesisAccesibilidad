@@ -5,12 +5,14 @@ import {Formulario} from './Formulario/formulario';
 import {Institucion} from './Institucion/institucion';
 import {InstitucionService} from "./Institucion/institucion.service";
 import {FormularioService} from "./Formulario/formulario.service";
+import {NormaService} from "./Normas/norma.service";
 
 @Controller('api')
 export class AppController {
   constructor(private readonly appService: AppService,
               private readonly institucionService: InstitucionService,
-              private readonly formularioService: FormularioService) {
+              private readonly formularioService: FormularioService,
+              private readonly normaService: NormaService) {
 
      }
 /*
@@ -62,7 +64,7 @@ export class AppController {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
 
-    const norma = await this.formularioService._repositorioUsuario.find();
+    const norma = await this.normaService._repositorioNorma.find();
     return res.render('norma', {
       norma:norma
     });

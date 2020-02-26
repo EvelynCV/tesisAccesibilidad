@@ -30,7 +30,7 @@ export class NormaService {
         id: number,
         usuario: NormaEntity
     ): Promise<NormaEntity> {
-        usuario.idIns = id;
+        usuario.id_nor = id;
         return this._repositorioNorma
             .save(usuario); // UPSERT
     }

@@ -6,8 +6,10 @@ import {NorDisEntity} from "../Nor_Dis/nor-dis.entity";
 export class NormaEntity {
     @PrimaryGeneratedColumn({
         name: 'id_nor',
+        type: 'varchar',
+        length: 3,
     })
-    id_nor: number;
+    id_nor: string;
 
     @Column({
         name: 'nom_nor',

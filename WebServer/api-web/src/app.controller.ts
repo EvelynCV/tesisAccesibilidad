@@ -19,12 +19,12 @@ export class AppController {
               private readonly norDisService:NorDisService) {
 
      }
-/*
+
   @Get('Hola')
   getHello(): string {
    return this.appService.getHello();
   }
-*/
+
   @Get('prueba')
   getPrueba(@Response()res) {
     return res.render('prueba');

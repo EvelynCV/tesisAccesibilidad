@@ -5,11 +5,13 @@ import {InstitucionModule} from "./Institucion/institucion.module";
 import {FormularioModule} from "./Formulario/formulario.module";
 import {NormaModule} from "./Normas/norma.module";
 import {DiscapacidadModule} from "./Discapacidad/discapacidad.module";
+import {NorDisModule} from "./Nor_Dis/nor-dis.module";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {InstitucionEntity} from "./Institucion/institucion.entity";
 import {FormularioEntity} from "./Formulario/formulario.entity";
 import {NormaEntity} from "./Normas/norma.entity";
 import {DiscapacidadEntity} from "./Discapacidad/discapacidad.entity";
+import {NorDisEntity} from "./Nor_Dis/nor-dis.entity";
 
 
 @Module({
@@ -18,6 +20,7 @@ import {DiscapacidadEntity} from "./Discapacidad/discapacidad.entity";
       FormularioModule,
       NormaModule,
       DiscapacidadModule,
+      NorDisModule,
     TypeOrmModule.forRoot(
         {
           name: 'default', // Nombre cadena de Conex.
@@ -33,6 +36,7 @@ import {DiscapacidadEntity} from "./Discapacidad/discapacidad.entity";
               FormularioEntity,
               NormaEntity,
               DiscapacidadEntity,
+              NorDisEntity,
           ],
           synchronize: true, // Crear -> true , Conectar -> false
         },

@@ -66,7 +66,7 @@ export class AppController {
 
     const norma = await this.normaService._repositorioNorma.find();
     return res.render('norma', {
-      norma:norma
+      discapacidad:norma
     });
 
   }

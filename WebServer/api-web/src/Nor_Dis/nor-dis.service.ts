@@ -1,37 +1,37 @@
 import {Injectable} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
-import {DiscapacidadEntity} from "./discapacidad.entity";
+import {NorDisEntity} from "./nor-dis.entity";
 import {DeleteResult, Repository} from "typeorm";
 
 @Injectable()
-export class DiscapacidadService {
+export class NorDisService {
     constructor(
-        @InjectRepository(DiscapacidadEntity) // Inyectar Dependencias
-        public _repositorioDiscapacidad: Repository<DiscapacidadEntity>
+        @InjectRepository(NorDisEntity) // Inyectar Dependencias
+        public _repositorioNorDis: Repository<NorDisEntity>
     ) {
     }
 
-    encontrarUno(id_dis: number): Promise<DiscapacidadEntity | undefined> {
-        return this._repositorioDiscapacidad
+    encontrarUno(id_dis: number): Promise<NorDisEntity | undefined> {
+        return this._repositorioNorDis
             .findOne(id_dis);
     }
 
-    crearUno(discapacidad: DiscapacidadEntity) {
-        return this._repositorioDiscapacidad
+    crearUno(discapacidad: NorDisEntity) {
+        return this._repositorioNorDis
             .save(discapacidad);
     }
 
     borrarUno(id_dis: number): Promise<DeleteResult> {
-        return this._repositorioDiscapacidad
+        return this._repositorioNorDis
             .delete(id_dis);
     }
 
     actualizarUno(
         id: number,
-        usuario: DiscapacidadEntity
-    ): Promise<DiscapacidadEntity> {
-        usuario.id_dis = id;
-        return this._repositorioDiscapacidad
+        usuario: NorDisEntity
+    ): Promise<NorDisEntity> {
+        usuario.id_nordis = id;
+        return this._repositorioNorDis
             .save(usuario); // UPSERT
     }
 
@@ -43,7 +43,7 @@ export class DiscapacidadService {
             id: 'DESC',
             nombre: 'ASC'
         }
-    ): Promise<DiscapacidadEntity[]> {
+    ): Promise<NorDisEntity[]> {
 
         // Exactamente el nombre o Exactamente la cedula
         const consultaWhere = [
@@ -75,7 +75,7 @@ export class DiscapacidadService {
             id: 30
         };
 
-        return this._repositorioDiscapacidad
+        return this._repositorioNorDis
             .find({
                 where: where,
                 skip: skip,

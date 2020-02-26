@@ -84,28 +84,28 @@
 
 <script>
     console.log(<%- JSON.stringify(nordis) %>)
-    var norma = <%- JSON.stringify(nordis) %>
+    var nordis = <%- JSON.stringify(nordis) %>
         console.log(nordis)
     console.log('holaaaa')
 
-    var nombreNormas = norma.map(
-        function (norma) {
-            return norma.nom_nor;
+    var valoresDiscapacidades = nordis.map(
+        function (discapacidades) {
+            return discapacidades.id_dis;
         }
     )
 
-    var valoresNorma = norma.map(
-        function (norma) {
-            return norma.id_nor;
+    var valoresNormas = nordis.map(
+        function (institucion) {
+            return institucion.id_nor;
         }
     )
 
     var datos = {
-        labels : nombreNormas,
+        labels : valoresDiscapacidades,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresNorma
+            data : valoresNormas
         }
         ]
     };

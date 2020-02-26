@@ -4,10 +4,12 @@ import { AppService } from './app.service';
 import {InstitucionModule} from "./Institucion/institucion.module";
 import {FormularioModule} from "./Formulario/formulario.module";
 import {NormaModule} from "./Normas/norma.module";
+import {DiscapacidadModule} from "./Discapacidad/discapacidad.module";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {InstitucionEntity} from "./Institucion/institucion.entity";
 import {FormularioEntity} from "./Formulario/formulario.entity";
 import {NormaEntity} from "./Normas/norma.entity";
+import {DiscapacidadEntity} from "./Discapacidad/discapacidad.entity";
 
 
 @Module({
@@ -15,6 +17,7 @@ import {NormaEntity} from "./Normas/norma.entity";
     InstitucionModule,
       FormularioModule,
       NormaModule,
+      DiscapacidadModule,
     TypeOrmModule.forRoot(
         {
           name: 'default', // Nombre cadena de Conex.
@@ -29,6 +32,7 @@ import {NormaEntity} from "./Normas/norma.entity";
             InstitucionEntity,
               FormularioEntity,
               NormaEntity,
+              DiscapacidadEntity,
           ],
           synchronize: true, // Crear -> true , Conectar -> false
         },

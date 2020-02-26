@@ -1,4 +1,6 @@
-import {Column, Entity, PrimaryGeneratedColumn, many} from 'typeorm';
+import {Column, Entity, PrimaryGeneratedColumn, OneToMany} from 'typeorm';
+import {DiscapacidadEntity} from "../Discapacidad/discapacidad.entity";
+import {NorDisEntity} from "../Nor_Dis/nor-dis.entity";
 
 @Entity('norma')
 export class NormaEntity {
@@ -14,22 +16,11 @@ export class NormaEntity {
     })
     nom_nor: string;
 
-}
-
-
-import {Entity, PrimaryGeneratedColumn, Column, ManyToOne} from "typeorm";
-import {User} from "./User";
-
-@Entity()
-export class Photo {
-
-    @PrimaryGeneratedColumn()
-    id: number;
-
-    @Column()
-    url: string;
-
-    @ManyToOne(type => User, user => user.photos)
-    user: User;
+    @OneToMany(
+        type => NorDisEntity, // Entidad
+        nordis => nordis.id_nordis, // El campo de la relacion
+    )
+    NorDis: NorDisEntity[];
 
 }
+

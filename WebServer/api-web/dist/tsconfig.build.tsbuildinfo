@@ -2153,17 +2153,25 @@
         "version": "aea110acfb76fb945a5d69e22afd0f14d932e0e9f1d4a48c974ef7ea423a73c6",
         "signature": "534d44b93c592e0b83a19fb18cd3d232d7011c711924356932f801b8d00f421f"
       },
+      "../src/discapacidad/nor-dis.entity.ts": {
+        "version": "b040b3ce5a14d71d338c430b30c18bf209758d2e4a30d119fc3cb828d28c96ca",
+        "signature": "017e161365fedd7e3b95d17b563fc4f1119592eaf1c61cb4f6a4230183630e37"
+      },
       "../src/normas/norma.entity.ts": {
-        "version": "95240da3c1a19aabf677d24f3ae2ef8f1014e05dd39ed0d3a6c1a65faee400b6",
-        "signature": "610715912d70bf5faaa89f94dea0afed9e6bdf3cd37dbc58a866e43c73e0c83e"
+        "version": "9885f12f1089f954e0f479ad9331737f76d5c1e67d45d4db050f863cf275dc46",
+        "signature": "65458d631da252d5fd5f018262b3f9a08dc87133e5c7fec226b65434cd85d90e"
       },
       "../src/normas/norma.service.ts": {
         "version": "caa84d7b30855cba755ce3d8864f1a5ae73ca3e37498ddef5e49e0c473417395",
         "signature": "8172dd7e891d617e14f71f0fab6e77db44c0106e932542796079f45a4d8c57c1"
       },
+      "../src/discapacidad/nor-dis.service.ts": {
+        "version": "51a3ee21e4262bac25166019a79bad3bd40f7733754aacd5365164bbb09afe8e",
+        "signature": "e68f8920f231dbc5d3248394f93f1d494b0bf2c102c2a2737d58bbe85d4c74fd"
+      },
       "../src/app.controller.ts": {
-        "version": "7087a264ba17f44b5bd23941865a5ceb32023687438dc9f1d73402d13ed784a8",
-        "signature": "d680bb6b37fbca6f056f07d4a89174849dbef91e94b7897c431e56ccecee24ad"
+        "version": "3747f5a08ae6cce535b6cb09bf958c365997ce81d9048ba7310aef0330271dfd",
+        "signature": "2dc23e3ecce4a6ea8815d4dffe768f1b7be120f7cb08626ede7e9985e8a24651"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "f803fb7a2020aeb792d5905f3994b6f579cec3ae26f1789f59700101840557e4",
@@ -2177,8 +2185,12 @@
         "version": "9308bcb157774da28e1d6ddbdb1474d1fca15688a0a2ddd8bf8ac14aba32fbe2",
         "signature": "806989315b6e5dc67c498a3502522a6277e230a5da77402a3a6cdbdab61636a6"
       },
+      "../src/discapacidad/nor-dis.module.ts": {
+        "version": "e3f51fa503095abc8e8ae3155b913995354f728f9fca8acd61c14ab6a9af08bc",
+        "signature": "43c3db8984474390617615a74763a1455217f0d8299a45e7b1b735f823649886"
+      },
       "../src/app.module.ts": {
-        "version": "5cf83ebfe82df3cfb9cb4b5d2039bfc5564d20e247bbdb546817952d8b016a91",
+        "version": "046689131752615099f5eba44e675c5034aa8583b0da7384b72337a69fdedb4f",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2421,19 +2433,7 @@
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "../src/discapacidad/discapacidad.entity.ts": {
-        "version": "95dd089ec9526d335e832c69b59731bf7405291be0c2bd5c24c7ff40511a42f3",
-        "signature": "8c0c12117fcab0736c2e6975bc1f56d8fd07ed58e6f4c391bc62e360118a7b09"
-      },
-      "../src/discapacidad/discapacidad.service.ts": {
-        "version": "d562467346470294aa3c2a34303fc7669739688bfbf245c070197ee0b72587c9",
-        "signature": "1a78de39a9530ec62182917aa511c5fa8a8ba48365eeaa0090a5c7e9b9242eba"
-      },
-      "../src/discapacidad/discapacidad.module.ts": {
-        "version": "e3f51fa503095abc8e8ae3155b913995354f728f9fca8acd61c14ab6a9af08bc",
-        "signature": "43c3db8984474390617615a74763a1455217f0d8299a45e7b1b735f823649886"
-      },
-      "../src/discapacidad/discapacidad.ts": {
+      "../src/discapacidad/nor-dis.ts": {
         "version": "a15cc1c39cadeb61c3f2a077c094cff8c6aacc9efda7cea2c98e298e815dcfa9",
         "signature": "a842b070f8dffc8224e94892554af005468c76bbf28046b73dbccf452e68a03f"
       },
@@ -7062,8 +7062,17 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/discapacidad/nor-dis.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/normas/norma.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/normas/norma.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../src/discapacidad/nor-dis.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7079,6 +7088,16 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/discapacidad/nor-dis.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/discapacidad/nor-dis.entity.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.service.ts",
@@ -7087,6 +7106,7 @@
         "../src/institucion/institucion.service.ts",
         "../src/formulario/formulario.service.ts",
         "../src/normas/norma.service.ts",
+        "../src/discapacidad/nor-dis.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7122,6 +7142,16 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/discapacidad/nor-dis.module.ts": [
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/discapacidad/nor-dis.entity.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/discapacidad/nor-dis.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -7129,10 +7159,12 @@
         "../src/institucion/institucion.module.ts",
         "../src/formulario/formulario.module.ts",
         "../src/normas/norma.module.ts",
+        "../src/discapacidad/nor-dis.module.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../src/institucion/institucion.entity.ts",
         "../src/formulario/formulario.entity.ts",
         "../src/normas/norma.entity.ts",
+        "../src/discapacidad/nor-dis.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7651,34 +7683,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/discapacidad/discapacidad.entity.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/discapacidad/discapacidad.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/discapacidad/discapacidad.entity.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/discapacidad/discapacidad.module.ts": [
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/discapacidad/discapacidad.entity.ts",
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/discapacidad/discapacidad.service.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/discapacidad/discapacidad.ts": [
+      "../src/discapacidad/nor-dis.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -12343,15 +12348,26 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/formulario/formulario.entity.ts"
       ],
+      "../src/discapacidad/nor-dis.entity.ts": [
+        "../src/normas/norma.entity.ts"
+      ],
+      "../src/normas/norma.entity.ts": [
+        "../src/discapacidad/nor-dis.entity.ts"
+      ],
       "../src/normas/norma.service.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/normas/norma.entity.ts"
+      ],
+      "../src/discapacidad/nor-dis.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/discapacidad/nor-dis.entity.ts"
       ],
       "../src/app.controller.ts": [
         "../src/app.service.ts",
         "../src/institucion/institucion.service.ts",
         "../src/formulario/formulario.service.ts",
-        "../src/normas/norma.service.ts"
+        "../src/normas/norma.service.ts",
+        "../src/discapacidad/nor-dis.service.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -12848,10 +12864,6 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/discapacidad/discapacidad.service.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/discapacidad/discapacidad.entity.ts"
       ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -13599,98 +13611,14 @@
       "../src/institucion/institucion.service.ts",
       "../src/formulario/formulario.entity.ts",
       "../src/formulario/formulario.service.ts",
-      [
-        "../src/normas/norma.entity.ts",
-        [
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 16,
-            "length": 6,
-            "messageText": "Duplicate identifier 'Entity'.",
-            "category": 1,
-            "code": 2300
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 342,
-            "length": 6,
-            "messageText": "Duplicate identifier 'Entity'.",
-            "category": 1,
-            "code": 2300
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 24,
-            "length": 22,
-            "messageText": "Duplicate identifier 'PrimaryGeneratedColumn'.",
-            "category": 1,
-            "code": 2300
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 350,
-            "length": 22,
-            "messageText": "Duplicate identifier 'PrimaryGeneratedColumn'.",
-            "category": 1,
-            "code": 2300
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 8,
-            "length": 6,
-            "messageText": "Duplicate identifier 'Column'.",
-            "category": 1,
-            "code": 2300
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 374,
-            "length": 6,
-            "messageText": "Duplicate identifier 'Column'.",
-            "category": 1,
-            "code": 2300
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 48,
-            "length": 4,
-            "messageText": "Module '\"../../../../../../../../../Users/evelyn.cisneros/Documents/GitHub/hello/WebServer/api-web/node_modules/typeorm\"' has no exported member 'many'. Did you mean 'Any'?",
-            "category": 1,
-            "code": 2724,
-            "relatedInformation": [
-              {
-                "file": "../node_modules/typeorm/find-options/operator/any.d.ts",
-                "start": 144,
-                "length": 3,
-                "messageText": "'Any' is declared here.",
-                "category": 3,
-                "code": 2728
-              }
-            ]
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 429,
-            "length": 8,
-            "messageText": "Cannot find module './User'.",
-            "category": 1,
-            "code": 2307
-          },
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 604,
-            "length": 6,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'photos' does not exist on type 'unknown'."
-          }
-        ]
-      ],
+      "../src/discapacidad/nor-dis.entity.ts",
+      "../src/normas/norma.entity.ts",
       "../src/normas/norma.service.ts",
+      "../src/discapacidad/nor-dis.service.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/normas/norma.module.ts",
-      "../src/app.module.ts",
+      "../src/discapacidad/nor-dis.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -13751,6 +13679,7 @@
       "../node_modules/@types/express/index.d.ts",
       "../src/main.ts",
       "../src/contenido/contenido.ts",
+      "../src/discapacidad/nor-dis.ts",
       "../src/normas/normas.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
@@ -13782,10 +13711,7 @@
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
       "../src/app.controller.ts",
-      "../src/discapacidad/discapacidad.entity.ts",
-      "../src/discapacidad/discapacidad.module.ts",
-      "../src/discapacidad/discapacidad.service.ts",
-      "../src/discapacidad/discapacidad.ts"
+      "../src/app.module.ts"
     ]
   },
   "version": "3.7.4"

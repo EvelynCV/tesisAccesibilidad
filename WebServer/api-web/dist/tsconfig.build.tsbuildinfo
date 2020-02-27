@@ -2162,12 +2162,12 @@
         "signature": "5c13b138c349996b02614079740bce6d20ee4140c7b8bdf0b28941a10bf76204"
       },
       "../src/normas/norma.entity.ts": {
-        "version": "fe0f68b6077716b1f7c8c46b52b7a6a84eef7b32337bb838ef9fc850b70777bb",
+        "version": "45151018b418af1abba1b15a8044669b445780571c6fa351dc597eca8ad02802",
         "signature": "8cd6ac36653f8daf58dd86ee78ef9af916b054a3aac9b769f21c83928f090d59"
       },
       "../src/normas/norma.service.ts": {
-        "version": "caa84d7b30855cba755ce3d8864f1a5ae73ca3e37498ddef5e49e0c473417395",
-        "signature": "8172dd7e891d617e14f71f0fab6e77db44c0106e932542796079f45a4d8c57c1"
+        "version": "3902b42e532bc01d9930285b87012b26abf4205309e59be4a23d6ddcab6ca0ae",
+        "signature": "c481c940672f9aa49e5f23093faa512fac4bd4ef29105d1cd44c33af295ebfb9"
       },
       "../src/discapacidad/discapacidad.service.ts": {
         "version": "51a3ee21e4262bac25166019a79bad3bd40f7733754aacd5365164bbb09afe8e",
@@ -2454,8 +2454,8 @@
         "signature": "22e387fed89ad6b39e25667b47b5155c2ab8622396d6984c53ea67436aa761a9"
       },
       "../src/normas/normas.ts": {
-        "version": "d1187c1a85a598a2fb619fa4aa2b78bf0dca44711798029a3b7f91b90a9177e0",
-        "signature": "89950379e3dbb8305f0c8e89c7d769ccf0ee6f8b327aba87a424773d11916572"
+        "version": "5c9d7d01f0459968496d2d0c96f42cb075a0153a1e3ffb8643f08bb9be2dce86",
+        "signature": "a0281a90d6807a4ad234ea7d9ba36e7a3717c5eddfaf8505c56d1d7c2b14def9"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -13676,8 +13676,15 @@
       "../src/institucion/institucion.service.ts",
       "../src/formulario/formulario.entity.ts",
       "../src/formulario/formulario.service.ts",
+      "../src/nor_dis/nor-dis.entity.ts",
+      "../src/discapacidad/discapacidad.entity.ts",
+      "../src/normas/norma.entity.ts",
+      "../src/discapacidad/discapacidad.service.ts",
+      "../src/nor_dis/nor-dis.service.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
+      "../src/discapacidad/discapacidad.module.ts",
+      "../src/nor_dis/nor-dis.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -13769,77 +13776,10 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      [
-        "../src/normas/norma.entity.ts",
-        [
-          {
-            "file": "../src/normas/norma.entity.ts",
-            "start": 318,
-            "length": 4,
-            "code": 2769,
-            "category": 1,
-            "messageText": {
-              "messageText": "No overload matches this call.",
-              "category": 1,
-              "code": 2769,
-              "next": [
-                {
-                  "messageText": "The last overload gave the following error.",
-                  "category": 1,
-                  "code": 2770,
-                  "next": [
-                    {
-                      "messageText": "Type '\"varchar\"' is not assignable to type 'PrimaryGeneratedColumnType'.",
-                      "category": 1,
-                      "code": 2322
-                    }
-                  ]
-                }
-              ]
-            },
-            "relatedInformation": [
-              {
-                "file": "../node_modules/typeorm/decorator/options/primarygeneratedcolumnnumericoptions.d.ts",
-                "start": 330,
-                "length": 4,
-                "messageText": "The expected type comes from property 'type' which is declared here on type 'PrimaryGeneratedColumnNumericOptions'",
-                "category": 3,
-                "code": 6500
-              },
-              {
-                "file": "../node_modules/typeorm/decorator/columns/primarygeneratedcolumn.d.ts",
-                "start": 464,
-                "length": 22,
-                "messageText": "The last overload is declared here.",
-                "category": 1,
-                "code": 2771
-              }
-            ]
-          }
-        ]
-      ],
-      "../src/app.module.ts",
+      "../src/normas/norma.service.ts",
       "../src/normas/norma.module.ts",
-      [
-        "../src/normas/norma.service.ts",
-        [
-          {
-            "file": "../src/normas/norma.service.ts",
-            "start": 885,
-            "length": 14,
-            "code": 2322,
-            "category": 1,
-            "messageText": "Type 'number' is not assignable to type 'string'."
-          }
-        ]
-      ],
-      "../src/discapacidad/discapacidad.entity.ts",
-      "../src/nor_dis/nor-dis.entity.ts",
-      "../src/discapacidad/discapacidad.service.ts",
-      "../src/nor_dis/nor-dis.service.ts",
       "../src/app.controller.ts",
-      "../src/discapacidad/discapacidad.module.ts",
-      "../src/nor_dis/nor-dis.module.ts",
+      "../src/app.module.ts",
       "../src/main.ts"
     ]
   },

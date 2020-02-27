@@ -83,18 +83,18 @@
 </script>
 
 <script>
-    console.log(<%- JSON.stringify(nordis) %>)
-    var nordis = <%- JSON.stringify(nordis) %>
-        console.log(nordis)
+    console.log(<%- JSON.stringify(discapacidad) %>)
+    var discapacidad = <%- JSON.stringify(discapacidad) %>
+        console.log(discapacidad)
     console.log('holaaaa')
 
-    var nombreDiscapacidad = nordis.map(
+    var nombreDiscapacidad = discapacidad.map(
         function (norma) {
             return norma.nom_dis;
         }
     )
 
-    var valoresDiscapacidad = nordis.map(
+    var valoresDiscapacidad = discapacidad.map(
         function (norma) {
             return norma.id_dis;
         }

@@ -1,4 +1,4 @@
 export interface Normas{
-    id?:number;
+    id?:string;
     nombres:string;
 }

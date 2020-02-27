@@ -27,7 +27,7 @@ export class NormaService {
     }
 
     actualizarUno(
-        id: number,
+        id: string,
         usuario: NormaEntity
     ): Promise<NormaEntity> {
         usuario.id_nor = id;

@@ -61,51 +61,29 @@
 </body>
 
 <script>
-
-
-    /*
-    setInterval(function(){
-        var newData = [
-            [instituciones],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-        ];
-
-        $.each(datos.datasets, function(i, dataset){
-            dataset.data = newData[i];
-        });
-        window.bar.update();
-    }, 5000);
-    */
-
-
-
-</script>
-
-<script>
-    console.log(<%- JSON.stringify(discapacidad) %>)
-    var nordis = <%- JSON.stringify(discapacidad) %>
-        console.log(discapacidad)
+    console.log(<%- JSON.stringify(nordiss) %>)
+    var nordiss = <%- JSON.stringify(nordiss) %>
+        console.log(nordiss)
     console.log('holaaaa')
 
-    var valoresDiscapacidades = nordis.map(
-        function (discapacidades) {
-            return discapacidades.id_dis;
+    var valoresNordiss = nordiss.map(
+        function (nordis) {
+            return nordis.id_nordis;
         }
     )
 
-    var valoresNormas = nordis.map(
-        function (institucion) {
-            return institucion.id_nor;
+    var valoresDiscapacidades = nordiss.map(
+        function (discapacidad) {
+            return discapacidad.id_dis;
         }
     )
 
     var datos = {
-        labels : valoresDiscapacidades,
+        labels : valoresNordiss,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresNormas
+            data : valoresDiscapacidades
         }
         ]
     };

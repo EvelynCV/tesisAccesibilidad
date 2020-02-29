@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -11,8 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-
-
 </head>
 
 <body>
@@ -45,7 +42,7 @@
 <!-- CHART.JS -->
 
 <div id="canvas-container" style="width:40%;">
-    <canvas id="chart2" width="500" height="350"></canvas>
+    <canvas id="chart" width="500" height="350"></canvas>
 </div>
 
 <!-- jQuery -->
@@ -62,8 +59,6 @@
 </body>
 
 <script>
-
-
     /*
     setInterval(function(){
         var newData = [
@@ -71,53 +66,41 @@
             [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
             [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
         ];
-
         $.each(datos.datasets, function(i, dataset){
             dataset.data = newData[i];
         });
         window.bar.update();
     }, 5000);
     */
-
-
-
 </script>
 
 <script>
-
-    console.log(<%- JSON.stringify(institucion) %>)
-    var institucion = <%- JSON.stringify(institucion) %>
-       console.log(institucion);
-   // console.log('holaaaa')
-
-
-    var nombreInstitucion = institucion.map(
+    /*definir variables para tra*/
+    console.log(<%- JSON.stringify(instituciones) %>)
+    var instituciones = <%- JSON.stringify(instituciones) %>
+        console.log(instituciones)
+    console.log('holaaaa')
+    var nombreInstituciones = instituciones.map(
         function (institucion) {
             return institucion.nomIns;
         }
     )
-
-
-    var valoresInstitucion = institucion.map(
+    var valoresInstituciones = instituciones.map(
         function (institucion) {
             return institucion.idIns;
-
         }
     )
-
     var datos = {
-        labels : nombreInstitucion,
+        labels : nombreInstituciones,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresInstitucion
+            data : valoresInstituciones
         }
         ]
     };
-
     console.log(datos)
-
-    var canvas = document.getElementById('chart2').getContext('2d');
+    var canvas = document.getElementById('chart').getContext('2d');
     window.bar = new Chart(canvas, {
         type : "bar",
         data : datos,
@@ -136,7 +119,6 @@
             }
         }
     });
-
 </script>
 
 </html>

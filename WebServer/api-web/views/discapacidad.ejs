@@ -61,42 +61,20 @@
 </body>
 
 <script>
-
-
-    /*
-    setInterval(function(){
-        var newData = [
-            [instituciones],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-        ];
-
-        $.each(datos.datasets, function(i, dataset){
-            dataset.data = newData[i];
-        });
-        window.bar.update();
-    }, 5000);
-    */
-
-
-
-</script>
-
-<script>
-    console.log(<%- JSON.stringify(discapacidad) %>)
-    var discapacidad = <%- JSON.stringify(discapacidad) %>
-        console.log(discapacidad)
+    console.log(<%- JSON.stringify(discapacidades) %>)
+    var discapacidades = <%- JSON.stringify(discapacidades) %>
+        console.log(discapacidades)
     console.log('holaaaa')
 
-    var nombreDiscapacidad = discapacidad.map(
-        function (norma) {
-            return norma.nom_dis;
+    var nombreDiscapacidad = discapacidades.map(
+        function (discapacidad) {
+            return discapacidad.nom_dis;
         }
     )
 
-    var valoresDiscapacidad = discapacidad.map(
-        function (norma) {
-            return norma.id_dis;
+    var valoresDiscapacidad = discapacidades.map(
+        function (discapacidad) {
+            return discapacidad.id_dis;
         }
     )
 

@@ -1,6 +1,5 @@
 export interface Formulario{
-    id?:number;
-    nombres:string;
-    institucionId: number;
-
+    id_for?:number;
+    fech_for:number;
+    id_ins: number;
 }

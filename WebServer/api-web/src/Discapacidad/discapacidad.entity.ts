@@ -1,6 +1,6 @@
 import {Column, Entity, PrimaryGeneratedColumn, OneToMany} from 'typeorm';
-import {NorDisEntity} from "../Nor_Dis/nor-dis.entity";
-import {NormaEntity} from "../Normas/norma.entity";
+import {NordisEntity} from "../NorDis/nordis.entity";
+
 
 @Entity('discapacidad')
 export class DiscapacidadEntity {
@@ -17,10 +17,9 @@ export class DiscapacidadEntity {
     nom_dis: string;
 
     @OneToMany(
-        type => NorDisEntity, // Entidad
-        nordis => nordis.id_nordis, // El campo de la relacion
+        type => NordisEntity, // Entidad
+        nordis => nordis.id_dis, // El campo de la relacion
     )
-    NorDis: NorDisEntity[];
+    NorDis: NordisEntity[];
 
 }
-

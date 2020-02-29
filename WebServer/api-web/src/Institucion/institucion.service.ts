@@ -5,24 +5,26 @@ import {DeleteResult, Repository} from "typeorm";
 
 @Injectable()
 export class InstitucionService {
+    /*esta es la linea de la magia donde importas el directorio para acceder a los metodos :)*/
     constructor(
+        /* Cambiar a publico para poder acceder a las consultas */
         @InjectRepository(InstitucionEntity) // Inyectar Dependencias
-        public _repositorioUsuario: Repository<InstitucionEntity>
+        public _repositorioInstitucion: Repository<InstitucionEntity>
     ) {
     }
 
     encontrarUno(id: number): Promise<InstitucionEntity | undefined> {
-        return this._repositorioUsuario
+        return this._repositorioInstitucion
             .findOne(id);
     }
 
     crearUno(usuario: InstitucionEntity) {
-        return this._repositorioUsuario
+        return this._repositorioInstitucion
             .save(usuario);
     }
 
     borrarUno(id: number): Promise<DeleteResult> {
-        return this._repositorioUsuario
+        return this._repositorioInstitucion
             .delete(id);
     }
 
@@ -31,7 +33,7 @@ export class InstitucionService {
         usuario: InstitucionEntity
     ): Promise<InstitucionEntity> {
         usuario.idIns = id;
-        return this._repositorioUsuario
+        return this._repositorioInstitucion
             .save(usuario); // UPSERT
     }
 
@@ -75,7 +77,7 @@ export class InstitucionService {
             id: 30
         };
 
-        return this._repositorioUsuario
+        return this._repositorioInstitucion
             .find({
                 where: where,
                 skip: skip,

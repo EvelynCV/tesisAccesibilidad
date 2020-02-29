@@ -84,20 +84,19 @@
 </script>
 
 <script>
-    console.log(<%- JSON.stringify(formulario) %>)
-    var formulario = <%- JSON.stringify(formulario) %>
-        console.log(formulario)
+    console.log(<%- JSON.stringify(formularios) %>)
+    var formularios = <%- JSON.stringify(formularios) %>
+        console.log(formularios)
     console.log('holaaaa')
 
 
-    var idFormulario = formulario.map(
+    var idFormulario = formularios.map(
         function (formulario) {
-            return formulario.idFor;
+            return formulario.id_for;
         }
     )
 
-
-    var valoresFormulario = formulario.map(
+    var valoresFormulario = formularios.map(
         function (formulario) {
             return formulario.id_ins;
 

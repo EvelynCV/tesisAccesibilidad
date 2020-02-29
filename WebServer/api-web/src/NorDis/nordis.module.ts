@@ -1,13 +1,13 @@
 import {TypeOrmModule} from '@nestjs/typeorm';
-import {NorDisEntity} from "./nor-dis.entity";
+import {NordisEntity} from "./nordis.entity";
 import {Module} from "@nestjs/common";
-import {NorDisService} from "./nor-dis.service";
+import {NordisService} from "./nordis.service";
 
 @Module({
     imports: [
         TypeOrmModule
             .forFeature([
-                    NorDisEntity, // Entidades a usarse dentro
+                    NordisEntity, // Entidades a usarse dentro
                                   // del modulo.
                 ],
                 'default', // Nombre de la cadena de conex.
@@ -16,12 +16,12 @@ import {NorDisService} from "./nor-dis.service";
     controllers: [
     ],
     providers: [
-        NorDisService
+        NordisService
     ],
     exports: [
-        NorDisService
+        NordisService
     ],
 })
-export class NorDisModule {
+export class NordisModule {
 
 }

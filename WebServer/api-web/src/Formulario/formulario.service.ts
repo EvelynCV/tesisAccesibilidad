@@ -7,81 +7,31 @@ import {DeleteResult, Repository} from "typeorm";
 export class FormularioService {
     constructor(
         @InjectRepository(FormularioEntity) // Inyectar Dependencias
-        public _repositorioUsuario: Repository<FormularioEntity>
+        public _repositorioFormulario: Repository<FormularioEntity>
     ) {
     }
 
-    encontrarUno(id: number): Promise<FormularioEntity | undefined> {
-        return this._repositorioUsuario
-            .findOne(id);
+    encontrarUno(id_for: number): Promise<FormularioEntity | undefined> {
+        return this._repositorioFormulario
+            .findOne(id_for);
     }
 
     crearUno(usuario: FormularioEntity) {
-        return this._repositorioUsuario
+        return this._repositorioFormulario
             .save(usuario);
     }
 
-    borrarUno(id: number): Promise<DeleteResult> {
-        return this._repositorioUsuario
-            .delete(id);
+    borrarUno(id_for: number): Promise<DeleteResult> {
+        return this._repositorioFormulario
+            .delete(id_for);
     }
 
     actualizarUno(
         id: number,
         usuario: FormularioEntity
     ): Promise<FormularioEntity> {
-        usuario.idFor = id;
-        return this._repositorioUsuario
+        usuario.id_for = id;
+        return this._repositorioFormulario
             .save(usuario); // UPSERT
     }
-
-    buscar(
-        where: any = {},
-        skip: number = 0,
-        take: number = 10,
-        order: any = {
-            id: 'DESC',
-            nombre: 'ASC'
-        }
-    ): Promise<FormularioEntity[]> {
-
-        // Exactamente el nombre o Exactamente la cedula
-        const consultaWhere = [
-            {
-                nombre: ''
-            },
-            {
-                cedula: ''
-            }
-        ];
-
-        // Exactamente el nombre o LIKE la cedula
-        const consultaWhereLike = [
-            {
-                // nombre: Like('a%')
-            },
-            {
-                // cedula: Like('%a')
-            }
-        ];
-
-        // id sea mayor a 20
-        const consultaWhereMoreThan = {
-            // id: MoreThan(20)
-        };
-
-        // id sea igual a x
-        const consultaWhereIgual = {
-            id: 30
-        };
-
-        return this._repositorioUsuario
-            .find({
-                where: where,
-                skip: skip,
-                take: take,
-                order: order,
-            });
-    }
-
 }

@@ -3,15 +3,21 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {InstitucionModule} from "./Institucion/institucion.module";
 import {FormularioModule} from "./Formulario/formulario.module";
-import {NormaModule} from "./Normas/norma.module";
+import {NormaModule} from "./Norma/norma.module";
 import {DiscapacidadModule} from "./Discapacidad/discapacidad.module";
-import {NorDisModule} from "./Nor_Dis/nor-dis.module";
+import {NordisModule} from "./NorDis/nordis.module";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {InstitucionEntity} from "./Institucion/institucion.entity";
 import {FormularioEntity} from "./Formulario/formulario.entity";
-import {NormaEntity} from "./Normas/norma.entity";
+import {NormaEntity} from "./Norma/norma.entity";
 import {DiscapacidadEntity} from "./Discapacidad/discapacidad.entity";
-import {NorDisEntity} from "./Nor_Dis/nor-dis.entity";
+import {NordisEntity} from "./NorDis/nordis.entity";
+import {OpcionModule} from "./Opcion/opcion.module";
+import {PreguntaModule} from "./Pregunta/pregunta.module";
+import {OpcpreModule} from "./OpcPre/opcpre.module";
+import {OpcionEntity} from "./Opcion/opcion.entity";
+import {PreguntaEntity} from "./Pregunta/pregunta.entity";
+import {OpcpreEntity} from "./OpcPre/opcpre.entity";
 
 
 @Module({
@@ -20,7 +26,12 @@ import {NorDisEntity} from "./Nor_Dis/nor-dis.entity";
       FormularioModule,
       NormaModule,
       DiscapacidadModule,
-      NorDisModule,
+    NordisModule,
+      OpcionModule,
+      PreguntaModule,
+      OpcpreModule,
+
+
     TypeOrmModule.forRoot(
         {
           name: 'default', // Nombre cadena de Conex.
@@ -34,9 +45,14 @@ import {NorDisEntity} from "./Nor_Dis/nor-dis.entity";
           entities: [
             InstitucionEntity,
               FormularioEntity,
-              NormaEntity,
-              DiscapacidadEntity,
-              NorDisEntity,
+            NormaEntity,
+             DiscapacidadEntity,
+            NordisEntity,
+              OpcionEntity,
+              PreguntaEntity,
+              OpcpreEntity,
+
+
           ],
           synchronize: true, // Crear -> true , Conectar -> false
         },

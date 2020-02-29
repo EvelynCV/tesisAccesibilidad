@@ -1,13 +1,13 @@
 import {TypeOrmModule} from '@nestjs/typeorm';
-import {DiscapacidadEntity} from "./discapacidad.entity";
+import {ContenidoEntity} from "./contenido.entity";
 import {Module} from "@nestjs/common";
-import {DiscapacidadService} from "./discapacidad.service";
+import {ContenidoService} from "./contenido.service";
 
 @Module({
     imports: [
         TypeOrmModule
             .forFeature([
-                    DiscapacidadEntity, // Entidades a usarse dentro
+                    ContenidoEntity, // Entidades a usarse dentro
                     // del modulo.
                 ],
                 'default', // Nombre de la cadena de conex.
@@ -16,12 +16,12 @@ import {DiscapacidadService} from "./discapacidad.service";
     controllers: [
     ],
     providers: [
-        DiscapacidadService
+        ContenidoService
     ],
     exports: [
-        DiscapacidadService
+        ContenidoService
     ],
 })
-export class DiscapacidadModule {
+export class ContenidoModule {
 
 }

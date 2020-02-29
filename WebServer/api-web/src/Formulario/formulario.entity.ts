@@ -7,13 +7,13 @@ export class FormularioEntity {
     @PrimaryGeneratedColumn({
         name: 'id_for',
     })
-    idFor: number;
+    id_for: number;
 
     @Column({
-        name: 'fecha_for',
+        name: 'fech_for',
         type: 'date',
     })
-    fechFor: number;
+    fech_for: number;
 
     @OneToOne(type => InstitucionEntity)
     @JoinColumn()

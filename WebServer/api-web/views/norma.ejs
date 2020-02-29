@@ -61,40 +61,18 @@
 </body>
 
 <script>
-
-
-    /*
-    setInterval(function(){
-        var newData = [
-            [instituciones],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-        ];
-
-        $.each(datos.datasets, function(i, dataset){
-            dataset.data = newData[i];
-        });
-        window.bar.update();
-    }, 5000);
-    */
-
-
-
-</script>
-
-<script>
-    console.log(<%- JSON.stringify(norma) %>)
-    var norma = <%- JSON.stringify(norma) %>
-        console.log(norma)
+    console.log(<%- JSON.stringify(opciones) %>)
+    var normas = <%- JSON.stringify(opciones) %>
+        console.log(opciones)
     console.log('holaaaa')
 
-    var nombreNormas = norma.map(
+    var nombreNormas = normas.map(
         function (norma) {
             return norma.nom_nor;
         }
     )
 
-    var valoresNorma = norma.map(
+    var valoresNormas = normas.map(
         function (norma) {
             return norma.id_nor;
         }
@@ -105,7 +83,7 @@
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresNorma
+            data : valoresNormas
         }
         ]
     };

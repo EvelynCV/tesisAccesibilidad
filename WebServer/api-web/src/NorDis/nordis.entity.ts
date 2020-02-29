@@ -1,11 +1,11 @@
 import {Column, Entity, PrimaryGeneratedColumn, ManyToOne} from 'typeorm';
-import {NormaEntity} from "../Normas/norma.entity";
+import {NormaEntity} from "../Norma/norma.entity";
 import {DiscapacidadEntity} from "../Discapacidad/discapacidad.entity";
 
-@Entity('nor-dis')
-export class NorDisEntity {
+@Entity('nordis')
+export class NordisEntity {
     @PrimaryGeneratedColumn({
-        name: 'id_dis',
+        name: 'id_nordis',
     })
     id_nordis: number;
 

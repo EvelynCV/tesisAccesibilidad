@@ -5,18 +5,26 @@ import {Formulario} from './Formulario/formulario';
 import {Institucion} from './Institucion/institucion';
 import {InstitucionService} from "./Institucion/institucion.service";
 import {FormularioService} from "./Formulario/formulario.service";
-import {NormaService} from "./Normas/norma.service";
+import {NormaService} from "./Norma/norma.service";
 import {DiscapacidadService} from "./Discapacidad/discapacidad.service";
-import {NorDisService} from "./Nor_Dis/nor-dis.service";
+import {NordisService} from "./NorDis/nordis.service";
+import {OpcionService} from "./Opcion/opcion.service";
+import {PreguntaService} from "./Pregunta/pregunta.service";
+import {OpcpreService} from "./OpcPre/opcpre.service";
 
 @Controller('api')
 export class AppController {
   constructor(private readonly appService: AppService,
               private readonly institucionService: InstitucionService,
               private readonly formularioService: FormularioService,
-              private readonly normaService: NormaService,
+             private readonly normaService: NormaService,
               private readonly discapacidadService: DiscapacidadService,
-              private readonly norDisService:NorDisService) {
+             private readonly norDisService:NordisService,
+              private readonly opcionService: OpcionService,
+              private readonly preguntaService: PreguntaService,
+              private readonly opcpreService:OpcpreService
+
+              ) {
 
      }
 
@@ -40,49 +48,60 @@ export class AppController {
     return res.render('informacion');
   }
 
+  /* funciones de ejemplo para llamar y guardar datos en la bd*/
+  @Get('bargraph')
+  async getbargraph(@Response()res) {
+    const respuesta = await this.institucionService._repositorioInstitucion.save({nomIns:'Prueba 1'});
+    console.log(respuesta)
+    const instituciones = await this.institucionService._repositorioInstitucion.find();
+    return res.render('bargraph', {
+      instituciones:instituciones
+    });
+  }
+/*
     @Get('institucion')
     async getinstitucion(@Response()res) {
       //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
       //console.log(respuesta)
-      const instituciones = await this.institucionService._repositorioUsuario.find();
+      const institucion = await this.institucionService._repositorioInstitucion.find();
       return res.render('institucion', {
-        instituciones:instituciones
+        instituciones:institucion
       });
-
-
     }
+    */
   @Get('formulario')
   async getformulario(@Response()res) {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
 
-    const formulario = await this.formularioService._repositorioUsuario.find();
+    const formularios = await this.formularioService._repositorioFormulario.find();
     return res.render('formulario', {
-      formulario:formulario
+      formularios:formularios
     });
 
   }
+
 
   @Get('norma')
   async getnorma(@Response()res) {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
 
-    const norma = await this.normaService._repositorioNorma.find();
+    const normas = await this.normaService._repositorioNorma.find();
     return res.render('norma', {
-      normas:norma
+      normas:normas
     });
 
   }
 
-  @Get('discapacidad')
+   @Get('discapacidad')
   async getdiscapacidad(@Response()res) {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
 
-    const discapacidad = await this.discapacidadService._repositorioDiscapacidad.find();
+    const discapacidades = await this.discapacidadService._repositorioDiscapacidad.find();
     return res.render('discapacidad', {
-      discapacidades:discapacidad
+      discapacidades:discapacidades
     });
 
   }
@@ -92,12 +111,47 @@ export class AppController {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
 
-    const nordis = await this.norDisService._repositorioNorDis.find();
+    const nordiss = await this.norDisService._repositorioNorDis.find();
     return res.render('nordis', {
-      nordis:nordis
+      nordiss:nordiss
     });
 
   }
 
+  @Get('pregunta')
+  async getpregunta(@Response()res) {
+    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+    //console.log(respuesta)
+
+    const preguntas = await this.preguntaService._repositorioPregunta.find();
+    return res.render('pregunta', {
+      preguntas:preguntas
+    });
+
+  }
+
+  @Get('opcion')
+  async getopcion(@Response()res) {
+    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+    //console.log(respuesta)
+
+    const opciones = await this.opcionService._repositorioOpcion.find();
+    return res.render('opcion', {
+      opciones:opciones
+    });
+
+  }
+
+  @Get('opcpre')
+  async getopcpre(@Response()res) {
+    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+    //console.log(respuesta)
+
+    const opcpres = await this.opcpreService._repositorioOpcPre.find();
+    return res.render('opcpre', {
+      opcpres:opcpres
+    });
+
+  }
 
 }

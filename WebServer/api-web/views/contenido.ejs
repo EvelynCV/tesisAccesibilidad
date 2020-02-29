@@ -84,33 +84,31 @@
 </script>
 
 <script>
+    console.log(<%- JSON.stringify(contenidos) %>)
+    var contenidos = <%- JSON.stringify(contenidos) %>
+        console.log(contenidos)
+    console.log('holaaaa')
 
-    console.log(<%- JSON.stringify(institucion) %>)
-    var institucion = <%- JSON.stringify(institucion) %>
-       console.log(institucion);
-   // console.log('holaaaa')
 
-
-    var nombreInstitucion = institucion.map(
-        function (institucion) {
-            return institucion.nomIns;
+    var idContenido = contenidos.map(
+        function (contenido) {
+            return contenido.id_con;
         }
     )
 
-
-    var valoresInstitucion = institucion.map(
-        function (institucion) {
-            return institucion.idIns;
+    var valoresFormulario = contenidos.map(
+        function (formulario) {
+            return formulario.id_for;
 
         }
     )
 
     var datos = {
-        labels : nombreInstitucion,
+        labels : idContenido,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresInstitucion
+            data : valoresFormulario
         }
         ]
     };

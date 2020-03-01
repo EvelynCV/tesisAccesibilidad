@@ -19,7 +19,7 @@ import {OpcpreService} from "./opcpre.service";
         OpcpreService
     ],
     exports: [
-       OpcpreService
+        OpcpreService
     ],
 })
 export class OpcpreModule {

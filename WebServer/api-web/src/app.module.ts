@@ -18,47 +18,51 @@ import {OpcpreModule} from "./OpcPre/opcpre.module";
 import {OpcionEntity} from "./Opcion/opcion.entity";
 import {PreguntaEntity} from "./Pregunta/pregunta.entity";
 import {OpcpreEntity} from "./OpcPre/opcpre.entity";
+import {ContenidoEntity} from "./Contenido/contenido.entity";
+import {ContenidoModule} from "./Contenido/contenido.module";
 
 
 @Module({
-  imports: [
-    InstitucionModule,
-      FormularioModule,
-      NormaModule,
-      DiscapacidadModule,
-    NordisModule,
-      OpcionModule,
-      PreguntaModule,
-      OpcpreModule,
+    imports: [
+        InstitucionModule,
+        FormularioModule,
+        NormaModule,
+        DiscapacidadModule,
+        NordisModule,
+        OpcionModule,
+        PreguntaModule,
+        OpcpreModule,
+        ContenidoModule,
 
 
-    TypeOrmModule.forRoot(
-        {
-          name: 'default', // Nombre cadena de Conex.
-          type: 'mysql',
-          host: 'localhost',
-          port: 3306,
-          username: 'root',
-          password: '',
-          database: 'bdproyecto',
-          dropSchema: false,
-          entities: [
-            InstitucionEntity,
-              FormularioEntity,
-            NormaEntity,
-             DiscapacidadEntity,
-            NordisEntity,
-              OpcionEntity,
-              PreguntaEntity,
-              OpcpreEntity,
+        TypeOrmModule.forRoot(
+            {
+                name: 'default', // Nombre cadena de Conex.
+                type: 'mysql',
+                host: 'localhost',
+                port: 3306,
+                username: 'root',
+                password: '',
+                database: 'bdproyecto',
+                dropSchema: false,
+                entities: [
+                    InstitucionEntity,
+                    FormularioEntity,
+                    NormaEntity,
+                    DiscapacidadEntity,
+                    NordisEntity,
+                    OpcionEntity,
+                    PreguntaEntity,
+                    OpcpreEntity,
+                    ContenidoEntity,
 
 
-          ],
-          synchronize: true, // Crear -> true , Conectar -> false
-        },
-    ),
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+                ],
+                synchronize: true, // Crear -> true , Conectar -> false
+            },
+        ),
+    ],
+    controllers: [AppController],
+    providers: [AppService],
 })
 export class AppModule {}

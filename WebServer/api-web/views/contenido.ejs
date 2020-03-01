@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -45,7 +44,7 @@
 <!-- CHART.JS -->
 
 <div id="canvas-container" style="width:40%;">
-    <canvas id="chart2" width="500" height="350"></canvas>
+    <canvas id="chart" width="500" height="350"></canvas>
 </div>
 
 <!-- jQuery -->
@@ -62,60 +61,36 @@
 </body>
 
 <script>
-
-
-    /*
-    setInterval(function(){
-        var newData = [
-            [instituciones],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-        ];
-
-        $.each(datos.datasets, function(i, dataset){
-            dataset.data = newData[i];
-        });
-        window.bar.update();
-    }, 5000);
-    */
-
-
-
-</script>
-
-<script>
     console.log(<%- JSON.stringify(contenidos) %>)
     var contenidos = <%- JSON.stringify(contenidos) %>
         console.log(contenidos)
     console.log('holaaaa')
 
-
-    var idContenido = contenidos.map(
+    var valoresContenidos = contenidos.map(
         function (contenido) {
             return contenido.id_con;
         }
     )
 
-    var valoresFormulario = contenidos.map(
-        function (formulario) {
-            return formulario.id_for;
-
+    var valoresNordis = contenidos.map(
+        function (nordis) {
+            return nordis.id_nordis;
         }
     )
 
     var datos = {
-        labels : idContenido,
+        labels : valoresContenidos,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresFormulario
+            data : valoresNordis
         }
         ]
     };
 
     console.log(datos)
 
-    var canvas = document.getElementById('chart2').getContext('2d');
+    var canvas = document.getElementById('chart').getContext('2d');
     window.bar = new Chart(canvas, {
         type : "bar",
         data : datos,

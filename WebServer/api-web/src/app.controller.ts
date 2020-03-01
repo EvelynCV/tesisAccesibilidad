@@ -1,8 +1,5 @@
 import { Controller, Get, Response } from '@nestjs/common';
 import { AppService } from './app.service';
-import * as Joi from '@hapi/joi';
-import {Formulario} from './Formulario/formulario';
-import {Institucion} from './Institucion/institucion';
 import {InstitucionService} from "./Institucion/institucion.service";
 import {FormularioService} from "./Formulario/formulario.service";
 import {NormaService} from "./Norma/norma.service";
@@ -11,26 +8,24 @@ import {NordisService} from "./NorDis/nordis.service";
 import {OpcionService} from "./Opcion/opcion.service";
 import {PreguntaService} from "./Pregunta/pregunta.service";
 import {OpcpreService} from "./OpcPre/opcpre.service";
+import {ContenidoService} from "./Contenido/contenido.service";
 
 @Controller('api')
 export class AppController {
   constructor(private readonly appService: AppService,
               private readonly institucionService: InstitucionService,
               private readonly formularioService: FormularioService,
-             private readonly normaService: NormaService,
+              private readonly normaService: NormaService,
               private readonly discapacidadService: DiscapacidadService,
-             private readonly norDisService:NordisService,
+              private readonly nordisService:NordisService,
               private readonly opcionService: OpcionService,
               private readonly preguntaService: PreguntaService,
-              private readonly opcpreService:OpcpreService
-
-              ) {
-
-     }
+              private readonly opcpreService:OpcpreService,
+              private readonly contenidoService:ContenidoService) {}
 
   @Get('Hola')
   getHello(): string {
-   return this.appService.getHello();
+    return this.appService.getHello();
   }
 
   @Get('prueba')
@@ -49,6 +44,7 @@ export class AppController {
   }
 
   /* funciones de ejemplo para llamar y guardar datos en la bd*/
+  /*
   @Get('bargraph')
   async getbargraph(@Response()res) {
     const respuesta = await this.institucionService._repositorioInstitucion.save({nomIns:'Prueba 1'});
@@ -57,18 +53,18 @@ export class AppController {
     return res.render('bargraph', {
       instituciones:instituciones
     });
+  }*/
+
+  @Get('institucion')
+  async getinstitucion(@Response()res) {
+    // const respuesta = await this.institucionService._repositorioInstitucion.save({nom_ins:'Prueba 1'});
+    //  console.log(respuesta)
+    const instituciones = await this.institucionService._repositorioInstitucion.find();
+    return res.render('institucion', {
+      instituciones:instituciones
+    });
   }
-/*
-    @Get('institucion')
-    async getinstitucion(@Response()res) {
-      //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-      //console.log(respuesta)
-      const institucion = await this.institucionService._repositorioInstitucion.find();
-      return res.render('institucion', {
-        instituciones:institucion
-      });
-    }
-    */
+
   @Get('formulario')
   async getformulario(@Response()res) {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
@@ -94,7 +90,7 @@ export class AppController {
 
   }
 
-   @Get('discapacidad')
+  @Get('discapacidad')
   async getdiscapacidad(@Response()res) {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
@@ -111,7 +107,7 @@ export class AppController {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
 
-    const nordiss = await this.norDisService._repositorioNorDis.find();
+    const nordiss = await this.nordisService._repositorioNorDis.find();
     return res.render('nordis', {
       nordiss:nordiss
     });
@@ -149,9 +145,20 @@ export class AppController {
 
     const opcpres = await this.opcpreService._repositorioOpcPre.find();
     return res.render('opcpre', {
-      opcpres:opcpres
+      opcpres: opcpres
     });
-
   }
 
+  @Get('contenido')
+  async getcontenido(@Response()res) {
+    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+    //console.log(respuesta)
+
+    const contenidos = await this.contenidoService._repositorioContenido.find();
+    return res.render('contenido', {
+      contenidos:contenidos
+    });
+
+
+  }
 }

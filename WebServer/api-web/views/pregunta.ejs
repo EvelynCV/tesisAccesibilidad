@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -45,7 +44,7 @@
 <!-- CHART.JS -->
 
 <div id="canvas-container" style="width:40%;">
-    <canvas id="chart2" width="500" height="350"></canvas>
+    <canvas id="chart" width="500" height="350"></canvas>
 </div>
 
 <!-- jQuery -->
@@ -62,60 +61,36 @@
 </body>
 
 <script>
-
-
-    /*
-    setInterval(function(){
-        var newData = [
-            [instituciones],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-            [getRandom(),getRandom(),getRandom(),getRandom(),getRandom()],
-        ];
-
-        $.each(datos.datasets, function(i, dataset){
-            dataset.data = newData[i];
-        });
-        window.bar.update();
-    }, 5000);
-    */
-
-
-
-</script>
-
-<script>
-    console.log(<%- JSON.stringify(formularios) %>)
-    var formularios = <%- JSON.stringify(formularios) %>
-        console.log(formularios)
+    console.log(<%- JSON.stringify(preguntas) %>)
+    var preguntas = <%- JSON.stringify(preguntas) %>
+        console.log(preguntas)
     console.log('holaaaa')
 
-
-    var idFormulario = formularios.map(
-        function (formulario) {
-            return formulario.fech_for;
+    var nombrePreguntas = preguntas.map(
+        function (pregunta) {
+            return pregunta.nom_pre;
         }
     )
 
-    var valoresFormulario = formularios.map(
-        function (formulario) {
-            return formulario.id_for;
-
+    var valoresPreguntas = preguntas.map(
+        function (pregunta) {
+            return pregunta.id_pre;
         }
     )
 
     var datos = {
-        labels : idFormulario,
+        labels : nombrePreguntas,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresFormulario
+            data : valoresPreguntas
         }
         ]
     };
 
     console.log(datos)
 
-    var canvas = document.getElementById('chart2').getContext('2d');
+    var canvas = document.getElementById('chart').getContext('2d');
     window.bar = new Chart(canvas, {
         type : "bar",
         data : datos,

@@ -66,24 +66,24 @@
         console.log(opciones)
     console.log('holaaaa')
 
-    var nombreOpcion = opciones.map(
-        function (opcion) {
-            return opcion.nom_opc;
+    var nombreNormas = opciones.map(
+        function (norma) {
+            return norma.nom_opc;
         }
     )
 
-    var valoresOpcion = opciones.map(
-        function (opcion) {
-            return opcion.id_opc;
+    var valoresNormas = opciones.map(
+        function (norma) {
+            return norma.id_opc;
         }
     )
 
     var datos = {
-        labels : nombreOpcion,
+        labels : nombreNormas,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresOpcion
+            data : valoresNormas
         }
         ]
     };

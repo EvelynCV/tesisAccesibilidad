@@ -61,14 +61,14 @@
 </body>
 
 <script>
-    console.log(<%- JSON.stringify(opciones) %>)
-    var normas = <%- JSON.stringify(opciones) %>
-        console.log(opciones)
+    console.log(<%- JSON.stringify(normas) %>)
+    var normas = <%- JSON.stringify(normas) %>
+        console.log(normas)
     console.log('holaaaa')
 
     var nombreNormas = normas.map(
         function (norma) {
-            return norma.nom_nor;
+            return norma.cod_nor;
         }
     )
 

@@ -32,7 +32,7 @@ export class InstitucionService {
         id: number,
         usuario: InstitucionEntity
     ): Promise<InstitucionEntity> {
-        usuario.idIns = id;
+        usuario.id_ins = id;
         return this._repositorioInstitucion
             .save(usuario); // UPSERT
     }

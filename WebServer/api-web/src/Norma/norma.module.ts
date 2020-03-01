@@ -8,7 +8,7 @@ import {NormaService} from "./norma.service";
         TypeOrmModule
             .forFeature([
                     NormaEntity, // Entidades a usarse dentro
-                                  // del modulo.
+                    // del modulo.
                 ],
                 'default', // Nombre de la cadena de conex.
             ),

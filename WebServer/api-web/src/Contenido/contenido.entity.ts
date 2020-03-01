@@ -1,6 +1,6 @@
 import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from 'typeorm';
 import {FormularioEntity} from "../Formulario/formulario.entity";
-import {NorDisEntity} from "../../dist/Nor_Dis/nor-dis.entity";
+import {NordisEntity} from "../NorDis/nordis.entity";
 import {OpcpreEntity} from "../OpcPre/opcpre.entity";
 
 
@@ -15,9 +15,9 @@ export class ContenidoEntity {
     @JoinColumn()
     id_for: FormularioEntity;
 
-    @OneToOne(type => NorDisEntity)
+    @OneToOne(type => NordisEntity)
     @JoinColumn()
-    id_nordis: NorDisEntity;
+    id_nordis: NordisEntity;
 
     @OneToOne(type => OpcpreEntity)
     @JoinColumn()

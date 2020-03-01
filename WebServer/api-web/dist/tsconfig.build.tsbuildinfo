@@ -2154,7 +2154,7 @@
         "signature": "7a304e38d75e8d20253e4a88a0340d65334f9787947ad939b71e9cc0a8169bb9"
       },
       "../src/nordis/nordis.entity.ts": {
-        "version": "298a5412d661f147eddd2b73165a475848f9bc99020252485e9e0137935bc5ef",
+        "version": "f6d4a4b75ec356374b38df55eb637bbb753478777cbc62293ac2e7426486a725",
         "signature": "9c109156108f631e7fc053efc110ecc20a33b2b6efe14dcdbdf7a5a87e1e4e0b"
       },
       "../src/discapacidad/discapacidad.entity.ts": {
@@ -14007,7 +14007,6 @@
       "../src/institucion/institucion.service.ts",
       "../src/formulario/formulario.entity.ts",
       "../src/formulario/formulario.service.ts",
-      "../src/nordis/nordis.entity.ts",
       "../src/discapacidad/discapacidad.entity.ts",
       "../src/norma/norma.entity.ts",
       "../src/norma/norma.service.ts",

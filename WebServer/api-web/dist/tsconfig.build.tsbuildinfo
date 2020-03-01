@@ -2138,11 +2138,11 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "../src/institucion/institucion.entity.ts": {
-        "version": "f2cdaf0ca0db63b17cd0d055ad9179f26b0fedc7292693881e967b27af32df3f",
-        "signature": "9556312674ae91d0d2b63a0029b7e4787028d76bbe64bc5d563ab3adef1a2245"
+        "version": "fdb0c5a6a44381eeb44cab67ead41c60f4b9e6e55aacb1fdba467cfdde39be77",
+        "signature": "646b4f2bc076a6cac78685947f24c4e8349e5181a782b2a209808b0a9cfa16e7"
       },
       "../src/institucion/institucion.service.ts": {
-        "version": "831b75090cf62d9306cc141f542b193ffd0375fc952107ada128577e3a61d836",
+        "version": "49457b9a6261c3e89b986f7af24fa64ee0659bedfd416f88281df6c96f08209c",
         "signature": "828b7257b11823d66c276938ea97621e8ac05c2ffa2974ebd62dba3474ccd596"
       },
       "../src/formulario/formulario.entity.ts": {
@@ -2201,9 +2201,17 @@
         "version": "73398c6b3efcf648003652532949954c0661fcb293e45d47d6f75bac0dfbf975",
         "signature": "dedd92b53f6c03465ce415671097b410cc62a45e3ffe71f68b8e90d4fc434698"
       },
+      "../src/contenido/contenido.entity.ts": {
+        "version": "5aa44dd1d4239075d06f1f0fb356907db6406be26c446b5887e070163a7df3a2",
+        "signature": "d9c93859fc3cb9c7af80ddb17fe3c289cce62d0dca5b611863e8ed0db0b43d43"
+      },
+      "../src/contenido/contenido.service.ts": {
+        "version": "732218d4b1faa0bcd1ad78fdc62a5b0a155a15f83491315501293037b96c50b1",
+        "signature": "2ad3089c4aa367ae8076d93cbef273c07085e9a79b81a99eb19ce7e3ee167ec4"
+      },
       "../src/app.controller.ts": {
-        "version": "4649209309b57b30df05cc55805ac60b37fd68a7107dafab0ab37922d2b53890",
-        "signature": "826a23af4981b6f2b798d8bfc98bd649985f47848ae18d4635384bacb93b486e"
+        "version": "87dde7fc39ed98e8d15741d8c916393bf67584d6a49004bfda3b7ca2807f0556",
+        "signature": "9735ce6a66964d5dd909a5b9790a2a6f2e14566d812051b8ecade40c79dcf71b"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -2214,7 +2222,7 @@
         "signature": "e61e5c56deeb389b9dbb9f904c86d75e89ab45de83ce3cd89d436b43c26fb74b"
       },
       "../src/norma/norma.module.ts": {
-        "version": "9308bcb157774da28e1d6ddbdb1474d1fca15688a0a2ddd8bf8ac14aba32fbe2",
+        "version": "609a5f9030b4ad03c29bbbff8360850705d5104197dea66ebd372d41c75f3eb5",
         "signature": "806989315b6e5dc67c498a3502522a6277e230a5da77402a3a6cdbdab61636a6"
       },
       "../src/discapacidad/discapacidad.module.ts": {
@@ -2234,11 +2242,15 @@
         "signature": "fd1fdb26054a214e6b9556e94a28b7e103dc8da4688e9f51fdcc3d46f00a012c"
       },
       "../src/opcpre/opcpre.module.ts": {
-        "version": "aef63df92fb81511fc6736b86f28bdece754ad9d2f2705f5c1019b4a0b5dd5a9",
+        "version": "a66d2b15d8dc357cdbbfb72158ddf1dc64bf21a821b96e39d2a1bf8fd6b8eda1",
         "signature": "63940004b17ee63d26af5abd5fb694329c92d271f618676eae3775a59a68cdff"
       },
+      "../src/contenido/contenido.module.ts": {
+        "version": "fcd25b245091a2f6bc775efd754bdeb2d6f4fb25169a5bb53c50e975aba528a2",
+        "signature": "0cd18872b6f4ffb883d6c685246471183a09981cdc7b80616597e44fb472cd26"
+      },
       "../src/app.module.ts": {
-        "version": "b58bfa4f13c101b1b2c52267335cea9b33aafecfccd37a9be67969e69384b922",
+        "version": "99a6b868126896333dc4898c7b7f0133eab7a9e7d1e3f8fbfdd551ac9ed2200d",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2476,38 +2488,6 @@
       "../src/main.ts": {
         "version": "1db31582ac2d72bb7ce6784c489c13daa9262ea1700362c32bc9a9bd2bae4e13",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "./normas/norma.entity.d.ts": {
-        "version": "f648819d1f144c570c557564647d32a9c12905553ea3224d309a39395aa5fa2f",
-        "signature": "f648819d1f144c570c557564647d32a9c12905553ea3224d309a39395aa5fa2f"
-      },
-      "./norma/norma.entity.d.ts": {
-        "version": "48feff21b18834c68110ad2e859a87b400510d0641ce5cedc1fac5d7cf9927fa",
-        "signature": "48feff21b18834c68110ad2e859a87b400510d0641ce5cedc1fac5d7cf9927fa"
-      },
-      "./nordis/nordis.entity.d.ts": {
-        "version": "9c109156108f631e7fc053efc110ecc20a33b2b6efe14dcdbdf7a5a87e1e4e0b",
-        "signature": "9c109156108f631e7fc053efc110ecc20a33b2b6efe14dcdbdf7a5a87e1e4e0b"
-      },
-      "./discapacidad/discapacidad.entity.d.ts": {
-        "version": "3c3d771fd7f413be74d9e84b9a15f19195b30e0bc34294c48c84e55debadf2a9",
-        "signature": "3c3d771fd7f413be74d9e84b9a15f19195b30e0bc34294c48c84e55debadf2a9"
-      },
-      "./nor_dis/nor-dis.entity.d.ts": {
-        "version": "030af2b13d08bbed8ef0e776720d12b003bb38b0c4da4aacab62a316e0d0d87d",
-        "signature": "030af2b13d08bbed8ef0e776720d12b003bb38b0c4da4aacab62a316e0d0d87d"
-      },
-      "../src/contenido/contenido.entity.ts": {
-        "version": "87d25c8afa7d27f1a57350606c43e9dec4d7a178be0c4f55368a00b9ae120d26",
-        "signature": "91ea6d9eb57154b52825272770ca0a0d1cfdf8b6ea9fcea401c929bb81715cf1"
-      },
-      "../src/contenido/contenido.service.ts": {
-        "version": "732218d4b1faa0bcd1ad78fdc62a5b0a155a15f83491315501293037b96c50b1",
-        "signature": "2ad3089c4aa367ae8076d93cbef273c07085e9a79b81a99eb19ce7e3ee167ec4"
-      },
-      "../src/contenido/contenido.module.ts": {
-        "version": "fcd25b245091a2f6bc775efd754bdeb2d6f4fb25169a5bb53c50e975aba528a2",
-        "signature": "0cd18872b6f4ffb883d6c685246471183a09981cdc7b80616597e44fb472cd26"
       },
       "../src/contenido/contenido.ts": {
         "version": "c99c6a12a5de7540ead29afe293b4cb01c07d38d52b3ab2781d871f99d12855f",
@@ -7271,11 +7251,29 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/contenido/contenido.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/formulario/formulario.entity.ts",
+        "../src/nordis/nordis.entity.ts",
+        "../src/opcpre/opcpre.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/contenido/contenido.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/contenido/contenido.entity.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.service.ts",
-        "../src/formulario/formulario.ts",
-        "../src/institucion/institucion.ts",
         "../src/institucion/institucion.service.ts",
         "../src/formulario/formulario.service.ts",
         "../src/norma/norma.service.ts",
@@ -7284,6 +7282,7 @@
         "../src/opcion/opcion.service.ts",
         "../src/pregunta/pregunta.service.ts",
         "../src/opcpre/opcpre.service.ts",
+        "../src/contenido/contenido.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7369,6 +7368,16 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/contenido/contenido.module.ts": [
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/contenido/contenido.entity.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/contenido/contenido.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -7390,6 +7399,8 @@
         "../src/opcion/opcion.entity.ts",
         "../src/pregunta/pregunta.entity.ts",
         "../src/opcpre/opcpre.entity.ts",
+        "../src/contenido/contenido.entity.ts",
+        "../src/contenido/contenido.module.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7897,73 +7908,6 @@
         "../node_modules/@nestjs/platform-express/index.d.ts",
         "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./normas/norma.entity.d.ts": [
-        "./nor_dis/nor-dis.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./norma/norma.entity.d.ts": [
-        "./nordis/nordis.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./nordis/nordis.entity.d.ts": [
-        "./norma/norma.entity.d.ts",
-        "./discapacidad/discapacidad.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./discapacidad/discapacidad.entity.d.ts": [
-        "./nordis/nordis.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./nor_dis/nor-dis.entity.d.ts": [
-        "./normas/norma.entity.d.ts",
-        "./discapacidad/discapacidad.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/contenido/contenido.entity.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/formulario/formulario.entity.ts",
-        "./nor_dis/nor-dis.entity.d.ts",
-        "../src/opcpre/opcpre.entity.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/contenido/contenido.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/contenido/contenido.entity.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/contenido/contenido.module.ts": [
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/contenido/contenido.entity.ts",
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/contenido/contenido.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -12708,6 +12652,15 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/opcpre/opcpre.entity.ts"
       ],
+      "../src/contenido/contenido.entity.ts": [
+        "../src/formulario/formulario.entity.ts",
+        "../src/nordis/nordis.entity.ts",
+        "../src/opcpre/opcpre.entity.ts"
+      ],
+      "../src/contenido/contenido.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/contenido/contenido.entity.ts"
+      ],
       "../src/app.controller.ts": [
         "../src/app.service.ts",
         "../src/institucion/institucion.service.ts",
@@ -12717,7 +12670,8 @@
         "../src/nordis/nordis.service.ts",
         "../src/opcion/opcion.service.ts",
         "../src/pregunta/pregunta.service.ts",
-        "../src/opcpre/opcpre.service.ts"
+        "../src/opcpre/opcpre.service.ts",
+        "../src/contenido/contenido.service.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -13214,52 +13168,6 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./normas/norma.entity.d.ts": [
-        "./nor_dis/nor-dis.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./norma/norma.entity.d.ts": [
-        "./nordis/nordis.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./nordis/nordis.entity.d.ts": [
-        "./norma/norma.entity.d.ts",
-        "./discapacidad/discapacidad.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./discapacidad/discapacidad.entity.d.ts": [
-        "./nordis/nordis.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./nor_dis/nor-dis.entity.d.ts": [
-        "./normas/norma.entity.d.ts",
-        "./discapacidad/discapacidad.entity.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/contenido/contenido.entity.ts": [
-        "../src/formulario/formulario.entity.ts",
-        "./nor_dis/nor-dis.entity.d.ts",
-        "../src/opcpre/opcpre.entity.ts"
-      ],
-      "../src/contenido/contenido.service.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/contenido/contenido.entity.ts"
       ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -14003,10 +13911,6 @@
       "../node_modules/@nestjs/typeorm/dist/typeorm.module.d.ts",
       "../node_modules/@nestjs/typeorm/dist/index.d.ts",
       "../node_modules/@nestjs/typeorm/index.d.ts",
-      "../src/institucion/institucion.entity.ts",
-      "../src/institucion/institucion.service.ts",
-      "../src/formulario/formulario.entity.ts",
-      "../src/formulario/formulario.service.ts",
       "../src/discapacidad/discapacidad.entity.ts",
       "../src/norma/norma.entity.ts",
       "../src/norma/norma.service.ts",
@@ -14018,14 +13922,10 @@
       "../src/opcion/opcion.service.ts",
       "../src/pregunta/pregunta.service.ts",
       "../src/opcpre/opcpre.service.ts",
-      "../src/institucion/institucion.module.ts",
-      "../src/formulario/formulario.module.ts",
-      "../src/norma/norma.module.ts",
       "../src/discapacidad/discapacidad.module.ts",
       "../src/nordis/nordis.module.ts",
       "../src/opcion/opcion.module.ts",
       "../src/pregunta/pregunta.module.ts",
-      "../src/opcpre/opcpre.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -14084,7 +13984,6 @@
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
-      "../src/main.ts",
       "../src/contenido/contenido.ts",
       "../src/discapacidad/discapacidad.ts",
       "../src/nordis/nordis.ts",
@@ -14120,7 +14019,22 @@
       "../node_modules/@types/webpack-sources/index.d.ts",
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
-      "../node_modules/@types/yargs/index.d.ts"
+      "../node_modules/@types/yargs/index.d.ts",
+      "../src/institucion/institucion.entity.ts",
+      "../src/institucion/institucion.module.ts",
+      "../src/formulario/formulario.entity.ts",
+      "../src/institucion/institucion.service.ts",
+      "../src/contenido/contenido.entity.ts",
+      "../src/contenido/contenido.module.ts",
+      "../src/contenido/contenido.service.ts",
+      "../src/app.controller.ts",
+      "../src/norma/norma.module.ts",
+      "../src/opcpre/opcpre.module.ts",
+      "../src/formulario/formulario.service.ts",
+      "../src/nordis/nordis.entity.ts",
+      "../src/formulario/formulario.module.ts",
+      "../src/app.module.ts",
+      "../src/main.ts"
     ]
   },
   "version": "3.7.4"

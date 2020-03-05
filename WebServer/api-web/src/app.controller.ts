@@ -43,6 +43,11 @@ export class AppController {
     return res.render('informacion');
   }
 
+  @Get('index')
+  getIndex(@Response()res) {
+    return res.render('index');
+  }
+
   /* funciones de ejemplo para llamar y guardar datos en la bd*/
   /*
   @Get('bargraph')

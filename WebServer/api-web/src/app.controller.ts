@@ -28,14 +28,14 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('prueba')
-  getPrueba(@Response()res) {
-    return res.render('prueba');
+  @Get('inicio')
+  getInicio(@Response()res) {
+    return res.render('inicio');
   }
 
-  @Get('HolaMundo')
-  getHolaMundo(@Response()res) {
-    return res.render('HolaMundo');
+  @Get('acerca')
+  getAcerca(@Response()res) {
+    return res.render('acerca');
   }
 
   @Get('informacion')

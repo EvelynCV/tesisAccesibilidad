@@ -48,6 +48,11 @@ export class AppController {
     return res.render('index');
   }
 
+  @Get('2dmap')
+  get2dmap(@Response()res) {
+    return res.render('2dmap');
+  }
+
   /* funciones de ejemplo para llamar y guardar datos en la bd*/
   /*
   @Get('bargraph')

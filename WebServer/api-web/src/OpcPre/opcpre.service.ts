@@ -1,7 +1,8 @@
-import {Injectable} from "@nestjs/common";
+import {Injectable, Post} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
 import {OpcpreEntity} from "./opcpre.entity";
-import {DeleteResult, Repository} from "typeorm";
+import {DeleteResult, Repository, Like, MoreThan, Between} from "typeorm";
+
 
 @Injectable()
 export class OpcpreService {
@@ -34,5 +35,60 @@ export class OpcpreService {
         return this._repositorioOpcPre
             .save(usuario); // UPSERT
     }
+
+
+
+
+
+
+
+
+
+
+    buscar2(
+        where: any = {},
+        skip: number = 0,
+        take: number = 10,
+        order: any = {
+            id: 'DESC',
+
+        }
+    ): Promise<OpcpreEntity[]> {
+
+      // id sea igual a x
+        const consultaWhereIgual = {
+            id_pre: 4
+        };
+
+        return this._repositorioOpcPre
+            .find({
+                where: where,
+                skip: skip,
+                take: take,
+                order: order,
+            });
+    }
+
+
+
+
+
+
+
+
+
+    buscar(): Promise<OpcpreEntity[]> {
+
+        // id sea igual a x
+        const consultaWhereIgual = {
+            id_opcpre: 5
+        };
+
+        return this._repositorioOpcPre
+            .find({
+
+            });
+    }
+
 
 }

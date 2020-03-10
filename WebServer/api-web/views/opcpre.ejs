@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -105,13 +106,24 @@
             return opcion.id_opcpre;
         }
     )
+    var valor2 = opcpres.map(
+        function (valor2) {
+            return valor2.buscar2();
+        }
+    )
+    var valor = opcpres.map(
+        function (valor) {
+            return valor.buscar();
+        }
+    )
+
 
     var datos = {
-        labels : valoresOpcpres,
+        labels : valor2,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresOpciones
+            data : valor
         }
         ]
     };

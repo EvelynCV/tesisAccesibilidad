@@ -43,7 +43,7 @@ import {ContenidoModule} from "./Contenido/contenido.module";
                 port: 3306,
                 username: 'root',
                 password: '',
-                database: 'bdproyecto',
+                database: 'bdproyectoinfo',
                 dropSchema: false,
                 entities: [
                     InstitucionEntity,

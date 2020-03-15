@@ -2202,7 +2202,7 @@
         "signature": "b2d98b2dad71c71fede4a27e6bf45f0dba942343c9e47afea06cc9dc5e948d93"
       },
       "../src/contenido/contenido.entity.ts": {
-        "version": "5aa44dd1d4239075d06f1f0fb356907db6406be26c446b5887e070163a7df3a2",
+        "version": "3e26de59992d2a171e55f4125ed9127185c92b25be0cfeef4f7cab76a9a523d0",
         "signature": "d9c93859fc3cb9c7af80ddb17fe3c289cce62d0dca5b611863e8ed0db0b43d43"
       },
       "../src/contenido/contenido.service.ts": {
@@ -2250,7 +2250,7 @@
         "signature": "0cd18872b6f4ffb883d6c685246471183a09981cdc7b80616597e44fb472cd26"
       },
       "../src/app.module.ts": {
-        "version": "99a6b868126896333dc4898c7b7f0133eab7a9e7d1e3f8fbfdd551ac9ed2200d",
+        "version": "56ead4dbd7bc3f4d712545518ae70d40e305e9a56d6f0153446347bca48563a7",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -13926,8 +13926,9 @@
       "../src/opcion/opcion.entity.ts",
       "../src/opcion/opcion.service.ts",
       "../src/pregunta/pregunta.service.ts",
-      "../src/contenido/contenido.entity.ts",
+      "../src/opcpre/opcpre.service.ts",
       "../src/contenido/contenido.service.ts",
+      "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -13935,7 +13936,9 @@
       "../src/nordis/nordis.module.ts",
       "../src/opcion/opcion.module.ts",
       "../src/pregunta/pregunta.module.ts",
+      "../src/opcpre/opcpre.module.ts",
       "../src/contenido/contenido.module.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -13994,6 +13997,7 @@
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
+      "../src/main.ts",
       "../src/contenido/contenido.ts",
       "../src/discapacidad/discapacidad.ts",
       "../src/nordis/nordis.ts",
@@ -14030,11 +14034,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/opcpre/opcpre.service.ts",
-      "../src/opcpre/opcpre.module.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts",
-      "../src/main.ts"
+      "../src/contenido/contenido.entity.ts"
     ]
   },
   "version": "3.7.4"

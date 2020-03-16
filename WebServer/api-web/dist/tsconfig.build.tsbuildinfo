@@ -2206,8 +2206,8 @@
         "signature": "d9c93859fc3cb9c7af80ddb17fe3c289cce62d0dca5b611863e8ed0db0b43d43"
       },
       "../src/contenido/contenido.service.ts": {
-        "version": "732218d4b1faa0bcd1ad78fdc62a5b0a155a15f83491315501293037b96c50b1",
-        "signature": "2ad3089c4aa367ae8076d93cbef273c07085e9a79b81a99eb19ce7e3ee167ec4"
+        "version": "68ea699e58f40918dbf7a84f97aac3e016f7922abca82472a8b142d43157be0a",
+        "signature": "303d2ba22e6d0ecc352f961cd8077bc06d963c1cb90dbe6f0aeb1f7b4e8f205d"
       },
       "../src/app.controller.ts": {
         "version": "21d14a3335db626018c73240312071719113986a0ea0715e8a176ff683d1f0f3",
@@ -13927,7 +13927,7 @@
       "../src/opcion/opcion.service.ts",
       "../src/pregunta/pregunta.service.ts",
       "../src/opcpre/opcpre.service.ts",
-      "../src/contenido/contenido.service.ts",
+      "../src/contenido/contenido.entity.ts",
       "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
@@ -14034,7 +14034,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/contenido/contenido.entity.ts"
+      "../src/contenido/contenido.service.ts"
     ]
   },
   "version": "3.7.4"

@@ -121,13 +121,24 @@
             return nordis.id_nordis;
         }
     )
+//obtencion de data seleccionada
+    const conRepo = new ContenidoService ();
+
+    var consulta = contenidos.map(
+    app.get('/customer/:id', (req, res) => {
+        conRepo.obtener(req.parameter.id_for, req.parameter.id_opcpre).then((resultado) => res.send(resultado));
+        return res;
+    }))
+//fin -- revisar
+
+
 
     var datos = {
-        labels : valoresContenidos,
+        labels : valoresNordis,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresNordis
+            data : valoresContenidos
         }
         ]
     };

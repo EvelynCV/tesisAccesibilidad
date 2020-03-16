@@ -1,7 +1,7 @@
-import {Injectable} from "@nestjs/common";
+import {Injectable, Post} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
 import {ContenidoEntity} from "./contenido.entity";
-import {DeleteResult, Repository} from "typeorm";
+import {DeleteResult, Repository, Between, MoreThan, getManager} from "typeorm";
 
 @Injectable()
 export class ContenidoService {
@@ -34,4 +34,18 @@ export class ContenidoService {
         return this._repositorioContenido
             .save(usuario); // UPSERT
     }
+
+    obtener(id_for: number,
+            id_opcpre: number): Promise<ContenidoEntity> {
+        return getManager().getRepository(ContenidoEntity).findOne({
+            where: {
+                id_for:id_for=1,
+                id_opcpre: id_opcpre % 2 !=0
+
+            }
+        });
+
+    }
+
+
 }

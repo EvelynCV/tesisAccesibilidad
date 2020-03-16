@@ -125,7 +125,7 @@
     const conRepo = new ContenidoService ();
 
     var consulta = contenidos.map(
-    app.get('/customer/:id', (req, res) => {
+    app.get( (req, res) => {
         conRepo.obtener(req.parameter.id_for, req.parameter.id_opcpre).then((resultado) => res.send(resultado));
         return res;
     }))
@@ -134,11 +134,11 @@
 
 
     var datos = {
-        labels : valoresNordis,
+        labels : valoresContenidos,
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresContenidos
+            data : consulta
         }
         ]
     };

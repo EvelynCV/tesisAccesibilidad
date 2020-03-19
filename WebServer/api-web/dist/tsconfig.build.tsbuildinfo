@@ -2206,12 +2206,12 @@
         "signature": "d9c93859fc3cb9c7af80ddb17fe3c289cce62d0dca5b611863e8ed0db0b43d43"
       },
       "../src/contenido/contenido.service.ts": {
-        "version": "d418755ee462613868516e1f89db5375d7c8a1ceabf74d58ce2f7288cd4c9261",
-        "signature": "303d2ba22e6d0ecc352f961cd8077bc06d963c1cb90dbe6f0aeb1f7b4e8f205d"
+        "version": "6cc4a5313bdf563999eef529bc4246fa2d2a162211ca661a8dd60eb68480018f",
+        "signature": "02b4260ed606305ee6a3bec64768da71acbadb4a2eb37cc846d6375be3382aeb"
       },
       "../src/app.controller.ts": {
-        "version": "21d14a3335db626018c73240312071719113986a0ea0715e8a176ff683d1f0f3",
-        "signature": "6bb9b21a51761950a32a07bff5906fd37e81580153c99f73208f37721fbf194a"
+        "version": "d9825b1a0b7af5fee49e50bedb0ff93d95be83d8bbf307a478aa3dc5a1a34dff",
+        "signature": "6d1c178b34e7fe7d355763810e9441067df594fa8d2fcf5ab0210511c9ad34ae"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -2246,7 +2246,7 @@
         "signature": "63940004b17ee63d26af5abd5fb694329c92d271f618676eae3775a59a68cdff"
       },
       "../src/contenido/contenido.module.ts": {
-        "version": "fcd25b245091a2f6bc775efd754bdeb2d6f4fb25169a5bb53c50e975aba528a2",
+        "version": "f30388c5b8df7fe75f8fbb9d505e5b3b185a5a82faa38264fed06b87b6eaffbe",
         "signature": "0cd18872b6f4ffb883d6c685246471183a09981cdc7b80616597e44fb472cd26"
       },
       "../src/app.module.ts": {
@@ -2488,6 +2488,10 @@
       "../src/main.ts": {
         "version": "be6225ef08310b97a1d5c99c4ea4c0591f95926c61bf701b36268828d92effd9",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "../src/contenido/contenido.controller.ts": {
+        "version": "804e8400ec3eca5b689d04e2b6d47168c618b46bb70cc80cd6d4dc9ec7f8bef2",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "../src/contenido/contenido.ts": {
         "version": "c99c6a12a5de7540ead29afe293b4cb01c07d38d52b3ab2781d871f99d12855f",
@@ -7913,6 +7917,12 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/contenido/contenido.controller.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/contenido/contenido.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -12662,6 +12672,7 @@
         "../src/contenido/contenido.entity.ts"
       ],
       "../src/app.controller.ts": [
+        "../src/contenido/contenido.entity.ts",
         "../src/app.service.ts",
         "../src/institucion/institucion.service.ts",
         "../src/formulario/formulario.service.ts",
@@ -13654,6 +13665,7 @@
       "../node_modules/@nestjs/common/index.d.ts",
       "../src/formulario/formulario.ts",
       "../src/institucion/institucion.ts",
+      "../src/app.service.ts",
       "../node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts",
       "../node_modules/typeorm/schema-builder/table/tablecolumn.d.ts",
       "../node_modules/typeorm/common/objectliteral.d.ts",
@@ -13927,7 +13939,6 @@
       "../src/pregunta/pregunta.service.ts",
       "../src/opcpre/opcpre.service.ts",
       "../src/contenido/contenido.entity.ts",
-      "../src/contenido/contenido.service.ts",
       "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
@@ -13998,6 +14009,7 @@
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
       "../src/main.ts",
+      "../src/contenido/contenido.controller.ts",
       "../src/contenido/contenido.ts",
       "../src/discapacidad/discapacidad.ts",
       "../src/nordis/nordis.ts",
@@ -14034,7 +14046,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.service.ts"
+      "../src/contenido/contenido.service.ts"
     ]
   },
   "version": "3.7.4"

@@ -112,23 +112,23 @@
 
     var valoresContenidos = contenidos.map(
         function (contenido) {
-            return contenido.id_con;
+            return contenido.id_for;
         }
     )
 
     var valoresNordis = contenidos.map(
         function (nordis) {
-            return nordis.id_nordis;
+            return nordis.id_opcpre;
         }
     )
 //obtencion de data seleccionada
-    const conRepo = new ContenidoService ();
+/*    const conRepo = new ContenidoService ();
 
     var consulta = contenidos.map(
     app.get( (req, res) => {
         conRepo.obtener(req.parameter.id_for, req.parameter.id_opcpre).then((resultado) => res.send(resultado));
         return res;
-    }))
+    }))*/
 //fin -- revisar
 
 
@@ -138,7 +138,7 @@
         datasets : [{
             label : "datos 1",
             backgroundColor : "rgba(220,220,220,0.5)",
-            data : valoresNordis
+            data :valoresNordis
         }
         ]
     };

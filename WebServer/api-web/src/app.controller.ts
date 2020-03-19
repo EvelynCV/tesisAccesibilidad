@@ -1,4 +1,4 @@
-import { Controller, Get, Response } from '@nestjs/common';
+import {Controller, Get, Param, Response} from '@nestjs/common';
 import { AppService } from './app.service';
 import {InstitucionService} from "./Institucion/institucion.service";
 import {FormularioService} from "./Formulario/formulario.service";
@@ -158,7 +158,7 @@ export class AppController {
       opcpres: opcpres
     });
   }
-
+/*
   @Get('contenido')
   async getcontenido(@Response()res) {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
@@ -168,7 +168,23 @@ export class AppController {
     return res.render('contenido', {
       contenidos:contenidos
     });
+  }
+*/
+/*
+  @Get('contenido')
+  get(@Param() params) {
+    return this.contenidoService.obtener(params.id_opcpre);
+  }
+*/
 
+  @Get('contenido')
+  async getcontenido(@Param()params) {
+    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+    //console.log(respuesta)
+
+    const contenidos = await this.contenidoService._repositorioContenido.find();
+    return this.contenidoService.buscar(params.id_for);
 
   }
+
 }

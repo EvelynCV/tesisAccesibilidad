@@ -46,6 +46,13 @@ export class ContenidoService {
         });
 
     }
+/*
 
+    getUser(_id: number): Promise<User[]> {
+        return await this.usersRepository.find({
+            select: ["fullName", "birthday", "isActive"],
+            where: [{ "id": _id }]
+        });
+    }*/
 
 }

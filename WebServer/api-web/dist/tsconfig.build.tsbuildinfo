@@ -1110,8 +1110,8 @@
         "signature": "411428308c4ca2504eed6980784bd90818b007fcc99ec8acb9ff32abca870ff4"
       },
       "../src/app.service.ts": {
-        "version": "aface4295f95ebb92c835114ab388090365506d27e04b832fca13247594e3981",
-        "signature": "cb651e21f2bfec1893dfff8b578ac4b03d24bdcd4b693bfaa2ccc3d4f2a5b351"
+        "version": "e74834b925074c28981376361f63cd11a13e476ddb7620fda7d6aeb35bd275f4",
+        "signature": "d8f4cb0109c1b399d657807fd6af504d74a9300325e0fc915abdbf658b464a97"
       },
       "../node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts": {
         "version": "222ebf19b1260582fd2023a65c5b7da77f730021f05afb9c4ead4b0b339a8c98",
@@ -2206,7 +2206,7 @@
         "signature": "d9c93859fc3cb9c7af80ddb17fe3c289cce62d0dca5b611863e8ed0db0b43d43"
       },
       "../src/contenido/contenido.service.ts": {
-        "version": "68ea699e58f40918dbf7a84f97aac3e016f7922abca82472a8b142d43157be0a",
+        "version": "d418755ee462613868516e1f89db5375d7c8a1ceabf74d58ce2f7288cd4c9261",
         "signature": "303d2ba22e6d0ecc352f961cd8077bc06d963c1cb90dbe6f0aeb1f7b4e8f205d"
       },
       "../src/app.controller.ts": {
@@ -13654,7 +13654,6 @@
       "../node_modules/@nestjs/common/index.d.ts",
       "../src/formulario/formulario.ts",
       "../src/institucion/institucion.ts",
-      "../src/app.service.ts",
       "../node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts",
       "../node_modules/typeorm/schema-builder/table/tablecolumn.d.ts",
       "../node_modules/typeorm/common/objectliteral.d.ts",
@@ -13928,6 +13927,7 @@
       "../src/pregunta/pregunta.service.ts",
       "../src/opcpre/opcpre.service.ts",
       "../src/contenido/contenido.entity.ts",
+      "../src/contenido/contenido.service.ts",
       "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
@@ -14034,7 +14034,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/contenido/contenido.service.ts"
+      "../src/app.service.ts"
     ]
   },
   "version": "3.7.4"

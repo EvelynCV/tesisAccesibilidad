@@ -1,4 +1,4 @@
-import {Controller, Get, Param, Response} from '@nestjs/common';
+import {Controller, Get, Param, Query, Response} from '@nestjs/common';
 import { AppService } from './app.service';
 import {InstitucionService} from "./Institucion/institucion.service";
 import {FormularioService} from "./Formulario/formulario.service";
@@ -9,6 +9,7 @@ import {OpcionService} from "./Opcion/opcion.service";
 import {PreguntaService} from "./Pregunta/pregunta.service";
 import {OpcpreService} from "./OpcPre/opcpre.service";
 import {ContenidoService} from "./Contenido/contenido.service";
+import {ContenidoEntity} from "./Contenido/contenido.entity";
 
 @Controller('api')
 export class AppController {
@@ -183,8 +184,7 @@ export class AppController {
     //console.log(respuesta)
 
     const contenidos = await this.contenidoService._repositorioContenido.find();
-    return this.contenidoService.buscar(params.id_for);
+    return this.contenidoService.buscar();
 
   }
-
 }

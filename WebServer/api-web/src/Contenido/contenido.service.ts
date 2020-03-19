@@ -34,7 +34,7 @@ export class ContenidoService {
         return this._repositorioContenido
             .save(usuario); // UPSERT
     }
-/*
+
     obtener(id_for: number,
             id_opcpre: number
             ): Promise<ContenidoEntity> {
@@ -47,7 +47,7 @@ export class ContenidoService {
         });
 
     }
-/*
+
 /*
     getUser(_id: number): Promise<User[]> {
         return await this.usersRepository.find({
@@ -70,13 +70,13 @@ export class ContenidoService {
             take: number = 20,
             order: any = {}): Promise<ContenidoEntity[]> {
 /*
-        const photosSums = [ getRepository(ContenidoEntity)
+        const cont = [ getRepository(ContenidoEntity)
             .createQueryBuilder("contenido")
             .select("contenido.id_for")
             .where("contenido.id_for = :id_for", { id_for: 1 })
             .getOne()];
 */
-
+/*
         // Exactamente el nombre o Exactamente la cedula
         const consultaWhere = [
             {
@@ -86,13 +86,15 @@ export class ContenidoService {
                 id_opcpre: ''
             }
         ];
-
+*/
         return this._repositorioContenido.find({
             where: where,
             skip: skip,
             take: take,
             order: order,
         });
+
+
     }
 
 }

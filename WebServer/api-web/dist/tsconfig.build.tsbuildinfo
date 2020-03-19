@@ -2206,12 +2206,12 @@
         "signature": "d9c93859fc3cb9c7af80ddb17fe3c289cce62d0dca5b611863e8ed0db0b43d43"
       },
       "../src/contenido/contenido.service.ts": {
-        "version": "6cc4a5313bdf563999eef529bc4246fa2d2a162211ca661a8dd60eb68480018f",
-        "signature": "02b4260ed606305ee6a3bec64768da71acbadb4a2eb37cc846d6375be3382aeb"
+        "version": "0e18d343b22d9ff8f4450b2c54613e832ba75404a684593a8bbbd4d5825e9ba0",
+        "signature": "c2edc7a2aebd7c899a6b709a632a1e5eaa0eeb2e089e4dfa0ef2d1b29e7a9e93"
       },
       "../src/app.controller.ts": {
-        "version": "d9825b1a0b7af5fee49e50bedb0ff93d95be83d8bbf307a478aa3dc5a1a34dff",
-        "signature": "6d1c178b34e7fe7d355763810e9441067df594fa8d2fcf5ab0210511c9ad34ae"
+        "version": "1a141bb914d7da3d59f93e9e6fb08c76477bff3cee68adefcfd014a11b7dd4b0",
+        "signature": "88392a5fb6deffa01bba2466902ca8715906ec43a099581b0b72021a1a7008ff"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -7287,6 +7287,7 @@
         "../src/pregunta/pregunta.service.ts",
         "../src/opcpre/opcpre.service.ts",
         "../src/contenido/contenido.service.ts",
+        "../src/contenido/contenido.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -12672,7 +12673,6 @@
         "../src/contenido/contenido.entity.ts"
       ],
       "../src/app.controller.ts": [
-        "../src/contenido/contenido.entity.ts",
         "../src/app.service.ts",
         "../src/institucion/institucion.service.ts",
         "../src/formulario/formulario.service.ts",
@@ -12682,7 +12682,8 @@
         "../src/opcion/opcion.service.ts",
         "../src/pregunta/pregunta.service.ts",
         "../src/opcpre/opcpre.service.ts",
-        "../src/contenido/contenido.service.ts"
+        "../src/contenido/contenido.service.ts",
+        "../src/contenido/contenido.entity.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -13939,7 +13940,7 @@
       "../src/pregunta/pregunta.service.ts",
       "../src/opcpre/opcpre.service.ts",
       "../src/contenido/contenido.entity.ts",
-      "../src/app.controller.ts",
+      "../src/contenido/contenido.service.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -13949,7 +13950,6 @@
       "../src/pregunta/pregunta.module.ts",
       "../src/opcpre/opcpre.module.ts",
       "../src/contenido/contenido.module.ts",
-      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -14046,7 +14046,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/contenido/contenido.service.ts"
+      "../src/app.controller.ts",
+      "../src/app.module.ts"
     ]
   },
   "version": "3.7.4"

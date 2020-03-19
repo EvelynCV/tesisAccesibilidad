@@ -94,7 +94,6 @@ export class ContenidoService {
             order: order,
         });
 
-
     }
 
 }

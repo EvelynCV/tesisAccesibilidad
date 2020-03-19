@@ -106,7 +106,7 @@ export class AppController {
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
 
-    const discapacidades = await this.discapacidadService._repositorioDiscapacidad.find();
+    const discapacidades = await this.contenidoService.buscar()
     return res.render('discapacidad', {
       discapacidades:discapacidades
     });
@@ -179,12 +179,56 @@ export class AppController {
 */
 
   @Get('contenido')
-  async getcontenido(@Param()params) {
+  async getcontenido(
+      @Param() params,
+      @Query() query,
+      @Response() res
+  ) {
+    console.log(query);
+
     //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
     //console.log(respuesta)
+    const id_conNumber = Number(query.id_con);
+    let consulta:any = {};
+
+    if(id_conNumber){
+      consulta.id_con = id_conNumber;
+    }
+    console.log(consulta);
 
     const contenidos = await this.contenidoService._repositorioContenido.find();
-    return this.contenidoService.buscar();
+
+    const contenidoFiltrado = await this.contenidoService._repositorioContenido.find({
+      where:consulta
+    });
+    console.log(contenidos);
+    // return this.contenidoService.buscar();
+    return res.render('contenido', {
+      contenidos:contenidos,
+      contenidoFiltrado:contenidoFiltrado
+    });
 
   }
 }
+
+
+
+
+
+
+// Parametros HTTP
+
+// Query (consulta)
+
+// http://localhost:3000/api/vista?nombre=adrian&tipoReporte=vertical
+
+// Body
+
+// Params
+
+
+// servidor   -- HTTP -- cliente
+
+
+
+

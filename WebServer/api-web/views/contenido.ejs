@@ -85,6 +85,36 @@
 -->
 
 
+
+<h1>ejemplo formulario</h1>
+
+<% const usuario = {nombre:'adrian',apellido:'eguez'} %>
+
+<% const arregloNumeros = [1,2,3,4,5] %>
+
+<ul>
+    <% for(var i = 0; i< arregloNumeros.length; i++){ %>
+    <li> <%= arregloNumeros[i] %> </li>
+    <% } %>
+</ul>
+
+<p><%= usuario.nombre %> - <%= usuario.apellido %></p>
+
+<form action="/api/contenido">
+    <label for="id_con">Seleccionar id CON</label>
+    <select name="pepito" id="id_con">
+        <option value="">Todos</option>
+        <% for(var i = 0; i< contenidos.length; i++){ %>
+            <option value="<%= contenidos[i].id_con %>"> Nombre: <%= contenidos[i].id_con %> </option>
+        <% } %>
+
+    </select>
+    <button type="submit">filtrar por id con</button>
+</form>
+
+<h1>contenido filtrado</h1>
+<p><%= contenidoFiltrado[0].id_con %></p>
+
 <!-- CHART.JS -->
 
 <div id="canvas-container" style="width:40%;">

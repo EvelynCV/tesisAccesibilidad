@@ -2210,7 +2210,7 @@
         "signature": "c2edc7a2aebd7c899a6b709a632a1e5eaa0eeb2e089e4dfa0ef2d1b29e7a9e93"
       },
       "../src/app.controller.ts": {
-        "version": "8b3ce320fd52014901f7b53f9c0c21fd5d23370028132232a77ae1454789630e",
+        "version": "f92777ebc746222fb470523fe4cf3893fd2b4e3b7b4a9d6a73e2af9685a1e816",
         "signature": "fc60c58c6f2cc1f1ca3eb95977228e11892de98eb2f748500dc8cdd0f0c18733"
       },
       "../src/institucion/institucion.module.ts": {

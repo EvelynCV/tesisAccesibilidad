@@ -16,7 +16,14 @@
 
 <body>
 <!-- Cabecera -->
-<div class="text-black-50 text-center  " style="background-image: url(https://cdn.pixabay.com/photo/2017/08/08/21/31/skyscrapers-2612766__340.jpg); background-size: cover; width: auto;height: 100vh; display: flex; justify-content: center; align-items:center ;">
+<div class="text-black-50 text-center  "
+     style="background-image: url(https://cdn.pixabay.com/photo/2017/08/08/21/31/skyscrapers-2612766__340.jpg);
+     background-size: cover;
+     width: auto;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items:center ;">
     <!--
      <a class="justify-content-center align-items-center">
          <img src="../logo2.png" alt="logo" style="width:200px;">
@@ -86,34 +93,26 @@
 
 
 
-<h1>ejemplo formulario</h1>
-
-<% const usuario = {nombre:'adrian',apellido:'eguez'} %>
-
-<% const arregloNumeros = [1,2,3,4,5] %>
-
-<ul>
-    <% for(var i = 0; i< arregloNumeros.length; i++){ %>
-    <li> <%= arregloNumeros[i] %> </li>
-    <% } %>
-</ul>
-
-<p><%= usuario.nombre %> - <%= usuario.apellido %></p>
+<h1>Seleccion de Información</h1>
 
 <form action="/api/contenido">
-    <label for="id_con">Seleccionar id CON</label>
-    <select name="pepito" id="id_con">
+    <label for="id_con">Seleccionar identificador</label>
+    <select name="id_con" id="id_con">
         <option value="">Todos</option>
-        <% for(var i = 0; i< contenidos.length; i++){ %>
-            <option value="<%= contenidos[i].id_con %>"> Nombre: <%= contenidos[i].id_con %> </option>
+        <% for(var i= 0; i< contenidos.length; i++){ %>
+            <% var valor = contenidos[i]%>
+            <% if(valor%2!==0) {%>
+                <option value="<%= valor.id_con %>"> Nombre: <%= valor.id_con %> </option>
+            <% } %>
         <% } %>
-
     </select>
     <button type="submit">filtrar por id con</button>
 </form>
-
 <h1>contenido filtrado</h1>
 <p><%= contenidoFiltrado[0].id_con %></p>
+
+
+
 
 <!-- CHART.JS -->
 

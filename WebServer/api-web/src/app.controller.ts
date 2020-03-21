@@ -185,19 +185,15 @@ export class AppController {
       @Response() res
   ) {
     console.log(query);
-
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
     const id_conNumber = Number(query.id_con);
     let consulta:any = {};
 
     if(id_conNumber){
       consulta.id_con = id_conNumber;
     }
-    console.log(consulta);
+
 
     const contenidos = await this.contenidoService._repositorioContenido.find();
-
     const contenidoFiltrado = await this.contenidoService._repositorioContenido.find({
       where:consulta
     });

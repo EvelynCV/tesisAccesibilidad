@@ -16,6 +16,13 @@ export class OpcionEntity {
     })
     nom_opc: string;
 
+    @Column({
+        name: 'val_opc',
+        type: 'int',
+
+    })
+    val_opc: number;
+
     @OneToMany(
         type => OpcpreEntity, // Entidad
         opcpre => opcpre.id_opc, // El campo de la relacion

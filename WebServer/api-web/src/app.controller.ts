@@ -9,7 +9,9 @@ import {OpcionService} from "./Opcion/opcion.service";
 import {PreguntaService} from "./Pregunta/pregunta.service";
 import {OpcpreService} from "./OpcPre/opcpre.service";
 import {ContenidoService} from "./Contenido/contenido.service";
-import {ContenidoEntity} from "./Contenido/contenido.entity";
+import {ViewInsValOpcService} from "./viewInsValOpc/viewInsValOpc.service"
+import {ViewTotValInsService} from "./viewTotValIns/viewTotValIns.service";
+import {ViewTotNorService} from "./ViewTotNor/ViewTotNor.service";
 
 @Controller('api')
 export class AppController {
@@ -22,7 +24,10 @@ export class AppController {
               private readonly opcionService: OpcionService,
               private readonly preguntaService: PreguntaService,
               private readonly opcpreService:OpcpreService,
-              private readonly contenidoService:ContenidoService) {}
+              private readonly contenidoService:ContenidoService,
+              private readonly viewInsValOpcService:ViewInsValOpcService,
+              private readonly viewTotValInsService:ViewTotValInsService,
+              private readonly viewTotNorService:ViewTotNorService) {}
 
   @Get('Hola')
   getHello(): string {
@@ -185,16 +190,14 @@ export class AppController {
       @Response() res
   ) {
     console.log(query);
-    const id_conNumber = Number(query.id_con);
+    const normaNumber = Number(query.nom_ins);
     let consulta:any = {};
 
-    if(id_conNumber){
-      consulta.id_con = id_conNumber;
+    if(normaNumber){
+      consulta.nom_ins = normaNumber;
     }
-
-
-    const contenidos = await this.contenidoService._repositorioContenido.find();
-    const contenidoFiltrado = await this.contenidoService._repositorioContenido.find({
+    const contenidos = await this.viewTotNorService._repositorioViewTotNor.find();
+    const contenidoFiltrado = await this.viewTotNorService._repositorioViewTotNor.find({
       where:consulta
     });
     console.log(contenidos);
@@ -205,6 +208,71 @@ export class AppController {
     });
 
   }
+
+
+  @Get('pruebaData')
+  async getpruebaData(
+      @Param() params,
+      @Query() query,
+      @Response() res
+  ) {
+    console.log(query);
+    const id_conNumber = Number(query.nom_ins);
+    let consulta:any = {};
+
+    if(id_conNumber){
+      consulta.nom_ins = id_conNumber;
+
+    }
+    const instituciones = await this.institucionService._repositorioInstitucion.find();
+    const institucionesFiltrado = await this.institucionService._repositorioInstitucion.find({
+      where:consulta
+    });
+
+    console.log(instituciones);
+    // return this.contenidoService.buscar();
+    return res.render('pruebaData', {
+      instituciones:instituciones,
+      institucionesFiltrado:institucionesFiltrado,
+
+    });
+  }
+
+  @Get('vistaCompleta')
+  async getvistaCompleta(
+      @Param() params,
+      @Query() query,
+      @Response() res
+  ) {
+    console.log(query);
+    const id_conNumber = Number(query.nom_ins);
+    let consulta:any = {};
+
+    if(id_conNumber){
+      consulta.nom_ins = id_conNumber;
+
+    }
+    const instituciones = await this.viewTotValInsService._repositorioViewTotValIns.find();
+    const institucionesFiltrado = await this.viewTotValInsService._repositorioViewTotValIns.find({
+      where:consulta
+    });
+
+    console.log(instituciones);
+    // return this.contenidoService.buscar();
+    return res.render('vistaCompleta', {
+      instituciones:instituciones,
+      institucionesFiltrado:institucionesFiltrado,
+
+    });
+
+
+  }
+
+
+
+
+
+
 }
 
 

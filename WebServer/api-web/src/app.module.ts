@@ -4,22 +4,28 @@ import { AppService } from './app.service';
 import {InstitucionModule} from "./Institucion/institucion.module";
 import {FormularioModule} from "./Formulario/formulario.module";
 import {NormaModule} from "./Norma/norma.module";
+import {OpcionModule} from "./Opcion/opcion.module";
+import {PreguntaModule} from "./Pregunta/pregunta.module";
+import {OpcpreModule} from "./OpcPre/opcpre.module";
 import {DiscapacidadModule} from "./Discapacidad/discapacidad.module";
 import {NordisModule} from "./NorDis/nordis.module";
 import {TypeOrmModule} from "@nestjs/typeorm";
+import {ContenidoModule} from "./Contenido/contenido.module";
+import {ViewInsValOpcModule} from "./viewInsValOpc/viewInsValOpc.module";
+import {ViewTotValInsModule} from "./viewTotValIns/viewTotValIns.module";
+import {ViewTotNorModule} from "./ViewTotNor/ViewTotNor.module";
 import {InstitucionEntity} from "./Institucion/institucion.entity";
 import {FormularioEntity} from "./Formulario/formulario.entity";
 import {NormaEntity} from "./Norma/norma.entity";
 import {DiscapacidadEntity} from "./Discapacidad/discapacidad.entity";
 import {NordisEntity} from "./NorDis/nordis.entity";
-import {OpcionModule} from "./Opcion/opcion.module";
-import {PreguntaModule} from "./Pregunta/pregunta.module";
-import {OpcpreModule} from "./OpcPre/opcpre.module";
 import {OpcionEntity} from "./Opcion/opcion.entity";
 import {PreguntaEntity} from "./Pregunta/pregunta.entity";
 import {OpcpreEntity} from "./OpcPre/opcpre.entity";
 import {ContenidoEntity} from "./Contenido/contenido.entity";
-import {ContenidoModule} from "./Contenido/contenido.module";
+import {ViewInsValOpcEntity} from "./viewInsValOpc/viewInsValOpc.entity";
+import {ViewTotValInsEntity} from "./viewTotValIns/viewTotValIns.entity";
+import {ViewTotNorEntity} from "./ViewTotNor/ViewTotNor.entity";
 
 
 @Module({
@@ -33,6 +39,9 @@ import {ContenidoModule} from "./Contenido/contenido.module";
         PreguntaModule,
         OpcpreModule,
         ContenidoModule,
+        ViewInsValOpcModule,
+        ViewTotValInsModule,
+        ViewTotNorModule,
 
 
         TypeOrmModule.forRoot(
@@ -55,8 +64,9 @@ import {ContenidoModule} from "./Contenido/contenido.module";
                     PreguntaEntity,
                     OpcpreEntity,
                     ContenidoEntity,
-
-
+                    ViewInsValOpcEntity,
+                    ViewTotValInsEntity,
+                    ViewTotNorEntity,
                 ],
                 synchronize: true, // Crear -> true , Conectar -> false
             },

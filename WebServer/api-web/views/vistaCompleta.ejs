@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- CHART.JS -->
+
+<div id="canvas-container" style="width:40%;">
+    <canvas id="chart" width="500" height="350"></canvas>
+</div>
+
+<!-- jQuery -->
+
+<script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Chart JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+<script>
+    /*definir variables para tra*/
+    console.log(<%- JSON.stringify(instituciones) %>)
+    var instituciones =<%- JSON.stringify(instituciones) %>
+    var institucionesFiltrado = <%- JSON.stringify(institucionesFiltrado) %>
+        console.log(instituciones)
+        console.log(institucionesFiltrado)
+    console.log('holaaaa')
+    var nombreInstituciones = instituciones.map(
+        function (institucion) {
+            return institucion.nom_ins;
+        }
+    )
+    var totalvaloresInstituciones = institucionesFiltrado.map(
+        function (institucion) {
+            return institucion.por_ins;
+        }
+    )
+    var datos = {
+        labels : nombreInstituciones,
+        datasets : [{
+            label : "datos 1",
+            backgroundColor : "rgba(220,220,220,0.5)",
+            data : totalvaloresInstituciones
+        }
+        ]
+    };
+    console.log(datos)
+    var canvas = document.getElementById('chart').getContext('2d');
+    window.bar = new Chart(canvas, {
+        type : "pie",
+        data : datos,
+        options : {
+            elements : {
+                rectangle : {
+                    borderWidth : 1,
+                    borderColor : "rgb(0,255,0)",
+                    borderSkipped : 'bottom'
+                }
+            },
+            responsive : true,
+            title : {
+                display : true,
+                text : "Prueba de grafico de barras"
+            }
+        }
+    });
+</script>
+
+</html>

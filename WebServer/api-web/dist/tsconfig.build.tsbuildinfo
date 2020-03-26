@@ -2233,9 +2233,25 @@
         "version": "5e3be2e8040b70e7180c0c570b0972d1523e08722be58cd14e11c73aea34097f",
         "signature": "c1974889fa368b0fc4ed221c4db7f78743d34091696ce3f31ca8a8f944351671"
       },
+      "../src/viewnora/viewnora.entity.ts": {
+        "version": "73c73fde08dff2aa8ce9aaf22babd347195e2c887070f6e58a26f175713ebdc5",
+        "signature": "aedf3200301b6f5c2a6a2678113a8bdd707cd942ea0f917bb288c38fc0cb6c11"
+      },
+      "../src/viewnora/viewnora.service.ts": {
+        "version": "d7ee738ce67fc49706655d776458cdddab0c9e474f2b57ec7ce314426b9da209",
+        "signature": "012024b980201af043770cbcde54847e5ab1cb12805bf79e515361748a74b715"
+      },
+      "../src/viewnorb/viewnorb.entity.ts": {
+        "version": "75164c271b22d05ee97e1deb31b336d518dea17b90573bb40ce16b86adeaf94e",
+        "signature": "def80025ee09a13a523938b6f6215adc148ffa803812f5904c8053f6a9446d0e"
+      },
+      "../src/viewnorb/viewnorb.service.ts": {
+        "version": "b0ae2e8eee5dce3cd165e8518d900acdd02a5240834452ef7deafa47d6d75fe4",
+        "signature": "a3076192f4c0c250062f1a4abfe782f3034bd436536a65b6d955501e59781bf7"
+      },
       "../src/app.controller.ts": {
-        "version": "dbaffb99f883db582d11961bdeeffba4a906ba74345ada6ee7faad7608903290",
-        "signature": "9cd2dec07de2bec615193f3a51eff50f22259a8b6ec88b7afa5f1e5645a8f868"
+        "version": "fa3c8a23e2d69d4b2c04dabe9e3ad765f475420d66a581c5a0e7152af4791533",
+        "signature": "79d895193df3f0fe841f6ca73c8350fddda2980001e2ebec60c6af65dd4c52f3"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -2285,8 +2301,16 @@
         "version": "25dbb51bc605dc4c249f901b0b25b268c2edd99a3eae55eb0d6eb4661bc4b37a",
         "signature": "f07b4df8e2ca5e17ae545fcfb3465875481a600070e8abcddb29b3ea7d146e10"
       },
+      "../src/viewnora/viewnora.module.ts": {
+        "version": "d09de2dde2c9141a280fa00302577562cdd77aff9ecdd8dae8b1b154df5bf0fb",
+        "signature": "41d1a7eb15cdfef61ea691bee97f8644c9f672bd40ed67494e002a79fbb45007"
+      },
+      "../src/viewnorb/viewnorb.module.ts": {
+        "version": "646f6d3a2e64d750c5b65ecb7c19c124dd1dc0bb995d9bf84970ccfb11f42877",
+        "signature": "bf5879bb007b434a5ea1f838be0c10f1276d3419fd0088459a72862659a788ff"
+      },
       "../src/app.module.ts": {
-        "version": "55f4b3246b6e95058361d61a4abd7bebf557906c239d5de730ea58bca36fa1ed",
+        "version": "db3deebbeb0f011937577aa05ebe175a7269ff33d7268a49ef6dfb8cf2ab0f66",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2564,6 +2588,14 @@
       "../src/viewinsvalopc/viewinsvalopc.ts": {
         "version": "37fd22593f9463886e48665bda438700cc9486570a9b866efb2e3b95de39ab2e",
         "signature": "3f075d42da1a34a62c2e36297f63cf0de7b5f0e720f66c2b762a670c5fa3cec6"
+      },
+      "../src/viewnora/viewnora.ts": {
+        "version": "eb3155ba9d7d682f3b47f2d1af89a4a4ac6af4625316b41bcac2a2f52e7c7be1",
+        "signature": "d93adfbacc787f0ad92842a45bc2c9aa7c68531b379ae96f60b2d8df2bc4405d"
+      },
+      "../src/viewnorb/viewnorb.ts": {
+        "version": "c37cd6bf1f91b86fd2fc9700d7d76c133eb76de0e0b4e78692913979de5f78ca",
+        "signature": "ca4e49d9b037970062eee670c8766c3a2481f4f65aeb3f277481c6e545a9d175"
       },
       "../src/viewtotvalins/viewtotvalins.ts": {
         "version": "57366107ca2619af4e0283a25c2e41c50571bdfaef2e4f28ffec77d60cb4bc04",
@@ -7374,6 +7406,40 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/viewnora/viewnora.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewnora/viewnora.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/viewnora/viewnora.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewnorb/viewnorb.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewnorb/viewnorb.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/viewnorb/viewnorb.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.service.ts",
@@ -7389,6 +7455,8 @@
         "../src/viewinsvalopc/viewinsvalopc.service.ts",
         "../src/viewtotvalins/viewtotvalins.service.ts",
         "../src/viewtotnor/viewtotnor.service.ts",
+        "../src/viewnora/viewnora.service.ts",
+        "../src/viewnorb/viewnorb.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7514,6 +7582,26 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/viewnora/viewnora.module.ts": [
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/viewnora/viewnora.entity.ts",
+        "../src/viewnora/viewnora.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewnorb/viewnorb.module.ts": [
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/viewnorb/viewnorb.service.ts",
+        "../src/viewnorb/viewnorb.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -7531,6 +7619,8 @@
         "../src/viewinsvalopc/viewinsvalopc.module.ts",
         "../src/viewtotvalins/viewtotvalins.module.ts",
         "../src/viewtotnor/viewtotnor.module.ts",
+        "../src/viewnora/viewnora.module.ts",
+        "../src/viewnorb/viewnorb.module.ts",
         "../src/institucion/institucion.entity.ts",
         "../src/formulario/formulario.entity.ts",
         "../src/norma/norma.entity.ts",
@@ -7543,6 +7633,8 @@
         "../src/viewinsvalopc/viewinsvalopc.entity.ts",
         "../src/viewtotvalins/viewtotvalins.entity.ts",
         "../src/viewtotnor/viewtotnor.entity.ts",
+        "../src/viewnora/viewnora.entity.ts",
+        "../src/viewnorb/viewnorb.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8110,6 +8202,18 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/viewinsvalopc/viewinsvalopc.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewnora/viewnora.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewnorb/viewnorb.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -12852,7 +12956,9 @@
         "../src/contenido/contenido.service.ts",
         "../src/viewinsvalopc/viewinsvalopc.service.ts",
         "../src/viewtotvalins/viewtotvalins.service.ts",
-        "../src/viewtotnor/viewtotnor.service.ts"
+        "../src/viewtotnor/viewtotnor.service.ts",
+        "../src/viewnora/viewnora.service.ts",
+        "../src/viewnorb/viewnorb.service.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -13555,6 +13661,14 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewnora/viewnora.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/viewnora/viewnora.entity.ts"
+      ],
+      "../src/viewnorb/viewnorb.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/viewnorb/viewnorb.entity.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -14186,7 +14300,6 @@
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
-      "../src/main.ts",
       "../src/contenido/contenido.controller.ts",
       "../src/contenido/contenido.ts",
       "../src/discapacidad/discapacidad.ts",
@@ -14227,8 +14340,17 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
+      "../src/viewnora/viewnora.entity.ts",
+      "../src/viewnora/viewnora.module.ts",
+      "../src/viewnora/viewnora.service.ts",
+      "../src/viewnorb/viewnorb.entity.ts",
+      "../src/viewnorb/viewnorb.module.ts",
+      "../src/viewnorb/viewnorb.service.ts",
+      "../src/viewnora/viewnora.ts",
+      "../src/viewnorb/viewnorb.ts",
       "../src/app.controller.ts",
-      "../src/app.module.ts"
+      "../src/app.module.ts",
+      "../src/main.ts"
     ]
   },
   "version": "3.7.4"

@@ -12,6 +12,8 @@ import {ContenidoService} from "./Contenido/contenido.service";
 import {ViewInsValOpcService} from "./viewInsValOpc/viewInsValOpc.service"
 import {ViewTotValInsService} from "./viewTotValIns/viewTotValIns.service";
 import {ViewTotNorService} from "./ViewTotNor/ViewTotNor.service";
+import {ViewNorAService} from "./viewNorA/viewNorA.service";
+import {ViewNorBService} from "./viewNorB/viewNorB.service";
 
 @Controller('api')
 export class AppController {
@@ -27,7 +29,9 @@ export class AppController {
               private readonly contenidoService:ContenidoService,
               private readonly viewInsValOpcService:ViewInsValOpcService,
               private readonly viewTotValInsService:ViewTotValInsService,
-              private readonly viewTotNorService:ViewTotNorService) {}
+              private readonly viewTotNorService:ViewTotNorService,
+              private readonly viewNorAService: ViewNorAService,
+              private readonly viewNorBService: ViewNorBService) {}
 
   @Get('Hola')
   getHello(): string {

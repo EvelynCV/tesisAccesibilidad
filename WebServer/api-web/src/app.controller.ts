@@ -14,6 +14,15 @@ import {ViewTotValInsService} from "./viewTotValIns/viewTotValIns.service";
 import {ViewTotNorService} from "./ViewTotNor/ViewTotNor.service";
 import {ViewNorAService} from "./viewNorA/viewNorA.service";
 import {ViewNorBService} from "./viewNorB/viewNorB.service";
+import {ViewNorCService} from "./ViewNorC/ViewNorC.service";
+import {ViewNorDService} from "./ViewNorD/ViewNorD.service";
+import {ViewNorEService} from "./ViewNorE/ViewNorE.service";
+import {ViewNorFService} from "./ViewNorF/ViewNorF.service";
+import {ViewNorGService} from "./ViewNorG/ViewNorG.service";
+import {ViewNorHService} from "./ViewNorH/ViewNorH.service";
+import {ViewNorIService} from "./ViewNorI/ViewNorI.service";
+import {ViewNorJService} from "./ViewNorJ/ViewNorJ.service";
+import {ViewNorKService} from "./ViewNorK/ViewNorK.service";
 
 @Controller('api')
 export class AppController {
@@ -31,7 +40,16 @@ export class AppController {
               private readonly viewTotValInsService:ViewTotValInsService,
               private readonly viewTotNorService:ViewTotNorService,
               private readonly viewNorAService: ViewNorAService,
-              private readonly viewNorBService: ViewNorBService) {}
+              private readonly viewNorBService: ViewNorBService,
+              private readonly viewNorCService: ViewNorCService,
+              private readonly viewNorDService: ViewNorDService,
+              private readonly viewNorEService: ViewNorEService,
+              private readonly viewNorFService: ViewNorFService,
+              private readonly viewNorGService: ViewNorGService,
+              private readonly viewNorHService: ViewNorHService,
+              private readonly viewNorIService: ViewNorIService,
+              private readonly viewNorJService: ViewNorJService,
+              private readonly viewNorKService: ViewNorKService  ) {}
 
   @Get('Hola')
   getHello(): string {

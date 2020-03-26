@@ -30,6 +30,26 @@ import {ViewTotValInsEntity} from "./viewTotValIns/viewTotValIns.entity";
 import {ViewTotNorEntity} from "./ViewTotNor/ViewTotNor.entity";
 import {ViewNorAEntity} from "./viewNorA/viewNorA.entity";
 import {ViewNorBEntity} from "./viewNorB/viewNorB.entity";
+import {ViewNorCModule} from "./ViewNorC/ViewNorC.module";
+import {ViewNorDModule} from "./ViewNorD/ViewNorD.module";
+import {ViewNorEModule} from "./ViewNorE/ViewNorE.module";
+import {ViewNorFModule} from "./ViewNorF/ViewNorF.module";
+import {ViewNorGModule} from "./ViewNorG/ViewNorG.module";
+import {ViewNorHModule} from "./ViewNorH/ViewNorH.module";
+import {ViewNorIModule} from "./ViewNorI/ViewNorI.module";
+import {ViewNorJModule} from "./ViewNorJ/ViewNorJ.module";
+import {ViewNorKModule} from "./ViewNorK/ViewNorK.module";
+import {ViewNorCEntity} from "./ViewNorC/ViewNorC.entity";
+import {ViewNorDEntity} from "./ViewNorD/ViewNorD.entity";
+import {ViewNorEEntity} from "./ViewNorE/ViewNorE.entity";
+import {ViewNorFEntity} from "./ViewNorF/ViewNorF.entity";
+import {ViewNorGEntity} from "./ViewNorG/ViewNorG.entity";
+import {ViewNorHEntity} from "./ViewNorH/ViewNorH.entity";
+import {ViewNorIEntity} from "./ViewNorI/ViewNorI.entity";
+import {ViewNorJEntity} from "./ViewNorJ/ViewNorJ.entity";
+import {ViewNorKEntity} from "./ViewNorK/ViewNorK.entity";
+import {ViewTotNorInsModule} from "./viewTotNorIns/ViewTotNorIns.module";
+import {ViewTotNorInsEntity} from "./viewTotNorIns/ViewTotNorIns.entity";
 
 
 @Module({
@@ -48,7 +68,16 @@ import {ViewNorBEntity} from "./viewNorB/viewNorB.entity";
         ViewTotNorModule,
         ViewNorAModule,
         ViewNorBModule,
-
+        ViewNorCModule,
+        ViewNorDModule,
+        ViewNorEModule,
+        ViewNorFModule,
+        ViewNorGModule,
+        ViewNorHModule,
+        ViewNorIModule,
+        ViewNorJModule,
+        ViewNorKModule,
+        ViewTotNorInsModule,
 
         TypeOrmModule.forRoot(
             {
@@ -75,6 +104,16 @@ import {ViewNorBEntity} from "./viewNorB/viewNorB.entity";
                     ViewTotNorEntity,
                     ViewNorAEntity,
                     ViewNorBEntity,
+                    ViewNorCEntity,
+                    ViewNorDEntity,
+                    ViewNorEEntity,
+                    ViewNorFEntity,
+                    ViewNorGEntity,
+                    ViewNorHEntity,
+                    ViewNorIEntity,
+                    ViewNorJEntity,
+                    ViewNorKEntity,
+                    ViewTotNorInsEntity,
                 ],
                 synchronize: true, // Crear -> true , Conectar -> false
             },

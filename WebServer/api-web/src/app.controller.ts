@@ -23,6 +23,7 @@ import {ViewNorHService} from "./ViewNorH/ViewNorH.service";
 import {ViewNorIService} from "./ViewNorI/ViewNorI.service";
 import {ViewNorJService} from "./ViewNorJ/ViewNorJ.service";
 import {ViewNorKService} from "./ViewNorK/ViewNorK.service";
+import {ViewTotNorInsService} from "./viewTotNorIns/ViewTotNorIns.service";
 
 @Controller('api')
 export class AppController {
@@ -49,7 +50,8 @@ export class AppController {
               private readonly viewNorHService: ViewNorHService,
               private readonly viewNorIService: ViewNorIService,
               private readonly viewNorJService: ViewNorJService,
-              private readonly viewNorKService: ViewNorKService  ) {}
+              private readonly viewNorKService: ViewNorKService,
+              private readonly viewTotNorIns: ViewTotNorInsService) {}
 
   @Get('Hola')
   getHello(): string {
@@ -246,8 +248,8 @@ export class AppController {
       consulta.nom_ins = id_conNumber;
 
     }
-    const instituciones = await this.institucionService._repositorioInstitucion.find();
-    const institucionesFiltrado = await this.institucionService._repositorioInstitucion.find({
+    const instituciones = await this.viewTotNorIns._repositorioViewTotNorIns.find();
+    const institucionesFiltrado = await this.viewTotNorIns._repositorioViewTotNorIns.find({
       where:consulta
     });
 

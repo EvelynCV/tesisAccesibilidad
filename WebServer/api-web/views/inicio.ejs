@@ -14,6 +14,7 @@
 
 <!-- Cabecera -->
 <section>
+    <!-- IMAGEN contenida en Cabecera -->
     <div class="text-black-50 text-center container-fluid "
          style="background-image: url(https://cdn.pixabay.com/photo/2016/05/11/16/32/bridge-1385938_960_720.jpg);
                 background-size: cover;
@@ -22,7 +23,7 @@
                 display: flex;
                 justify-content: center;
                 align-items:center ;">
-
+        <!-- Texto sobrepuesto en Contenido -->
         <div id="cover">
             <div class="row CoverImage">
                 <div class="col-sm-12">
@@ -40,18 +41,21 @@
                 </div>
             </div>
         </div>
+        <!-- FIN Texto sobrepuesto en Contenido -->
     </div>
+    <!-- FIN IMAGEN contenida en Cabecera -->
 </section>
 <!-- FIN Cabecera -->
 
-<!-- Menú -->
+<!-- Menú - navbar -->
 <section>
     <div>
         <nav class="navbar navbar-expand-sm justify-content-center sticky-top container-fluid embed-responsive-item"
 
-             style="background-image: linear-gradient(to bottom, #1e2c3a, #3e4a55, #616b72, #868d91, #aeb0b1);">
+             style="background-image: radial-gradient(circle, #c89986, #a8797b, #815f6f, #56485c, #2f3243);">
             <!-- Links -->
             <ul class="navbar-nav ">
+                <!-- MENÚ - pestaña Home -->
                 <li class="nav-item ">
                     <button type="button" class="btn btn-informacion ">
                         <a class="nav-link" href="inicio">
@@ -61,6 +65,8 @@
                         </a>
                     </button>
                 </li>
+                <!-- FIN MENÚ - pestaña Home -->
+                <!-- MENÚ - pestaña Acerca de -->
                 <li class="nav-item">
                     <button type="button" class="btn btn-informacion">
                         <a class="nav-link" href="acerca" >
@@ -70,6 +76,8 @@
                         </a>
                     </button>
                 </li>
+                <!-- FIN MENÚ - pestaña Acerca de -->
+                <!-- MENÚ - pestaña Resultados -->
                 <li class="nav-item">
                     <button type="button" class="btn btn-informacion">
                         <a class="nav-link" href="informacion">
@@ -79,20 +87,20 @@
                         </a>
                     </button>
                 </li>
+                <!-- FIN MENÚ - pestaña Resultados -->
             </ul>
         </nav>
     </div>
 </section>
-<!-- FIN Menú -->
+<!-- FIN Menú - navbar -->
 
-<!-- Contenido -->
+<!-- Contenido 1 Informativo -->
 <section>
-
-    <div id="content2" style="background: white">
-
+    <div id="content1" class="container-fluid" style="background: white">
         <div class="row">
-
+            <!-- IMAGEN Contenido 1 Informativo -->
             <div class="col-sm-4" >
+
                 <div class="card text-center" style="background-color: transparent; border: none">
                     <div style="margin-top: 20px; margin-bottom: 20px">
                         <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 40px 35px; display: inline-block; ">
@@ -101,7 +109,8 @@
                     </div>
                 </div>
             </div>
-
+            <!-- FIN IMAGEN Contenido 1 Informativo -->
+            <!-- Información Contenido 1 -->
             <div class="col-sm-7" style="padding-right: 0px;">
                 <div class="card text-center" data-aos="fade-left" style="background-color: transparent; border: none">
                     <div style="margin-top: 20px; margin-bottom: 20px">
@@ -116,27 +125,76 @@
                     </div>
                 </div>
             </div>
-
+            <!-- FIN Información Contenido 1 -->
         </div>
-
     </div>
-
 </section>
-<!-- FIN Contenido -->
+<!-- FIN Contenido 1 Informativo -->
 
-<div class="container-fluid text-center" style="background:beige">
-    <div class="btn-group btn-group-justified">
-        <button type="button" class="btn btn-primary" style="background: #667f9c">Seleccione la Institución</button>
-        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="background: #667f9c">
-            <span class="caret"></span>
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="contenido">Ministerio del Trabajo Sede Geminis</a>
-            <a class="dropdown-item" href="norma">Ministerio del Trabajo Sede Republica</a>
-            <a class="dropdown-item" href="formulario">Superintendencia de Bancos</a>
+<section>
+    <div id="content2" class="container-fluid">
+        <div class="row CoverImage " style=" background-image:  linear-gradient( rgba(0, 0, 0,0), rgba(0, 0, 0,0)), url(https://cdn.pixabay.com/photo/2018/04/14/23/20/triangles-3320452_960_720.png)">
+            <div class="col-sm-12" style ="text-align: center">
+                <div class="card text-center" style="background-color: transparent; border: none">
+                    <div style="margin-top: 10px; margin-bottom: 10px">
+                        <div class="card-body" style="background: transparent; padding: 40px 35px; display: inline-block;">
+                            <h2 class="card-title" style="font-size: 2.5em; color:#ffffff">¿La accesibilidad está en todas las partes donde quieras estar?</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6" >
+                        <div class="card text-center" data-aos="fade-right" data-aos-easing="ease-in-sine" style="background-color: transparent; border: none">
+                            <div style="margin-top: 10px; margin-bottom: 10px">
+                                <div class="card-body" style="background: rgba(0,0,0,0.41); padding: 10px 10px; display: inline-block; max-width: 410px; min-height: 360px">
+                                    <img class="card-img-top" src="../iconDashboard.png" style="max-width: 3.5em; margin-top: 10px ">
+                                    <h5 class="card-title" style="font-size: 2em; color:#ffffff">Dashboard</h5>
+                                    <p class="card-text" style="color: #fff; text-align: center">
+                                        <br>Visualización de datos recolectados en instituciones públicas de atención al cliente dentro del DMQ para conocimiento
+                                        de la accesibilidad física que brindan a personas con discapacidad física.
+                                    </p>
+                                    <a href="pruebaData" class="btn btn-outline-secondary" role="button" aria-pressed="true" style="color: white ; border-bottom-color: white; ">Conozca más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="card text-center" data-aos="fade-left" style="background-color: transparent; border: none">
+                            <div style="margin-top: 10px; margin-bottom: 10px">
+                                <div class="card-body" style="background: rgba(0,0,0,0.41); padding: 10px 10px; display: inline-block; max-width: 410px ; min-height: 360px">
+                                    <img class="card-img-top" src="../iconAcerca.png" style="max-width: 3.5em; margin-top: 10px ">
+                                    <h5 class="card-title" style="font-size: 2em; color:#ffffff">Información</h5>
+                                    <p class="card-text" style="color: #fff; text-align: center">
+                                        <br><br>Análisis y parámetros de evaluacion de informacion recolectada a instituciones públicas de
+                                        atención al cliente dentro del Distrito Metropolitano de Quito.
+                                    </p>
+                                    <a href="acerca" class="btn btn-outline-secondary" role="button" aria-pressed="true" style="color: white ; border-bottom-color: white; ">Conozca más</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div> <br><br>
+    </div>
+</section>
+
+<!-- Pie de página -->
+<div >
+    <footer class="page-footer font-small container-fluid" style="background-image: radial-gradient(circle, #c89986, #a8797b, #815f6f, #56485c, #2f3243);">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="color: white; font-weight: bold">
+            EPN © Todos los Derechos Reservados
+        </div>
+        <!-- Copyright -->
+    </footer>
 </div>
+<!-- FIN Pie de página -->
+
+
 </body>
 </html>
 

@@ -14,11 +14,8 @@ async function bootstrap() {
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
 
   app.use(express.static('imagenes'));
-  app.use(express.static('img'));
-  app.use(express.static('js'));
-  app.use(express.static('lib'));
-  app.use(express.static('php'));
   app.use(express.static('CSS'));
+  app.use(express.static('Publico'));
 
   await app.listen(3001);
     // app.use(favicon(path.join(__dirname,'..','imagenes')));

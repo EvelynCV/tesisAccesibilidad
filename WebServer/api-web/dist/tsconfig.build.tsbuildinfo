@@ -2666,7 +2666,7 @@
         "signature": "6e1c6fe784daeba017901db7766e6b872f535defe33b0e0196d2a12c26f50517"
       },
       "../src/main.ts": {
-        "version": "be6225ef08310b97a1d5c99c4ea4c0591f95926c61bf701b36268828d92effd9",
+        "version": "b6109425cde7d478f7f933e3b6a3e5fccd0f16a6f2f1a4acfd3583f757f00b38",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../src/contenido/contenido.controller.ts": {
@@ -14825,6 +14825,7 @@
       "../src/viewnork/viewnork.service.ts",
       "../src/viewtotnorins/viewtotnorins.entity.ts",
       "../src/viewtotnorins/viewtotnorins.service.ts",
+      "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -14849,6 +14850,7 @@
       "../src/viewnorj/viewnorj.module.ts",
       "../src/viewnork/viewnork.module.ts",
       "../src/viewtotnorins/viewtotnorins.module.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -14907,7 +14909,6 @@
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
-      "../src/main.ts",
       "../src/contenido/contenido.controller.ts",
       "../src/contenido/contenido.ts",
       "../src/discapacidad/discapacidad.ts",
@@ -14960,8 +14961,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts"
+      "../src/main.ts"
     ]
   },
   "version": "3.7.4"

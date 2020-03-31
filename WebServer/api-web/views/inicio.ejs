@@ -9,53 +9,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+
+
+
 </head>
 <body>
 <!-- Menú - navbar -->
 <section>
-    <div>
-        <nav class="navbar navbar-expand-sm justify-content-center sticky-top container-fluid embed-responsive-item"
-             style="background-image: radial-gradient(circle, #c89986, #a8797b, #815f6f, #56485c, #2f3243); position: fixed">
-            <!-- Links -->
-            <ul class="navbar-nav ">
-                <!-- MENÚ - pestaña Home -->
-                <li class="nav-item ">
-                    <button type="button" class="btn btn-informacion ">
-                        <a class="nav-link" href="inicio">
-                            <h3 class="text-center" style="color: white" > &nbsp;&nbsp; &nbsp;&nbsp;Inicio
-                                <img src="../iconHome.png"  class=" rounded-circle " width="50" height="50" align="left" >
-                            </h3>
-                        </a>
-                    </button>
-                </li>
-                <!-- FIN MENÚ - pestaña Home -->
-
-                <!-- MENÚ - pestaña Resultados -->
-                <li class="nav-item">
-                    <button type="button" class="btn btn-informacion">
-                        <a class="nav-link" href="informacion">
-                            <h3 class="text-center" style="color: white" >&nbsp;&nbsp;&nbsp; Resultados&nbsp;
-                                <img src="../iconDashboard.png"  class=" rounded" width="45" height="45" align="left" >
-                            </h3>
-                        </a>
-                    </button>
-                </li>
-                <!-- FIN MENÚ - pestaña Resultados -->
-
-                <!-- MENÚ - pestaña Acerca de -->
-                <li class="nav-item">
-                    <button type="button" class="btn btn-informacion">
-                        <a class="nav-link" href="acerca" >
-                            <h3 class="text-center" style="color: white">&nbsp;&nbsp;&nbsp; Acerca de &nbsp;&nbsp;
-                                <img src="../iconAcerca.png"  class=" rounded " width="65" height="55" align="left" >
-                            </h3>
-                        </a>
-                    </button>
-                </li>
-                <!-- FIN MENÚ - pestaña Acerca de -->
-            </ul>
-        </nav>
+<nav class="navbar fixed-top navbar-expand-sm " style="background-color:#2A3B59">
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse" style="color: white">☰</button>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ml-auto ">
+            <li class="nav-item"> <a class="nav-link" style="color: white ; font-size: 20px" href="#">
+                    <img src="../iconHome.png"  class=" rounded-circle " style="width: 40px; height: 40px; margin-left: 10px;margin-right: 10px">
+                    Inicio</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" style="color: white; font-size: 20px" href="pruebaData">
+                    <img src="../iconDashboard.png"  class=" rounded" style="width: 45px; height: 45px; margin-left: 10px;margin-right: 10px">
+                    Resultados</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" style="color: white; font-size: 20px" href="informacion">
+                    <img src="../iconAcerca.png"  class=" rounded " style="width: 45px; height: 45px; margin-left: 10px;margin-right: 10px">
+                Acerca de</a>
+            </li>
+        </ul>
     </div>
+</nav>
 </section>
 <!-- FIN Menú - navbar -->
 
@@ -63,7 +43,7 @@
 <section>
     <!-- IMAGEN contenida en Cabecera -->
     <div class="text-black-50 text-center container-fluid "
-         style="background-image: url(https://cdn.pixabay.com/photo/2016/05/11/16/32/bridge-1385938_960_720.jpg);
+         style="background-image: linear-gradient(rgba(150, 150, 248,.7), rgba(185, 189, 165, .5)), url(https://images.unsplash.com/photo-1511871539190-20cb70cb3c8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80);
                 background-size: cover;
                 width: auto;
                 height: 100vh;
@@ -73,16 +53,12 @@
         <!-- Texto sobrepuesto en Contenido -->
         <div id="cover">
             <div class="row CoverImage">
-                <div class="col-sm-12">
-                    <div class="card text-center" style="margin-top: 25px; background-color: transparent; align-items:center">
-                        <div class="card-body text-white"
-                             style="background: rgba(0,0,0,0.35);
-                                    padding: 125px 185px;
-                                    min-width: 300px;
-                                    display: inline-block">
-                            <img src="../logo-EPN-blanco.png" style="padding-top: 8px">
-                            <br><br>
-                            <h2 class="card-title h5Ed">ACCESIBILIDAD DE LAS PERSONAS AL MEDIO FISICO</h2>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="card text-center" style="margin-top: 55px; background-color: transparent; align-items:center; border: none   ">
+                        <div class="card-body text-white" >
+                            <img src="../logo-EPN-blanco.png" style="padding-top: 8px; height: 150px">
+                            <br><br><br>
+                            <h2 class="card-title" style="font-size: 3em">Sistema Informativo de Accesibilidad al Medio Físico</h2>
                         </div>
                     </div>
                 </div>
@@ -115,8 +91,9 @@
                 <div class="card text-center" data-aos="fade-left" style="background-color: transparent; border: none">
                     <div style="margin-top: 20px; margin-bottom: 20px">
                         <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 80px 35px; display: inline-block;">
-                            <h5 class="card-title h5Ed" style="font-family: 'Monotype Corsiva' ;font-size: 2.5em; color:#335574;">Accesibilidad en cualquier momento, cualquier lugar.</h5>
-                            <p class="card-text" style="color: black; text-align: center; font-size: 1.3em">
+                            <h5 class="card-title h5Ed" style="font-family: 'Monotype Corsiva' ;font-size: 2.5em; color:#335574;">Accesibilidad en cualquier momento y cualquier lugar.</h5>
+                            <br>
+                            <p class="card-text" style="color: black; text-align: justify; font-size: 1.3em">
                                 La accesibilidad en Ecuador busca la eliminación de barreras que impiden la autonomía personal y el libre desplazamiento de los
                                 ciudadanos y ciudadanas, fortaleciendo estrategias para la creación de espacios y servicios que faciliten la interacción con
                                 el medio físico, la comunicación y la información.
@@ -134,17 +111,17 @@
 <!-- Contenido 2 Informativo - Redireccionamiento-->
 <section>
     <div id="content2" class="container-fluid">
-        <div class="row CoverImage " style=" background-image:  linear-gradient( rgba(0, 0, 0,0), rgba(0, 0, 0,0)), url(https://cdn.pixabay.com/photo/2018/04/14/23/20/triangles-3320452_960_720.png)">
+        <div class="row " style=" background-image:  linear-gradient( rgba(0, 0, 0,0), rgba(0, 0, 0,0)), url(https://cdn.pixabay.com/photo/2018/04/14/23/20/triangles-3320452_960_720.png)">
             <div class="col-sm-12" style ="text-align: center">
                 <div class="card text-center" style="background-color: transparent; border: none">
                     <div style="margin-top: 10px; margin-bottom: 10px">
                         <div class="card-body" style="background: transparent; padding: 40px 35px; display: inline-block;">
-                            <h2 class="card-title" style="font-size: 2.5em; color:#ffffff">¿La accesibilidad está en todas las partes donde quieras estar?</h2>
+                            <h2 class="card-title" style="font-size: 2.5em; color:#ffffff">¿La accesibilidad está en todas las partes donde quieres estar?</h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" >
                     <div class="col-sm-6" >
                         <div class="card text-center" data-aos="fade-right" data-aos-easing="ease-in-sine" style="background-color: transparent; border: none">
                             <div style="margin-top: 10px; margin-bottom: 10px">
@@ -186,7 +163,7 @@
 
 <!-- Pie de página -->
 <div >
-    <footer class="page-footer font-small container-fluid" style="background-image: radial-gradient(circle, #c89986, #a8797b, #815f6f, #56485c, #2f3243);">
+    <footer class="page-footer font-small container-fluid" style="background-color:#2A3B59;">
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3" style="color: white; font-weight: bold">
             EPN © Todos los Derechos Reservados
@@ -195,7 +172,6 @@
     </footer>
 </div>
 <!-- FIN Pie de página -->
-
 
 </body>
 </html>

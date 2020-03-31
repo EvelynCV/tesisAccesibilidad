@@ -10,24 +10,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%;
+            margin: auto;
+        }
+    </style>
 
 </head>
 
 <body>
-
 <!-- Menú - navbar -->
 <section>
     <div>
         <nav class="navbar navbar-expand-sm justify-content-center sticky-top container-fluid embed-responsive-item"
-             style="background-image: radial-gradient(circle, #c89986, #a8797b, #815f6f, #56485c, #2f3243); position: fixed">
+             style="background-color:#2A3B59; position: fixed; height: 60px; display: flex">
             <!-- Links -->
-            <ul class="navbar-nav ">
+            <ul class="navbar-nav embed-responsive-item">
                 <!-- MENÚ - pestaña Home -->
                 <li class="nav-item ">
                     <button type="button" class="btn btn-informacion ">
                         <a class="nav-link" href="inicio">
                             <h3 class="text-center" style="color: white" > &nbsp;&nbsp; &nbsp;&nbsp;Inicio
-                                <img src="../iconHome.png"  class=" rounded-circle " width="50" height="50" align="left" >
+                                <img src="../iconHome.png"  class=" rounded-circle " width="35" height="35" align="left" >
                             </h3>
                         </a>
                     </button>
@@ -51,7 +58,7 @@
                     <button type="button" class="btn btn-informacion">
                         <a class="nav-link" href="acerca" >
                             <h3 class="text-center" style="color: white">&nbsp;&nbsp;&nbsp; Acerca de &nbsp;&nbsp;
-                                <img src="../iconAcerca.png"  class=" rounded " width="65" height="55" align="left" >
+                                <img src="../iconAcerca.png"  class=" rounded " width="45" height="45" align="left" >
                             </h3>
                         </a>
                     </button>
@@ -67,32 +74,14 @@
 <section>
     <!-- IMAGEN contenida en Cabecera -->
     <div class="text-black-50 text-center container-fluid "
-         style="background-image: url(https://cdn.pixabay.com/photo/2017/11/10/14/43/bridge-2936500_960_720.jpg);
+         style="background-image: url(https://cdn.pixabay.com/photo/2015/10/27/09/03/senior-1008620_960_720.jpg);
                 background-size: cover;
                 width: auto;
                 height: 100vh;
                 display: flex;
                 justify-content: center;
                 align-items:center ;">
-        <!-- Texto sobrepuesto en Contenido -->
-        <div id="cover">
-            <div class="row CoverImage">
-                <div class="col-sm-12">
-                    <div class="card text-center" style="margin-top: 25px; background-color: transparent; align-items:center">
-                        <div class="card-body text-white"
-                             style="background: rgba(0,0,0,0.65);
-                                    padding: 165px 305px;
-                                    min-width: 250px;
-                                    display: inline-block">
-                            <br><br>
-                            <h2 class="card-title">ACERCA DE NOSOTROS</h2>
-                            <h1 style="font-family: 'Monotype Corsiva'"> <br> La vida es bella con accesibilidad</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- FIN Texto sobrepuesto en Contenido -->
+
     </div>
     <!-- FIN IMAGEN contenida en Cabecera -->
 </section>
@@ -108,34 +97,52 @@
                 <div class="card text-center" data-aos="fade-left" style="background-color: transparent; border: none">
                     <div style="margin-top: 20px; margin-bottom: 20px">
                         <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 80px 35px; display: inline-block;">
-                            <h5 class="card-title h5Ed" style="font-family: 'Lucida Sans' ;font-size: 2.5em; color:#335574;">Nuestro proyecto</h5>
+                            <h5 class="card-title" style="font-family: 'Lucida Sans' ;font-size: 2.5em; color:#335574;">Nuestro proyecto</h5>
 
                             <div class="container">
+
+                                <div id="menu">
+                                    <ul>
+                                        <li><a id="inicio" class="activo" href="#inicio">INICIO</a></li>
+                                        <li><a id="menu1" class="activo" href="#menu1">MENU 1</a></li>
+                                        <li><a id="menu2" href="#menu2">MENU 2</a></li>
+                                        <li><a id="contacto" href="#contacto">CONTACTO</a></li>
+                                        <li><a id="acercade" href="#acercade">ACERCA DE</a></li>
+                                    </ul>
+                                </div>
+
+
+
                                 <ul class="nav nav-tabs nav-justified justify-content-center" style="font-size: 25px" >
-                                    <li ><a data-toggle="tab" href="#Acerca" style="color: #815f6f">&nbsp;&nbsp;&nbsp; Acerca &nbsp;&nbsp;&nbsp;</a></li>
-                                    <li><a data-toggle="tab" href="#Objetivo" style="color: #815f6f">&nbsp;&nbsp;&nbsp; Objetivo &nbsp;&nbsp;&nbsp;</a></li>
-                                    <li><a data-toggle="tab" href="#Meta" style="color: #815f6f">&nbsp;&nbsp;&nbsp; Meta &nbsp;&nbsp;&nbsp;</a></li>
+                                    <li class="nav-item active"><a href="#Acerca" style="color: #815f6f"> Acerca </a></li>
+                                    <li class="nav-item active"><a href="#Objetivo" style="color: #815f6f"> Objetivo </a></li>
+                                    <li class="nav-item active"><a href="#Meta" style="color: #815f6f"> Meta </a></li>
                                 </ul>
 
                                 <div class="tab-content">
                                     <div id="Acerca" class="tab-pane fade show active" style="text-align: justify">
                                         <br>
-                                        <p>El acceso a las Tecnologías de la Información (TI) permite tener una interacción continua
-                                            con el mundo, pese a esto la falta de información referente a la calidad y cantidad de instituciones que cumplan
-                                            con  regulaciones para accesibilidad física provoca que las personas con discapacidad motriz y sensorial no
-                                            puedan acceder a lugares con facilidad.</p>
+                                        <p>La creciente incorporación de personas con discapacidades al medio laboral o a la vida social, evidencia cada vez
+                                            más la necesidad de adecuar los espacios urbanos, los servicios públicos, el transporte y los sistemas de comunicación,
+                                            a las necesidades reales y condiciones de vida necesarias para el desarrollo integral de las personas con discapacidad. </p>
+                                        <p> La accesibilidad al medio físico busca la eliminación de barreras que impiden la autonomía personal y el libre
+                                            desplazamiento de las personas, es por ello que este proyecto entrega a la comunidad información derivada del análisis
+                                            de un grupo de instituciones públicas que brindan servicios a la ciudadanía en el Distrito Metropolitano de Quito,
+                                            con el fin de evidenciar la accesibilidad física que brindan. </p>
 
                                     </div>
                                     <div id="Objetivo" class="tab-pane fade" style="text-align: justify">
-                                        <br>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                        <br><br><br><br>
+                                        <p>Implementar un aplicativo web que permita cooperar con las estrategias de difusión de la accesibilidad al medio físico en el
+                                            Distrito Metropolitano de Quito (DMQ), apoyando una política inclusiva que mejore la conciencia, el bienestar social
+                                            y la solidaridad ciudadana.</p>
                                     </div>
                                     <div id="Meta" class="tab-pane fade" style="text-align: justify">
-                                        <br>
-                                        <p>En Ecuador no se cuenta con información pública centralizada sobre el cumplimiento de normas de accesibilidad física en
-                                            instituciones públicas. Por tanto, este proyecto tiene como meta, proporcionar información sobre la accesibilidad que
+                                        <br><br><br><br>
+                                        <p>Actualmente Ecuador no cuenta con información pública centralizada sobre el cumplimiento de normas de accesibilidad física en
+                                            instituciones públicas. Por tanto, este proyecto tiene como meta, proporcionar dicha información sobre la accesibilidad que
                                             se ofrece a personas con discapacidad motriz, visual y auditiva en instituciones públicas
-                                            que brindan atención a la ciudadanía en el Distrito Metropolitano de Quito.</p>
+                                            que prestan atención a la ciudadanía en el Distrito Metropolitano de Quito (DMQ).</p>
                                     </div>
                                 </div>
                             </div>
@@ -150,8 +157,8 @@
             <div class="col-sm-6" >
                 <div class="card text-center" style="background-color: transparent; border: none">
                     <div style="margin-top: 20px; margin-bottom: 20px">
-                        <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 40px 35px; display: inline-block; ">
-                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/06/12/00/29/building-2393978_960_720.png" style="width: 355px;">
+                        <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 90px 35px; display: inline-block; ">
+                            <img class="card-img-top" src="../accesibilidad1.jpg" style="width: 400px; height: 400px">
                         </div>
                     </div>
                 </div>
@@ -162,58 +169,17 @@
     </div>
 </section>
 <!-- FIN Contenido 1 Informativo -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container-fluid">
-    <!-- Control the column width, and how they should appear on different devices -->
-
-    <div class="row">
-        <div class="col-sm-4" style="background-color:beige;">
-            <img src="../accesibilidad1.jpg"  class=" img-thumbnail center-block" width="300" height="300" align="left" >
+<!-- Pie de página -->
+<div >
+    <footer class="page-footer font-small container-fluid" style="background-color:#2A3B59;">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="color: white; font-weight: bold">
+            EPN © Todos los Derechos Reservados
         </div>
-        <div class="col-sm-8" style="background-color:beige;">
-            <p class="text-justify"> <br> <br> El acceso a las Tecnologías de la Información (TI) permite tener una interacción continua
-                con el mundo, pese a esto la falta de información referente a la calidad y cantidad de instituciones que cumplan
-                con  regulaciones para accesibilidad física provoca que las personas con discapacidad motriz y sensorial no
-                puedan acceder a lugares con facilidad.
-            </p>
-
-            <p class="text-justify">
-                En Ecuador no se cuenta con información pública centralizada sobre el cumplimiento de normas de accesibilidad física en
-                instituciones públicas. Por tanto, este proyecto tiene como meta, proporcionar información sobre la accesibilidad que
-                se ofrece a personas con discapacidad motriz, discapacidad  visual y discapacidad  auditiva en instituciones públicas
-                que brindan servicios a la ciudadanía en el Distrito Metropolitano de Quito.
-            </p>
-
-            <p class="text-justify">
-                Se ha establecido un listado de las instituciones públicas que brindan servicios a la ciudadanía en el Distrito
-                Metropolitano de Quito, con el fin de recopilar información acerca de la accesibilidad física que brindan, y la
-                misma ha sido una base para el diseño y la implementación de la aplicación web que se presenta.
-            </p>
-
-        </div>
-    </div>
-    <br>
+        <!-- Copyright -->
+    </footer>
 </div>
+<!-- FIN Pie de página -->
+
 </body>
-
-
 </html>

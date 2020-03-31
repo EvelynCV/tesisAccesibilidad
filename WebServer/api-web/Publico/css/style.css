@@ -1,2 +1,11 @@
-
+.activo {
+    text-decoration: underline;
+    background-color: red;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
 

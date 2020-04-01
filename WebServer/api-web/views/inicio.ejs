@@ -9,28 +9,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-
-
-
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
 <!-- Menú - navbar -->
 <section>
-<nav class="navbar fixed-top navbar-expand-sm " style="background-color:#2A3B59">
-    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse" style="color: white">☰</button>
+<nav class="navbar fixed-top navbar-expand-sm nav-fill bg">
+    <a class="navbar-brand logo" href="#"><img src="../logo-epn.png" style="height: 50px"></a>
+    <button class="navbar-toggler toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
     <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav ml-auto ">
-            <li class="nav-item"> <a class="nav-link" style="color: white ; font-size: 20px" href="#">
-                    <img src="../iconHome.png"  class=" rounded-circle " style="width: 40px; height: 40px; margin-left: 10px;margin-right: 10px">
+            <li class="nav-item"> <a class="nav-link textMenu" href="#">
+                    <img src="../iconHome.png"  class="rounded-circle imgText" >
                     Inicio</a>
             </li>
-            <li class="nav-item"> <a class="nav-link" style="color: white; font-size: 20px" href="pruebaData">
-                    <img src="../iconDashboard.png"  class=" rounded" style="width: 45px; height: 45px; margin-left: 10px;margin-right: 10px">
+            <li class="nav-item"> <a class="nav-link textMenu" href="pruebaData">
+                    <img src="../iconDashboard.png"  class="rounded imgText">
                     Resultados</a>
             </li>
-            <li class="nav-item"> <a class="nav-link" style="color: white; font-size: 20px" href="informacion">
-                    <img src="../iconAcerca.png"  class=" rounded " style="width: 45px; height: 45px; margin-left: 10px;margin-right: 10px">
+            <li class="nav-item"> <a class="nav-link textMenu" href="acerca">
+                    <img src="../iconAcerca.png"  class="rounded imgText">
                 Acerca de</a>
             </li>
         </ul>
@@ -42,23 +41,14 @@
 <!-- Cabecera -->
 <section>
     <!-- IMAGEN contenida en Cabecera -->
-    <div class="text-black-50 text-center container-fluid "
-         style="background-image: linear-gradient(rgba(150, 150, 248,.7), rgba(185, 189, 165, .5)), url(https://images.unsplash.com/photo-1511871539190-20cb70cb3c8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80);
-                background-size: cover;
-                width: auto;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items:center ;">
+    <div class="text-black-50 text-center container-fluid embed-responsive-item">
         <!-- Texto sobrepuesto en Contenido -->
         <div id="cover">
-            <div class="row CoverImage">
-                <div class="col-sm-12" style="margin-top: 5px">
-                    <div class="card text-center" style="margin-top: 55px; background-color: transparent; align-items:center; border: none   ">
-                        <div class="card-body text-white" >
-                            <img src="../logo-EPN-blanco.png" style="padding-top: 8px; height: 150px">
-                            <br><br><br>
-                            <h2 class="card-title" style="font-size: 3em">Sistema Informativo de Accesibilidad al Medio Físico</h2>
+            <div class="row CoverImage contenedorP1">
+                <div class="col-sm-12 colCabecera">
+                    <div class="card text-center cardCabecera">
+                        <div class="card-body text-white" style="display: inline-block" >
+                            <h2 class="card-title titulo h5Ed">Sistema Informativo de Accesibilidad al Medio Físico</h2>
                         </div>
                     </div>
                 </div>
@@ -76,10 +66,9 @@
         <div class="row">
             <!-- IMAGEN Contenido 1 Informativo -->
             <div class="col-sm-4" >
-
-                <div class="card text-center" style="background-color: transparent; border: none">
-                    <div style="margin-top: 20px; margin-bottom: 20px">
-                        <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 40px 35px; display: inline-block; ">
+                <div class="card text-center imgCI1" >
+                    <div class="div-imgCI1" >
+                        <div class="card-body cb-imgCI1" >
                             <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/06/12/00/29/building-2393978_960_720.png" style="width: 355px;">
                         </div>
                     </div>
@@ -87,13 +76,13 @@
             </div>
             <!-- FIN IMAGEN Contenido 1 Informativo -->
             <!-- Información Contenido 1 -->
-            <div class="col-sm-7" style="padding-right: 0px;">
-                <div class="card text-center" data-aos="fade-left" style="background-color: transparent; border: none">
-                    <div style="margin-top: 20px; margin-bottom: 20px">
-                        <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 80px 35px; display: inline-block;">
-                            <h5 class="card-title h5Ed" style="font-family: 'Monotype Corsiva' ;font-size: 2.5em; color:#335574;">Accesibilidad en cualquier momento y cualquier lugar.</h5>
+            <div class="col-sm-7" >
+                <div class="card text-center cardCI1" >
+                    <div class="div-txtCI1" >
+                        <div class="card-body cb-txtCI1">
+                            <h5 class="card-title frase" >Accesibilidad en cualquier momento y cualquier lugar.</h5>
                             <br>
-                            <p class="card-text" style="color: black; text-align: justify; font-size: 1.3em">
+                            <p class="card-text ct-CI1 " >
                                 La accesibilidad en Ecuador busca la eliminación de barreras que impiden la autonomía personal y el libre desplazamiento de los
                                 ciudadanos y ciudadanas, fortaleciendo estrategias para la creación de espacios y servicios que faciliten la interacción con
                                 el medio físico, la comunicación y la información.
@@ -111,44 +100,44 @@
 <!-- Contenido 2 Informativo - Redireccionamiento-->
 <section>
     <div id="content2" class="container-fluid">
-        <div class="row " style=" background-image:  linear-gradient( rgba(0, 0, 0,0), rgba(0, 0, 0,0)), url(https://cdn.pixabay.com/photo/2018/04/14/23/20/triangles-3320452_960_720.png)">
+        <div class="row row-CI2">
             <div class="col-sm-12" style ="text-align: center">
-                <div class="card text-center" style="background-color: transparent; border: none">
-                    <div style="margin-top: 10px; margin-bottom: 10px">
-                        <div class="card-body" style="background: transparent; padding: 40px 35px; display: inline-block;">
-                            <h2 class="card-title" style="font-size: 2.5em; color:#ffffff">¿La accesibilidad está en todas las partes donde quieres estar?</h2>
+                <div class="card text-center cardCI2" >
+                    <div class="div-txtCI2" >
+                        <div class="card-body cb-CI2" >
+                            <h2 class="card-title frase2" >¿La accesibilidad está en todas las partes donde quieres estar?</h2>
                         </div>
                     </div>
                 </div>
 
                 <div class="row" >
                     <div class="col-sm-6" >
-                        <div class="card text-center" data-aos="fade-right" data-aos-easing="ease-in-sine" style="background-color: transparent; border: none">
-                            <div style="margin-top: 10px; margin-bottom: 10px">
-                                <div class="card-body" style="background: rgba(0,0,0,0.41); padding: 10px 10px; display: inline-block; max-width: 410px; min-height: 360px">
-                                    <img class="card-img-top" src="../iconDashboard.png" style="max-width: 3.5em; margin-top: 10px ">
-                                    <h5 class="card-title" style="font-size: 2em; color:#ffffff">Dashboard</h5>
-                                    <p class="card-text" style="color: #fff; text-align: center">
+                        <div class="card text-center c1" >
+                            <div class="divCards" >
+                                <div class="card-body cb6-CI2" >
+                                    <img class="card-img-top cit-CI2" src="../iconDashboard.png" >
+                                    <h5 class="card-title cTitleCI2" >Dashboard</h5>
+                                    <p class="card-text cTxtCI2">
                                         <br>Visualización de datos recolectados en instituciones públicas de atención al cliente dentro del DMQ para conocimiento
                                         de la accesibilidad física que brindan a personas con discapacidad física.
                                     </p>
-                                    <a href="pruebaData" class="btn btn-outline-secondary" role="button" aria-pressed="true" style="color: white ; border-bottom-color: white; ">Conozca más</a>
+                                    <a href="pruebaData" class="btn btn-outline-secondary a-CI2" role="button" aria-pressed="true" >Conozca más</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
-                        <div class="card text-center" data-aos="fade-left" style="background-color: transparent; border: none">
-                            <div style="margin-top: 10px; margin-bottom: 10px">
-                                <div class="card-body" style="background: rgba(0,0,0,0.41); padding: 10px 10px; display: inline-block; max-width: 410px ; min-height: 360px">
-                                    <img class="card-img-top" src="../iconAcerca.png" style="max-width: 3.5em; margin-top: 10px ">
-                                    <h5 class="card-title" style="font-size: 2em; color:#ffffff">Información</h5>
-                                    <p class="card-text" style="color: #fff; text-align: center">
+                        <div class="card text-center c2" >
+                            <div class="divCards" >
+                                <div class="card-body cb6-CI2" >
+                                    <img class="card-img-top cit-CI2" src="../iconAcerca.png" >
+                                    <h5 class="card-title cTitleCI2" >Información</h5>
+                                    <p class="card-text cTxtCI2 ">
                                         <br><br>Análisis y parámetros de evaluacion de informacion recolectada a instituciones públicas de
                                         atención al cliente dentro del Distrito Metropolitano de Quito.
                                     </p>
-                                    <a href="acerca" class="btn btn-outline-secondary" role="button" aria-pressed="true" style="color: white ; border-bottom-color: white; ">Conozca más</a>
+                                    <a href="acerca" class="btn btn-outline-secondary a-CI2" role="button" aria-pressed="true" >Conozca más</a>
 
                                 </div>
                             </div>
@@ -163,9 +152,9 @@
 
 <!-- Pie de página -->
 <div >
-    <footer class="page-footer font-small container-fluid" style="background-color:#2A3B59;">
+    <footer class="page-footer font-small container-fluid pg">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3" style="color: white; font-weight: bold">
+        <div class="footer-copyright text-center py-3 pg-txt" >
             EPN © Todos los Derechos Reservados
         </div>
         <!-- Copyright -->

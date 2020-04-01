@@ -10,82 +10,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: 70%;
-            margin: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style2.css">
 
 </head>
 
 <body>
+
 <!-- Menú - navbar -->
 <section>
-    <div>
-        <nav class="navbar navbar-expand-sm justify-content-center sticky-top container-fluid embed-responsive-item"
-             style="background-color:#2A3B59; position: fixed; height: 60px; display: flex">
-            <!-- Links -->
-            <ul class="navbar-nav embed-responsive-item">
-                <!-- MENÚ - pestaña Home -->
-                <li class="nav-item ">
-                    <button type="button" class="btn btn-informacion ">
-                        <a class="nav-link" href="inicio">
-                            <h3 class="text-center" style="color: white" > &nbsp;&nbsp; &nbsp;&nbsp;Inicio
-                                <img src="../iconHome.png"  class=" rounded-circle " width="35" height="35" align="left" >
-                            </h3>
-                        </a>
-                    </button>
+    <nav class="navbar fixed-top navbar-expand-sm nav-fill bg">
+        <a class="navbar-brand logo" href="#"><img src="../logo-epn.png" style="height: 50px"></a>
+        <button class="navbar-toggler toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav ml-auto ">
+                <li class="nav-item"> <a class="nav-link textMenu" href="#">
+                        <img src="../iconHome.png"  class="rounded-circle imgText" >
+                        Inicio</a>
                 </li>
-                <!-- FIN MENÚ - pestaña Home -->
-
-                <!-- MENÚ - pestaña Resultados -->
-                <li class="nav-item">
-                    <button type="button" class="btn btn-informacion">
-                        <a class="nav-link" href="informacion">
-                            <h3 class="text-center" style="color: white" >&nbsp;&nbsp;&nbsp; Resultados&nbsp;
-                                <img src="../iconDashboard.png"  class=" rounded" width="45" height="45" align="left" >
-                            </h3>
-                        </a>
-                    </button>
+                <li class="nav-item"> <a class="nav-link textMenu" href="pruebaData">
+                        <img src="../iconDashboard.png"  class="rounded imgText">
+                        Resultados</a>
                 </li>
-                <!-- FIN MENÚ - pestaña Resultados -->
-
-                <!-- MENÚ - pestaña Acerca de -->
-                <li class="nav-item">
-                    <button type="button" class="btn btn-informacion">
-                        <a class="nav-link" href="acerca" >
-                            <h3 class="text-center" style="color: white">&nbsp;&nbsp;&nbsp; Acerca de &nbsp;&nbsp;
-                                <img src="../iconAcerca.png"  class=" rounded " width="45" height="45" align="left" >
-                            </h3>
-                        </a>
-                    </button>
+                <li class="nav-item"> <a class="nav-link textMenu" href="acerca">
+                        <img src="../iconAcerca.png"  class="rounded imgText">
+                        Acerca de</a>
                 </li>
-                <!-- FIN MENÚ - pestaña Acerca de -->
             </ul>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </section>
 <!-- FIN Menú - navbar -->
 
 <!-- Cabecera -->
 <section>
     <!-- IMAGEN contenida en Cabecera -->
-    <div class="text-black-50 text-center container-fluid "
-         style="background-image: url(https://cdn.pixabay.com/photo/2015/10/27/09/03/senior-1008620_960_720.jpg);
-                background-size: cover;
-                width: auto;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items:center ;">
-
+    <div class="text-black-50 text-center container-fluid embed-responsive-item">
+        <!-- Texto sobrepuesto en Contenido -->
+        <div id="cover">
+            <div class="row CoverImage contenedorP2"></div>
+        </div>
+        <!-- FIN Texto sobrepuesto en Contenido -->
     </div>
     <!-- FIN IMAGEN contenida en Cabecera -->
 </section>
 <!-- FIN Cabecera -->
+
+
 
 <!-- Contenido 1 Informativo -->
 <section>
@@ -93,30 +63,17 @@
         <div class="row">
 
             <!-- Información Contenido 1 -->
-            <div class="col-sm-6" style="padding-right: 0px;">
-                <div class="card text-center" data-aos="fade-left" style="background-color: transparent; border: none">
+            <div class="col-sm-6">
+                <div class="card text-center" style="background-color: transparent; border: none">
                     <div style="margin-top: 20px; margin-bottom: 20px">
                         <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 80px 35px; display: inline-block;">
-                            <h5 class="card-title" style="font-family: 'Lucida Sans' ;font-size: 2.5em; color:#335574;">Nuestro proyecto</h5>
+                            <h5 class="card-title h5Ed" style="font-family: 'Lucida Sans' ;font-size: 2.5em; color:#335574;">Nuestro proyecto</h5>
 
                             <div class="container">
-
-                                <div id="menu">
-                                    <ul>
-                                        <li><a id="inicio" class="activo" href="#inicio">INICIO</a></li>
-                                        <li><a id="menu1" class="activo" href="#menu1">MENU 1</a></li>
-                                        <li><a id="menu2" href="#menu2">MENU 2</a></li>
-                                        <li><a id="contacto" href="#contacto">CONTACTO</a></li>
-                                        <li><a id="acercade" href="#acercade">ACERCA DE</a></li>
-                                    </ul>
-                                </div>
-
-
-
                                 <ul class="nav nav-tabs nav-justified justify-content-center" style="font-size: 25px" >
-                                    <li class="nav-item active"><a href="#Acerca" style="color: #815f6f"> Acerca </a></li>
-                                    <li class="nav-item active"><a href="#Objetivo" style="color: #815f6f"> Objetivo </a></li>
-                                    <li class="nav-item active"><a href="#Meta" style="color: #815f6f"> Meta </a></li>
+                                    <li ><a data-toggle="tab" href="#Acerca" style="color: #815f6f">&nbsp;&nbsp;&nbsp; Acerca &nbsp;&nbsp;&nbsp;</a></li>
+                                    <li><a data-toggle="tab" href="#Objetivo" style="color: #815f6f">&nbsp;&nbsp;&nbsp; Objetivo &nbsp;&nbsp;&nbsp;</a></li>
+                                    <li><a data-toggle="tab" href="#Meta" style="color: #815f6f">&nbsp;&nbsp;&nbsp; Meta &nbsp;&nbsp;&nbsp;</a></li>
                                 </ul>
 
                                 <div class="tab-content">
@@ -132,13 +89,13 @@
 
                                     </div>
                                     <div id="Objetivo" class="tab-pane fade" style="text-align: justify">
-                                        <br><br><br><br>
+                                        <br>
                                         <p>Implementar un aplicativo web que permita cooperar con las estrategias de difusión de la accesibilidad al medio físico en el
                                             Distrito Metropolitano de Quito (DMQ), apoyando una política inclusiva que mejore la conciencia, el bienestar social
                                             y la solidaridad ciudadana.</p>
                                     </div>
                                     <div id="Meta" class="tab-pane fade" style="text-align: justify">
-                                        <br><br><br><br>
+                                        <br>
                                         <p>Actualmente Ecuador no cuenta con información pública centralizada sobre el cumplimiento de normas de accesibilidad física en
                                             instituciones públicas. Por tanto, este proyecto tiene como meta, proporcionar dicha información sobre la accesibilidad que
                                             se ofrece a personas con discapacidad motriz, visual y auditiva en instituciones públicas
@@ -157,8 +114,8 @@
             <div class="col-sm-6" >
                 <div class="card text-center" style="background-color: transparent; border: none">
                     <div style="margin-top: 20px; margin-bottom: 20px">
-                        <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 90px 35px; display: inline-block; ">
-                            <img class="card-img-top" src="../accesibilidad1.jpg" style="width: 400px; height: 400px">
+                        <div class="card-body" style="background: rgba(0,0,0,0.0); padding: 40px 35px; display: inline-block; ">
+                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/06/12/00/29/building-2393978_960_720.png" style="width: 355px;">
                         </div>
                     </div>
                 </div>
@@ -169,11 +126,12 @@
     </div>
 </section>
 <!-- FIN Contenido 1 Informativo -->
+
 <!-- Pie de página -->
 <div >
-    <footer class="page-footer font-small container-fluid" style="background-color:#2A3B59;">
+    <footer class="page-footer font-small container-fluid pg">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3" style="color: white; font-weight: bold">
+        <div class="footer-copyright text-center py-3 pg-txt" >
             EPN © Todos los Derechos Reservados
         </div>
         <!-- Copyright -->

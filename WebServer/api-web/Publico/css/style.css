@@ -1,11 +1,170 @@
-.activo {
-    text-decoration: underline;
-    background-color: red;
-}
-ul {
-    list-style-type: none;
-}
-a {
-    text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
+/*---------------****PAGINA INICIO****---------------*/
+/*Menú*/
+.bg{
+    background-color: #2A3B59;
+}
+.textMenu{
+    color: white ;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+.toggler{
+    color: white;
+}
+.imgText{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*FIN Menú*/
+
+/*Cabecera*/
+.contenedorP1{
+    background-image: linear-gradient(rgba(150, 150, 248,.7), rgba(185, 189, 165, .5)),
+                      url(https://images.unsplash.com/photo-1511871539190-20cb70cb3c8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80);
+    background-size: cover;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.titulo{
+    font-family: 'Lato', sans-serif !important;
+    font-size: 5em;
+}
+@media screen and (max-width: 610px) {
+    .h5Ed {
+        font-size: 3em;
+        color: #ffffff
+    }
+}
+@media screen and (max-width: 410px) {
+    .h5Ed {
+        font-size: 2em;
+        color: #ffffff
+    }
+}
+.cardCabecera{
+    margin-top: 55px;
+    background-color: transparent;
+    align-items:center;
+    border: none;
+}
+.colCabecera{
+    margin-top: 5px;
+}
+/*FIN Cabecera*/
+
+/*Contenido 1 Informativo*/
+.imgCI1{
+    background-color: transparent;
+    border: none;
+}
+.cb-imgCI1{
+    background: rgba(0,0,0,0.0);
+    padding: 40px 35px;
+    display: inline-block;
+}
+.div-imgCI1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cardCI1{
+    background-color: transparent;
+    border: none;
+}
+.div-txtCI1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cb-txtCI1{
+    background: rgba(0,0,0,0.0);
+    padding: 80px 35px;
+    display: inline-block;
+}
+.frase{
+    font-family: 'Lobster', cursive !important;
+    font-size: 2.5em;
+    color:#335574;
+}
+.ct-CI1{
+    color: black;
+    text-align: justify;
+    font-size: 1.3em;
+}
+/*FIN Contenido 1 Informativo*/
+
+/*Contenido 2 Informativo - Redireccionamiento*/
+.row-CI2{
+    background-image:  linear-gradient( rgba(0, 0, 0,0), rgba(0, 0, 0,0)),
+                       url(https://cdn.pixabay.com/photo/2018/04/14/23/20/triangles-3320452_960_720.png);
+}
+.cardCI2{
+    background-color: transparent;
+    border: none;
+}
+.div-txtCI2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cb-CI2{
+    background: transparent;
+    padding: 40px 35px;
+    display: inline-block;
+}
+.frase2{
+    font-size: 2.5em;
+    color:#ffffff;
+}
+.c1{
+    background-color: transparent;
+    border: none;
+}
+.c2{
+    background-color: transparent;
+    border: none;
+}
+.divCards{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cTitleCI2{
+    font-size: 2em;
+    color:#ffffff;
+}
+.cTxtCI2{
+    color: #fff;
+    text-align: center;
+}
+.cit-CI2{
+    max-width: 3.5em;
+    margin-top: 10px;
+}
+.cb6-CI2{
+    background: rgba(0,0,0,0.41);
+    padding: 10px 10px;
+    display: inline-block;
+    max-width: 410px ;
+    min-height: 360px;
+}
+.a-CI2{
+    color: white;
+    border-bottom-color: white;
+}
+/*FIN Contenido 2 Informativo - Redireccionamiento*/
+
+/* Pie de página */
+.pg{
+    background-color:#2A3B59;
+}
+.pg-txt{
+    color: white;
+    font-weight: bold;
+}
+/* FIN Pie de página */

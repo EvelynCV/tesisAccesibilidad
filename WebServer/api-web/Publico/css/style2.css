@@ -62,7 +62,51 @@
 
 /* Contenido 1 Informativo */
 
-
+.c{
+    background: white;
+}
+.c-CI{
+    background-color: transparent;
+    border: none;
+}
+.d-CI {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cb-CI{
+    background: rgba(0,0,0,0.0);
+    padding: 80px 35px;
+    display: inline-block;
+}
+.ct-CI{
+    font-family:'Lucida Sans';
+    font-size: 2.5em;
+    color:#335574;
+}
+.n-CI{
+    font-size: 25px;
+}
+.a-Menu{
+    color: #815f6f;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.dcon{
+    text-align: justify;
+}
+.c-img{
+    background-color: transparent;
+    border: none;
+}
+.d-img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dc-img{
+    background: rgba(0,0,0,0.0);
+    padding: 40px 35px;
+    display: inline-block;
+}
 
 
 /* FIN Contenido 1 Informativo */

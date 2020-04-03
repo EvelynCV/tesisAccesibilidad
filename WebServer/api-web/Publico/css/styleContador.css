@@ -1,0 +1,29 @@
+
+.counter {
+    display: inline-block;
+    align-content: center;
+    background-color: #335574;
+}
+.count-text {
+    font-size: 20px;
+    text-align: center;
+    background-color: #335574;
+    background: rgba(0,0,0,0.20);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.columC{
+
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:#335574;
+    background: rgba(0,0,0,0.20);
+
+
+}
+.cimg{
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/01/13/48/blue-2363578_960_720.jpg);
+    background-position: center center;
+}

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 /*---------------****PAGINA INICIO****---------------*/
 /*Menú*/
@@ -70,7 +71,7 @@
     border: none;
 }
 .d-CI {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 .cb-CI{
@@ -79,21 +80,23 @@
     display: inline-block;
 }
 .ct-CI{
-    font-family:'Lucida Sans';
+    font-family: 'Lato', sans-serif !important;
     font-size: 2.5em;
     color:#335574;
+    text-align: left;
 }
 .n-CI{
     font-size: 25px;
 }
 .a-Menu{
-    color: #335574;
+    color: #009da1;
     margin-left: 20px;
     margin-right: 20px;
 
 }
 .dcon{
     text-align: justify;
+
 }
 .c-img{
     background-color: transparent;
@@ -107,6 +110,8 @@
     background: rgba(0,0,0,0.0);
     padding: 40px 35px;
     display: inline-block;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 /* FIN Contenido 1 Informativo */

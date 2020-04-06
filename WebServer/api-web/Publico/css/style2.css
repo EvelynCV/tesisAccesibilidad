@@ -13,6 +13,9 @@
     font-size: 20px;
     font-family: 'Lato', sans-serif;
 }
+.textMenu:hover{
+    color: orange;
+}
 .toggler{
     color: white;
 }
@@ -80,10 +83,10 @@
     display: inline-block;
 }
 .ct-CI{
-    font-family: 'Lato', sans-serif !important;
+    font-family: 'Lobster', cursive !important;
     font-size: 2.5em;
     color:#335574;
-    text-align: left;
+    text-align: center;
 }
 .n-CI{
     font-size: 25px;
@@ -94,6 +97,21 @@
     margin-right: 20px;
 
 }
+.nav-tabs .nav-link.active {
+    color: #2A3B59;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-top: 2px solid #009da1;
+    border-left: 2px solid #009da1;
+    border-right: 2px solid #009da1;
+
+
+}
+.tab-content>.active {
+    display: block;
+    border-top: 2px solid #009da1;
+}
+
 .dcon{
     text-align: justify;
 
@@ -112,6 +130,9 @@
     display: inline-block;
     margin-top: 60px;
     margin-bottom: 20px;
+}
+.count-text{
+    font-family: 'Lato', sans-serif !important;
 }
 
 /* FIN Contenido 1 Informativo */

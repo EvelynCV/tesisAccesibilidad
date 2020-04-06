@@ -10,31 +10,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link rel="stylesheet" href="/css/selectBox.css">
 
 
 </head>
 
 <body>
 
-<h1>Seleccion de Información</h1>
-
-<form action="/api/pruebaData">
-    <label for="nom_ins">Seleccionar Institucion</label>
-    <select name="pepito" id="nom_ins">
-        <option value="">Todos</option>
-        <% for(var i = 0; i< instituciones.length; i++){ %>
-            <option value="<%= instituciones[i].nom_ins %>"> Nombre: <%= instituciones[i].nom_ins %> </option>
-        <% } %>
-    </select>
-    <button type="submit">filtrar por id con</button>
-
-</form>
-<h1>contenido filtrado</h1>
-<p><%= institucionesFiltrado[0].nom_ins %></p>
-
 
 
 <!-- CHART.JS -->
+<form name="formulario1" action="#">
+    <select class="seleccion" name="cosa" onchange="cambia()" >
+
+        <option hidden selected>Selecciona una opción</option>
+        <% for(var i = 0; i< instituciones.length; i++){ %>
+            <option id="seleccionado"  value="<%= instituciones[i].nom_ins %>"> <%= instituciones[i].nom_ins %> </option>
+        <% } %>
+    </select>
+
+</form>
 
 <div id="canvas-container" style="width:70%;">
     <canvas id="chart" width="1000" height="500"></canvas>
@@ -51,73 +46,92 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
 
-
-
 </body>
 
-<script>
-    /*definir variables para tra*/
-    console.log(<%- JSON.stringify(instituciones) %>)
+<script type="text/javascript">
+
     var instituciones = <%- JSON.stringify(instituciones) %>
-        console.log(instituciones)
-    console.log('holaaaa')
+    // 2) crear una funcion que permita ejecutar el cambio dinamico
+    console.log("aquiholiii")
+    console.log(instituciones)
+
     var nombreInstituciones = instituciones.map(
         function (institucion) {
             return institucion.nom_ins;
+
         }
     )
+    console.log(nombreInstituciones)
     var valoresInstituciones = instituciones.map(
         function (institucion) {
             return institucion.nor_tot_a;
         }
     )
-    var datos = {
-        labels : nombreInstituciones,
-        datasets : [{
-            label : "datos 1",
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            data : valoresInstituciones
-        }
-        ]
-    };
-    console.log(datos)
-    var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options : {
-            legend: {
-                position: 'right'
-            },
-            elements : {
-                rectangle : {
-                    borderWidth : 1,
-                    borderColor : "rgb(0,255,0)",
-                    borderSkipped : 'bottom'
+    console.log(valoresInstituciones)
+
+    function cambia(){
+        var cosa;
+        //Se toma el valor de la "cosa seleccionada"
+        cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].index;
+        console.log(cosa);
+
+        if (cosa==1)
+        {
+           console.log("cosa hecha")
+            var datos = {
+                labels : nombreInstituciones,
+                datasets : [{
+                    label : "datos 1",
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    data : valoresInstituciones
                 }
-            },
-            responsive : true,
-            title : {
-                display : true,
-                text : "Prueba de grafico de barras"
-            }
+                ]
+            };
+            console.log(datos)
+            var canvas = document.getElementById('chart').getContext('2d');
+            window.bar = new Chart(canvas, {
+                type : "polarArea",
+                data : datos,
+                options : {
+                    legend: {
+                        position: 'right'
+                    },
+                    elements : {
+                        rectangle : {
+                            borderWidth : 1,
+                            borderColor : "rgb(0,255,0)",
+                            borderSkipped : 'bottom'
+                        }
+                    },
+                    responsive : true,
+                    title : {
+                        display : true,
+                        text : "Prueba de grafico de barras"
+                    }
+                }
+            });
         }
-    });
+
+    }
+    /*definir variables para tra*/
 </script>
+
+
+
 
 </html>

@@ -224,6 +224,9 @@
     border-top: 2px solid #009da1;
     border-left: 2px solid #009da1;
     border-right: 2px solid #009da1;
+    border-top-left-radius: 0.50rem;
+    border-top-right-radius: 0.50rem;
+
 }
 .tab-content>.active {
     display: block;
@@ -313,5 +316,13 @@
     background: rgba(0,0,0,0.41);
     padding: 10px 10px;
 
+}
+.carousel-caption{
+    font-size: 18px;
+    font-family: 'Lato', sans-serif !important;
+    background-color: rgba(148,150,168,0.5);
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 /* FIN Contenido 1 Informativo */

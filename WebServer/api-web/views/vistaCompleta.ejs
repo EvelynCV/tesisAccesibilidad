@@ -10,22 +10,66 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-
+    <link rel="stylesheet" href="/css/menuVertical.css">
 
 </head>
-
 <body>
 
-<!-- CHART.JS -->
+<!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar">
+    <div class="py-4 px-3 mb-4 bg-dark">
+        <div class="media d-flex align-items-center"><img src="../logo-epn.png" alt="logo EPN" width="65">
+        </div>
+    </div>
 
-<div id="canvas-container" style="width:40%;">
-    <canvas id="chart" width="500" height="350"></canvas>
+    <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+    <ul class="nav flex-column bg-white mb-0">
+        <li class="nav-item">
+            <a class="nav-link text-truncate" href="inicio"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Inicio</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><i class="fa fa-table"></i> <span class="d-none d-sm-inline">Resultados</span></a>
+            <div class="collapse" id="submenu1" aria-expanded="false">
+                <ul class="flex-column pl-2 nav">
+                    <li class="nav-item"><a class="nav-link py-0 active" data-toggle="tab" href="#canvas-container"><span>Datos Generales</span></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1"><span>Datos Por Institución</span></a>
+                        <div class="collapse" id="submenu1sub1" aria-expanded="false">
+                            <form name="formulario1" action="#">
+                                <select class="seleccion" name="cosa" onchange="cambia()" >
+                                    <option hidden selected>Selecciona una opción</option>
+                                    <% for(var i = 0; i< instituciones.length; i++){ %>
+                                        <option id="seleccionado"  value="<%= instituciones[i].nom_ins %>"> <%= instituciones[i].nom_ins %> </option>
+                                    <% } %>
+                                </select>
+                            </form>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-truncate" href="acerca"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Acerca de</span></a>
+        </li>
+    </ul>
 </div>
+<!-- End vertical navbar -->
 
-<!-- jQuery -->
 
-<script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Page content holder -->
+<div class="page-content p-5" id="content">
+    <!-- Toggle button -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">☰</small></button>
+    <div class="tab-content">
+        <div id="canvas-container" style="width:70%;">
+            <canvas id="chart" width="1000" height="500"></canvas>
+        </div>
+    </div>
 
+</div>
+<!-- End demo content -->
 <!-- Chart JS -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
@@ -33,57 +77,89 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
 
-
+<script src="/js/menuVertical.js"></script>
 
 </body>
+<script type="text/javascript">
 
-<script>
-    /*definir variables para tra*/
-    console.log(<%- JSON.stringify(instituciones) %>)
-    var instituciones =<%- JSON.stringify(instituciones) %>
-    var institucionesFiltrado = <%- JSON.stringify(institucionesFiltrado) %>
-        console.log(instituciones)
-        console.log(institucionesFiltrado)
-    console.log('holaaaa')
+    var instituciones = <%- JSON.stringify(instituciones) %>
+        // 2) crear una funcion que permita ejecutar el cambio dinamico
+        console.log("aquiholiii")
+    console.log(instituciones)
+
     var nombreInstituciones = instituciones.map(
         function (institucion) {
             return institucion.nom_ins;
-        }
-    )
-    var totalvaloresInstituciones = institucionesFiltrado.map(
-        function (institucion) {
-            return institucion.por_ins;
-        }
-    )
-    var datos = {
-        labels : nombreInstituciones,
-        datasets : [{
-            label : "datos 1",
-            backgroundColor : "rgba(220,220,220,0.5)",
-            data : totalvaloresInstituciones
-        }
-        ]
-    };
-    console.log(datos)
-    var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
-        type : "pie",
-        data : datos,
-        options : {
-            elements : {
-                rectangle : {
-                    borderWidth : 1,
-                    borderColor : "rgb(0,255,0)",
-                    borderSkipped : 'bottom'
-                }
-            },
-            responsive : true,
-            title : {
-                display : true,
-                text : "Prueba de grafico de barras"
-            }
-        }
-    });
-</script>
 
+        }
+    )
+    console.log(nombreInstituciones)
+    var valoresInstituciones = instituciones.map(
+        function (institucion) {
+            return institucion.nor_tot_a;
+        }
+    )
+    console.log(valoresInstituciones)
+
+    function cambia(){
+        var cosa;
+        //Se toma el valor de la "cosa seleccionada"
+        cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].index;
+        console.log(cosa);
+
+        if (cosa==1)
+        {
+            console.log("cosa hecha")
+            var datos = {
+                labels : nombreInstituciones,
+                datasets : [{
+                    label : "datos 1",
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    data : valoresInstituciones
+                }
+                ]
+            };
+            console.log(datos)
+            var canvas = document.getElementById('chart').getContext('2d');
+            window.bar = new Chart(canvas, {
+                type : "polarArea",
+                data : datos,
+                options : {
+                    legend: {
+                        position: 'right'
+                    },
+                    elements : {
+                        rectangle : {
+                            borderWidth : 1,
+                            borderColor : "rgb(0,255,0)",
+                            borderSkipped : 'bottom'
+                        }
+                    },
+                    responsive : true,
+                    title : {
+                        display : true,
+                        text : "Prueba de grafico de barras"
+                    }
+                }
+            });
+        }
+
+    }
+    /*definir variables para tra*/
+</script>
 </html>

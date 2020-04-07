@@ -2330,8 +2330,8 @@
         "signature": "3d30b920beba06e581db5ea584f3d34cf7c7ab78a5022c4eb3b1c08c4e95349d"
       },
       "../src/app.controller.ts": {
-        "version": "bd6a95606d7697d1bc7d647ed3a1dcef4a361283bbbf150bf1b5bbe7f7fb549d",
-        "signature": "d1374d33d9400a05b63e81980159e29efce76b4ed644411ca9b96947cfc87de8"
+        "version": "337001a898c81394952acf7094181f86222a565633ada5520e3ea5fca18d218a",
+        "signature": "705be6080d3df8c1b46ea7e449bfe96883ef91390ded01a41a94c188536d77c9"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -14825,7 +14825,6 @@
       "../src/viewnork/viewnork.service.ts",
       "../src/viewtotnorins/viewtotnorins.entity.ts",
       "../src/viewtotnorins/viewtotnorins.service.ts",
-      "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -14850,7 +14849,6 @@
       "../src/viewnorj/viewnorj.module.ts",
       "../src/viewnork/viewnork.module.ts",
       "../src/viewtotnorins/viewtotnorins.module.ts",
-      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -14909,6 +14907,7 @@
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
+      "../src/main.ts",
       "../src/contenido/contenido.controller.ts",
       "../src/contenido/contenido.ts",
       "../src/discapacidad/discapacidad.ts",
@@ -14961,7 +14960,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/main.ts"
+      "../src/app.controller.ts",
+      "../src/app.module.ts"
     ]
   },
   "version": "3.7.4"

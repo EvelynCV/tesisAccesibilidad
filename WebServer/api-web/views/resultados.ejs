@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Bootstrap Example</title>
@@ -10,70 +10,115 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-    <link rel="stylesheet" href="/css/selectBox.css">
 
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/selectBox.css">
 
 </head>
 
 <body>
 
+<!-- Menú - navbar -->
+<section>
+    <nav class="navbar fixed-top navbar-expand-sm nav-fill bg">
+        <a class="navbar-brand logo" ><img src="../logo-epn.png" alt="logo EPN" style="height: 50px"></a>
+        <button class="navbar-toggler toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav ml-auto ">
+                <li class="nav-item"> <a class="nav-link textMenu" href="inicio">
+                        <img src="../iconHome.png"  class="rounded-circle imgText" alt="icono Inicio" >
+                        Inicio</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link textMenu" href="pruebaData">
+                        <img src="../iconDashboard.png"  class="rounded imgText" alt="icono Resultados">
+                        Resultados</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link textMenu" href="acerca">
+                        <img src="../iconAcerca.png"  class="rounded imgText" alt="icono Acerca">
+                        Acerca de</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<!-- FIN Menú - navbar -->
+
+<section>
+
+
+
+
+
+    <div class="container-fluid cf-f">
+        <div class="container">
+            <div class="selected-item">
+                <p>You Selected Country : <span>Empty</span></p>
+            </div>
+
+            <div class="dropdown">
+                <span class="selLabel">Select Country</span>
+                <input type="hidden" name="cd-dropdown">
+                <ul class="dropdown-list">
+                    <% for(var i = 0; i< instituciones.length; i++){ %>
+                        <li id="seleccionado"  value="<%= instituciones[i].nom_ins %>"> <%= instituciones[i].nom_ins %> </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/js/selectot.js"></script>
+</section>
+
+
 <section>
 
     <div class="container-fluid cf-f">
-        <!--Blue select-->
-        <select class="mdb-select md-form colorful-select dropdown-primary">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-            <option value="4">Option 4</option>
-            <option value="5">Option 5</option>
-        </select>
-        <label class="mdb-main-label">Blue select</label>
-        <!--/Blue select-->
+        <form name="formulario1" action="#">
+            <select class="seleccion" name="cosa" onchange="cambia()" >
+                <option hidden selected>Selecciona una opción</option>
+                <% for(var i = 0; i< instituciones.length; i++){ %>
+                    <option id="seleccionado"  value="<%= instituciones[i].nom_ins %>"> <%= instituciones[i].nom_ins %> </option>
+                <% } %>
+            </select>
+        </form>
     </div>
 
+    <div id="canvas-container" class="container-fluid " style="width:60%; align-content: center">
+        <canvas id="chart" width="1000" height="500"></canvas>
+    </div>
+
+
 </section>
-<script src="../js/selector.js"></script>
 
-<!-- CHART.JS -->
-<form name="formulario1" action="#">
-    <select class="seleccion" name="cosa" onchange="cambia()" >
 
-        <option hidden selected>Selecciona una opción</option>
-        <% for(var i = 0; i< instituciones.length; i++){ %>
-            <option id="seleccionado"  value="<%= instituciones[i].nom_ins %>"> <%= instituciones[i].nom_ins %> </option>
-        <% } %>
-    </select>
 
-</form>
 
-<div id="canvas-container" style="width:70%;">
-    <canvas id="chart" width="1000" height="500"></canvas>
-</div>
+<!-- Pie de página -->
+<section>
+    <div >
+        <footer class="page-footer font-small container-fluid pg">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 pg-txt" >
+                EPN © Todos los Derechos Reservados
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <!-- FIN Pie de página -->
+</section>
 
-<!-- jQuery -->
 
-<script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<!-- Chart JS -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+
 
 </body>
-
-
-
-
-
-
 <script type="text/javascript">
 
     var instituciones = <%- JSON.stringify(instituciones) %>
-    // 2) crear una funcion que permita ejecutar el cambio dinamico
-    console.log("aquiholiii")
+        // 2) crear una funcion que permita ejecutar el cambio dinamico
+        console.log("aquiholiii")
     console.log(instituciones)
 
     var nombreInstituciones = instituciones.map(
@@ -98,7 +143,7 @@
 
         if (cosa==1)
         {
-           console.log("cosa hecha")
+            console.log("cosa hecha")
             var datos = {
                 labels : nombreInstituciones,
                 datasets : [{
@@ -151,8 +196,4 @@
     }
     /*definir variables para tra*/
 </script>
-
-
-
-
 </html>

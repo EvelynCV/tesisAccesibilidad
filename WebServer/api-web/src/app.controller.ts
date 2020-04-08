@@ -243,22 +243,18 @@ export class AppController {
     console.log(query);
     const id_conNumber = Number(query.nom_ins);
     let consulta:any = {};
-
     if(id_conNumber){
       consulta.nom_ins = id_conNumber;
-
     }
     const instituciones = await this.viewTotNorIns._repositorioViewTotNorIns.find();
     const institucionesFiltrado = await this.viewTotNorIns._repositorioViewTotNorIns.find({
       where:consulta
     });
-
     console.log(instituciones);
     // return this.contenidoService.buscar();
     return res.render('pruebaData', {
       instituciones:instituciones,
       institucionesFiltrado:institucionesFiltrado,
-
     });
   }
 

@@ -2330,7 +2330,7 @@
         "signature": "3d30b920beba06e581db5ea584f3d34cf7c7ab78a5022c4eb3b1c08c4e95349d"
       },
       "../src/app.controller.ts": {
-        "version": "337001a898c81394952acf7094181f86222a565633ada5520e3ea5fca18d218a",
+        "version": "be43174e3c7db800dea59fdf1ec7d389af02e92178f8a1a6e54d434c48c5dd64",
         "signature": "705be6080d3df8c1b46ea7e449bfe96883ef91390ded01a41a94c188536d77c9"
       },
       "../src/institucion/institucion.module.ts": {
@@ -14849,6 +14849,7 @@
       "../src/viewnorj/viewnorj.module.ts",
       "../src/viewnork/viewnork.module.ts",
       "../src/viewtotnorins/viewtotnorins.module.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -14960,8 +14961,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts"
+      "../src/app.controller.ts"
     ]
   },
   "version": "3.7.4"

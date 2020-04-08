@@ -17,23 +17,6 @@
 
 <body>
 
-<section>
-
-    <div class="container-fluid cf-f">
-        <!--Blue select-->
-        <select class="mdb-select md-form colorful-select dropdown-primary">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-            <option value="4">Option 4</option>
-            <option value="5">Option 5</option>
-        </select>
-        <label class="mdb-main-label">Blue select</label>
-        <!--/Blue select-->
-    </div>
-
-</section>
-<script src="../js/selector.js"></script>
 
 <!-- CHART.JS -->
 <form name="formulario1" action="#">
@@ -50,109 +33,16 @@
 <div id="canvas-container" style="width:70%;">
     <canvas id="chart" width="1000" height="500"></canvas>
 </div>
-
-<!-- jQuery -->
-
-<script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-<!-- Chart JS -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
-
-</body>
-
-
-
-
+<script src="/js/grafico1.js"></script>
 
 
 <script type="text/javascript">
-
-    var instituciones = <%- JSON.stringify(instituciones) %>
-    // 2) crear una funcion que permita ejecutar el cambio dinamico
-    console.log("aquiholiii")
-    console.log(instituciones)
-
-    var nombreInstituciones = instituciones.map(
-        function (institucion) {
-            return institucion.nom_ins;
-
-        }
-    )
-    console.log(nombreInstituciones)
-    var valoresInstituciones = instituciones.map(
-        function (institucion) {
-            return institucion.nor_tot_a;
-        }
-    )
-    console.log(valoresInstituciones)
-
-    function cambia(){
-        var cosa;
-        //Se toma el valor de la "cosa seleccionada"
-        cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].index;
-        console.log(cosa);
-
-        if (cosa==1)
-        {
-           console.log("cosa hecha")
-            var datos = {
-                labels : nombreInstituciones,
-                datasets : [{
-                    label : "datos 1",
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    data : valoresInstituciones
-                }
-                ]
-            };
-            console.log(datos)
-            var canvas = document.getElementById('chart').getContext('2d');
-            window.bar = new Chart(canvas, {
-                type : "polarArea",
-                data : datos,
-                options : {
-                    legend: {
-                        position: 'right'
-                    },
-                    elements : {
-                        rectangle : {
-                            borderWidth : 1,
-                            borderColor : "rgb(0,255,0)",
-                            borderSkipped : 'bottom'
-                        }
-                    },
-                    responsive : true,
-                    title : {
-                        display : true,
-                        text : "Prueba de grafico de barras"
-                    }
-                }
-            });
-        }
-
-    }
-    /*definir variables para tra*/
+    var instituciones = JSON.stringify(instituciones);
+    archivoJS(instituciones);
 </script>
 
 
+</body>
 
 
 </html>

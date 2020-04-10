@@ -2329,9 +2329,17 @@
         "version": "05681a7cf7366a1618dddedeee656896b772b7c8366d8c9f6885bb08210d423b",
         "signature": "3d30b920beba06e581db5ea584f3d34cf7c7ab78a5022c4eb3b1c08c4e95349d"
       },
+      "../src/viewtotinsnor/viewtotinsnor.entity.ts": {
+        "version": "710da5e2be3120dc850b2d5bbb14288c7f50f831e20c23d066f0e94f13437532",
+        "signature": "5e34eda77ca953d47e1aa4f259235012c8cc3599a9cab05abe445c0649bfa944"
+      },
+      "../src/viewtotinsnor/viewtotinsnor.service.ts": {
+        "version": "820e052847ae57380fbed56ac98da89ccfe01fdf41b7cd9a8ffa8044a902dbe4",
+        "signature": "81f04fa6f0ce59aafa3542d99055476cf86a6e479bd1f0311bc1e2b4d99f0c84"
+      },
       "../src/app.controller.ts": {
-        "version": "a4e7d239c97f47de614ec15ed1cd58c4e53edb2b3d151c3bce0254e23df999fc",
-        "signature": "705be6080d3df8c1b46ea7e449bfe96883ef91390ded01a41a94c188536d77c9"
+        "version": "ac63deffb72854825d3aea8939cc45e29fc3ad121570e5efdd3408b7e8c502f3",
+        "signature": "408e542a30f294677251557dcfb18ff6658ea97ac3133864bbc16137942d99e9"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -2429,8 +2437,12 @@
         "version": "a69092c3e159ce58e5e0262dc01c99d4f2fffc7b772f92a5155a8dbd16abd55f",
         "signature": "a6d0ab5752936505e1a7e5f2f6d01e29ddcae0afbb89b9d15b2a9b4a9616066e"
       },
+      "../src/viewtotinsnor/viewtotinsnor.module.ts": {
+        "version": "529ce4f69bc54909167b771b8de2006f02b11fe1741fafbeeade87f7b342a2a6",
+        "signature": "f72888e38b6c7fe0482e059e3640cba99cc2192e393c5b451b5dc992cee7c56b"
+      },
       "../src/app.module.ts": {
-        "version": "635b9a9d292322c70ea0d670daae2edfce29d3f07abc4fe952b646bd3462dd4e",
+        "version": "dbe6e5f98a1a0b2e6d2aec8023e554dfa8b31042c3695001d4e726835a3c16f4",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2752,6 +2764,10 @@
       "../src/viewnorb/viewnorb.ts": {
         "version": "c37cd6bf1f91b86fd2fc9700d7d76c133eb76de0e0b4e78692913979de5f78ca",
         "signature": "ca4e49d9b037970062eee670c8766c3a2481f4f65aeb3f277481c6e545a9d175"
+      },
+      "../src/viewtotinsnor/viewtotinsnor.ts": {
+        "version": "e48097bde6e54d8115dc8764acab183a88372c6449d5c3f8ecba36d5df5f2a07",
+        "signature": "a2667a330f9142a8111669df0120e139dc8dacf2d376e255d0ab3477290b891d"
       },
       "../src/viewtotnorins/viewtotnorins.ts": {
         "version": "c1bff315d2fbc19369fbd51eefb5c47ccd89b48491e726a073c413f0138ef7ac",
@@ -7770,6 +7786,23 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/viewtotinsnor/viewtotinsnor.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewtotinsnor/viewtotinsnor.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/viewtotinsnor/viewtotinsnor.entity.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.service.ts",
@@ -7797,6 +7830,7 @@
         "../src/viewnorj/viewnorj.service.ts",
         "../src/viewnork/viewnork.service.ts",
         "../src/viewtotnorins/viewtotnorins.service.ts",
+        "../src/viewtotinsnor/viewtotinsnor.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8042,6 +8076,16 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/viewtotinsnor/viewtotinsnor.module.ts": [
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/viewtotinsnor/viewtotinsnor.entity.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/viewtotinsnor/viewtotinsnor.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -8071,6 +8115,7 @@
         "../src/viewnorj/viewnorj.module.ts",
         "../src/viewnork/viewnork.module.ts",
         "../src/viewtotnorins/viewtotnorins.module.ts",
+        "../src/viewtotinsnor/viewtotinsnor.module.ts",
         "../src/institucion/institucion.entity.ts",
         "../src/formulario/formulario.entity.ts",
         "../src/norma/norma.entity.ts",
@@ -8095,6 +8140,7 @@
         "../src/viewnorj/viewnorj.entity.ts",
         "../src/viewnork/viewnork.entity.ts",
         "../src/viewtotnorins/viewtotnorins.entity.ts",
+        "../src/viewtotinsnor/viewtotinsnor.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8728,6 +8774,12 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/viewnorb/viewnorb.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewtotinsnor/viewtotinsnor.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -13512,6 +13564,10 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/viewtotnorins/viewtotnorins.entity.ts"
       ],
+      "../src/viewtotinsnor/viewtotinsnor.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/viewtotinsnor/viewtotinsnor.entity.ts"
+      ],
       "../src/app.controller.ts": [
         "../src/app.service.ts",
         "../src/institucion/institucion.service.ts",
@@ -13537,7 +13593,8 @@
         "../src/viewnori/viewnori.service.ts",
         "../src/viewnorj/viewnorj.service.ts",
         "../src/viewnork/viewnork.service.ts",
-        "../src/viewtotnorins/viewtotnorins.service.ts"
+        "../src/viewtotnorins/viewtotnorins.service.ts",
+        "../src/viewtotinsnor/viewtotinsnor.service.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -14825,6 +14882,8 @@
       "../src/viewnork/viewnork.service.ts",
       "../src/viewtotnorins/viewtotnorins.entity.ts",
       "../src/viewtotnorins/viewtotnorins.service.ts",
+      "../src/viewtotinsnor/viewtotinsnor.entity.ts",
+      "../src/viewtotinsnor/viewtotinsnor.service.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -14849,7 +14908,7 @@
       "../src/viewnorj/viewnorj.module.ts",
       "../src/viewnork/viewnork.module.ts",
       "../src/viewtotnorins/viewtotnorins.module.ts",
-      "../src/app.module.ts",
+      "../src/viewtotinsnor/viewtotinsnor.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -14930,6 +14989,7 @@
       "../src/viewinsvalopc/viewinsvalopc.ts",
       "../src/viewnora/viewnora.ts",
       "../src/viewnorb/viewnorb.ts",
+      "../src/viewtotinsnor/viewtotinsnor.ts",
       "../src/viewtotnorins/viewtotnorins.ts",
       "../src/viewtotvalins/viewtotvalins.ts",
       "../node_modules/@types/anymatch/index.d.ts",
@@ -14961,7 +15021,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts"
+      "../src/app.controller.ts",
+      "../src/app.module.ts"
     ]
   },
   "version": "3.7.4"

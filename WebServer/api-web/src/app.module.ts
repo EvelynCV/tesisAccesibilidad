@@ -26,6 +26,7 @@ import {ViewNorIModule} from "./ViewNorI/ViewNorI.module";
 import {ViewNorJModule} from "./ViewNorJ/ViewNorJ.module";
 import {ViewNorKModule} from "./ViewNorK/ViewNorK.module";
 import {ViewTotNorInsModule} from "./viewTotNorIns/ViewTotNorIns.module";
+import {ViewTotInsNorModule} from "./viewTotInsNor/ViewTotInsNor.module";
 import {InstitucionEntity} from "./Institucion/institucion.entity";
 import {FormularioEntity} from "./Formulario/formulario.entity";
 import {NormaEntity} from "./Norma/norma.entity";
@@ -50,6 +51,7 @@ import {ViewNorIEntity} from "./ViewNorI/ViewNorI.entity";
 import {ViewNorJEntity} from "./ViewNorJ/ViewNorJ.entity";
 import {ViewNorKEntity} from "./ViewNorK/ViewNorK.entity";
 import {ViewTotNorInsEntity} from "./viewTotNorIns/ViewTotNorIns.entity";
+import {ViewTotInsNorEntity} from "./viewTotInsNor/ViewTotInsNor.entity";
 
 
 @Module({
@@ -78,6 +80,7 @@ import {ViewTotNorInsEntity} from "./viewTotNorIns/ViewTotNorIns.entity";
         ViewNorJModule,
         ViewNorKModule,
         ViewTotNorInsModule,
+        ViewTotInsNorModule,
 
         TypeOrmModule.forRoot(
             {
@@ -114,6 +117,7 @@ import {ViewTotNorInsEntity} from "./viewTotNorIns/ViewTotNorIns.entity";
                     ViewNorJEntity,
                     ViewNorKEntity,
                     ViewTotNorInsEntity,
+                    ViewTotInsNorEntity,
                 ],
                 synchronize: true, // Crear -> true , Conectar -> false
             },

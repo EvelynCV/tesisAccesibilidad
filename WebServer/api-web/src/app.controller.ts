@@ -53,7 +53,7 @@ export class AppController {
               private readonly viewNorJService: ViewNorJService,
               private readonly viewNorKService: ViewNorKService,
               private readonly viewTotNorIns: ViewTotNorInsService,
-              private readonly viewTotInsNor:ViewTotInsNorService) {}
+              private readonly viewTotInsNorService:ViewTotInsNorService) {}
 
   @Get('Hola')
   getHello(): string {
@@ -249,7 +249,7 @@ export class AppController {
       consulta.nom_ins = id_conNumber;
     }
     const instituciones = await this.viewTotNorIns._repositorioViewTotNorIns.find();
-    const tot_nor= await this.viewTotNorService._repositorioViewTotNor.find();
+    const tot_ins_nor= await this.viewTotInsNorService._repositorioViewTotInsNor.find();
     const institucionesFiltrado = await this.viewTotNorIns._repositorioViewTotNorIns.find({
       where:consulta
     });
@@ -257,7 +257,7 @@ export class AppController {
     // return this.contenidoService.buscar();
     return res.render('pruebaData', {
       instituciones:instituciones,
-      tot_nor:tot_nor,
+      tot_ins_nor:tot_ins_nor,
       institucionesFiltrado:institucionesFiltrado,
     });
   }

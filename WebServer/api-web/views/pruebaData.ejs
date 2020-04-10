@@ -27,7 +27,7 @@
     </select>
 </form>
 
-<div id="canvas-container" style="width:40%;">
+<div id="canvas-container" style="width:60%;">
     <canvas id="chart" width="1000" height="500"></canvas>
 </div>
 
@@ -36,29 +36,27 @@
 <script src="/js/grafico1.js"></script>
 
 <script type="text/javascript">
+    var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
     var instituciones = <%- JSON.stringify(instituciones) %>
-    console.log(instituciones)
+    console.log(tot_ins_nor)
     //archivoJS(instituciones)
 
     function cambia1(){
         cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].index;
         console.log("cosita" + cosa)
        // return cosa;
-        if(cosa==0)
-        {
-            console.log("no hay nada")
-        }
+
         if (cosa==1)
         {
-            archivoJS(instituciones);
+            archivoJS(tot_ins_nor);
         }
         if (cosa==2)
         {
-            archivoJS2(instituciones);
+            archivoJS2(tot_ins_nor);
         }
         if (cosa==3)
         {
-            archivoJS3(instituciones);
+            archivoJS3(tot_ins_nor);
         }
     }
 

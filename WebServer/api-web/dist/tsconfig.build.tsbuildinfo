@@ -2338,8 +2338,8 @@
         "signature": "81f04fa6f0ce59aafa3542d99055476cf86a6e479bd1f0311bc1e2b4d99f0c84"
       },
       "../src/app.controller.ts": {
-        "version": "ac63deffb72854825d3aea8939cc45e29fc3ad121570e5efdd3408b7e8c502f3",
-        "signature": "408e542a30f294677251557dcfb18ff6658ea97ac3133864bbc16137942d99e9"
+        "version": "00a6cc11fed6efd0969016073b5737576d17d3397a6df731befc02066078a755",
+        "signature": "d2aee71e700e8631a3ec316253c372375d3025db0e1ac39a9ad8a60e33de5668"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",

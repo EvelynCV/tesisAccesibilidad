@@ -1,15 +1,15 @@
-function archivoJS(instituciones) {
-    console.log(instituciones);
-    var nombreInstituciones = instituciones.map(
+function archivoJS(tot_ins_nor) {
+    console.log(tot_ins_nor);
+    var nombreInstituciones = tot_ins_nor.map(
         function (institucion) {
-            return institucion.tot_nor;
+            return institucion.cod_nor;
         }
     );
     console.log(nombreInstituciones);
 
-    var valoresInstituciones = instituciones.map(
+    var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
-            return institucion.cod_nor;
+            return institucion.ins_1;
         }
     );
     console.log(valoresInstituciones);
@@ -40,7 +40,7 @@ function archivoJS(instituciones) {
     };
     console.log(datos);
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar2 = new Chart(canvas, {
+    window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
         options : {
@@ -62,18 +62,18 @@ function archivoJS(instituciones) {
         }
     });
 }
-function archivoJS2(instituciones) {
-    console.log(instituciones);
-    var nombreInstituciones = instituciones.map(
+function archivoJS2(tot_ins_nor) {
+    console.log(tot_ins_nor);
+    var nombreInstituciones = tot_ins_nor.map(
         function (institucion) {
-            return institucion.nom_ins;
+            return institucion.cod_nor;
         }
     );
     console.log(nombreInstituciones);
 
-    var valoresInstituciones = instituciones.map(
+    var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
-            return institucion.nor_tot_a;
+            return institucion.ins_2;
         }
     );
     console.log(valoresInstituciones);
@@ -127,18 +127,18 @@ function archivoJS2(instituciones) {
     });
 }
 
-function archivoJS3(instituciones) {
-    console.log(instituciones);
-    var nombreInstituciones = instituciones.map(
+function archivoJS3(tot_ins_nor) {
+    console.log(tot_ins_nor);
+    var nombreInstituciones = tot_ins_nor.map(
         function (institucion) {
-            return institucion.nom_ins= "Ministerio de Trabajo - Edificio Géminis";
+            return institucion.cod_nor;
         }
     );
     console.log(nombreInstituciones);
 
-    var valoresInstituciones = instituciones.map(
+    var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
-            return institucion.nor_tot_a;
+            return institucion.ins_3;
         }
     );
     console.log(valoresInstituciones);

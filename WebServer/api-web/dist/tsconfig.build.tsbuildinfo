@@ -2218,8 +2218,8 @@
         "signature": "65b580fdb0127325bc7a35e2d10cb8feafd4fff8cda312a3731fc0adeab8b639"
       },
       "../src/viewtotvalins/viewtotvalins.entity.ts": {
-        "version": "a2efeb30e72ff2bab632d3f308c4aa20f13c013166c24e5cc83bebb989c94878",
-        "signature": "42f08625879c3589019b14b8cebc7b4879d26424bdc1c547d27679590a6c331f"
+        "version": "33a4c214f53567b0ff0c9d3e62b2b25ce499e385549f6bcfc4cb610851daf97f",
+        "signature": "9a3644689d235c9d60fcad03f30d41cb5bd1d477ecbcbbbcd26b2783404fe42a"
       },
       "../src/viewtotvalins/viewtotvalins.service.ts": {
         "version": "0d4c4acab1c3ee967d18ca1881b42f42eff350034ae76f782a98504cc1446e1a",
@@ -2774,8 +2774,8 @@
         "signature": "ce4745ff6b88bc6662d3a103416aaefec179173a08c8bfdf5bcbdd79ed8bec46"
       },
       "../src/viewtotvalins/viewtotvalins.ts": {
-        "version": "57366107ca2619af4e0283a25c2e41c50571bdfaef2e4f28ffec77d60cb4bc04",
-        "signature": "be9c9b4ef47829a8f74f4987874e1794bd7f6b579327c1ce7f9394cdf12113b9"
+        "version": "120bfb33dbda6e56e4a9fd067374beca24fbf9140753f651c5ebf48df4cd54b1",
+        "signature": "00165b7a3e1c37caa2e8580afdeac3aaa492746011775c121528b9189d239ee3"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -14854,8 +14854,6 @@
       "../src/contenido/contenido.service.ts",
       "../src/viewinsvalopc/viewinsvalopc.entity.ts",
       "../src/viewinsvalopc/viewinsvalopc.service.ts",
-      "../src/viewtotvalins/viewtotvalins.entity.ts",
-      "../src/viewtotvalins/viewtotvalins.service.ts",
       "../src/viewtotnor/viewtotnor.entity.ts",
       "../src/viewtotnor/viewtotnor.service.ts",
       "../src/viewnora/viewnora.entity.ts",
@@ -14894,7 +14892,6 @@
       "../src/nordis/nordis.module.ts",
       "../src/contenido/contenido.module.ts",
       "../src/viewinsvalopc/viewinsvalopc.module.ts",
-      "../src/viewtotvalins/viewtotvalins.module.ts",
       "../src/viewtotnor/viewtotnor.module.ts",
       "../src/viewnora/viewnora.module.ts",
       "../src/viewnorb/viewnorb.module.ts",
@@ -14991,7 +14988,6 @@
       "../src/viewnorb/viewnorb.ts",
       "../src/viewtotinsnor/viewtotinsnor.ts",
       "../src/viewtotnorins/viewtotnorins.ts",
-      "../src/viewtotvalins/viewtotvalins.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -15021,8 +15017,12 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts"
+      "../src/viewtotvalins/viewtotvalins.entity.ts",
+      "../src/app.module.ts",
+      "../src/viewtotvalins/viewtotvalins.module.ts",
+      "../src/viewtotvalins/viewtotvalins.service.ts",
+      "../src/viewtotvalins/viewtotvalins.ts",
+      "../src/app.controller.ts"
     ]
   },
   "version": "3.7.4"

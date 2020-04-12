@@ -2234,88 +2234,88 @@
         "signature": "c1974889fa368b0fc4ed221c4db7f78743d34091696ce3f31ca8a8f944351671"
       },
       "../src/viewnora/viewnora.entity.ts": {
-        "version": "73c73fde08dff2aa8ce9aaf22babd347195e2c887070f6e58a26f175713ebdc5",
-        "signature": "aedf3200301b6f5c2a6a2678113a8bdd707cd942ea0f917bb288c38fc0cb6c11"
+        "version": "c4fdda97f5fb2ae8d332889d9e7de053ea6c1a8b66938af4084e89d052f2d7e9",
+        "signature": "b19ce9c08dc088948decc7b5c1a20f640827188f64e19d2c44794c5909b43008"
       },
       "../src/viewnora/viewnora.service.ts": {
         "version": "d7ee738ce67fc49706655d776458cdddab0c9e474f2b57ec7ce314426b9da209",
         "signature": "012024b980201af043770cbcde54847e5ab1cb12805bf79e515361748a74b715"
       },
       "../src/viewnorb/viewnorb.entity.ts": {
-        "version": "75164c271b22d05ee97e1deb31b336d518dea17b90573bb40ce16b86adeaf94e",
-        "signature": "def80025ee09a13a523938b6f6215adc148ffa803812f5904c8053f6a9446d0e"
+        "version": "ea5e6983ba09c5c6539f74689a5f093bc10050d9de6adbf5bf0216970abffb37",
+        "signature": "aadece3df3dabed40bdc037cc9bef7e2adc6709087380b389a17fcd54efd32a4"
       },
       "../src/viewnorb/viewnorb.service.ts": {
         "version": "b0ae2e8eee5dce3cd165e8518d900acdd02a5240834452ef7deafa47d6d75fe4",
         "signature": "a3076192f4c0c250062f1a4abfe782f3034bd436536a65b6d955501e59781bf7"
       },
       "../src/viewnorc/viewnorc.entity.ts": {
-        "version": "e83e7abd47413c3e4da739b3b8232734627c704d7122b8a49dca6aed2b817865",
-        "signature": "06f89f29e482c96a4637e1ad1330fb8a173ffc23fb767f683a679a4323a176ee"
+        "version": "98d83945e8b0fe6f7ddd2f7381f80c93b54c4abb9ccfe31ba075f79d148b1fc1",
+        "signature": "009a69f8cbbccfb64cf4d9ebeb6d8a8161adb806d6e15ca8677ea09ca82ced5f"
       },
       "../src/viewnorc/viewnorc.service.ts": {
         "version": "e2c7b5012d7dd691ff2dd039b32ec4d38285cd68264fe90be2397b2e6cfa0795",
         "signature": "6da8e1d982dae4152622ec1dbc7160122c10cf594a3fbcc584fdab99fb96ba51"
       },
       "../src/viewnord/viewnord.entity.ts": {
-        "version": "62946e09ce9c61df92291497041b4d714109215fdf3cd22a65ce58d7648b36f7",
-        "signature": "11182f1394b44cda8d8d4a2429d92bb14c7c3f84f54ec139fe5f66e3cf7e5385"
+        "version": "219a3d6740bfdfa0bae9f30ce2b23211a3ddf698211bbffa8d9ff01d5abbcbff",
+        "signature": "f291f18e3534e6d7e9c97680bed9588ce4b5130c6b512c17e4acd13207fb93e6"
       },
       "../src/viewnord/viewnord.service.ts": {
         "version": "f7b324e932d512a882d37f7caa60673728d90a93fc996eabc7cbb0b7f9472e0b",
         "signature": "c833123cc3dfc67f39dd53940fdda939a3900b240db0287eaffb69009fc7f658"
       },
       "../src/viewnore/viewnore.entity.ts": {
-        "version": "3a7ad9bc41d199b0f0659506826fbd3931202a1e03ac14b9b218176718842558",
-        "signature": "4a7bf3b0c366de151063609961cb8973e9e5af894aecc04f9ad11ebb363c3fa0"
+        "version": "9526aafff8310a989cd1e87ff542dc383820ff56c139222a354f17f1d81ca0ea",
+        "signature": "36e46b1a59a5c8a5f4c72f16c73ddbc38ed1fae3abd41810a6b5257f4b8cdb8f"
       },
       "../src/viewnore/viewnore.service.ts": {
         "version": "880a56d199ecc94cc7fc2bd47a8f8343f1f1edf43d3cd910d210451a3cf6444e",
         "signature": "4f5a39dabd51853c1b784a0511ef2818c1ee1c7bd0324b424864468e53f911f7"
       },
       "../src/viewnorf/viewnorf.entity.ts": {
-        "version": "a3671191d687b1c3ffd8d7f582a70dcfa6e0d7c20e3e224a85241ff61a76444f",
-        "signature": "4cd3287c0a7798d958a1d7373d60d92e93822239dfbc0ad8f0aa86b2c4439bd8"
+        "version": "8242170ca5428f22ceea4791a016a620f8d22df3040bc9aa03618e5caa5ffc9b",
+        "signature": "489ea53ea1b8634df954428069bdc0500f941596eae156ab2dd177eb96825ebb"
       },
       "../src/viewnorf/viewnorf.service.ts": {
         "version": "f3bf67907f10378d184277ef4748243c57b67114926587f2fbccb1a2cce8c641",
         "signature": "215e939221cc26294b687e715f7db4aa1ede29c6aa8870b81e2770fdc9950295"
       },
       "../src/viewnorg/viewnorg.entity.ts": {
-        "version": "4dc7d65582e79c3b3964be67fa02d303c278f77f3dad20ddbf7e5d3567dc572f",
-        "signature": "e907ba43b2644250f553bc9cbc47abd865eee2994188ca9b887b9710d3078700"
+        "version": "7556175db8d4d9c798b0cd5014ec3dc169f6f37080848d1b8c1409b7c30af2f9",
+        "signature": "7e85e6d837aa03adc5cf329af0d077f16cf9fdf209056a8e1acf272f40323cc2"
       },
       "../src/viewnorg/viewnorg.service.ts": {
         "version": "bb6ebc93c0613ab2b6a9218e0274861f7aeb85370be5e76819e1d0d463e2328f",
         "signature": "ca847c77eb9d56341d2291f8c4fb33ef11f740e687662c09807cd24b12f4b6f3"
       },
       "../src/viewnorh/viewnorh.entity.ts": {
-        "version": "bb1927136f52711c34da8614d8d2e420b7473a0fac1f6f54a0658bcaed046cf6",
-        "signature": "d305fd007f04304a662441a578ddd685db19da09cc45c8d3d17b22743744f569"
+        "version": "a5b0aea397f86cba0ccdce7ea50ee2491a88cfe211077a6c1ce3c472db9ca1a1",
+        "signature": "4df537fed2a67e7115bef1f308329cd437d357941d021f18fc1dc0e0f184dc0b"
       },
       "../src/viewnorh/viewnorh.service.ts": {
         "version": "3fe85fa498abedb443c8f250c6b2605d7b1e44675755d9cba3a5ca629d1aee37",
         "signature": "6b7c38aa95b63dc86b58a49a97455775d762d944fc7e6ea5773170670bb0a8d4"
       },
       "../src/viewnori/viewnori.entity.ts": {
-        "version": "664764ec4328548d15982b126aec9f0a8fdce814b00ff3e6741e7ab897f0efb7",
-        "signature": "2018b2f21634f2e7a26af2047e9ae68552ddecc59f7a08dcddf230da9514684a"
+        "version": "098b8fb15acf65cfe16f59a134a72ec1e33aa2df7651d32420f0f744c7567fc6",
+        "signature": "a0ca3cac84bb61c94676b9d85ca46c742f4808b05c2dcb0239f1fd67adfc95b6"
       },
       "../src/viewnori/viewnori.service.ts": {
         "version": "d006abccc432daf06852a84024b3166ea69cb7ff5d6cdda7a53d4aae4c212333",
         "signature": "4ecd6a7bff64a9757e2f32fd2caa2a8790e7a9a1da6bde7eca6c83928eb5142e"
       },
       "../src/viewnorj/viewnorj.entity.ts": {
-        "version": "bfa00ce4b9dd0f43039dd95d9127daa8aa7d99f7070fa1cdd069727864446029",
-        "signature": "a0dbfc286902f5b17f3c56dc1ff133aae62d0d3667cf869f307028ae771eda1f"
+        "version": "3f426b8b44d9bb351e8736eb0d334fbc630e6238f4ccc449c914da6c619fc270",
+        "signature": "701f624ec40ab12c53f78d68d8d43f61a42c0a65c0ce34732e0763aa058d1cc0"
       },
       "../src/viewnorj/viewnorj.service.ts": {
         "version": "e8a1241ac59b70b9b418f47eaa5b1994d75d93d207caf9ab4c5fdb6d9f035ffe",
         "signature": "09da68252c4e6cec73272e419adade991f38940824ba21de2e9f021ef8861820"
       },
       "../src/viewnork/viewnork.entity.ts": {
-        "version": "c73b86afb258136314e5db247543a4829b10cb7bcdb22dee05cb251e8b668983",
-        "signature": "83a0c03ae23eb91751c9394aebaf1c8f641fa22046074838b2d8a7847f8b2a9b"
+        "version": "45933d823e26a4b59034f3a98f258f754364ffd2bf8f232c9711ca4bc056bcc8",
+        "signature": "110e438658e353d4e2be0c57f0ad83f3aad45bf022c22b1068933947e9c5a2f6"
       },
       "../src/viewnork/viewnork.service.ts": {
         "version": "90ee26d93cbc93f860b57f8f0ff4dde40bc94ab4bea95ab63fbec1178900e9b6",
@@ -2714,40 +2714,40 @@
         "signature": "748b248f6f2dec1af8c0f64e2299dd2f06cdfa58560e3a501cc0d0511af28b1b"
       },
       "../src/viewnorc/viewnorc.ts": {
-        "version": "10aea77c365aa649b75af1d0b998aa7e31cb8be443142e83e6d0ea43b5ce31f8",
-        "signature": "dea9ee8bb24c2ca2a0d7edd2309ec0671ef89f37dc2ee2945940701947e1deaa"
+        "version": "ea2addbd5394303a83932ae2a3f03e0aaffb4c0924483bdee5c8e712d4d4ce30",
+        "signature": "65164d9f6f81739629dea5116fd8ff8705b784df5f577967dc5d843528bd52d7"
       },
       "../src/viewnord/viewnord.ts": {
-        "version": "feb91cc6ad28d8694307c43901d5df622a71e69bb6a971887d1e0b462749c2fa",
-        "signature": "038f223de2d65e2fc5d047baead07e4dab11e6f49e4b69e9ad420ba602a68e3d"
+        "version": "375b90e14e4c327fb363d9e259dcb6ddf98a2bc8bdac6f9c100cec5ec9c39597",
+        "signature": "7301549c1a47cb85eb2ecb6ecac9641d0c93feb4a8c1af76c1496c646792a352"
       },
       "../src/viewnore/viewnore.ts": {
-        "version": "f050baf0add243eaf1188361d37e7b98eeb3e07618c833dde12b33e8d3e8d9ba",
-        "signature": "d61d7f154a995d57bd2765723fc821370b92a40059d9d13d44af0841a58fbbff"
+        "version": "e0feb04e3f9e2c277d7b9eda61f0164aba0b1b6a2603105b708ee6ca23c34775",
+        "signature": "d8e03f42d254f2ca82ee9d3cc913bf175c81e13352d5aa01f3359a0dfa942ad8"
       },
       "../src/viewnorf/viewnorf.ts": {
-        "version": "eab07d487e0120352dc774dbad24790543aaac03bdca2797bcce92d6c8a39610",
-        "signature": "7742239b54a457d394ab61b882385a2d31fb5cd95f08f6e3af0bed95d2adddde"
+        "version": "ceebbbe9c46756ac41006b12958dfa995c89151e861c81d9d3cf2ffc420f1ddf",
+        "signature": "537d04a96896be8fcc457cd6a9a39bb8a59f0fd9c353d3bebd394e7b2b1dea80"
       },
       "../src/viewnorg/viewnorg.ts": {
-        "version": "7dcf7d0e3759129fe518704310e21e683c694cbae86d1934dc0467ad97f3006a",
-        "signature": "c38709def29220c2b461ca5584a3cf6731fc8482c77a50c9b224e058de2f35c9"
+        "version": "c8ff9ed6adb7d73afa0fdca32c89f98cd9bdbefe09573627787d834cfbe48260",
+        "signature": "5882cfb046ba46c0c9a2cc5c180dd85c7e7a4d5a28d7fa878511580f24976b53"
       },
       "../src/viewnorh/viewnorh.ts": {
-        "version": "8dded82fe77e05769524cdabfcac6a858596736b94f204d0850dbfb0f1cc25ea",
-        "signature": "25f514e222223f00e364377766762963f31ac448c83bd357a0af91ebd46ad982"
+        "version": "0b34b5f583d5ca2dcd28313567ed830a20ab8f3b40de796b866cb8f2cd08ea06",
+        "signature": "c9bd784d412dfc7530f0aba859b9fd38f8f137f7ff309a20b56705f6fc6218f1"
       },
       "../src/viewnori/viewnori.ts": {
-        "version": "b176d1be80d3975c39290016e0e7a5103b68198057b8ec5ff1d27740b3466c6d",
-        "signature": "27238818054d6c506eeb86bcc5e0b63edc065caf4b3722c98181eb72d3cbc3d3"
+        "version": "8435df25d9eb808e28a90da5572c3da3e0d4fdd8a90ebe28f41689732560cc7c",
+        "signature": "1f900503d62d5fb2a0723c4f7787109f2a444a1046150fde8c2418abf0fbc794"
       },
       "../src/viewnorj/viewnorj.ts": {
-        "version": "a031a0a7029e975956f74a885e96a2d31daebb7f4e940ed2eb89a4ac8778b2d2",
-        "signature": "6b1e2bf951ec7b62bdb04c5fcbe4b05e36ef976bb106e4457d6c6165dcf4818a"
+        "version": "4fa27600f65d65af2fd5864be87a8aab73ece7cd2a7c1efcaff2864491867d83",
+        "signature": "65bd6af5254bf7c1ca8afa470afe9e134ddebdf8d486f9223efbd4701195c579"
       },
       "../src/viewnork/viewnork.ts": {
-        "version": "ac9d3adf58c68eb023515464a2e886c1a125f4f5838437dee631c097d47ce599",
-        "signature": "cb2046a4ded62aa9aa0d098a28630acb967d87b8ed582e4159bec0eb4ecbe1c5"
+        "version": "b9331af29dca3099555f12576764210bb600cd1cc0206a69fb4a6d83644ad45f",
+        "signature": "01150b72bd79b5ecfcee809843f26d34d6ffe0ac3820cb5372278cc428d73110"
       },
       "../src/viewtotnor/viewtotnor.ts": {
         "version": "874e292e72ddb301f5116f08b8982a9ad232d65b52425c81ce9a700bcbcc7c0f",
@@ -2758,12 +2758,12 @@
         "signature": "3f075d42da1a34a62c2e36297f63cf0de7b5f0e720f66c2b762a670c5fa3cec6"
       },
       "../src/viewnora/viewnora.ts": {
-        "version": "eb3155ba9d7d682f3b47f2d1af89a4a4ac6af4625316b41bcac2a2f52e7c7be1",
-        "signature": "d93adfbacc787f0ad92842a45bc2c9aa7c68531b379ae96f60b2d8df2bc4405d"
+        "version": "e9f45b11b4dac16a5b9ee168e25f8b6460dd708a720bbb1f113bb5d4f0130bad",
+        "signature": "c013fdcf3729fa5d6624529eba6424778f016234b02feba409fb4cb4d2068160"
       },
       "../src/viewnorb/viewnorb.ts": {
-        "version": "c37cd6bf1f91b86fd2fc9700d7d76c133eb76de0e0b4e78692913979de5f78ca",
-        "signature": "ca4e49d9b037970062eee670c8766c3a2481f4f65aeb3f277481c6e545a9d175"
+        "version": "0dec588f0f23740bfcc9874278e53bfd7e7570579b2828321957a9edc743a287",
+        "signature": "2cd057d2c8ef330624bcd9fe65daae9b20c99bcc644320917298aa9cea554aa7"
       },
       "../src/viewtotinsnor/viewtotinsnor.ts": {
         "version": "e48097bde6e54d8115dc8764acab183a88372c6449d5c3f8ecba36d5df5f2a07",
@@ -14854,30 +14854,10 @@
       "../src/contenido/contenido.service.ts",
       "../src/viewinsvalopc/viewinsvalopc.entity.ts",
       "../src/viewinsvalopc/viewinsvalopc.service.ts",
+      "../src/viewtotvalins/viewtotvalins.entity.ts",
+      "../src/viewtotvalins/viewtotvalins.service.ts",
       "../src/viewtotnor/viewtotnor.entity.ts",
       "../src/viewtotnor/viewtotnor.service.ts",
-      "../src/viewnora/viewnora.entity.ts",
-      "../src/viewnora/viewnora.service.ts",
-      "../src/viewnorb/viewnorb.entity.ts",
-      "../src/viewnorb/viewnorb.service.ts",
-      "../src/viewnorc/viewnorc.entity.ts",
-      "../src/viewnorc/viewnorc.service.ts",
-      "../src/viewnord/viewnord.entity.ts",
-      "../src/viewnord/viewnord.service.ts",
-      "../src/viewnore/viewnore.entity.ts",
-      "../src/viewnore/viewnore.service.ts",
-      "../src/viewnorf/viewnorf.entity.ts",
-      "../src/viewnorf/viewnorf.service.ts",
-      "../src/viewnorg/viewnorg.entity.ts",
-      "../src/viewnorg/viewnorg.service.ts",
-      "../src/viewnorh/viewnorh.entity.ts",
-      "../src/viewnorh/viewnorh.service.ts",
-      "../src/viewnori/viewnori.entity.ts",
-      "../src/viewnori/viewnori.service.ts",
-      "../src/viewnorj/viewnorj.entity.ts",
-      "../src/viewnorj/viewnorj.service.ts",
-      "../src/viewnork/viewnork.entity.ts",
-      "../src/viewnork/viewnork.service.ts",
       "../src/viewtotnorins/viewtotnorins.entity.ts",
       "../src/viewtotnorins/viewtotnorins.service.ts",
       "../src/viewtotinsnor/viewtotinsnor.entity.ts",
@@ -14892,18 +14872,8 @@
       "../src/nordis/nordis.module.ts",
       "../src/contenido/contenido.module.ts",
       "../src/viewinsvalopc/viewinsvalopc.module.ts",
+      "../src/viewtotvalins/viewtotvalins.module.ts",
       "../src/viewtotnor/viewtotnor.module.ts",
-      "../src/viewnora/viewnora.module.ts",
-      "../src/viewnorb/viewnorb.module.ts",
-      "../src/viewnorc/viewnorc.module.ts",
-      "../src/viewnord/viewnord.module.ts",
-      "../src/viewnore/viewnore.module.ts",
-      "../src/viewnorf/viewnorf.module.ts",
-      "../src/viewnorg/viewnorg.module.ts",
-      "../src/viewnorh/viewnorh.module.ts",
-      "../src/viewnori/viewnori.module.ts",
-      "../src/viewnorj/viewnorj.module.ts",
-      "../src/viewnork/viewnork.module.ts",
       "../src/viewtotnorins/viewtotnorins.module.ts",
       "../src/viewtotinsnor/viewtotinsnor.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
@@ -14973,21 +14943,11 @@
       "../src/opcpre/opcpre.ts",
       "../src/opcion/opcion.ts",
       "../src/pregunta/pregunta.ts",
-      "../src/viewnorc/viewnorc.ts",
-      "../src/viewnord/viewnord.ts",
-      "../src/viewnore/viewnore.ts",
-      "../src/viewnorf/viewnorf.ts",
-      "../src/viewnorg/viewnorg.ts",
-      "../src/viewnorh/viewnorh.ts",
-      "../src/viewnori/viewnori.ts",
-      "../src/viewnorj/viewnorj.ts",
-      "../src/viewnork/viewnork.ts",
       "../src/viewtotnor/viewtotnor.ts",
       "../src/viewinsvalopc/viewinsvalopc.ts",
-      "../src/viewnora/viewnora.ts",
-      "../src/viewnorb/viewnorb.ts",
       "../src/viewtotinsnor/viewtotinsnor.ts",
       "../src/viewtotnorins/viewtotnorins.ts",
+      "../src/viewtotvalins/viewtotvalins.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -15017,12 +14977,52 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/viewtotvalins/viewtotvalins.entity.ts",
-      "../src/app.module.ts",
-      "../src/viewtotvalins/viewtotvalins.module.ts",
-      "../src/viewtotvalins/viewtotvalins.service.ts",
-      "../src/viewtotvalins/viewtotvalins.ts",
-      "../src/app.controller.ts"
+      "../src/viewnora/viewnora.entity.ts",
+      "../src/viewnora/viewnora.module.ts",
+      "../src/viewnora/viewnora.service.ts",
+      "../src/viewnorb/viewnorb.entity.ts",
+      "../src/viewnorb/viewnorb.module.ts",
+      "../src/viewnorb/viewnorb.service.ts",
+      "../src/viewnorc/viewnorc.entity.ts",
+      "../src/viewnorc/viewnorc.module.ts",
+      "../src/viewnorc/viewnorc.service.ts",
+      "../src/viewnord/viewnord.entity.ts",
+      "../src/viewnord/viewnord.module.ts",
+      "../src/viewnord/viewnord.service.ts",
+      "../src/viewnore/viewnore.entity.ts",
+      "../src/viewnore/viewnore.module.ts",
+      "../src/viewnore/viewnore.service.ts",
+      "../src/viewnorf/viewnorf.entity.ts",
+      "../src/viewnorf/viewnorf.module.ts",
+      "../src/viewnorf/viewnorf.service.ts",
+      "../src/viewnorg/viewnorg.entity.ts",
+      "../src/viewnorg/viewnorg.module.ts",
+      "../src/viewnorg/viewnorg.service.ts",
+      "../src/viewnorh/viewnorh.entity.ts",
+      "../src/viewnorh/viewnorh.module.ts",
+      "../src/viewnorh/viewnorh.service.ts",
+      "../src/viewnori/viewnori.entity.ts",
+      "../src/viewnori/viewnori.module.ts",
+      "../src/viewnori/viewnori.service.ts",
+      "../src/viewnorj/viewnorj.entity.ts",
+      "../src/viewnorj/viewnorj.module.ts",
+      "../src/viewnorj/viewnorj.service.ts",
+      "../src/viewnork/viewnork.entity.ts",
+      "../src/viewnork/viewnork.module.ts",
+      "../src/viewnork/viewnork.service.ts",
+      "../src/viewnorc/viewnorc.ts",
+      "../src/viewnord/viewnord.ts",
+      "../src/viewnore/viewnore.ts",
+      "../src/viewnorf/viewnorf.ts",
+      "../src/viewnorg/viewnorg.ts",
+      "../src/viewnorh/viewnorh.ts",
+      "../src/viewnori/viewnori.ts",
+      "../src/viewnorj/viewnorj.ts",
+      "../src/viewnork/viewnork.ts",
+      "../src/viewnora/viewnora.ts",
+      "../src/viewnorb/viewnorb.ts",
+      "../src/app.controller.ts",
+      "../src/app.module.ts"
     ]
   },
   "version": "3.7.4"

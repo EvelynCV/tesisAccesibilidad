@@ -5,7 +5,8 @@ import {ViewEntity, ViewColumn, Connection} from "typeorm";
         SELECT 
             institucion.id_ins,
             institucion.nom_ins,
-            SUM(opcion.val_opc) nor_tot_k
+            SUM(opcion.val_opc) nor_tot_k,
+            SUM(((opcion.val_opc)*100)/37) dis_por_k
     
         FROM
             institucion
@@ -33,6 +34,9 @@ export class ViewNorKEntity {
     nom_ins: string;
 
     @ViewColumn()
-    nor_tot_a: number;
+    nor_tot_k: number;
+
+    @ViewColumn()
+    dis_por_k: number;
 
 }

@@ -25,6 +25,7 @@ import {ViewNorJService} from "./ViewNorJ/ViewNorJ.service";
 import {ViewNorKService} from "./ViewNorK/ViewNorK.service";
 import {ViewTotNorInsService} from "./viewTotNorIns/ViewTotNorIns.service";
 import {ViewTotInsNorService} from "./viewTotInsNor/ViewTotInsNor.service";
+import {ViewPorcentajeDisInsService} from "./viewPorcentajeDisIns/ViewPorcentajeDisIns.service";
 
 @Controller('api')
 export class AppController {
@@ -53,12 +54,8 @@ export class AppController {
               private readonly viewNorJService: ViewNorJService,
               private readonly viewNorKService: ViewNorKService,
               private readonly viewTotNorIns: ViewTotNorInsService,
-              private readonly viewTotInsNorService:ViewTotInsNorService) {}
-
-  @Get('Hola')
-  getHello(): string {
-    return this.appService.getHello();
-  }
+              private readonly viewTotInsNorService:ViewTotInsNorService,
+              private readonly ViewPorcentajeDisInsService:ViewPorcentajeDisInsService) {}
 
   @Get('inicio')
   getInicio(@Response()res) {
@@ -68,171 +65,6 @@ export class AppController {
   @Get('acerca')
   getAcerca(@Response()res) {
     return res.render('acerca');
-  }
-
-  @Get('informacion')
-  getInformacion(@Response()res) {
-    return res.render('informacion');
-  }
-
-  @Get('index')
-  getIndex(@Response()res) {
-    return res.render('index');
-  }
-
-  @Get('2dmap')
-  get2dmap(@Response()res) {
-    return res.render('2dmap');
-  }
-
-  /* funciones de ejemplo para llamar y guardar datos en la bd*/
-  /*
-  @Get('bargraph')
-  async getbargraph(@Response()res) {
-    const respuesta = await this.institucionService._repositorioInstitucion.save({nomIns:'Prueba 1'});
-    console.log(respuesta)
-    const instituciones = await this.institucionService._repositorioInstitucion.find();
-    return res.render('bargraph', {
-      instituciones:instituciones
-    });
-  }*/
-
-  @Get('institucion')
-  async getinstitucion(@Response()res) {
-    // const respuesta = await this.institucionService._repositorioInstitucion.save({nom_ins:'Prueba 1'});
-    //  console.log(respuesta)
-    const instituciones = await this.institucionService._repositorioInstitucion.find();
-    return res.render('institucion', {
-      instituciones:instituciones
-    });
-  }
-
-  @Get('formulario')
-  async getformulario(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const formularios = await this.formularioService._repositorioFormulario.find();
-    return res.render('formulario', {
-      formularios:formularios
-    });
-
-  }
-
-
-  @Get('norma')
-  async getnorma(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const normas = await this.normaService._repositorioNorma.find();
-    return res.render('norma', {
-      normas:normas
-    });
-
-  }
-
-  @Get('discapacidad')
-  async getdiscapacidad(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const discapacidades = await this.contenidoService.buscar()
-    return res.render('discapacidad', {
-      discapacidades:discapacidades
-    });
-
-  }
-
-  @Get('nordis')
-  async getnordis(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const nordiss = await this.nordisService._repositorioNorDis.find();
-    return res.render('nordis', {
-      nordiss:nordiss
-    });
-
-  }
-
-  @Get('pregunta')
-  async getpregunta(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const preguntas = await this.preguntaService._repositorioPregunta.find();
-    return res.render('pregunta', {
-      preguntas:preguntas
-    });
-
-  }
-
-  @Get('opcion')
-  async getopcion(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const opciones = await this.opcionService._repositorioOpcion.find();
-    return res.render('opcion', {
-      opciones:opciones
-    });
-
-  }
-
-  @Get('opcpre')
-  async getopcpre(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const opcpres = await this.opcpreService._repositorioOpcPre.find();
-    return res.render('opcpre', {
-      opcpres: opcpres
-    });
-  }
-/*
-  @Get('contenido')
-  async getcontenido(@Response()res) {
-    //const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
-    //console.log(respuesta)
-
-    const contenidos = await this.contenidoService._repositorioContenido.find();
-    return res.render('contenido', {
-      contenidos:contenidos
-    });
-  }
-*/
-/*
-  @Get('contenido')
-  get(@Param() params) {
-    return this.contenidoService.obtener(params.id_opcpre);
-  }
-*/
-
-  @Get('contenido')
-  async getcontenido(
-      @Param() params,
-      @Query() query,
-      @Response() res
-  ) {
-    console.log(query);
-    const normaNumber = Number(query.nom_ins);
-    let consulta:any = {};
-
-    if(normaNumber){
-      consulta.nom_ins = normaNumber;
-    }
-    const contenidos = await this.viewTotNorService._repositorioViewTotNor.find();
-    const contenidoFiltrado = await this.viewTotNorService._repositorioViewTotNor.find({
-      where:consulta
-    });
-    console.log(contenidos);
-    // return this.contenidoService.buscar();
-    return res.render('contenido', {
-      contenidos:contenidos,
-      contenidoFiltrado:contenidoFiltrado
-    });
-
   }
 
 

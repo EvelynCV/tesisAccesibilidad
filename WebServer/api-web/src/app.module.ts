@@ -27,6 +27,7 @@ import {ViewNorJModule} from "./ViewNorJ/ViewNorJ.module";
 import {ViewNorKModule} from "./ViewNorK/ViewNorK.module";
 import {ViewTotNorInsModule} from "./viewTotNorIns/ViewTotNorIns.module";
 import {ViewTotInsNorModule} from "./viewTotInsNor/ViewTotInsNor.module";
+import {ViewPorcentajeDisInsModule} from "./viewPorcentajeDisIns/ViewPorcentajeDisIns.module";
 import {InstitucionEntity} from "./Institucion/institucion.entity";
 import {FormularioEntity} from "./Formulario/formulario.entity";
 import {NormaEntity} from "./Norma/norma.entity";
@@ -52,6 +53,7 @@ import {ViewNorJEntity} from "./ViewNorJ/ViewNorJ.entity";
 import {ViewNorKEntity} from "./ViewNorK/ViewNorK.entity";
 import {ViewTotNorInsEntity} from "./viewTotNorIns/ViewTotNorIns.entity";
 import {ViewTotInsNorEntity} from "./viewTotInsNor/ViewTotInsNor.entity";
+import {ViewPorcentajeDisInsEntity} from "./viewPorcentajeDisIns/ViewPorcentajeDisIns.entity";
 
 
 @Module({
@@ -81,6 +83,7 @@ import {ViewTotInsNorEntity} from "./viewTotInsNor/ViewTotInsNor.entity";
         ViewNorKModule,
         ViewTotNorInsModule,
         ViewTotInsNorModule,
+        ViewPorcentajeDisInsModule,
 
         TypeOrmModule.forRoot(
             {
@@ -118,6 +121,7 @@ import {ViewTotInsNorEntity} from "./viewTotInsNor/ViewTotInsNor.entity";
                     ViewNorKEntity,
                     ViewTotNorInsEntity,
                     ViewTotInsNorEntity,
+                    ViewPorcentajeDisInsEntity,
                 ],
                 synchronize: true, // Crear -> true , Conectar -> false
             },

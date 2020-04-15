@@ -66,9 +66,36 @@ export class AppController {
   getAcerca(@Response()res) {
     return res.render('acerca');
   }
+
   @Get('datosGenerales')
   getDatosGenerales(@Response()res) {
     return res.render('datosGenerales');
+  }
+
+  @Get('datosInstitucion')
+  async getDatosInstitucion(
+      @Param() params,
+      @Query() query,
+      @Response() res
+  ) {
+    console.log(query);
+    const id_conNumber = Number(query.nom_ins);
+    let consulta:any = {};
+    if(id_conNumber){
+      consulta.nom_ins = id_conNumber;
+    }
+    const instituciones = await this.viewTotNorIns._repositorioViewTotNorIns.find();
+    const tot_ins_nor= await this.viewTotInsNorService._repositorioViewTotInsNor.find();
+    const institucionesFiltrado = await this.viewTotNorIns._repositorioViewTotNorIns.find({
+      where:consulta
+    });
+    console.log(instituciones);
+    // return this.contenidoService.buscar();
+    return res.render('datosInstitucion', {
+      instituciones:instituciones,
+      tot_ins_nor:tot_ins_nor,
+      institucionesFiltrado:institucionesFiltrado,
+    });
   }
 
   @Get('pruebaData')

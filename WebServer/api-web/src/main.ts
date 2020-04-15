@@ -13,7 +13,7 @@ async function bootstrap() {
   app.setViewEngine('ejs');
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
 
-
+  app.use(express.static('imagenes'));
   app.use(express.static('Publico'));
 
   await app.listen(3001);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Bootstrap Example</title>
@@ -10,56 +10,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/menuVertical.css">
 
 </head>
+<body>
+
+<div class="sidebar ">
+    <a class="active" href="inicio"><img src="../logo-politecnica.png" alt="logo EPN" style="height: 70px"></a>
+    <hr class="hrv">
+    <a class="textMenu" href="inicio"><img src="../iconHome.png"  class="rounded-circle imgText fa fa-fw " alt="icono Inicio" >Inicio</a>
+    <button class="dropdown-btn textMenu"><img src="../iconDashboard.png"  class="rounded imgText fa fa-fw" alt="icono Resultados">Resultados
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="collapse" id="submenu1" aria-expanded="false">
+        <ul class="flex-column pl-2 nav">
+            <li class="nav-item">
+                <a class="nav-link collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub2"><span>Datoshfghfgh Generales</span></a></li>
+            <li class="nav-item">
+                <a class="nav-link collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1"><span>Datos Por Institución</span></a>
+            </li>
+        </ul>
+    </div>
+    <a class="textMenu" href="acerca"><img src="../iconAcerca.png"  class="rounded imgText fa fa-fw" alt="icono Acerca"> Acerca de</a>
+</div>
 
 
-<!-- Vertical navbar -->
-<div class="vertical-nav bg-white" id="sidebar">
-    <div class="py-4 px-3 mb-4 bg-dark">
-        <div class="media d-flex align-items-center"><img src="../logo-epn.png" alt="logo EPN" width="65">
+<div class="content main">
+
+    <div class="tab-content" id="submenu1sub2" aria-expanded="false">
+        <div id="canvas-container" style="width:70%;">
+            <canvas id="chart2" width="2000" height="800"></canvas>
+        </div>
+    </div>
+    <div class="tab-content" id="submenu1sub2" aria-expanded="false">
+        <div id="canvas-container" style="width:70%;">
+            <canvas id="chart3" width="2000" height="800"></canvas>
         </div>
     </div>
 
-    <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
-
-    <ul class="nav flex-column bg-white mb-0">
-        <li class="nav-item">
-            <a class="nav-link text-truncate" href="inicio"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Inicio</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><i class="fa fa-table"></i> <span class="d-none d-sm-inline">Resultados</span></a>
-            <div class="collapse" id="submenu1" aria-expanded="false">
-                <ul class="flex-column pl-2 nav">
-                    <li class="nav-item">
-                        <a class="nav-link py-0 active" data-toggle="tab" href="#canvas-container"><span>Datos Generales</span></a></li>
-                    <li class="nav-item">
-                        <a class="nav-link collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1"><span>Datos Por Institución</span></a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-truncate" href="acerca"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Acerca de</span></a>
-        </li>
-    </ul>
-</div>
-<!-- End vertical navbar -->
-
-
-<!-- Page content holder -->
-<div class="page-content p-5" id="content">
-    <!-- Toggle button -->
-    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">☰</small></button>
-
-    <div class="collapse" id="submenu1sub1" aria-expanded="false">
+    <div id="submenu1sub1" aria-expanded="false">
 
         <ul class="nav nav-tabs flex-column pl-2">
             <li>
                 <form name="formulario1" action="#">
-                    <select class="seleccion" name="cosa" onchange="var mivariable=cambia1()" >
+                    <select class="seleccion" name="cosa" onchange="cambia1()" >
                         <option hidden selected>Selecciona una opción</option>
                         <% for(var i = 0; i< instituciones.length; i++){ %>
                             <option id="seleccionado"  value="<%= instituciones[i].nom_ins %>"> <%= instituciones[i].nom_ins %> </option>
@@ -75,13 +71,27 @@
             <canvas id="chart" width="2000" height="800"></canvas>
         </div>
     </div>
+
 </div>
 
 
-<!-- End demo content -->
-<script src="/js/menuVertical.js"></script>
-<script src="/js/grafico1.js"></script>
 
+
+<script src="/js/mVertical.js"></script>
+
+
+
+<script src="/js/grafico2.js"></script>
+<script type="text/javascript">
+    var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
+    var instituciones = <%- JSON.stringify(instituciones) %>
+
+            archivoJS(tot_ins_nor);
+    archivoJS2(tot_ins_nor);
+
+</script>
+
+<script src="/js/grafico1.js"></script>
 <script type="text/javascript">
     var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
     var instituciones = <%- JSON.stringify(instituciones) %>
@@ -114,6 +124,6 @@
     // graficar(respuestaFuncion);
 </script>
 
-</body>
 
+</body>
 </html>

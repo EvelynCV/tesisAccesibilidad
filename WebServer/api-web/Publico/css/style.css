@@ -354,7 +354,7 @@ body {
 
 /* Estilo de los enlaces sidenav y el botón desplegable */
 .sidenav a, .dropdown-btn {
-    padding: 8px 8px 8px 16px;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 20px;
     color: white;
@@ -368,16 +368,10 @@ body {
 }
 
 
-/* Agregar una clase activa al botón desplegable activo */
-.active {
-    background-color: #335574;
-    color: white;
-}
-
 /* Contenedor desplegable (oculto por defecto).  */
 .dropdown-container {
     display: none;
-    background-color: #335574;
+    background-color: #2A3B59;
     padding-left: 8px;
 }
 
@@ -390,7 +384,7 @@ body {
 .hrv{
     color: black;
     width:100%;
-    size:10px;
+    size:20px;
     background-color: white;
 }
 .sidebar {
@@ -442,5 +436,13 @@ div.content, .main {
         text-align: center;
         float: none;
     }
+}
+
+.bg-c {
+    background-color: #2A3B59!important;
+}
+
+.py-4 {
+    padding-bottom: 1.1rem!important;
 }
 /*----FIN menu vertical----*/

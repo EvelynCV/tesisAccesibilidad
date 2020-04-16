@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/menuVertical.css">
 
@@ -17,32 +18,34 @@
 
 
 <!-- Vertical navbar -->
-<div class="vertical-nav bg-white" id="sidebar">
-    <div class="py-4 px-3 mb-4 bg-dark">
-        <div class="media d-flex align-items-center"><img src="../logo-epn.png" alt="logo EPN" width="65">
+<div class="vertical-nav bg-c sidebar" id="sidebar">
+    <div class="py-4 ">
+        <div class="media d-flex align-items-center active" data-target="#navbar-collapse"><img src="../logo-politecnica.png" alt="logo EPN" style="height: 80px">
         </div>
+        <hr class="hrv">
     </div>
 
-    <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+    <ul class="nav flex-column bg-c mb-0 sidebar" id="navbar-collapse">
 
-    <ul class="nav flex-column bg-white mb-0">
+        <a class="textMenu" href="inicio"><img src="../iconHome.png"  class="rounded-circle imgText fa fa-fw " alt="icono Inicio" >Inicio</a>
+
         <li class="nav-item">
-            <a class="nav-link text-truncate" href="inicio"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Inicio</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><i class="fa fa-table"></i> <span class="d-none d-sm-inline">Resultados</span></a>
+            <button class="dropdown-btn textMenu" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><img src="../iconDashboard.png"  class="rounded imgText fa fa-fw" alt="icono Resultados">Resultados
+                <i class="fa fa-caret-down"></i>
+            </button>
             <div class="collapse" id="submenu1" aria-expanded="false">
                 <ul class="flex-column pl-2 nav">
                     <li class="nav-item">
-                        <a class="nav-link py-0 active" data-toggle="tab" href="#canvas-container"><span>Datos Generales</span></a></li>
+                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1" onclick="$('#submenu1sub2').hide();$('#submenu1sub1').show();"><span>Datos Generales</span></a>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1"><span>Datos Por Institución</span></a>
+                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub2" data-toggle="collapse" data-target="#submenu1sub2" onclick="$('#submenu1sub1').hide();$('#submenu1sub2').show();"><span>Datos Institución</span></a>
                     </li>
                 </ul>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-truncate" href="acerca"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Acerca de</span></a>
+            <a class="textMenu" href="acerca"><img src="../iconAcerca.png"  class="rounded imgText fa fa-fw" alt="icono Acerca"> Acerca de</a>
         </li>
     </ul>
 </div>
@@ -50,11 +53,24 @@
 
 
 <!-- Page content holder -->
-<div class="page-content p-5" id="content">
+<div class="page-content p-5 content main" id="content">
     <!-- Toggle button -->
-    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">☰</small></button>
+    <button id="sidebarCollapse" type="button" class="btn btn-light rounded-pill "><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold"></small></button>
+
+
+
+
+
 
     <div class="collapse" id="submenu1sub1" aria-expanded="false">
+            <div id="canvas-container" style="width:70%;">
+                <canvas id="chart2" width="2000" height="800"></canvas>
+            </div>
+    </div>
+
+
+
+    <div class="collapse" id="submenu1sub2" aria-expanded="false">
 
         <ul class="nav nav-tabs flex-column pl-2">
             <li>
@@ -68,22 +84,33 @@
                 </form>
             </li>
         </ul>
-    </div>
-
-    <div class="tab-content">
-        <div id="canvas-container" style="width:70%;">
-            <canvas id="chart" width="2000" height="800"></canvas>
+        <div class="tab-content">
+            <div id="canvas-container" style="width:70%;">
+                <canvas id="chart" width="2000" height="800"></canvas>
+            </div>
         </div>
     </div>
+
 </div>
 
 
 <!-- End demo content -->
 <script src="/js/menuVertical.js"></script>
+<script src="/js/grafico2.js"></script>
+<script type="text/javascript">
+    var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
+    console.log();
+    var instituciones = <%- JSON.stringify(instituciones) %>
+
+        archivoJS(tot_ins_nor);
+    archivoJS2(tot_ins_nor);
+
+</script>
 <script src="/js/grafico1.js"></script>
 
 <script type="text/javascript">
     var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
+        console.log();
     var instituciones = <%- JSON.stringify(instituciones) %>
         console.log(tot_ins_nor)
     //archivoJS(instituciones)
@@ -107,11 +134,6 @@
         }
     }
 
-    //  var respuestaFuncion = cambia1();
-    //  var respuestaFuncion = nombreFuncion(parametrosDeLaFuncion, otroParametroSiEsNecesario);
-    // var varopcion =document.formulario1.mivariable;
-    //  console.log("esto es lo que cambia"+respuestaFuncion)
-    // graficar(respuestaFuncion);
 </script>
 
 </body>

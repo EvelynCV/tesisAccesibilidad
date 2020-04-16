@@ -7,13 +7,13 @@
 */
 
 .vertical-nav {
-    min-width: 17rem;
-    width: 17rem;
+
+    width: 220px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 10px rgba(42, 59, 89, 0.1);
     transition: all 0.4s;
 }
 
@@ -60,9 +60,7 @@
 */
 
 body {
-    background: #599fd9;
-    background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
-    background: linear-gradient(to right, #599fd9, #c2e59c);
+
     min-height: 100vh;
     overflow-x: hidden;
 }

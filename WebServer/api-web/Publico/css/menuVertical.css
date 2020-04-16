@@ -8,8 +8,6 @@
 
 .vertical-nav {
 
-    width: 220px;
-    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -60,9 +58,11 @@
 */
 
 body {
-
+    background: #599fd9;
+    background: linear-gradient(to bottom, #646464, #888888, #aeaeae, #d6d6d6, #ffffff);
     min-height: 100vh;
     overflow-x: hidden;
+
 }
 
 .separator {

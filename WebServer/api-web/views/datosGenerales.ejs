@@ -16,28 +16,195 @@
 </head>
 <body>
 
-<div class="sidenav">
-    <a class="navbar-brand" ><img src="../logo-politecnica.png" alt="logo EPN" style="height: 70px"></a>
-    <hr class="hrv">
-    <a class="textMenu" href="inicio"><img src="../iconHome.png"  class="rounded-circle imgText fa fa-fw " alt="icono Inicio" >Inicio</a>
-    <button class="dropdown-btn textMenu"><img src="../iconDashboard.png"  class="rounded imgText fa fa-fw" alt="icono Resultados">Resultados
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container textMenu">
-        <a href="#">Datos Generales</a>
-        <a href="#">Datos Institución</a>
+<!-- Menú - navbar -->
+<section>
+    <nav class="navbar fixed-top navbar-expand-sm nav-fill bg">
+        <a class="navbar-brand logo" ><img src="../logo-epn.png" alt="logo EPN" style="height: 50px"></a>
+        <button class="navbar-toggler toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav ml-auto ">
+                <li class="nav-item"> <a class="nav-link textMenu" href="inicio">
+                        <img src="../iconHome.png"  class="rounded-circle imgText" alt="icono Inicio" >
+                        Inicio</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link textMenu" href="resultados">
+                        <img src="../iconDashboard.png"  class="rounded imgText" alt="icono Resultados">
+                        Resultados</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link textMenu" href="acerca">
+                        <img src="../iconAcerca.png"  class="rounded imgText" alt="icono Acerca">
+                        Acerca de</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<!-- FIN Menú - navbar -->
+
+<section>
+    <h2 class="h2"> Representación gráfica de datos Obtenidos</h2>
+</section>
+
+
+<section>
+   <div class="row">
+       <div class="col-xl-3 col-lg-6 col-12">
+           <div class="card">
+               <div class="card-content">
+                   <div class="media align-items-stretch">
+                       <div class="p-2 text-center bg-primary bg-darken-2">
+                           <i><img class="card-img-top" src="../icn-ins.png" alt="icono Institución" ></i>
+                       </div>
+                       <div class="p-2 bg-gradient-x-primary white media-body">
+                           <h5>Products</h5>
+                           <h5 class="text-bold-400 mb-0">
+                               28
+                           </h5>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="col-xl-3 col-lg-6 col-12">
+           <div class="card">
+               <div class="card-content">
+                   <div class="media align-items-stretch">
+                       <div class="p-2 text-center bg-primary bg-darken-2">
+                           <i> <img class="card-img-top" src="../icn-norm.png" alt="icono Norma" ></i>
+                       </div>
+                       <div class="p-2 bg-gradient-x-primary white media-body">
+                           <h5>Products</h5>
+                           <h5 class="text-bold-400 mb-0">
+                               28
+                           </h5>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="col-xl-3 col-lg-6 col-12">
+           <div class="card">
+               <div class="card-content">
+                   <div class="media align-items-stretch">
+                       <div class="p-2 text-center bg-primary bg-darken-2">
+                           <i><img class="card-img-top" src="../icn-preg.png" alt="icono Pregunta" ></i>
+                       </div>
+                       <div class="p-2 bg-gradient-x-primary white media-body">
+                           <h5>Products</h5>
+                           <h5 class="text-bold-400 mb-0">
+                               28
+                           </h5>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="col-xl-3 col-lg-6 col-12">
+           <div class="card">
+               <div class="card-content">
+                   <div class="mediaI align-items-stretch">
+                       <div class="p-2 text-center bg-primary bg-darken-2">
+                           <i><img class="card-img-top" src="../icn-dis.png" alt="icono Discapacidad" ></i>
+                       </div>
+                       <div class="p-2 bg-gradient-x-primary white media-body">
+                           <h5>Products</h5>
+                           <h5 class="text-bold-400 mb-0">
+                               28
+                           </h5>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+
+
+<!-- Contador -->
+
+<section>
+    <div id="content2" class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12" style ="text-align: center">
+                <br>
+                <div class="row" >
+                    <div class="col-sm-3" >
+                        <div class="card text-center c1" >
+                            <div class="divCards" >
+                                <div class="card-body cb6-CI2-2" >
+                                    <img class="card-img-top cit-CI2" src="../icn-ins.png" alt="icono Institución" >
+                                    <h2 class="timer count-number text-center h2T" data-to="26" data-speed="4000"></h2>
+                                    <hr class="hr">
+                                    <p class="count-text-c ">Instituciones</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" >
+                        <div class="card text-center c1" >
+                            <div class="divCards" >
+                                <div class="card-body cb6-CI2-2" >
+                                    <img class="card-img-top cit-CI2" src="../icn-norm.png" alt="icono Norma" >
+                                    <h2 class="timer count-number text-center h2T" data-to="11" data-speed="4000"></h2>
+                                    <hr class="hr">
+                                    <p class="count-text-c ">Normas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" >
+                        <div class="card text-center c1" >
+                            <div class="divCards" >
+                                <div class="card-body cb6-CI2-2" >
+                                    <img class="card-img-top cit-CI2" src="../icn-preg.png" alt="icono Pregunta" >
+                                    <h2 class="timer count-number text-center h2T" data-to="181" data-speed="4000"></h2>
+                                    <hr class="hr">
+                                    <p class="count-text-c ">Preguntas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card text-center c2" >
+                            <div class="divCards" >
+                                <div class="card-body cb6-CI2-2" >
+                                    <img class="card-img-top cit-CI2" src="../icn-dis.png" alt="icono Discapacidad" >
+                                    <h2 class="timer count-number text-center h2T" data-to="3" data-speed="4000">  <img src="../icn-ins.png"  class="rounded imgText"></h2>
+                                    <hr class="hr">
+                                    <p class="count-text-c ">Discapacidades</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
     </div>
-    <a class="textMenu" href="acerca"><img src="../iconAcerca.png"  class="rounded imgText fa fa-fw" alt="icono Acerca"> Acerca de</a>
-</div>
+    <script src="/js/contador.js"></script>
+</section>
+<!-- FIN Contador -->
 
-<div class="main">
-    <h2>Sidebar Dropdown</h2>
-    <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
-    <p>This sidebar is of full height (100%) and always shown.</p>
-    <p>Some random text..</p>
-</div>
-<script src="/js/mVertical.js"></script>
 
+
+
+
+
+<!-- Pie de página -->
+<section>
+    <div >
+        <footer class="page-footer font-small container-fluid pg">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 pg-txt" >
+                EPN © Todos los Derechos Reservados
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <!-- FIN Pie de página -->
+</section>
 
 </body>
 </html>

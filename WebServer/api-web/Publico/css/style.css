@@ -329,6 +329,77 @@
 
 /*---------------****PAGINA RESULTADOS****---------------*/
 
+.h2{
+    margin-top: 130px;
+   text-align: center;
+    font-family: 'Lato', sans-serif !important;
+    text-decoration-color: #2A3B59;
+}
+
+.align-items-stretch {
+    align-items: stretch !important;
+}
+.mediaI {
+    display: flex;
+    align-items: flex-start;
+}
+.p-2 {
+    padding: 1.5rem !important;
+}
+.text-center {
+    text-align: center !important;
+}
+
+.bg-primary.bg-darken-2 {
+    background-color: #00A5A8 !important;
+}
+.bg-primary {
+    background-color: #00B5B8 !important;
+}
+.bg-gradient-x-primary {
+    background-image: linear-gradient(to right, #00A5A8 0%, #4DCBCD 100%);
+    background-repeat: repeat-x;
+}
+.media-body {
+    flex: 1;
+}
+.text-bold-400 {
+    font-weight: 400;
+}
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*/
 .cf-f{
     padding-top: 100px;
     background-color: #335574;
@@ -417,7 +488,7 @@ body {
 div.content, .main {
     margin-left: 220px;
     padding: 1px 16px;
-    height: 1000px;
+
 }
 
 

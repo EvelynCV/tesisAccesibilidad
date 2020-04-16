@@ -36,10 +36,10 @@
             <div class="collapse" id="submenu1" aria-expanded="false">
                 <ul class="flex-column pl-2 nav">
                     <li class="nav-item">
-                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1" onclick="$('#submenu1sub2').hide();$('#submenu1sub1').show();"><span>Datos Generales</span></a>
+                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1" onclick="$('#contenido').hide();$('#submenu1sub2').hide();$('#submenu1sub1').show();"><span>Datos Generales</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub2" data-toggle="collapse" data-target="#submenu1sub2" onclick="$('#submenu1sub1').hide();$('#submenu1sub2').show();"><span>Datos Institución</span></a>
+                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub2" data-toggle="collapse" data-target="#submenu1sub2" onclick="$('#contenido').hide();$('#submenu1sub1').hide();$('#submenu1sub2').show();"><span>Datos Institución</span></a>
                     </li>
                 </ul>
             </div>
@@ -52,13 +52,10 @@
 <!-- End vertical navbar -->
 
 
-<!-- Page content holder -->
-<div class="page-content p-5 content main" id="content">
+<!-- Contenido -->
+<div class="page-content p-5 content main" id="submenu1">
     <!-- Toggle button -->
     <button id="sidebarCollapse" type="button" class="btn btn-light rounded-pill "><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold"></small></button>
-
-
-
 
 
 
@@ -68,10 +65,7 @@
             </div>
     </div>
 
-
-
     <div class="collapse" id="submenu1sub2" aria-expanded="false">
-
         <ul class="nav nav-tabs flex-column pl-2">
             <li>
                 <form name="formulario1" action="#">
@@ -94,7 +88,9 @@
 </div>
 
 
-<!-- End demo content -->
+<!-- FIN Contenido -->
+
+<!-- SCRIPTS para llamado de funciones -->
 <script src="/js/menuVertical.js"></script>
 <script src="/js/grafico2.js"></script>
 <script type="text/javascript">
@@ -135,7 +131,7 @@
     }
 
 </script>
-
+<!-- FIN SCRIPTS para llamado de funciones -->
 </body>
 
 </html>

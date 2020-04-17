@@ -1,0 +1,18 @@
+body {
+    background: #d6d6d6;
+}
+canvas{
+    width: 400px;
+    height:300px;
+}
+
+.chart-container {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+element.style {
+
+    width: 559px;
+    height: 300px;
+}

@@ -39,5 +39,5 @@ export class ViewTotValInsEntity {
     por_ins: number;
 
     @ViewColumn()
-    valoracion: string;
+    Valoración: number;
 }

@@ -2218,8 +2218,8 @@
         "signature": "65b580fdb0127325bc7a35e2d10cb8feafd4fff8cda312a3731fc0adeab8b639"
       },
       "../src/viewtotvalins/viewtotvalins.entity.ts": {
-        "version": "33a4c214f53567b0ff0c9d3e62b2b25ce499e385549f6bcfc4cb610851daf97f",
-        "signature": "9a3644689d235c9d60fcad03f30d41cb5bd1d477ecbcbbbcd26b2783404fe42a"
+        "version": "78b2caabef863562ff6e3a055e1438ce2e990c74ed718a89ef8443ffceaec8e5",
+        "signature": "ddef23457383111a6690b0731d53fd073c6bd935ca204a7f06d79827d4afc4a8"
       },
       "../src/viewtotvalins/viewtotvalins.service.ts": {
         "version": "0d4c4acab1c3ee967d18ca1881b42f42eff350034ae76f782a98504cc1446e1a",
@@ -2346,8 +2346,8 @@
         "signature": "73c3e313457691f497471568a6c25f71138d835435b37bc7775830b9f62a67b4"
       },
       "../src/app.controller.ts": {
-        "version": "9f99fc88b5551dca74db955a6d3b00a9fc54182baa1fb83802850063f3498fa3",
-        "signature": "be83b26f93d17ed75210869af134c1ac262ecb4f21b634fe9b4b26fd76b57d5e"
+        "version": "597aa7dd8f2c15a251989d6eac95cea3b160d57d4d35460346e25af387f3e6f1",
+        "signature": "8444d23e272e89fde1ce1f0a88695423d63ec35e3285d8c4303343515f7e8816"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -2790,8 +2790,8 @@
         "signature": "757056c84ca5fe37ffdc9b771296343dc772ee24d636e46af1b064462df5bc61"
       },
       "../src/viewtotvalins/viewtotvalins.ts": {
-        "version": "120bfb33dbda6e56e4a9fd067374beca24fbf9140753f651c5ebf48df4cd54b1",
-        "signature": "00165b7a3e1c37caa2e8580afdeac3aaa492746011775c121528b9189d239ee3"
+        "version": "d7455118ff42823796b20c0f7021c28329c2b620c4ff7f69eb58e9938afdad7a",
+        "signature": "1002acb1435a48a1b4e67d17b3022774e25162e4672db0b22d9ed95732282e94"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -14969,6 +14969,7 @@
       "../src/viewtotnorins/viewtotnorins.module.ts",
       "../src/viewtotinsnor/viewtotinsnor.module.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.module.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -15082,8 +15083,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts"
+      "../src/app.controller.ts"
     ]
   },
   "version": "3.7.4"

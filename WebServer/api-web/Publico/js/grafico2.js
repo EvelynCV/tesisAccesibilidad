@@ -1,128 +1,86 @@
-function archivoJS(tot_ins_nor) {
-    console.log(tot_ins_nor);
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+function archivoJS(tot_val_ins) {
+    console.log(tot_val_ins);
+    var nombreInstituciones = tot_val_ins.map(
+        function (NombreInstitucion) {
+            return NombreInstitucion.nom_ins;
         }
     );
-    console.log(nombreInstituciones);
 
-    var valoresInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.ins_1;
+    var valoresInstituciones = tot_val_ins.map(
+        function (totalValores) {
+            return totalValores.tot_val;
         }
     );
-    console.log(valoresInstituciones);
-
     var datos = {
+
         labels : nombreInstituciones,
         datasets : [{
-            label : "datos 1",
+            label : "Puntaje obtenido",
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255,185,0,0.2)','rgba(231,72,86,0.2)','rgba(0,120,215,0.2)','rgba(0,153,188,0.2)',
+                'rgba(255,140,0,0.2)','rgba(232,17,35,0.2)', 'rgba(0,99,177,0.2)','rgba(45,125,154,0.2)',
+                'rgba(247,99,12,0.2)','rgba(234,0,94,0.2)','rgba(142,140,216,0.2)','rgba(0,183,195,0.2)',
+                'rgba(104,118,138,0.2)','rgba(202,80,16,0.2)','rgba(195,0,82,0.2)', 'rgba(107,105,214,0.2)',
+                'rgba(3,131,135,0.2)','rgba(218,59,1,0.2)','rgba(227,0,140,0.2)', 'rgba(135,100,184,0.2)',
+                'rgba(0,178,148,0.2)','rgba(86,124,115,0.2)','rgba(100,124,100,0.2)', 'rgba(191,0,119,0.2)',
+                'rgba(0,204,106,0.2)','rgba(132,117,69,0.2)'
             ],
+            borderWidth: 2,
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255,185,0,1)','rgba(231,72,86,1)','rgba(0,120,215,1)','rgba(0,153,188,1)',
+                'rgba(255,140,0,1)','rgba(232,17,35,1)', 'rgba(0,99,177,1)','rgba(45,125,154,1)',
+                'rgba(247,99,12,1)','rgba(234,0,94,1)','rgba(142,140,216,1)','rgba(0,183,195,1)',
+                'rgba(104,118,138,1)','rgba(202,80,16,1)','rgba(195,0,82,1)', 'rgba(107,105,214,1)',
+                'rgba(3,131,135,1)','rgba(218,59,1,1)','rgba(227,0,140,1)', 'rgba(135,100,184,1)',
+                'rgba(0,178,148,1)','rgba(86,124,115,1)','rgba(100,124,100,1)', 'rgba(191,0,119,1)',
+                'rgba(0,204,106,1)','rgba(132,117,69,1)'
+
             ],
+
             data : valoresInstituciones
         }
         ]
     };
     console.log(datos);
     var canvas = document.getElementById('chart2').getContext('2d');
-    window.bar = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options : {
-            legend: {
-                position: 'right'
-            },
-            elements : {
-                rectangle : {
-                    borderWidth : 1,
-                    borderColor : "rgb(0,255,0)",
-                    //borderSkipped : 'bottom'
-                }
-            },
-            responsive : true,
-            title : {
-                display : true,
-                text : "Prueba de grafico de barras"
-            }
-        }
-    });
-}
 
-function archivoJS2(tot_ins_nor) {
-    console.log(tot_ins_nor);
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
-        }
-    );
-    console.log(nombreInstituciones);
-
-    var valoresInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.ins_2;
-        }
-    );
-    console.log(valoresInstituciones);
-
-    var datos = {
-        labels : nombreInstituciones,
-        datasets : [{
-            label : "datos 1",
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            data : valoresInstituciones
-        }
-        ]
-    };
-    console.log(datos);
-    var canvas = document.getElementById('chart3').getContext('2d');
     window.bar = new Chart(canvas, {
         type : "bar",
         data : datos,
         options : {
             legend: {
-                position: 'right'
+                display: false // Ocultar legendas
             },
-            elements : {
-                rectangle : {
-                    borderWidth : 1,
-                    borderColor : "rgb(0,255,0)",
-                    // borderSkipped : ''
+
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 50,
+                    right: 50,
+                    top: 0,
+                    bottom: 0
                 }
             },
-            responsive : true,
             title : {
                 display : true,
-                text : "Prueba de grafico de barras"
+                text : "Puntaje Total obtenido por institución",
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 50
+            },
+            scales: {
+                xAxes: [{
+                    categorySpacing: 0.2,
+                    barPercentage: 1,
+                    ticks: {
+                        display: false
+                    }
+                }],
+                yAxes: [{
+                    stacked: true,
+                }]
             }
         }
     });

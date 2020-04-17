@@ -3,5 +3,5 @@ export interface ViewTotValIns{
     nom_ins: string;
     tot_val:number;
     por_ins:number;
-    valoracion: string;
+    Valoración: number;
 }

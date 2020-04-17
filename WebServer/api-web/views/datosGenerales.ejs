@@ -10,8 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/graficas.css">
 
 </head>
 <body>
@@ -41,13 +41,15 @@
 </section>
 <!-- FIN Menú - navbar -->
 
+<!-- Título -->
 <section>
-    <h2 class="h2"> Representación gráfica de datos Obtenidos</h2>
+    <h2 class="h2"> Datos Generales Obtenidos</h2>
 </section>
+<!-- FIN Título -->
 
-
+<!-- Información general -->
 <section>
-   <div class="row">
+   <div class="row sp">
        <div class="col-xl-3 col-lg-6 col-12">
            <div class="card">
                <div class="card-content">
@@ -56,9 +58,9 @@
                            <i><img class="card-img-top" src="../icn-ins.png" alt="icono Institución" ></i>
                        </div>
                        <div class="p-2 bg-gradient-x-primary white media-body">
-                           <h5>Products</h5>
+                           <h5>Instituciones Evaluadas</h5>
                            <h5 class="text-bold-400 mb-0">
-                               28
+                               26
                            </h5>
                        </div>
                    </div>
@@ -69,13 +71,13 @@
            <div class="card">
                <div class="card-content">
                    <div class="media align-items-stretch">
-                       <div class="p-2 text-center bg-primary bg-darken-2">
+                       <div class="p-2 text-center bg-primary2 bg-darken-22">
                            <i> <img class="card-img-top" src="../icn-norm.png" alt="icono Norma" ></i>
                        </div>
-                       <div class="p-2 bg-gradient-x-primary white media-body">
-                           <h5>Products</h5>
+                       <div class="p-2 bg-gradient-x-primary2 white media-body">
+                           <h5>Normas Técnicas Ecuatorianas</h5>
                            <h5 class="text-bold-400 mb-0">
-                               28
+                               11
                            </h5>
                        </div>
                    </div>
@@ -86,13 +88,13 @@
            <div class="card">
                <div class="card-content">
                    <div class="media align-items-stretch">
-                       <div class="p-2 text-center bg-primary bg-darken-2">
+                       <div class="p-2 text-center bg-primary3 bg-darken-23">
                            <i><img class="card-img-top" src="../icn-preg.png" alt="icono Pregunta" ></i>
                        </div>
-                       <div class="p-2 bg-gradient-x-primary white media-body">
-                           <h5>Products</h5>
+                       <div class="p-2 bg-gradient-x-primary3 white media-body">
+                           <h5>Preguntas realizadas</h5>
                            <h5 class="text-bold-400 mb-0">
-                               28
+                               181
                            </h5>
                        </div>
                    </div>
@@ -103,13 +105,13 @@
            <div class="card">
                <div class="card-content">
                    <div class="mediaI align-items-stretch">
-                       <div class="p-2 text-center bg-primary bg-darken-2">
+                       <div class="p-2 text-center bg-primary4 bg-darken-24">
                            <i><img class="card-img-top" src="../icn-dis.png" alt="icono Discapacidad" ></i>
                        </div>
-                       <div class="p-2 bg-gradient-x-primary white media-body">
-                           <h5>Products</h5>
+                       <div class="p-2 bg-gradient-x-primary4 white media-body">
+                           <h5>Discapacidades Consideradas</h5>
                            <h5 class="text-bold-400 mb-0">
-                               28
+                               3
                            </h5>
                        </div>
                    </div>
@@ -118,75 +120,17 @@
        </div>
    </div>
 </section>
+<!-- FIN Información general -->
 
-
-
-<!-- Contador -->
-
+<!-- Grafico Instituciones -->
 <section>
-    <div id="content2" class="container-fluid ">
-        <div class="row">
-            <div class="col-sm-12" style ="text-align: center">
-                <br>
-                <div class="row" >
-                    <div class="col-sm-3" >
-                        <div class="card text-center c1" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
-                                    <img class="card-img-top cit-CI2" src="../icn-ins.png" alt="icono Institución" >
-                                    <h2 class="timer count-number text-center h2T" data-to="26" data-speed="4000"></h2>
-                                    <hr class="hr">
-                                    <p class="count-text-c ">Instituciones</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3" >
-                        <div class="card text-center c1" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
-                                    <img class="card-img-top cit-CI2" src="../icn-norm.png" alt="icono Norma" >
-                                    <h2 class="timer count-number text-center h2T" data-to="11" data-speed="4000"></h2>
-                                    <hr class="hr">
-                                    <p class="count-text-c ">Normas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3" >
-                        <div class="card text-center c1" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
-                                    <img class="card-img-top cit-CI2" src="../icn-preg.png" alt="icono Pregunta" >
-                                    <h2 class="timer count-number text-center h2T" data-to="181" data-speed="4000"></h2>
-                                    <hr class="hr">
-                                    <p class="count-text-c ">Preguntas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-3">
-                        <div class="card text-center c2" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
-                                    <img class="card-img-top cit-CI2" src="../icn-dis.png" alt="icono Discapacidad" >
-                                    <h2 class="timer count-number text-center h2T" data-to="3" data-speed="4000">  <img src="../icn-ins.png"  class="rounded imgText"></h2>
-                                    <hr class="hr">
-                                    <p class="count-text-c ">Discapacidades</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-            </div>
-        </div>
+    <div id="chart-container" >
+        <canvas id="chart2" ></canvas>
     </div>
-    <script src="/js/contador.js"></script>
-</section>
-<!-- FIN Contador -->
 
+<script src="/js/grafico2.js"></script>
+</section>
 
 
 
@@ -205,6 +149,29 @@
     </div>
     <!-- FIN Pie de página -->
 </section>
+
+
+
+
+
+
+
+
+<!-- SCRIPTS para llamado de funciones -->
+
+<script type="text/javascript">
+    var tot_val_ins = <%- JSON.stringify(tot_val_ins) %>
+        console.log();
+    var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
+        console.log();
+    var  tot_nor_ins = <%- JSON.stringify( tot_nor_ins) %>
+
+    archivoJS(tot_val_ins);
+    archivoJS2(tot_ins_nor);
+
+</script>
+
+<!-- FIN SCRIPTS para llamado de funciones -->
 
 </body>
 </html>

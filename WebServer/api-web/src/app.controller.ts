@@ -68,8 +68,26 @@ export class AppController {
   }
 
   @Get('datosGenerales')
-  getDatosGenerales(@Response()res) {
-    return res.render('datosGenerales');
+  async getDatosGenerales(
+      @Param() params,
+      @Query() query,
+      @Response() res
+  ) {
+    console.log(query);
+    const id_conNumber = Number(query.nom_ins);
+
+    const tot_nor_ins = await this.viewTotNorIns._repositorioViewTotNorIns.find();
+    const tot_ins_nor= await this.viewTotInsNorService._repositorioViewTotInsNor.find();
+    const tot_val_ins= await this.viewTotValInsService._repositorioViewTotValIns.find();
+    const porcentaje_dis_ins= await this.ViewPorcentajeDisInsService._repositorioViewPorcentajeDisIns.find();
+
+
+    return res.render('datosGenerales', {
+      tot_nor_ins:tot_nor_ins,
+      tot_ins_nor:tot_ins_nor,
+      tot_val_ins:tot_val_ins,
+      porcentaje_dis_ins:porcentaje_dis_ins,
+    });
   }
 
   @Get('datosInstitucion')
@@ -86,6 +104,7 @@ export class AppController {
     }
     const instituciones = await this.viewTotNorIns._repositorioViewTotNorIns.find();
     const tot_ins_nor= await this.viewTotInsNorService._repositorioViewTotInsNor.find();
+
     const institucionesFiltrado = await this.viewTotNorIns._repositorioViewTotNorIns.find({
       where:consulta
     });

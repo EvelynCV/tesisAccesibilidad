@@ -1,5 +1,5 @@
-function archivoJS(tot_val_ins) {
-    console.log(tot_val_ins);
+function puntajeTotal(tot_val_ins) {
+
     var nombreInstituciones = tot_val_ins.map(
         function (NombreInstitucion) {
             return NombreInstitucion.nom_ins;
@@ -11,9 +11,11 @@ function archivoJS(tot_val_ins) {
             return totalValores.tot_val;
         }
     );
+
     var datos = {
 
         labels : nombreInstituciones,
+        fontSize: 18,
         datasets : [{
             label : "Puntaje obtenido",
             backgroundColor: [
@@ -42,7 +44,7 @@ function archivoJS(tot_val_ins) {
         ]
     };
     console.log(datos);
-    var canvas = document.getElementById('chart2').getContext('2d');
+    var canvas = document.getElementById('chart1').getContext('2d');
 
     window.bar = new Chart(canvas, {
         type : "bar",
@@ -64,7 +66,7 @@ function archivoJS(tot_val_ins) {
             },
             title : {
                 display : true,
-                text : "Puntaje Total obtenido por institución",
+                text : "Puntaje Total obtenido por Institución",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,

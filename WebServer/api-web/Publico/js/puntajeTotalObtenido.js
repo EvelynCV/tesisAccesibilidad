@@ -1,3 +1,5 @@
+
+
 function puntajeTotal(tot_val_ins) {
 
     var nombreInstituciones = tot_val_ins.map(
@@ -43,16 +45,15 @@ function puntajeTotal(tot_val_ins) {
         }
         ]
     };
-    console.log(datos);
+
     var canvas = document.getElementById('chart1').getContext('2d');
 
     window.bar = new Chart(canvas, {
         type : "bar",
         data : datos,
         options : {
-            legend: {
-                display: false // Ocultar legendas
-            },
+
+            legend: false,
 
             responsive: true,
             maintainAspectRatio: false,
@@ -82,8 +83,36 @@ function puntajeTotal(tot_val_ins) {
                 }],
                 yAxes: [{
                     stacked: true,
+                    mirror: true,
                 }]
+            },
+            plugins: {
+
+                afterDatasetsDraw: function (context, easing) {
+                    var ctx = context.chart.ctx;
+                    context.data.datasets.forEach(function (dataset) {
+                        for (var i = 0; i < dataset.data.length; i++) {
+                            if (dataset.data[i] != 0) {
+                                var model = dataset.object.keys(dataset)[0].data[i];
+                                var textY = model.y + (dataset.type == "line" ? -3 : 15);
+
+                                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                                ctx.textAlign = 'start';
+                                ctx.textBaseline = 'middle';
+                                ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                                ctx.save();
+                                ctx.translate(model.x, textY-15);
+                                ctx.rotate(4.7);
+                                ctx.fillText(dataset.data[i], 0, 0);
+                                ctx.restore();
+                            }
+                        }
+                    });
+                }
+
             }
         }
     });
+
+
 }

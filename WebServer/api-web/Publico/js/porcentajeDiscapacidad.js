@@ -1,8 +1,15 @@
+
 function porcentajeDiscapacidad(porcentaje_dis_ins) {
 
     var nombreInstituciones = porcentaje_dis_ins.map(
         function (NombreInstitucion) {
             return NombreInstitucion.nom_ins;
+        }
+    );
+
+    var idInstituciones = porcentaje_dis_ins.map(
+        function (idInstitucion) {
+            return idInstitucion.id_ins;
         }
     );
 
@@ -24,8 +31,7 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
 
     var datosG1 = {
 
-        labels: ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12", "13",
-            "14", "15", "16", "17", "18","19", "20", "21", "22", "22", "23", "24", "25", "26"],
+        labels: idInstituciones,
 
         datasets: [{
             label: "Motriz",
@@ -36,8 +42,7 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
     };
     var datosG2 = {
 
-        labels: ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12", "13",
-            "14", "15", "16", "17", "18","19", "20", "21", "22", "22", "23", "24", "25", "26"],
+        labels: idInstituciones,
         datasets: [{
             label: "Visual",
             backgroundColor: "rgba(0,99,177,0.5)",
@@ -47,8 +52,7 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
     };
     var datosG3 = {
 
-        labels: ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12", "13",
-            "14", "15", "16", "17", "18","19", "20", "21", "22", "22", "23", "24", "25", "26"],
+        labels: idInstituciones,
         datasets: [{
             label: "Auditiva",
             backgroundColor: "rgba(0,204,106,0.5)",
@@ -94,6 +98,12 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
                 reverse: false,
 
             },
+            plugins: {
+                datalabels: {
+                    display: false
+                }
+            },
+
         }
     });
 
@@ -131,6 +141,12 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
                 },
                 reverse: false
             },
+            plugins: {
+                datalabels: {
+                    display: false
+                }
+            },
+
         }
     });
     var canvas = document.getElementById('chart4').getContext('2d');
@@ -167,6 +183,13 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
                 },
                 reverse: false
             },
+            plugins: {
+                datalabels: {
+                    display: false
+                }
+            },
+
+
         }
     });
 }

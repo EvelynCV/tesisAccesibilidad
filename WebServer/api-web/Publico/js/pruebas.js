@@ -43,11 +43,12 @@ function prueba(tot_val_ins) {
                     display: false
                 }
             },
-            xAxes: [{
-                ticks: {
-                    display: false
-                }
-            }],
+            scales:
+                {
+                    xAxes: [{
+                        display: false
+                    }]
+                },
             legend: {
                 display: false // Ocultar legendas
             },

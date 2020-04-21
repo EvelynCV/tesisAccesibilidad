@@ -76,8 +76,8 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
             maintainAspectRatio: false,
             layout: {
                 padding: {
-                    left: 50,
-                    right: 50,
+                    left: 30,
+                    right: 30,
                     top: 0,
                     bottom: 0
                 }
@@ -88,7 +88,7 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 50
+                padding: 30
             },
             scale: {
                 ticks: {
@@ -121,8 +121,8 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
             maintainAspectRatio: false,
             layout: {
                 padding: {
-                    left: 50,
-                    right: 50,
+                    left: 30,
+                    right: 30,
                     top: 0,
                     bottom: 0
                 }
@@ -133,7 +133,7 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 50
+                padding: 30
             },
             scale: {
                 ticks: {
@@ -163,8 +163,8 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
             maintainAspectRatio: false,
             layout: {
                 padding: {
-                    left: 50,
-                    right: 50,
+                    left: 30,
+                    right: 30,
                     top: 0,
                     bottom: 0
                 }
@@ -175,7 +175,7 @@ function porcentajeDiscapacidad(porcentaje_dis_ins) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 50
+                padding: 30
             },
             scale: {
                 ticks: {

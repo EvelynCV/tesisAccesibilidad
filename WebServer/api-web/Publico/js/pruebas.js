@@ -38,15 +38,25 @@ function prueba(tot_val_ins) {
             }]
         },
         options: {
-            plugins: {
-                datalabels: {
-                    display: false
-                }
+            title : {
+                display : true,
+                text : "Puntaje Total obtenido por Institución",
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
             },
+            responsive: true,
+            maintainAspectRatio: false,
+
             scales:
                 {
                     xAxes: [{
                         display: false
+                    }],
+                    yAxes: [{
+                        stacked: true,
+                        mirror: true,
                     }]
                 },
             legend: {
@@ -64,6 +74,32 @@ function prueba(tot_val_ins) {
                 }
                 text.push('</ul>');
                 return text.join("");
+            },
+
+            plugins: {
+
+                afterDatasetsDraw: function (context, easing) {
+                    var ctx = context.chart.ctx;
+                    context.data.datasets.forEach(function (dataset) {
+                        for (var i = 0; i < dataset.data.length; i++) {
+                            if (dataset.data[i] != 0) {
+                                var model = dataset.object.keys(dataset)[0].data[i];
+                                var textY = model.y + (dataset.type == "line" ? -3 : 15);
+
+                                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                                ctx.textAlign = 'start';
+                                ctx.textBaseline = 'middle';
+                                ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                                ctx.save();
+                                ctx.translate(model.x, textY-15);
+                                ctx.rotate(4.7);
+                                ctx.fillText(dataset.data[i], 0, 0);
+                                ctx.restore();
+                            }
+                        }
+                    });
+                }
+
             }
         }
     });

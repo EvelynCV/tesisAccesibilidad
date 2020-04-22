@@ -27,6 +27,8 @@
     "@nestjs/typeorm": "^6.3.3",
     "app-controller": "^0.5.1",
     "app-service": "^0.4.0",
+    "chart.js": "^2.9.3",
+    "chartjs-subtitle": "^0.2.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "mysql": "^2.18.1",

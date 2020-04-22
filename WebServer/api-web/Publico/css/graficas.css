@@ -1,5 +1,5 @@
 body {
-    background: #d6d6d6;
+    background: #dddddd;
 }
 canvas{
     width: 400px;
@@ -11,8 +11,8 @@ canvas{
     margin-left: 10px;
     margin-right: 10px;
     background: #D0D4DC;
-    box-shadow: 3px 3px 2px 4px #2A3B59;
-    border-radius: 10px;
+    box-shadow: 3px 3px 2px 4px #888888;
+    border-radius: 5px;
 }
 element.style {
 
@@ -55,13 +55,34 @@ element.style {
     width: 20px;
     text-align: justify-all;
 }
-#global {
+.global {
     height: 300px;
     width: auto;
     border: 1px solid #ddd;
     background: #D0D4DC;
-    box-shadow: 3px 3px 2px 4px #2A3B59;
+    box-shadow: 3px 3px 2px 4px #888888;
     overflow-y: scroll;
     border-radius: 10px;
 }
 
+.global::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.global::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.global::-webkit-scrollbar-button:increment,.global::-webkit-scrollbar-button {
+    display: none;
+}
+
+.global::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 10px;
+    border: 1px solid #f1f2f3;
+}
+
+.global::-webkit-scrollbar-track {
+    border-radius: 5px;
+}

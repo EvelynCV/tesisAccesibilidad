@@ -1,4 +1,3 @@
-
 function prueba(tot_val_ins) {
     var nombreInstituciones = tot_val_ins.map(
         function (NombreInstitucion) {

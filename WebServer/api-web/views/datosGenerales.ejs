@@ -11,7 +11,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/graficas.css">
 
@@ -134,7 +133,7 @@
             <div class="col-sm-12">
                 <div class="row ">
                     <div class="col-sm-6">
-                        <div id="global" class="chart-container">
+                        <div id="global" class="chart-container global">
                             <div id="legend" ></div>
                         </div>
                         <br>
@@ -203,6 +202,47 @@
     <script src="/js/porcentaje_Discapacidad.js"></script>
 </section>
 
+
+<section>
+    <div id="content2" class="container-fluid">
+        <div class="row ">
+            <div class="col-sm-12" style ="text-align: center">
+                <div class="row" >
+                    <div class="col-sm-6" >
+                        <div class="chart-container">
+                            <canvas id="chart7" style="width: 700px; height: 500px"></canvas>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-sm-6" >
+                        <div class="chart-container">
+                            <canvas id="chart8" style="width: 700px; height: 500px"></canvas>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style ="text-align: center">
+                <div class="row" >
+                    <div class="col-sm-6" >
+                        <div class="chart-container">
+                            <canvas id="chart9" style="width: 700px; height: 500px"></canvas>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-sm-6" >
+                        <div class="chart-container">
+                            <canvas id="chart10" style="width: 700px; height: 500px"></canvas>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <script src="/js/porcentaje_Normas.js"></script>
+</section>
 <!-- FIN Graficos Generales-->
 
 <!-- Pie de página -->
@@ -233,12 +273,15 @@
         console.log();
     var porcentaje_dis_ins = <%- JSON.stringify(porcentaje_dis_ins) %>
         console.log();
+    var tot_nor_ins = <%- JSON.stringify(tot_nor_ins) %>
+        console.log();
 
 
-    puntajeTotal(tot_val_ins);
+    puntaje_Total(tot_val_ins);
     porcentajes_Totales(tot_val_ins);
     valoracion_Instituciones(tot_val_ins);
     porcentaje_Discapacidad(porcentaje_dis_ins);
+    porcentaje_Normas(tot_nor_ins);
    /* prueba(tot_val_ins);*/
 
 </script>

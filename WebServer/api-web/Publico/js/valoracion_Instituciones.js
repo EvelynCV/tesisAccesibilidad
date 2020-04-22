@@ -1,5 +1,4 @@
-
-function prueba(tot_val_ins) {
+function valoracion_Instituciones(tot_val_ins) {
     var nombreInstituciones = tot_val_ins.map(
         function (NombreInstitucion) {
             return NombreInstitucion.nom_ins;

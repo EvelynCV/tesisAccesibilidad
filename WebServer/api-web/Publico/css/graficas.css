@@ -57,7 +57,7 @@ element.style {
 }
 #global {
     height: 300px;
-    width: 400px;
+    width: auto;
     border: 1px solid #ddd;
     background: #D0D4DC;
     box-shadow: 3px 3px 2px 4px #2A3B59;

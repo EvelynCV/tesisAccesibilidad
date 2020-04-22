@@ -69,7 +69,7 @@ function puntajeTotal(tot_val_ins) {
 
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + '">' + '</span>' + chart.data.labels[i] + ' (' + ds.data[i] + ')');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + '">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');

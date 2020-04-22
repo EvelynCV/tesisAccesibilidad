@@ -1,5 +1,5 @@
 
-function porcentajeDiscapacidad(porcentaje_dis_ins) {
+function porcentaje_Discapacidad(porcentaje_dis_ins) {
 
     var nombreInstituciones = porcentaje_dis_ins.map(
         function (NombreInstitucion) {

@@ -172,6 +172,57 @@
 </section>
 
 <section>
+    <div class="titulo_boton">
+        Información adicional
+        <a style='cursor: pointer;' onClick="muestra_oculta('contenido')" title="" class="boton_mostrar">Mostrar / Ocultar</a>
+    </div>
+
+    <div id="contenido">
+        <div id="content2" class="container-fluid">
+            <div class="row ">
+                <div class="col-sm-12" style ="text-align: center">
+                    <div class="row" >
+                        <div class="col-sm-4" >
+                            <div class="chart-container">
+                                <canvas id="chart2" style="width: 700px; height: 500px"></canvas>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-sm-4" >
+                            <div class="chart-container">
+                                <canvas id="chart3" style="width: 700px; height: 500px"></canvas>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-sm-4" >
+                            <div class="chart-container">
+                                <canvas id="chart4" style="width: 700px; height: 500px" ></canvas>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <script src="/js/porcentaje_Discapacidad.js"></script>
+    </div>
+
+    <script>
+
+        function muestra_oculta(id){
+            if (document.getElementById){ //se obtiene el id
+                var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
+                el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+            }
+        }
+        window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
+            muestra_oculta('contenido');/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
+        }
+    </script>
+</section>
+<!--
+<section>
     <div id="content2" class="container-fluid">
         <div class="row ">
             <div class="col-sm-12" style ="text-align: center">
@@ -201,7 +252,7 @@
     <br><br>
     <script src="/js/porcentaje_Discapacidad.js"></script>
 </section>
-
+-->
 
 <section>
     <div id="content2" class="container-fluid">

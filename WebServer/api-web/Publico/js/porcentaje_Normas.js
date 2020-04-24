@@ -85,157 +85,105 @@ function porcentaje_Normas(tot_nor_ins) {
         'rgba(0,178,148,0.7)','rgba(86,124,115,0.7)','rgba(100,124,100,0.7)', 'rgba(191,0,119,0.7)',
         'rgba(0,204,106,0.7)','rgba(132,117,69,0.7)'];
 
-
-    var datosG1 = {
-
-        labels: nombreInstituciones,
-
-        datasets: [{
-            label: 'Norma A',
-            data: porcentajeNormaA,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        },{
-            label: 'Norma B',
-            data: porcentajeNormaB,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        },{
-            label: 'Norma C',
-            data: porcentajeNormaC,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        }],
-    };
-    var datosG2 = {
-
-        labels: nombreInstituciones,
-
-        datasets: [{
-            label: 'Norma D',
-            data: porcentajeNormaD,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        },{
-            label: 'Norma E',
-            data: porcentajeNormaE,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        },{
-            label: 'Norma F',
-            data: porcentajeNormaF,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        }],
-    };
-    var datosG3 = {
-
-        labels: nombreInstituciones,
-
-        datasets: [{
-            label: 'Norma G',
-            data: porcentajeNormaG,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        },{
-            label: 'Norma H',
-            data: porcentajeNormaH,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        },{
-            label: 'Norma I',
-            data: porcentajeNormaI,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        }],
-    };
-    var datosG4 = {
-
-        labels: nombreInstituciones,
-
-        datasets: [{
-            label: 'Norma J',
-            data: porcentajeNormaJ,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        },{
-            label: 'Norma K',
-            data: porcentajeNormaK,
-            backgroundColor: chartColors,
-            borderColor: colorBorder,
-            borderWidth: 1
-        }],
-    };
-
-
-
-
-    var ctx = document.getElementById("chart7").getContext('2d');
-    var chart1 = new Chart(ctx, {
-        type: 'polarArea',
-        data: datosG1,
-        options: {
-
-            title : {
-                display : true,
-                text: 'Puntución Obtenida',
-                fontFamily: 'Lato',
-                fontColor: '#335574',
-                fontSize: 18,
-                padding: 10
-            },
-
-            responsive: true,
-            maintainAspectRatio: false,
-
-            legend: {
-                display: false
-            },
-        }
-    });
-
-    var ctx = document.getElementById("chart8").getContext('2d');
-    var chart1 = new Chart(ctx, {
-        type: 'doughnut',
-        data: datosG2,
-        options: {
-
-            title : {
-                display : true,
-                text: 'Puntución Obtenida',
-                fontFamily: 'Lato',
-                fontColor: '#335574',
-                fontSize: 18,
-                padding: 10
-            },
-
-            responsive: true,
-            maintainAspectRatio: false,
-
-            legend: {
-                display: false
-            },
-        }
-    });
     var ctx = document.getElementById("chart9").getContext('2d');
-    var chart1 = new Chart(ctx, {
-        type: 'doughnut',
-        data: datosG3,
-        options: {
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: nombreInstituciones,
+            datasets: [{
+                label: "Porcentaje A",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaA
 
-            title : {
-                display : true,
-                text: 'Puntución Obtenida',
+            },{
+                label: "Porcentaje B",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaB
+
+            },{
+                label: "Porcentaje C",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data:porcentajeNormaC
+
+            },{
+                label: "Porcentaje D",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaD
+
+            },{
+                label: "Porcentaje E",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaE
+
+            },{
+                label: "Porcentaje F",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data:porcentajeNormaF
+
+            },{
+                label: "Porcentaje G",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaG
+
+            },{
+                label: "Porcentaje H",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaH
+
+            },{
+                label: "Porcentaje I",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaI
+
+            },{
+                label: "Porcentaje J",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaJ
+
+            },{
+                label: "Porcentaje K",
+                backgroundColor: chartColors,
+                borderColor: colorBorder,
+                borderWidth: 1.5,
+                hoverBackgroundColor: hover,
+                data: porcentajeNormaK
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje Obtenido por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -245,32 +193,20 @@ function porcentaje_Normas(tot_nor_ins) {
             responsive: true,
             maintainAspectRatio: false,
 
+            scales:
+                {
+                    xAxes: [{
+                        display: false
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
             legend: {
                 display: false
-            },
-        }
-    });
-    var ctx = document.getElementById("chart10").getContext('2d');
-    var chart1 = new Chart(ctx, {
-        type: 'doughnut',
-        data: datosG4,
-        options: {
 
-            title : {
-                display : true,
-                text: 'Puntución Obtenida',
-                fontFamily: 'Lato',
-                fontColor: '#335574',
-                fontSize: 18,
-                padding: 10
-            },
-
-            responsive: true,
-            maintainAspectRatio: false,
-
-            legend: {
-                display: false
-            },
+            }
         }
     });
 }

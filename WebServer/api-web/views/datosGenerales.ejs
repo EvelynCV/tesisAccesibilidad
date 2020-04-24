@@ -45,7 +45,7 @@
 
 <!-- Título -->
 <section>
-    <h2 class="h2"> Datos Generales Obtenidos</h2>
+    <h2 class="h2"></h2>
 </section>
 <!-- FIN Título -->
 
@@ -171,129 +171,105 @@
     </div>
 </section>
 
-<section>
-    <div class="titulo_boton">
-        Información adicional
-        <a style='cursor: pointer;' onClick="muestra_oculta('contenido')" title="" class="boton_mostrar">Mostrar / Ocultar</a>
-    </div>
 
-    <div id="contenido">
-        <div id="content2" class="container-fluid">
-            <div class="row ">
-                <div class="col-sm-12" style ="text-align: center">
-                    <div class="row" >
-                        <div class="col-sm-4" >
-                            <div class="chart-container">
-                                <canvas id="chart2" style="width: 700px; height: 500px"></canvas>
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-xs well">
+                <a href="#info1" class="inf" alt="Porcentaje obtenido por Discapacidad"></a>
+            </div>
+            <div class="col-sm-4 col-xs well" >
+                <a href="#info2" class="inf" alt="Porcentaje obtenido por Norma"></a>
+            </div>
+            <div class="col-sm-4 col-xs well">
+                <a href="#info3" class="inf" alt="Datos por Institución"></a>
+            </div>
+        </div>
+        <!-- contenido informacion adicional -->
+        <div class="row">
+            <div id="info1" class="col-sm-12 well oculto" >
+                <br>
+                <div id="content2" class="container-fluid">
+                    <div class="row ">
+                        <div class="col-sm-12" style ="text-align: center">
+                            <div class="row" >
+                                <div class="col-sm-4" >
+                                    <div class="chart-container">
+                                        <canvas id="chart2" style="width: 700px; height: 500px"></canvas>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <div class="chart-container">
+                                        <canvas id="chart3" style="width: 700px; height: 500px"></canvas>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <div class="chart-container">
+                                        <canvas id="chart4" style="width: 700px; height: 500px" ></canvas>
+                                    </div>
+                                    <br>
+                                </div>
                             </div>
-                            <br>
-                        </div>
-                        <div class="col-sm-4" >
-                            <div class="chart-container">
-                                <canvas id="chart3" style="width: 700px; height: 500px"></canvas>
-                            </div>
-                            <br>
-                        </div>
-                        <div class="col-sm-4" >
-                            <div class="chart-container">
-                                <canvas id="chart4" style="width: 700px; height: 500px" ></canvas>
-                            </div>
-                            <br>
                         </div>
                     </div>
                 </div>
+                <br><br>
+                <script src="/js/porcentaje_Discapacidad.js"></script>
+                <br>
+            </div>
+            <div id="info2" class="col-sm-12 well oculto" style="justify-content: center" >
+                <br>
+                <div class="chart-container">
+                    <canvas id="chart9"></canvas>
+                </div>
+                <br>
+                <script src="/js/porcentaje_Normas.js"></script>
+                <br>
+            </div>
+            <div id="info3" class="col-sm-12 well oculto" style="text-align: center;">
+                <br>
+                <li>
+                    <form name="formulario1" action="#">
+                        <select class="seleccion" name="institucion" onchange="cambia1()" >
+                            <option hidden selected>Selecciona una opción</option>
+                            <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
+                                <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
+                            <% } %>
+                        </select>
+                    </form>
+                </li>
+                <div class="tab-content">
+                    <div id="canvas-container" style="width:70%;">
+                        <canvas id="chart" width="2000" height="800"></canvas>
+                    </div>
+                    <script src="/js/puntaje_Total_Norma.js"></script>
+                </div>
+                <br>
             </div>
         </div>
-        <br><br>
-        <script src="/js/porcentaje_Discapacidad.js"></script>
     </div>
-
     <script>
+        jQuery(document).ready(function(){
+            $(".oculto").hide();
+            $(".inf").click(function(){
+                var nodo = $(this).attr("href");
 
-        function muestra_oculta(id){
-            if (document.getElementById){ //se obtiene el id
-                var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
-                el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
-            }
-        }
-        window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
-            muestra_oculta('contenido');/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
-        }
+                if ($(nodo).is(":visible")){
+                    $(nodo).hide();
+                    return false;
+                }else{
+                    $(".oculto").hide("slow");
+                    $(nodo).fadeToggle("slow");
+                    return false;
+                }
+            });
+        });
     </script>
 </section>
-<!--
-<section>
-    <div id="content2" class="container-fluid">
-        <div class="row ">
-            <div class="col-sm-12" style ="text-align: center">
-                <div class="row" >
-                    <div class="col-sm-4" >
-                        <div class="chart-container">
-                            <canvas id="chart2" style="width: 700px; height: 500px"></canvas>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-sm-4" >
-                        <div class="chart-container">
-                            <canvas id="chart3" style="width: 700px; height: 500px"></canvas>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-sm-4" >
-                        <div class="chart-container">
-                            <canvas id="chart4" style="width: 700px; height: 500px" ></canvas>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <script src="/js/porcentaje_Discapacidad.js"></script>
-</section>
--->
 
-<section>
-    <div id="content2" class="container-fluid">
-        <div class="row ">
-            <div class="col-sm-12" style ="text-align: center">
-                <div class="row" >
-                    <div class="col-sm-6" >
-                        <div class="chart-container">
-                            <canvas id="chart7" style="width: 700px; height: 500px"></canvas>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-sm-6" >
-                        <div class="chart-container">
-                            <canvas id="chart8" style="width: 700px; height: 500px"></canvas>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12" style ="text-align: center">
-                <div class="row" >
-                    <div class="col-sm-6" >
-                        <div class="chart-container">
-                            <canvas id="chart9" style="width: 700px; height: 500px"></canvas>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-sm-6" >
-                        <div class="chart-container">
-                            <canvas id="chart10" style="width: 700px; height: 500px"></canvas>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <script src="/js/porcentaje_Normas.js"></script>
-</section>
 <!-- FIN Graficos Generales-->
 
 <!-- Pie de página -->
@@ -326,6 +302,8 @@
         console.log();
     var tot_nor_ins = <%- JSON.stringify(tot_nor_ins) %>
         console.log();
+    var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
+        console.log();
 
 
     puntaje_Total(tot_val_ins);
@@ -335,6 +313,22 @@
     porcentaje_Normas(tot_nor_ins);
    /* prueba(tot_val_ins);*/
 
+    function cambia1(){
+        cosa = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;
+
+        if (cosa==1)
+        {
+            archivoJS(tot_ins_nor);
+        }
+        if (cosa==2)
+        {
+            archivoJS2(tot_ins_nor);
+        }
+        if (cosa==3)
+        {
+            archivoJS3(tot_ins_nor);
+        }
+    }
 </script>
 
 <!-- FIN SCRIPTS para llamado de funciones -->

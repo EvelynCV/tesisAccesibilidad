@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/graficas.css">
+    <link rel="stylesheet" href="/css/selector.css">
 
 
 </head>
@@ -231,16 +232,14 @@
             </div>
             <div id="info3" class="col-sm-12 well oculto" style="text-align: center;">
                 <br>
-                <li>
-                    <form name="formulario1" action="#">
-                        <select class="seleccion" name="institucion" onchange="cambia1()" >
+                    <form name="formulario1" action="#" style="justify-content: center">
+                        <select class="mdb-select md-form dropdown-content " name="institucion" onchange="institucionSeleccionada()" >
                             <option hidden selected>Selecciona una opción</option>
                             <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
                                 <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
                             <% } %>
                         </select>
                     </form>
-                </li>
                 <div class="tab-content">
                     <div id="canvas-container" style="width:70%;">
                         <canvas id="chart" width="2000" height="800"></canvas>
@@ -269,6 +268,33 @@
         });
     </script>
 </section>
+<br>
+<section>
+    <div class="col-sm-12" style="text-align: center">
+        <form name="formulario1" action="#" style="justify-content: center">
+            <input id="selcapa" class="chosen-value" type="text" value="" placeholder="Seleccione una capa">
+            <ul class="value-list" name="institucion" onchange="institucionSeleccionada()">
+
+
+                        <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
+                            <li id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </li>
+                        <% } %>
+
+            </ul>
+        </form>
+
+        <div class="tab-content">
+            <div id="canvas-container" style="width:70%;">
+                <canvas id="chart" width="2000" height="800"></canvas>
+            </div>
+            <script src="/js/puntaje_Total_Norma.js"></script>
+        </div>
+    </div>
+    <script src="/js/selector.js"></script>
+
+
+</section>
+
 
 <!-- FIN Graficos Generales-->
 
@@ -313,7 +339,7 @@
     porcentaje_Normas(tot_nor_ins);
    /* prueba(tot_val_ins);*/
 
-    function cambia1(){
+    function institucionSeleccionada(){
         cosa = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;
 
         if (cosa==1)

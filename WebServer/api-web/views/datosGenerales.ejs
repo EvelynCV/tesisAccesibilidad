@@ -184,7 +184,7 @@
             </div>
             <div class="col-sm-4 col-xs well" >
                 <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                <a href="#info2" class="inf" alt="Porcentaje obtenido por Norma"></a>
+                <a href="#info2" class="inf" alt="Porcentaje obtenido por Norma" style="height: 50px; width:40px "></a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs well">
@@ -208,7 +208,7 @@
                                     <br>
                                 </div>
                                 <div class="col-sm-4" >
-                                    <div class="chart-container">
+                                    <div class="chart-container" ng-if="">
                                         <canvas id="chart3" style="width: 700px; height: 500px"></canvas>
                                     </div>
                                     <br>
@@ -234,6 +234,7 @@
                 <script src="/js/porcentaje_Normas.js"></script>
             </div>
             <div id="info3" class="col-sm-12 well oculto" style="text-align: center;">
+                <div>
                <br>
                     <form name="formulario1" action="#" style="justify-content: center" >
                         <select class=" dropdown-content select-items select-selected " name="institucion" onchange="institucionSeleccionada()"  >
@@ -244,6 +245,7 @@
                         </select>
                     </form>
                 <br>
+                </div>
                 <div class="row" >
                     <div class="col-sm-2" >
 
@@ -251,18 +253,17 @@
                     <div class="col-sm-8" >
                         <div class="chart-container">
                             <br>
-                            <canvas id="chart" style="width: 1000px; height: 700px"></canvas>
+                            <canvas id="chart" style="width: 700px; height: 500px"></canvas>
                             <br>
                         </div>
                         <script src="/js/puntaje_Total_Norma.js"></script>
                         <br>
                     </div>
                     <div class="col-sm-2" >
-
                     </div>
                 </div>
-
             </div>
+            <span class="codigo">  </span>
         </div>
     </div>
     <script>
@@ -276,7 +277,7 @@
                     return false;
                 }else{
                     $(".oculto").hide("slow");
-                    $(nodo).fadeToggle("slow");
+                    $(nodo).fadeToggle("fast");
                     return false;
                 }
             });

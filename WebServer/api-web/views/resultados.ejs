@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Bootstrap Example</title>
@@ -10,128 +10,357 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/menuVertical.css">
+    <link rel="stylesheet" href="/css/graficas.css">
+    <link rel="stylesheet" href="/css/selector.css">
+
 
 </head>
+<body>
 
-
-<!-- Vertical navbar -->
-<div class="vertical-nav bg-c sidebar" id="sidebar">
-    <div class="py-4 ">
-        <div class="media d-flex align-items-center active" data-target="#navbar-collapse"><img src="../logo-politecnica.png" alt="logo EPN" style="height: 80px">
+<!-- Menú - navbar -->
+<section>
+    <nav class="navbar fixed-top navbar-expand-sm nav-fill bg">
+        <a class="navbar-brand logo" ><img src="../logo-epn.png" alt="logo EPN" style="height: 50px"></a>
+        <button class="navbar-toggler toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav ml-auto ">
+                <li class="nav-item"> <a class="nav-link textMenu" href="inicio">
+                        <img src="../iconHome.png"  class="rounded-circle imgText" alt="icono Inicio" >
+                        Inicio</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link textMenu" href="resultados">
+                        <img src="../iconDashboard.png"  class="rounded imgText" alt="icono Resultados">
+                        Resultados</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link textMenu" href="acerca">
+                        <img src="../iconAcerca.png"  class="rounded imgText" alt="icono Acerca">
+                        Acerca de</a>
+                </li>
+            </ul>
         </div>
-        <hr class="hrv">
-    </div>
+    </nav>
+</section>
+<!-- FIN Menú - navbar -->
 
-    <ul class="nav flex-column bg-c mb-0 sidebar" id="navbar-collapse">
+<!-- Título -->
+<section>
+    <h2 class="h2"></h2>
+</section>
+<!-- FIN Título -->
 
-        <a class="textMenu" href="inicio"><img src="../iconHome.png"  class="rounded-circle imgText fa fa-fw " alt="icono Inicio" >Inicio</a>
-
-        <li class="nav-item">
-            <button class="dropdown-btn textMenu" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><img src="../iconDashboard.png"  class="rounded imgText fa fa-fw" alt="icono Resultados">Resultados
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="collapse" id="submenu1" aria-expanded="false">
-                <ul class="flex-column pl-2 nav">
-                    <li class="nav-item">
-                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1" onclick="$('#contenido').hide();$('#submenu1sub2').hide();$('#submenu1sub1').show();"><span>Datos Generales</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link collapsed py-1 textMenu" href="#submenu1sub2" data-toggle="collapse" data-target="#submenu1sub2" onclick="$('#contenido').hide();$('#submenu1sub1').hide();$('#submenu1sub2').show();"><span>Datos Institución</span></a>
-                    </li>
-                </ul>
+<!-- Información general -->
+<section>
+    <div class="row sp">
+        <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media align-items-stretch">
+                        <div class="p-2 text-center bg-primary bg-darken-2">
+                            <i><img class="card-img-top" src="../icn-ins.png" alt="icono Institución" ></i>
+                        </div>
+                        <div class="p-2 bg-gradient-x-primary white media-body">
+                            <h5>Instituciones Evaluadas</h5>
+                            <h5 class="text-bold-400 mb-0">
+                                26
+                            </h5>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </li>
-        <li class="nav-item">
-            <a class="textMenu" href="acerca"><img src="../iconAcerca.png"  class="rounded imgText fa fa-fw" alt="icono Acerca"> Acerca de</a>
-        </li>
-    </ul>
-</div>
-<!-- End vertical navbar -->
-
-
-<!-- Contenido -->
-<div class="page-content p-5 content main" id="submenu1">
-    <!-- Toggle button -->
-    <button id="sidebarCollapse" type="button" class="btn btn-light rounded-pill "><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold"></small></button>
-
-
-
-    <div class="collapse" id="submenu1sub1" aria-expanded="false">
-        <div id="canvas-container" style="width:70%;">
-            <canvas id="chart2" width="2000" height="800"></canvas>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media align-items-stretch">
+                        <div class="p-2 text-center bg-primary2 bg-darken-22">
+                            <i> <img class="card-img-top" src="../icn-norm.png" alt="icono Norma" ></i>
+                        </div>
+                        <div class="p-2 bg-gradient-x-primary2 white media-body">
+                            <h5>Normas Técnicas Ecuatorianas</h5>
+                            <h5 class="text-bold-400 mb-0">
+                                11
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media align-items-stretch">
+                        <div class="p-2 text-center bg-primary3 bg-darken-23">
+                            <i><img class="card-img-top" src="../icn-preg.png" alt="icono Pregunta" ></i>
+                        </div>
+                        <div class="p-2 bg-gradient-x-primary3 white media-body">
+                            <h5>Preguntas realizadas</h5>
+                            <h5 class="text-bold-400 mb-0">
+                                181
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="mediaI align-items-stretch">
+                        <div class="p-2 text-center bg-primary4 bg-darken-24">
+                            <i><img class="card-img-top" src="../icn-dis.png" alt="icono Discapacidad" ></i>
+                        </div>
+                        <div class="p-2 bg-gradient-x-primary4 white media-body">
+                            <h5>Discapacidades Consideradas</h5>
+                            <h5 class="text-bold-400 mb-0">
+                                3
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <br>
+</section>
+<!-- FIN Información general -->
 
-    <div class="collapse" id="submenu1sub2" aria-expanded="false">
-        <ul class="nav nav-tabs flex-column pl-2">
-            <li>
-                <form name="formulario1" action="#">
-                    <select class="seleccion" name="cosa" onchange="var mivariable=cambia1()" >
+<!-- Graficos Generales-->
+
+<section>
+    <div id="content2" class="container-fluid">
+        <div class="row ">
+            <div class="col-sm-12">
+                <div class="row ">
+                    <div class="col-sm-6">
+                        <div id="global" class="chart-container global">
+                            <div id="legend" ></div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="chart-container" >
+                            <canvas id="chart1"></canvas>
+                        </div>
+                        <script src="/js/puntaje_Total.js"></script>
+                        <br>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="row ">
+                    <div class="col-sm-6">
+                        <div class="chart-container" >
+                            <canvas id="chart5"></canvas>
+                        </div>
+                        <script src="/js/porcentajes_Totales.js"></script>
+                        <br>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="chart-container" >
+                            <canvas id="chart6"></canvas>
+                        </div>
+                        <script src="/js/valoracion_instituciones.js"></script>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-xs well">
+                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
+                    <a href="#info1" class="inf" alt="Porcentaje obtenido por Discapacidad"></a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs well" >
+                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
+                    <a href="#info2" class="inf" alt="Porcentaje obtenido por Norma"></a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs well">
+                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
+                    <a href="#info3" class="inf" alt="Datos por Institución"></a>
+                </div>
+            </div>
+        </div>
+        <!-- contenido informacion adicional -->
+        <div class="row">
+            <div id="info1" class="col-sm-12 well oculto" >
+                <br>
+                <div id="content2" class="container-fluid">
+                    <div class="row ">
+                        <div class="col-sm-12" style ="text-align: center">
+                            <div class="row" >
+                                <div class="col-sm-4" >
+                                    <div class="chart-container">
+                                        <canvas id="chart2" style="width: 700px; height: 500px"></canvas>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <div class="chart-container">
+                                        <canvas id="chart3" style="width: 700px; height: 500px"></canvas>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <div class="chart-container">
+                                        <canvas id="chart4" style="width: 700px; height: 500px" ></canvas>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="/js/porcentaje_Discapacidad.js"></script>
+            </div>
+            <div id="info2" class="col-sm-12 well oculto" style="justify-content: center" >
+                <br>
+                <div class="chart-container">
+                    <canvas id="chart9"></canvas>
+                </div>
+                <br>
+                <script src="/js/porcentaje_Normas.js"></script>
+            </div>
+            <div id="info3" class="col-sm-12 well oculto" style="text-align: center;">
+                <br>
+                <form name="formulario1" action="#" style="justify-content: center" >
+                    <select class=" dropdown-content select-items select-selected " name="institucion" onchange="institucionSeleccionada()"  >
                         <option hidden selected>Selecciona una opción</option>
-                        <% for(var i = 0; i< instituciones.length; i++){ %>
-                            <option id="seleccionado"  value="<%= instituciones[i].nom_ins %>"> <%= instituciones[i].nom_ins %> </option>
+                        <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
+                            <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
                         <% } %>
                     </select>
                 </form>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div id="canvas-container" style="width:70%;">
-                <canvas id="chart" width="2000" height="800"></canvas>
+                <br>
+                <div class="row" >
+                    <div class="col-sm-2" >
+
+                    </div>
+                    <div class="col-sm-8" >
+                        <div class="chart-container">
+                            <br>
+                            <canvas id="chart" style="width: 1000px; height: 700px"></canvas>
+                            <br>
+                        </div>
+                        <script src="/js/puntaje_Total_Norma.js"></script>
+                        <br>
+                    </div>
+                    <div class="col-sm-2" >
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+    <script>
+        jQuery(document).ready(function(){
+            $(".oculto").hide();
+            $(".inf").click(function(){
+                var nodo = $(this).attr("href");
 
-</div>
+                if ($(nodo).is(":visible")){
+                    $(nodo).hide();
+                    return false;
+                }else{
+                    $(".oculto").hide("slow");
+                    $(nodo).fadeToggle("slow");
+                    return false;
+                }
+            });
+        });
+    </script>
+</section>
+<br>
+<!-- FIN Graficos Generales-->
+
+<!-- Pie de página -->
+<section>
+    <div >
+        <footer class="page-footer font-small container-fluid pg">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 pg-txt" >
+                EPN © Todos los Derechos Reservados
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <!-- FIN Pie de página -->
+</section>
 
 
-<!-- FIN Contenido -->
+
+
+
+
+
 
 <!-- SCRIPTS para llamado de funciones -->
-<script src="/js/menuVertical.js"></script>
-<script src="/js/grafico2.js"></script>
-<script type="text/javascript">
-    var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
-        console.log();
-    var instituciones = <%- JSON.stringify(instituciones) %>
-
-        archivoJS(tot_ins_nor);
-    archivoJS2(tot_ins_nor);
-
-</script>
-<script src="/js/grafico1.js"></script>
 
 <script type="text/javascript">
+    var tot_val_ins = <%- JSON.stringify(tot_val_ins) %>
+        console.log();
+    var porcentaje_dis_ins = <%- JSON.stringify(porcentaje_dis_ins) %>
+        console.log();
+    var tot_nor_ins = <%- JSON.stringify(tot_nor_ins) %>
+        console.log();
     var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
         console.log();
-    var instituciones = <%- JSON.stringify(instituciones) %>
-        console.log(tot_ins_nor)
-    //archivoJS(instituciones)
 
-    function cambia1(){
-        cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].index;
-        console.log("cosita" + cosa)
-        // return cosa;
 
-        if (cosa==1)
-        {
-            archivoJS(tot_ins_nor);
-        }
-        if (cosa==2)
-        {
-            archivoJS2(tot_ins_nor);
-        }
-        if (cosa==3)
-        {
-            archivoJS3(tot_ins_nor);
-        }
+    puntaje_Total(tot_val_ins);
+    porcentajes_Totales(tot_val_ins);
+    valoracion_Instituciones(tot_val_ins);
+    porcentaje_Discapacidad(porcentaje_dis_ins);
+    porcentaje_Normas(tot_nor_ins);
+    /* prueba(tot_val_ins);*/
+
+    function institucionSeleccionada(){
+        select = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;
+
+        if (select==1) { archivoJS(tot_ins_nor);}
+        if (select==2) { archivoJS2(tot_ins_nor);}
+        if (select==3) { archivoJS3(tot_ins_nor);}
+        if (select==4) { archivoJS4(tot_ins_nor);}
+        if (select==5) { archivoJS5(tot_ins_nor);}
+        if (select==6) { archivoJS6(tot_ins_nor);}
+        if (select==7) { archivoJS7(tot_ins_nor);}
+        if (select==8) { archivoJS8(tot_ins_nor);}
+        if (select==9) { archivoJS9(tot_ins_nor);}
+        if (select==10) { archivoJS10(tot_ins_nor);}
+        if (select==11) { archivoJS11(tot_ins_nor);}
+        if (select==12) { archivoJS12(tot_ins_nor);}
+        if (select==13) { archivoJS13(tot_ins_nor);}
+        if (select==14) { archivoJS14(tot_ins_nor);}
+        if (select==15) { archivoJS15(tot_ins_nor);}
+        if (select==16) { archivoJS16(tot_ins_nor);}
+        if (select==17) { archivoJS17(tot_ins_nor);}
+        if (select==18) { archivoJS18(tot_ins_nor);}
+        if (select==19) { archivoJS19(tot_ins_nor);}
+        if (select==20) { archivoJS20(tot_ins_nor);}
+        if (select==21) { archivoJS21(tot_ins_nor);}
+        if (select==22) { archivoJS22(tot_ins_nor);}
+        if (select==23) { archivoJS23(tot_ins_nor);}
+        if (select==24) { archivoJS24(tot_ins_nor);}
+        if (select==25) { archivoJS25(tot_ins_nor);}
+        if (select==26) { archivoJS26(tot_ins_nor);}
+
     }
-
 </script>
-<!-- FIN SCRIPTS para llamado de funciones -->
-</body>
 
+<!-- FIN SCRIPTS para llamado de funciones -->
+
+</body>
 </html>

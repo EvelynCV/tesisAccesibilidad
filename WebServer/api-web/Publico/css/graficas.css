@@ -14,6 +14,7 @@ canvas{
     box-shadow: 3px 3px 2px 4px #888888;
     border-radius: 5px;
 }
+
 element.style {
 
     width: 559px;
@@ -101,29 +102,34 @@ a {
     color:black;
 }
 .inf {
-    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    background-image: linear-gradient(90deg, #babf7a, #8eb176,  #003f5c, #00536b, #006774,
+    #0f7b78, #3d8e78, #64a077, #8eb176, #babf7a);
     border-radius:10px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-transform:uppercase;
-    font-size:18px;
+    font-size:15px;
     font-weight:bold;
+    width:calc(30vw + 10px);
+    height:calc(4vw + 10px);
 }
 .inf:after {
+    width:30vw;
+    height:4vw;
     content:attr(alt);
-    background-color:#dddddd;
-    border-radius:15px;
+    background-color: #dddddd;
+    border-radius:20px;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 .inf:hover {
-    animation:slidebg 2s linear infinite;
+    animation:slidebg 3s linear infinite;
 }
 
 @keyframes slidebg {
     to {
-      /*  background-position:20vw;*/
+       background-position:20vw;
     }
 }

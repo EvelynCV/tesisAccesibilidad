@@ -178,13 +178,19 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4 col-xs well">
+                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
                 <a href="#info1" class="inf" alt="Porcentaje obtenido por Discapacidad"></a>
+                </div>
             </div>
             <div class="col-sm-4 col-xs well" >
+                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
                 <a href="#info2" class="inf" alt="Porcentaje obtenido por Norma"></a>
+                </div>
             </div>
             <div class="col-sm-4 col-xs well">
+                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
                 <a href="#info3" class="inf" alt="Datos por Institución"></a>
+                </div>
             </div>
         </div>
         <!-- contenido informacion adicional -->
@@ -217,9 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <br><br>
                 <script src="/js/porcentaje_Discapacidad.js"></script>
-                <br>
             </div>
             <div id="info2" class="col-sm-12 well oculto" style="justify-content: center" >
                 <br>
@@ -228,7 +232,6 @@
                 </div>
                 <br>
                 <script src="/js/porcentaje_Normas.js"></script>
-                <br>
             </div>
             <div id="info3" class="col-sm-12 well oculto" style="text-align: center;">
                <br>
@@ -240,13 +243,25 @@
                             <% } %>
                         </select>
                     </form>
-                <div class="tab-content">
-                    <div id="canvas-container" style="width:70%;">
-                        <canvas id="chart" width="2000" height="800"></canvas>
-                    </div>
-                    <script src="/js/puntaje_Total_Norma.js"></script>
-                </div>
                 <br>
+                <div class="row" >
+                    <div class="col-sm-2" >
+
+                    </div>
+                    <div class="col-sm-8" >
+                        <div class="chart-container">
+                            <br>
+                            <canvas id="chart" style="width: 1000px; height: 700px"></canvas>
+                            <br>
+                        </div>
+                        <script src="/js/puntaje_Total_Norma.js"></script>
+                        <br>
+                    </div>
+                    <div class="col-sm-2" >
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -269,27 +284,6 @@
     </script>
 </section>
 <br>
-<!--
-<section>
-    <div class="col-sm-12" style="text-align: center">
-
-        <form name="formulario1" action="#" style="justify-content: center">
-            <input id="selcapa" class="chosen-value" type="text" value="" placeholder="Seleccione una capa">
-            <ul class="value-list" name="institucion" onchange="institucionSeleccionada()">
-                <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
-                    <li id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </li>
-                <% } %>
-            </ul>
-        </form>
-        <div class="tab-content">
-            <div id="canvas-container" style="width:70%;">
-                <canvas id="chart" width="2000" height="800"></canvas>
-            </div>
-            <script src="/js/puntaje_Total_Norma.js"></script>
-        </div>
-    </div>
-    <script src="/js/selector.js"></script>
-</section>-->
 <!-- FIN Graficos Generales-->
 
 <!-- Pie de página -->
@@ -334,20 +328,35 @@
    /* prueba(tot_val_ins);*/
 
     function institucionSeleccionada(){
-        cosa = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;
+        select = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;
 
-        if (cosa==1)
-        {
-            archivoJS(tot_ins_nor);
-        }
-        if (cosa==2)
-        {
-            archivoJS2(tot_ins_nor);
-        }
-        if (cosa==3)
-        {
-            archivoJS3(tot_ins_nor);
-        }
+        if (select==1) { archivoJS(tot_ins_nor);}
+        if (select==2) { archivoJS2(tot_ins_nor);}
+        if (select==3) { archivoJS3(tot_ins_nor);}
+        if (select==4) { archivoJS4(tot_ins_nor);}
+        if (select==5) { archivoJS5(tot_ins_nor);}
+        if (select==6) { archivoJS6(tot_ins_nor);}
+        if (select==7) { archivoJS7(tot_ins_nor);}
+        if (select==8) { archivoJS8(tot_ins_nor);}
+        if (select==9) { archivoJS9(tot_ins_nor);}
+        if (select==10) { archivoJS10(tot_ins_nor);}
+        if (select==11) { archivoJS11(tot_ins_nor);}
+        if (select==12) { archivoJS12(tot_ins_nor);}
+        if (select==13) { archivoJS13(tot_ins_nor);}
+        if (select==14) { archivoJS14(tot_ins_nor);}
+        if (select==15) { archivoJS15(tot_ins_nor);}
+        if (select==16) { archivoJS16(tot_ins_nor);}
+        if (select==17) { archivoJS17(tot_ins_nor);}
+        if (select==18) { archivoJS18(tot_ins_nor);}
+        if (select==19) { archivoJS19(tot_ins_nor);}
+        if (select==20) { archivoJS20(tot_ins_nor);}
+        if (select==21) { archivoJS21(tot_ins_nor);}
+        if (select==22) { archivoJS22(tot_ins_nor);}
+        if (select==23) { archivoJS23(tot_ins_nor);}
+        if (select==24) { archivoJS24(tot_ins_nor);}
+        if (select==25) { archivoJS25(tot_ins_nor);}
+        if (select==26) { archivoJS26(tot_ins_nor);}
+
     }
 </script>
 

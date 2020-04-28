@@ -66,7 +66,28 @@ export class AppController {
   getAcerca(@Response()res) {
     return res.render('acerca');
   }
+  @Get('resultados')
+  async getresultados(
+      @Param() params,
+      @Query() query,
+      @Response() res
+  ) {
 
+    const id_conNumber = Number(query.nom_ins);
+
+    const tot_nor_ins = await this.viewTotNorIns._repositorioViewTotNorIns.find();
+    const tot_ins_nor= await this.viewTotInsNorService._repositorioViewTotInsNor.find();
+    const tot_val_ins= await this.viewTotValInsService._repositorioViewTotValIns.find();
+    const porcentaje_dis_ins= await this.ViewPorcentajeDisInsService._repositorioViewPorcentajeDisIns.find();
+
+
+    return res.render('resultados', {
+      tot_nor_ins:tot_nor_ins,
+      tot_ins_nor:tot_ins_nor,
+      tot_val_ins:tot_val_ins,
+      porcentaje_dis_ins:porcentaje_dis_ins,
+    });
+  }
   @Get('datosGenerales')
   async getDatosGenerales(
       @Param() params,
@@ -168,40 +189,6 @@ export class AppController {
       institucionesFiltrado:institucionesFiltrado,
     });
   }
-
-  @Get('resultados')
-  async getresultados(
-      @Param() params,
-      @Query() query,
-      @Response() res
-  ) {
-    console.log(query);
-    const id_conNumber = Number(query.nom_ins);
-    let consulta:any = {};
-
-    if(id_conNumber){
-      consulta.nom_ins = id_conNumber;
-
-    }
-    const instituciones = await this.viewTotNorIns._repositorioViewTotNorIns.find();
-    const institucionesFiltrado = await this.viewTotNorIns._repositorioViewTotNorIns.find({
-      where:consulta
-    });
-
-    console.log(instituciones);
-    // return this.contenidoService.buscar();
-    return res.render('resultados', {
-      instituciones:instituciones,
-      institucionesFiltrado:institucionesFiltrado,
-
-    });
-  }
-
-
-
-
-
-
 }
 
 

@@ -4,13 +4,7 @@ select{
     background-color:#34495e;
 }
 
-.select-selected {
-    background-color: #2A3B59;
-}
 .select-items, .same-as-selected {
     background-color: rgba(42, 59, 89, 0.3);
 }
-select option:hover{
-    background-color: #FFC2A4; !important;
 
-}

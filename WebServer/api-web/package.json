@@ -30,7 +30,7 @@
     "chart.js": "^2.9.3",
     "chartjs-subtitle": "^0.2.0",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",

@@ -1,4 +1,4 @@
-
+/*jhfjhfjh*/
 function porcentaje_Discapacidad(porcentaje_dis_ins) {
 
     var idInstituciones = porcentaje_dis_ins.map(

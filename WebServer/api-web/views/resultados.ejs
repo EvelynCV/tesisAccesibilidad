@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Accesibilidad Física</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -236,7 +236,7 @@
             <div id="info3" class="col-sm-12 well oculto" style="text-align: center;">
                 <br>
                 <form name="formulario1" action="#" style="justify-content: center" >
-                    <select class=" dropdown-content select-items select-selected " name="institucion" onchange="institucionSeleccionada()"  >
+                    <select class=" dropdown-content select-items select-selected"  name="institucion" onchange="institucionSeleccionada()"  >
                         <option hidden selected>Selecciona una opción</option>
                         <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
                             <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
@@ -299,12 +299,6 @@
     </div>
     <!-- FIN Pie de página -->
 </section>
-
-
-
-
-
-
 
 
 <!-- SCRIPTS para llamado de funciones -->

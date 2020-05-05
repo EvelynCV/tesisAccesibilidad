@@ -107,6 +107,7 @@ function archivoJS2(tot_ins_nor) {
             },
 
             responsive: true,
+            maintainAspectRatio: false,
 
             title : {
                 display : true,

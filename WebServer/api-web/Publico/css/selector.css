@@ -2,9 +2,12 @@ select{
     color: #2A3B59;
     border-radius: 5px;
     background-color:#34495e;
+
 }
 
 .select-items, .same-as-selected {
     background-color: rgba(42, 59, 89, 0.3);
+    width: 700px;
+    height: auto;
 }
 

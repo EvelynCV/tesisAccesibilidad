@@ -1,0 +1,12 @@
+button{
+    background-color: dodgerblue;
+    background: linear-gradient(to  right,#4fc3f7,#66bb6a);
+    border:none;
+    font-size: 15px;
+    color: white;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 5px 15px 5px 15px;
+    text-align:center;
+    cursor: pointer;
+}

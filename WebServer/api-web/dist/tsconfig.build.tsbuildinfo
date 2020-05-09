@@ -2226,8 +2226,8 @@
         "signature": "27cbf9d71fbf09164211bf97e447670b02fcfb18fcabd6164fd578b53fca98c2"
       },
       "../src/viewtotnor/viewtotnor.entity.ts": {
-        "version": "94b67d4031c69f23bfbbb220993e03af8c316a9a3d66362ac9db9c6ff3e6057d",
-        "signature": "f149c5c0171a9b999fc47d4db9d91b4dea7f6dbf2ff175c657fec1d8068c4055"
+        "version": "b0f663a427449a109954819813c55a0aea694cc6f4e96090c1e7483093001f52",
+        "signature": "386fe4e0cf0f34b519ffc6ec6d922023b4ef6cca9da9ae6ba5cca7505deaebc9"
       },
       "../src/viewtotnor/viewtotnor.service.ts": {
         "version": "5e3be2e8040b70e7180c0c570b0972d1523e08722be58cd14e11c73aea34097f",
@@ -2330,8 +2330,8 @@
         "signature": "3d30b920beba06e581db5ea584f3d34cf7c7ab78a5022c4eb3b1c08c4e95349d"
       },
       "../src/viewtotinsnor/viewtotinsnor.entity.ts": {
-        "version": "710da5e2be3120dc850b2d5bbb14288c7f50f831e20c23d066f0e94f13437532",
-        "signature": "5e34eda77ca953d47e1aa4f259235012c8cc3599a9cab05abe445c0649bfa944"
+        "version": "7ead9c5f298250d465889b669673e93c254a48e6df8bf1fa199013cee80e9fd9",
+        "signature": "d40f0b39847267986b52907930f12dc8a5449e3ddcd69830fe6ac372f190000e"
       },
       "../src/viewtotinsnor/viewtotinsnor.service.ts": {
         "version": "820e052847ae57380fbed56ac98da89ccfe01fdf41b7cd9a8ffa8044a902dbe4",
@@ -2762,8 +2762,8 @@
         "signature": "01150b72bd79b5ecfcee809843f26d34d6ffe0ac3820cb5372278cc428d73110"
       },
       "../src/viewtotnor/viewtotnor.ts": {
-        "version": "874e292e72ddb301f5116f08b8982a9ad232d65b52425c81ce9a700bcbcc7c0f",
-        "signature": "77e90650717af2f9ce0f6c673761d7d001250fde566b7f425b541a23f4df3b52"
+        "version": "cc7c6a3db8a7aea32b9cc0b0538480a162ba96b1811398220cc3a4f22dc1c7fd",
+        "signature": "43ff5b73c77b1659db8e9ee0887ec64ed7aff592aa9bdab0d9eb59a05cd62526"
       },
       "../src/viewinsvalopc/viewinsvalopc.ts": {
         "version": "37fd22593f9463886e48665bda438700cc9486570a9b866efb2e3b95de39ab2e",
@@ -2782,8 +2782,8 @@
         "signature": "8acdec0b6566a1aef3b819a46271da2d5747d0382893549377c86ea6f992fea9"
       },
       "../src/viewtotinsnor/viewtotinsnor.ts": {
-        "version": "e48097bde6e54d8115dc8764acab183a88372c6449d5c3f8ecba36d5df5f2a07",
-        "signature": "a2667a330f9142a8111669df0120e139dc8dacf2d376e255d0ab3477290b891d"
+        "version": "fc3c0cd3fd5fd4887e57be680b20b663b5a698a553eb866901396d31d16c69fc",
+        "signature": "0e61f81b34a0ede621f6a57d4b2e0a5a91e9056ee9b3576e4ce994b98f42a8a7"
       },
       "../src/viewtotnorins/viewtotnorins.ts": {
         "version": "3ffb02e8c816d1bb3ae9e48883d8b5de5bdb0378b94d181a3a2150424bccc601",
@@ -8802,6 +8802,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/viewtotnor/viewtotnor.ts": [
+        "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -14943,6 +14944,7 @@
       "../src/viewtotinsnor/viewtotinsnor.service.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.entity.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.service.ts",
+      "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -15051,7 +15053,6 @@
       "../src/viewnora/viewnora.ts",
       "../src/viewnorb/viewnorb.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.ts",
-      "../src/viewtotinsnor/viewtotinsnor.ts",
       "../src/viewtotnorins/viewtotnorins.ts",
       "../src/viewtotvalins/viewtotvalins.ts",
       "../node_modules/@types/anymatch/index.d.ts",
@@ -15083,7 +15084,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts"
+      "../src/viewtotinsnor/viewtotinsnor.ts"
     ]
   },
   "version": "3.7.4"

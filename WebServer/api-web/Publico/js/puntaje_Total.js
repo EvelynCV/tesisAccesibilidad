@@ -61,9 +61,7 @@ var newHover=['#792F4F','#947A7C','#A3B999','#C1AB55',
                 fontSize: 18,
                 padding: 10
             },
-            subtitle: {
-                text: 'This text has'
-            },
+
             responsive: true,
             maintainAspectRatio: false,
 
@@ -87,7 +85,7 @@ var newHover=['#792F4F','#947A7C','#A3B999','#C1AB55',
                 text.push('<h3>Instituciones</h3>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + '; border-width:' + ds.borderWidth[i] +'">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + '; border-color:' + ds.borderColor[i] +'">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');

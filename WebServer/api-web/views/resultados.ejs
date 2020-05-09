@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <title>Accesibilidad Física</title>
@@ -126,45 +126,48 @@
 </section>
 <!-- FIN Información general -->
 
+
 <!-- Graficos Generales-->
 
 <section>
-    <div id="content2" class="container-fluid">
-        <div class="row ">
-            <div class="col-sm-12">
-                <div class="row ">
-                    <div class="col-sm-6">
-                        <div id="global" class="chart-container global">
-                            <div id="legend" ></div>
+    <div class="container-fluid">
+        <div id="content2" class="container-fluid">
+            <div class="row ">
+                <div class="col-sm-12">
+                    <div class="row ">
+                        <div class="col-sm-6">
+                            <div id="global" class="chart-container global">
+                                <div id="legend" ></div>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="chart-container" >
+                                <canvas id="chart1"></canvas>
+                            </div>
+                            <script src="/js/puntaje_Total.js"></script>
+                            <br>
                         </div>
                         <br>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="chart-container" >
-                            <canvas id="chart1"></canvas>
-                        </div>
-                        <script src="/js/puntaje_Total.js"></script>
-                        <br>
-                    </div>
-                    <br>
                 </div>
-            </div>
 
-            <div class="col-sm-12">
-                <div class="row ">
-                    <div class="col-sm-6">
-                        <div class="chart-container" >
-                            <canvas id="chart5"></canvas>
+                <div class="col-sm-12">
+                    <div class="row ">
+                        <div class="col-sm-6">
+                            <div class="chart-container" >
+                                <canvas id="chart5"></canvas>
+                            </div>
+                            <script src="/js/porcentajes_Totales.js"></script>
+                            <br>
                         </div>
-                        <script src="/js/porcentajes_Totales.js"></script>
-                        <br>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="chart-container" >
-                            <canvas id="chart6"></canvas>
+                        <div class="col-sm-6">
+                            <div class="chart-container" >
+                                <canvas id="chart6"></canvas>
+                            </div>
+                            <script src="/js/valoracion_instituciones.js"></script>
+                            <br>
                         </div>
-                        <script src="/js/valoracion_instituciones.js"></script>
-                        <br>
                     </div>
                 </div>
             </div>
@@ -172,29 +175,29 @@
     </div>
 </section>
 
-
+<!-- botones prueba -->
 
 <section>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4 col-xs well">
-                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                    <a href="#info1" class="inf" alt="Porcentaje obtenido por Discapacidad"></a>
+                <div id= "ainfo1" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px" >
+                    <a  href="#info1" class="inf" alt="Porcentaje obtenido por Discapacidad" onclick="deshabilitaBoton(event)"></a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs well" >
-                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                    <a href="#info2" class="inf" alt="Porcentaje obtenido por Norma"></a>
+                <div id= "ainfo2" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
+                    <a  href="#info2" class="inf" alt="Porcentaje obtenido por Norma" onclick="deshabilitaBoton(event)"></a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs well">
-                <div style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                    <a href="#info3" class="inf" alt="Datos por Institución"></a>
+                <div id= "ainfo3" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
+                    <a  href="#info3" class="inf" alt="Datos por Institución" onclick="deshabilitaBoton(event)"></a>
                 </div>
             </div>
         </div>
-        <!-- contenido informacion adicional -->
-        <div class="row">
+
+        <div class="row" style="min-height: 500px">
             <div id="info1" class="col-sm-12 well oculto" >
                 <br>
                 <div id="content2" class="container-fluid">
@@ -204,28 +207,31 @@
                                 <div class="col-sm-4" >
                                     <div class="chart-container">
                                         <canvas id="chart2" style="width: 700px; height: 500px"></canvas>
+                                        <script src="/js/porcentaje_Discapacidad.js"></script>
                                     </div>
                                     <br>
                                 </div>
                                 <div class="col-sm-4" >
-                                    <div class="chart-container">
+                                    <div class="chart-container" >
                                         <canvas id="chart3" style="width: 700px; height: 500px"></canvas>
+                                        <script src="/js/porcentaje_Discapacidad.js"></script>
                                     </div>
                                     <br>
                                 </div>
                                 <div class="col-sm-4" >
                                     <div class="chart-container">
-                                        <canvas id="chart4" style="width: 700px; height: 500px" ></canvas>
+                                        <canvas id="chart4" style="width: 700px; height: 500px"></canvas>
+                                        <script src="/js/porcentaje_Discapacidad.js"></script>
                                     </div>
                                     <br>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <script src="/js/porcentaje_Discapacidad.js"></script>
             </div>
-            <div id="info2" class="col-sm-12 well oculto" style="justify-content: center" >
+            <div id="info2" class="col-sm-12 well oculto" style="justify-content: center">
                 <br>
                 <div class="chart-container">
                     <canvas id="chart9"></canvas>
@@ -233,35 +239,46 @@
                 <br>
                 <script src="/js/porcentaje_Normas.js"></script>
             </div>
-            <div id="info3" class="col-sm-12 well oculto" style="text-align: center;">
+            <div id="info3" class="col-sm-12 well oculto" >
                 <br>
-                <form name="formulario1" action="#" style="justify-content: center" >
-                    <select class=" dropdown-content select-items select-selected"  name="institucion" onchange="institucionSeleccionada()"  >
-                        <option hidden selected>Selecciona una opción</option>
-                        <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
-                            <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
-                        <% } %>
-                    </select>
-                </form>
-                <br>
-                <div class="row" >
-                    <div class="col-sm-2" >
-
-                    </div>
-                    <div class="col-sm-8" >
-                        <div class="chart-container">
-                            <br>
-                            <canvas id="chart" style="width: 1000px; height: 700px"></canvas>
-                            <br>
+                <div id="content2" class="container-fluid">
+                    <div class="row ">
+                        <div class="col-sm-12" style ="text-align: center">
+                            <form name="formulario1" action="#"  >
+                                <select class=" dropdown-content select-items select-selected" type="button" name="institucion" onchange="institucionSeleccionada()" >
+                                    <option hidden selected>Selecciona una opción</option>
+                                    <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
+                                        <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
+                                    <% } %>
+                                </select>
+                            </form>
                         </div>
-                        <script src="/js/puntaje_Total_Norma.js"></script>
-                        <br>
-                    </div>
-                    <div class="col-sm-2" >
-
                     </div>
                 </div>
 
+                <br>
+                <div id="content2" class="container-fluid">
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <div class="row ">
+                                <div class="col-sm-6">
+                                    <div id="global2" class="chart-container global2">
+                                        <div id="legend2"></div>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="chart-container" id="chartContainer" >
+                                        <canvas id="chart"></canvas>
+                                    </div>
+                                    <script src="/js/puntaje_Total_Norma.js"></script>
+                                    <br>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -282,8 +299,48 @@
             });
         });
     </script>
+    <script>
+        var globalActivo;
+        function deshabilitaBoton(btnSelect) {
+            var botonInfo1= document.getElementById("ainfo1");
+            var botonInfo2= document.getElementById("ainfo2");
+            var botonInfo3= document.getElementById("ainfo3");
+
+            var activo= btnSelect.srcElement.hash;
+
+            console.log(activo);
+            console.log(btnSelect);
+            if (globalActivo){
+                globalActivo= undefined;
+                botonInfo1.style.display = "block";
+                botonInfo2.style.display = "block";
+                botonInfo3.style.display = "block";
+            }
+            else {
+                if (activo == "#info1")
+                {
+                    botonInfo2.style.display = "none";
+                    botonInfo3.style.display = "none";
+                    globalActivo = "#info1";
+                }
+                if (activo == "#info2")
+                {
+                    botonInfo1.style.display = "none";
+                    botonInfo3.style.display = "none";
+                    globalActivo = "#info2";
+                }
+                if (activo == "#info3")
+                {
+                    botonInfo1.style.display = "none";
+                    botonInfo2.style.display = "none";
+                    globalActivo = "#info3";
+                }
+            }
+        }
+    </script>
 </section>
 <br>
+
 <!-- FIN Graficos Generales-->
 
 <!-- Pie de página -->
@@ -319,7 +376,7 @@
     valoracion_Instituciones(tot_val_ins);
     porcentaje_Discapacidad(porcentaje_dis_ins);
     porcentaje_Normas(tot_nor_ins);
-    /* prueba(tot_val_ins);*/
+
 
     function institucionSeleccionada(){
         select = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;

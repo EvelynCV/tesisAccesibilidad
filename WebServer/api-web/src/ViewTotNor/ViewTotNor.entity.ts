@@ -6,6 +6,7 @@ import {ViewEntity, ViewColumn, Connection} from "typeorm";
             institucion.id_ins,
             institucion.nom_ins,
             norma.cod_nor,
+            norma.nom_nor,
             SUM(opcion.val_opc) tot_nor
         FROM
             institucion
@@ -32,6 +33,9 @@ export class ViewTotNorEntity {
 
     @ViewColumn()
     cod_nor: number;
+
+    @ViewColumn()
+    nom_nor: string;
 
     @ViewColumn()
     tot_nor: number;

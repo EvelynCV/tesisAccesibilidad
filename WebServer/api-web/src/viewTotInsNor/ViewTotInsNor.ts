@@ -1,6 +1,7 @@
 export interface ViewTotInsNor{
 
-    cod_nor: number;
+    cod_nor: string;
+    nom_nor: string;
     ins_1: number;
     ins_2: number;
     ins_3: number;

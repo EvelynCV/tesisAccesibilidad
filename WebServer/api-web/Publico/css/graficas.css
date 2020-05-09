@@ -82,6 +82,37 @@ canvas{
 .global::-webkit-scrollbar-track {
     border-radius: 5px;
 }
+.global2 {
+    height: 300px;
+    width: auto;
+    border: 1px solid #ddd;
+    background: #D0D4DC;
+    box-shadow: 3px 3px 2px 4px #888888;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+.global2::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.global2::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.global2::-webkit-scrollbar-button:increment,.global2::-webkit-scrollbar-button {
+    display: none;
+}
+
+.global2::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 10px;
+    border: 1px solid #f1f2f3;
+}
+
+.global2::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
 
 /*Botón Mostrar - Ocultar*/
 
@@ -97,8 +128,7 @@ a {
     color:black;
 }
 .inf {
-    background-image: linear-gradient(90deg, #babf7a, #8eb176,  #003f5c, #00536b, #006774,
-    #0f7b78, #3d8e78, #64a077, #8eb176, #babf7a);
+    background-image: linear-gradient(90deg, #F4DAE2, #EDCEE5,  #DEC3E1, #BBD5F2, #D4E0F9);
     border-radius:10px;
     display:flex;
     align-items:center;
@@ -106,19 +136,10 @@ a {
     text-transform:uppercase;
     font-size:15px;
     font-weight:bold;
-    width:calc(30vw + 10px);
-    height:calc(4vw + 10px);
+    width:400px;
+    height:50px;
 }
-.inf:after {
-    width:30vw;
-    height:4vw;
-    content:attr(alt);
-    background-color: #dddddd;
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+
 .inf:hover {
     animation:slidebg 3s linear infinite;
 }

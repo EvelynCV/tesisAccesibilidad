@@ -46,6 +46,168 @@ function porcentaje_Discapacidad(porcentaje_dis_ins) {
         '#2A275B','#833660','#159A80','#A6CD88',
         '#C1B53F','#BE465D'];
 
+    var dato1 = {
+        labels : idInstituciones,
+        datasets : [{
+            label: "Motriz",
+            backgroundColor: "rgba(191,0,119,0.5)",
+            pointRadius: 6,
+            pointBorderWidth: 1,
+            pointBackgroundColor: newColors,
+            pointBorderColor: newBorders,
+            pointHoverRadius: 20,
+            data : motriz
+        }
+        ]
+    };
+    var canvas = document.getElementById('chart2').getContext('2d');
+    window.bar = new Chart(canvas, {
+        type : "radar",
+        data : dato1,
+        options : {
+
+            legend: {
+                display: false // Ocultar legendas
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 30,
+                    right: 30,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            title : {
+                display : true,
+                text : "Porcentaje obtenido para Discapacidad Motriz",
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 30
+            },
+            scale: {
+                ticks: {
+                    beginAtZero: true,
+                },
+
+                reverse: false,
+
+            },
+
+        }
+    });
+
+    var dato2 = {
+        labels : idInstituciones,
+        datasets : [{
+            label: "Visual",
+            backgroundColor: "rgba(0,99,177,0.5)",
+            pointRadius: 6,
+            pointBorderWidth: 1,
+            pointBackgroundColor: newColors,
+            pointBorderColor: newBorders,
+            pointHoverRadius: 20,
+            data : visual
+        }
+        ]
+    };
+    var canvas2 = document.getElementById('chart3').getContext('2d');
+    window.bar = new Chart(canvas2, {
+        type : "radar",
+        data : dato2,
+        options : {
+
+            legend: {
+                display: false // Ocultar legendas
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 30,
+                    right: 30,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            title : {
+                display : true,
+                text : "Porcentaje obtenido para Discapacidad Visual",
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 30
+            },
+            scale: {
+                ticks: {
+                    beginAtZero: true,
+                },
+
+                reverse: false,
+
+            },
+
+        }
+    });
+
+    var dato3 = {
+        labels : idInstituciones,
+        datasets : [{
+            label: "Auditiva",
+            backgroundColor: "rgba(0,204,106,0.5)",
+            pointRadius: 6,
+            pointBorderWidth: 1,
+            pointBackgroundColor: newColors,
+            pointBorderColor: newBorders,
+            pointHoverRadius: 20,
+            data : auditiva
+        }
+        ]
+    };
+    var canvas3 = document.getElementById('chart4').getContext('2d');
+    window.bar = new Chart(canvas3, {
+        type : "radar",
+        data : dato3,
+        options : {
+
+            legend: {
+                display: false // Ocultar legendas
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 30,
+                    right: 30,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            title : {
+                display : true,
+                text : "Porcentaje obtenido para Discapacidad Auditiva",
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 30
+            },
+            scale: {
+                ticks: {
+                    beginAtZero: true,
+                },
+
+                reverse: false,
+
+            },
+
+        }
+    });
+/*
     var datosG1 = {
 
         labels: idInstituciones,
@@ -204,5 +366,5 @@ function porcentaje_Discapacidad(porcentaje_dis_ins) {
                 reverse: false
             },
         }
-    });
+    });*/
 }

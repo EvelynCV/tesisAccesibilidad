@@ -7,10 +7,14 @@ var bordes=['#BEB67D','#AFDB51','#FFC0A2','#FF868F',
     '#6DAFB8','#3A4070','#4DDBBC'];
 
 function archivoJS(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+   var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
         }
     );
     var valoresInstituciones = tot_ins_nor.map(
@@ -20,9 +24,10 @@ function archivoJS(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
@@ -30,36 +35,47 @@ function archivoJS(tot_ins_nor) {
         ]
     };
 
+
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
         options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
 
             responsive: true,
+            maintainAspectRatio:false,
+
             title : {
                 display : true,
                 text : "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS2(tot_ins_nor) {
 
@@ -87,12 +103,9 @@ function archivoJS2(tot_ins_nor) {
         ]
     };
 
-    var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
-    window.bar = new Chart(canvas, {
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
+    var canvas2 = document.getElementById('chart').getContext('2d');
+    window.bar = new Chart(canvas2, {
         type : "polarArea",
         data : datos,
         options : {
@@ -144,12 +157,8 @@ function archivoJS3(tot_ins_nor) {
         }
         ]
     };
-    console.log(datos);
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -200,12 +209,8 @@ function archivoJS4(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -257,12 +262,8 @@ function archivoJS5(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -314,12 +315,8 @@ function archivoJS6(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -371,12 +368,8 @@ function archivoJS7(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -428,12 +421,8 @@ function archivoJS8(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -485,11 +474,8 @@ function archivoJS9(tot_ins_nor) {
         }
         ]
     };
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -540,11 +526,8 @@ function archivoJS10(tot_ins_nor) {
         }
         ]
     };
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -595,12 +578,8 @@ function archivoJS11(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -652,11 +631,8 @@ function archivoJS12(tot_ins_nor) {
         }
         ]
     };
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -708,12 +684,8 @@ function archivoJS13(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -765,11 +737,8 @@ function archivoJS14(tot_ins_nor) {
         }
         ]
     };
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -821,12 +790,8 @@ function archivoJS15(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -878,12 +843,8 @@ function archivoJS16(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -935,12 +896,8 @@ function archivoJS17(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -992,12 +949,8 @@ function archivoJS18(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1048,12 +1001,8 @@ function archivoJS19(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1105,12 +1054,8 @@ function archivoJS20(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1162,12 +1107,8 @@ function archivoJS21(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1219,12 +1160,8 @@ function archivoJS22(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1275,12 +1212,8 @@ function archivoJS23(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1332,12 +1265,8 @@ function archivoJS24(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1389,12 +1318,8 @@ function archivoJS25(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,
@@ -1446,12 +1371,8 @@ function archivoJS26(tot_ins_nor) {
         }
         ]
     };
-
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    if (window.bar) {
-        window.bar.clear();
-        window.bar.destroy();
-    }
     window.bar = new Chart(canvas, {
         type : "polarArea",
         data : datos,

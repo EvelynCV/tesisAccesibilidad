@@ -2,7 +2,7 @@ import {ViewEntity, ViewColumn} from "typeorm";
 
 @ViewEntity({
     expression: `
-    select first.cod_nor,
+    select first.cod_nor, first.nom_nor,
         max(if(first.id_ins = "1", first.tot_nor, NULL)) as "ins_1",
         max(if(first.id_ins = "2", first.tot_nor, NULL)) as "ins_2",
         max(if(first.id_ins = "3", first.tot_nor, NULL)) as "ins_3",
@@ -39,7 +39,10 @@ import {ViewEntity, ViewColumn} from "typeorm";
 export class ViewTotInsNorEntity {
 
     @ViewColumn()
-    cod_nor: number;
+    cod_nor: string;
+
+    @ViewColumn()
+    nom_nor:string;
 
     @ViewColumn()
     ins_1: number;

@@ -26,6 +26,7 @@ import {ViewNorKService} from "./ViewNorK/ViewNorK.service";
 import {ViewTotNorInsService} from "./viewTotNorIns/ViewTotNorIns.service";
 import {ViewTotInsNorService} from "./viewTotInsNor/ViewTotInsNor.service";
 import {ViewPorcentajeDisInsService} from "./viewPorcentajeDisIns/ViewPorcentajeDisIns.service";
+import {ViewPorcentajeDisNorService} from "./viewPorcentajeDisNor/ViewPorcentajeDisNor.service";
 
 @Controller('api')
 export class AppController {
@@ -55,7 +56,12 @@ export class AppController {
               private readonly viewNorKService: ViewNorKService,
               private readonly viewTotNorIns: ViewTotNorInsService,
               private readonly viewTotInsNorService:ViewTotInsNorService,
-              private readonly ViewPorcentajeDisInsService:ViewPorcentajeDisInsService) {}
+              private readonly ViewPorcentajeDisInsService:ViewPorcentajeDisInsService,
+              private readonly ViewPorcentajeDisNorService:ViewPorcentajeDisNorService) {}
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
 
   @Get('inicio')
   getInicio(@Response()res) {
@@ -79,6 +85,7 @@ export class AppController {
     const tot_ins_nor= await this.viewTotInsNorService._repositorioViewTotInsNor.find();
     const tot_val_ins= await this.viewTotValInsService._repositorioViewTotValIns.find();
     const porcentaje_dis_ins= await this.ViewPorcentajeDisInsService._repositorioViewPorcentajeDisIns.find();
+    const porcentaje_dis_nor= await this.ViewPorcentajeDisNorService._repositorioViewPorcentajeDisNor.find();
 
 
     return res.render('resultados', {
@@ -86,6 +93,7 @@ export class AppController {
       tot_ins_nor:tot_ins_nor,
       tot_val_ins:tot_val_ins,
       porcentaje_dis_ins:porcentaje_dis_ins,
+      porcentaje_dis_nor:porcentaje_dis_nor,
     });
   }
   @Get('datosGenerales')
@@ -101,6 +109,7 @@ export class AppController {
     const tot_ins_nor= await this.viewTotInsNorService._repositorioViewTotInsNor.find();
     const tot_val_ins= await this.viewTotValInsService._repositorioViewTotValIns.find();
     const porcentaje_dis_ins= await this.ViewPorcentajeDisInsService._repositorioViewPorcentajeDisIns.find();
+    const porcentaje_dis_nor= await this.ViewPorcentajeDisNorService._repositorioViewPorcentajeDisNor.find();
 
 
     return res.render('datosGenerales', {
@@ -108,6 +117,7 @@ export class AppController {
       tot_ins_nor:tot_ins_nor,
       tot_val_ins:tot_val_ins,
       porcentaje_dis_ins:porcentaje_dis_ins,
+      porcentaje_dis_nor:porcentaje_dis_nor,
     });
   }
 

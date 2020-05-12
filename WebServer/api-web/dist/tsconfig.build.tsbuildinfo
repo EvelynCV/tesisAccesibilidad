@@ -2345,9 +2345,17 @@
         "version": "3217cbca55ffeb3832680b4eab95fdda01688f6d1c4ee942a2a47c6dcfd24cba",
         "signature": "73c3e313457691f497471568a6c25f71138d835435b37bc7775830b9f62a67b4"
       },
+      "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts": {
+        "version": "c4880aa54f11a6ab9db1d2a8d98b6f707299cd85a76b1395dab052137ea5b891",
+        "signature": "becbb4e20752a60679a7860811650993d835d3a16b26b6ed90c0ecebeff51698"
+      },
+      "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts": {
+        "version": "2c7509e34830a1e41217f5d9c105e5c915574488d81733586eb69a9b376259b6",
+        "signature": "e52b4d5580208ed963e2cc00cb6b9dc4bd81c81a35cc4b2fca1ea158cbfc9c7d"
+      },
       "../src/app.controller.ts": {
-        "version": "6b3ace36fb9cb406e5027da9de8ad9c7b9e20b327037b76d2965915d071234ce",
-        "signature": "a70994529a665335635f328134f56cb70ff0b5d284462370ef0f06a7ff868b86"
+        "version": "e2d882dfa56cff85318a1de9d51cbccde10e76ae8327ffa2a48893692d578c32",
+        "signature": "dd86f757bbc1bdff02895977922fd629cda21c1c1070cf28350269873321ed82"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -2453,8 +2461,12 @@
         "version": "ceb01a67a6fcfdcab080806cc2809779f4bda4bb45694e65c2c2dc181b969d96",
         "signature": "0519f74fd2ed3189e6b24070e0996f1735a8a328d2654f339bd07797e3a8c250"
       },
+      "../src/viewporcentajedisnor/viewporcentajedisnor.module.ts": {
+        "version": "78a43d68b2e0e4d51967495a148a8661b8e91e2b84dd270fb0fa8e5262edc649",
+        "signature": "c7ae6037076f0b2ada9ed4cfcec422ff988cdc58d81f530f5af0f951662aed0e"
+      },
       "../src/app.module.ts": {
-        "version": "cd74293b0accaaf6a923d3fddefb37703959a4c3b810fb6ddc536bac643f52d5",
+        "version": "6888257e8e73c7d91203a613cb149a7428e618e65b3093713cb062195379c8d3",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2780,6 +2792,10 @@
       "../src/viewporcentajedisins/viewporcentajedisins.ts": {
         "version": "66f81092110fc775a81acfb32356dc904eeafbd70242b4e241767829bd7809f4",
         "signature": "8acdec0b6566a1aef3b819a46271da2d5747d0382893549377c86ea6f992fea9"
+      },
+      "../src/viewporcentajedisnor/viewporcentajedisnor.ts": {
+        "version": "6200308cf110f071c6891563eda00618ad7a720e9d27394473860d7ca2cc096e",
+        "signature": "d5d2ece09fdea5d34b55e0124c3e4ddfd17a8094cce54682e02a8de868fa5544"
       },
       "../src/viewtotinsnor/viewtotinsnor.ts": {
         "version": "fc3c0cd3fd5fd4887e57be680b20b663b5a698a553eb866901396d31d16c69fc",
@@ -7836,6 +7852,23 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.service.ts",
@@ -7865,6 +7898,7 @@
         "../src/viewtotnorins/viewtotnorins.service.ts",
         "../src/viewtotinsnor/viewtotinsnor.service.ts",
         "../src/viewporcentajedisins/viewporcentajedisins.service.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8130,6 +8164,16 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/viewporcentajedisnor/viewporcentajedisnor.module.ts": [
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -8161,6 +8205,7 @@
         "../src/viewtotnorins/viewtotnorins.module.ts",
         "../src/viewtotinsnor/viewtotinsnor.module.ts",
         "../src/viewporcentajedisins/viewporcentajedisins.module.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.module.ts",
         "../src/institucion/institucion.entity.ts",
         "../src/formulario/formulario.entity.ts",
         "../src/norma/norma.entity.ts",
@@ -8187,6 +8232,7 @@
         "../src/viewtotnorins/viewtotnorins.entity.ts",
         "../src/viewtotinsnor/viewtotinsnor.entity.ts",
         "../src/viewporcentajedisins/viewporcentajedisins.entity.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8827,6 +8873,12 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/viewporcentajedisins/viewporcentajedisins.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/viewporcentajedisnor/viewporcentajedisnor.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -13625,6 +13677,10 @@
         "../src/viewporcentajedisins/viewporcentajedisins.entity.ts",
         "../node_modules/typeorm/index.d.ts"
       ],
+      "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts"
+      ],
       "../src/app.controller.ts": [
         "../src/app.service.ts",
         "../src/institucion/institucion.service.ts",
@@ -13652,7 +13708,8 @@
         "../src/viewnork/viewnork.service.ts",
         "../src/viewtotnorins/viewtotnorins.service.ts",
         "../src/viewtotinsnor/viewtotinsnor.service.ts",
-        "../src/viewporcentajedisins/viewporcentajedisins.service.ts"
+        "../src/viewporcentajedisins/viewporcentajedisins.service.ts",
+        "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -14944,7 +15001,8 @@
       "../src/viewtotinsnor/viewtotinsnor.service.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.entity.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.service.ts",
-      "../src/app.controller.ts",
+      "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts",
+      "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -14971,6 +15029,7 @@
       "../src/viewtotnorins/viewtotnorins.module.ts",
       "../src/viewtotinsnor/viewtotinsnor.module.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.module.ts",
+      "../src/viewporcentajedisnor/viewporcentajedisnor.module.ts",
       "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
@@ -15053,6 +15112,8 @@
       "../src/viewnora/viewnora.ts",
       "../src/viewnorb/viewnorb.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.ts",
+      "../src/viewporcentajedisnor/viewporcentajedisnor.ts",
+      "../src/viewtotinsnor/viewtotinsnor.ts",
       "../src/viewtotnorins/viewtotnorins.ts",
       "../src/viewtotvalins/viewtotvalins.ts",
       "../node_modules/@types/anymatch/index.d.ts",
@@ -15084,7 +15145,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/viewtotinsnor/viewtotinsnor.ts"
+      "../src/app.controller.ts"
     ]
   },
   "version": "3.7.4"

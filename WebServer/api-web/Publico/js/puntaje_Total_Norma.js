@@ -79,23 +79,27 @@ function archivoJS(tot_ins_nor) {
 }
 function archivoJS2(tot_ins_nor) {
 
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_2;
         }
     );
 
-
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
@@ -103,21 +107,13 @@ function archivoJS2(tot_ins_nor) {
         ]
     };
 
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
-    var canvas2 = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas2, {
+    var canvas = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
         options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
 
             responsive: true,
             maintainAspectRatio: false,
@@ -130,17 +126,39 @@ function archivoJS2(tot_ins_nor) {
                 fontSize: 18,
                 padding: 10
             },
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
+            },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS3(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_3;
@@ -148,32 +166,27 @@ function archivoJS3(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
+        options :  {
 
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -181,18 +194,42 @@ function archivoJS3(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS4(tot_ins_nor) {
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_4;
@@ -200,32 +237,26 @@ function archivoJS4(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -233,19 +264,42 @@ function archivoJS4(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS5(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_5;
@@ -253,32 +307,26 @@ function archivoJS5(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -286,19 +334,43 @@ function archivoJS5(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS6(tot_ins_nor) {
 
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_6;
@@ -306,32 +378,26 @@ function archivoJS6(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -339,19 +405,42 @@ function archivoJS6(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS7(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_7;
@@ -359,32 +448,26 @@ function archivoJS7(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -392,19 +475,42 @@ function archivoJS7(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS8(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_8;
@@ -412,32 +518,26 @@ function archivoJS8(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -445,19 +545,43 @@ function archivoJS8(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS9(tot_ins_nor) {
 
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_9;
@@ -465,32 +589,26 @@ function archivoJS9(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -498,18 +616,42 @@ function archivoJS9(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS10(tot_ins_nor) {
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_10;
@@ -517,32 +659,26 @@ function archivoJS10(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
         options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -550,18 +686,42 @@ function archivoJS10(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS11(tot_ins_nor) {
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_11;
@@ -569,32 +729,26 @@ function archivoJS11(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
         options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -602,19 +756,42 @@ function archivoJS11(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS12(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_12;
@@ -622,32 +799,26 @@ function archivoJS12(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -655,19 +826,42 @@ function archivoJS12(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS13(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_13;
@@ -675,32 +869,26 @@ function archivoJS13(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -708,19 +896,42 @@ function archivoJS13(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS14(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_14;
@@ -728,32 +939,26 @@ function archivoJS14(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -761,19 +966,42 @@ function archivoJS14(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS15(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_15;
@@ -781,32 +1009,26 @@ function archivoJS15(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -814,19 +1036,42 @@ function archivoJS15(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS16(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_16;
@@ -834,32 +1079,26 @@ function archivoJS16(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -867,19 +1106,42 @@ function archivoJS16(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS17(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_17;
@@ -887,32 +1149,26 @@ function archivoJS17(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -920,19 +1176,42 @@ function archivoJS17(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS18(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_18;
@@ -940,32 +1219,26 @@ function archivoJS18(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -973,18 +1246,42 @@ function archivoJS18(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS19(tot_ins_nor) {
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_19;
@@ -992,32 +1289,26 @@ function archivoJS19(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1025,19 +1316,42 @@ function archivoJS19(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS20(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_20;
@@ -1045,32 +1359,26 @@ function archivoJS20(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1078,19 +1386,42 @@ function archivoJS20(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS21(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_21;
@@ -1098,32 +1429,26 @@ function archivoJS21(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1131,19 +1456,42 @@ function archivoJS21(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS22(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_22;
@@ -1151,32 +1499,26 @@ function archivoJS22(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1184,18 +1526,42 @@ function archivoJS22(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS23(tot_ins_nor) {
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_23;
@@ -1203,32 +1569,26 @@ function archivoJS23(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1236,19 +1596,42 @@ function archivoJS23(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS24(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_24;
@@ -1256,32 +1639,26 @@ function archivoJS24(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1289,19 +1666,42 @@ function archivoJS24(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS25(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_25;
@@ -1309,32 +1709,26 @@ function archivoJS25(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1342,19 +1736,42 @@ function archivoJS25(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
-                padding: 10
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
             },
         }
     });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
 }
 function archivoJS26(tot_ins_nor) {
-
-    var nombreInstituciones = tot_ins_nor.map(
-        function (institucion) {
-            return institucion.cod_nor;
+    var codNor = tot_ins_nor.map(
+        function (norma) {
+            return norma.cod_nor;
         }
     );
-
+    var nombreNorma = tot_ins_nor.map(
+        function (norma) {
+            return norma.nom_nor;
+        }
+    );
     var valoresInstituciones = tot_ins_nor.map(
         function (institucion) {
             return institucion.ins_26;
@@ -1362,32 +1779,26 @@ function archivoJS26(tot_ins_nor) {
     );
 
     var datos = {
-        labels : nombreInstituciones,
+
+        labels : nombreNorma,
+
         datasets : [{
-            label : "datos 1",
             backgroundColor: colors,
             borderColor:bordes,
             data : valoresInstituciones
         }
         ]
     };
+
+
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
-    window.bar = new Chart(canvas, {
+    var chart = new Chart(canvas, {
         type : "polarArea",
         data : datos,
-        options : {
-            legend: {
-                position: 'top',
-                labels: {
-                    fontColor: "#335574",
-                    fontFamily: 'Lato',
-                    fontSize: 15,
-                    padding: 10
-                }
-            },
-
+        options :  {
             responsive: true,
+            maintainAspectRatio:false,
 
             title : {
                 display : true,
@@ -1395,7 +1806,1535 @@ function archivoJS26(tot_ins_nor) {
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
+                padding: 15
+            },
+
+            legend: {
+                display: false
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="0-legend">');
+                var ds = chart.data.datasets[0];
+                text.push('<h3>Normas</h3>');
+                for (var i = 0; i < ds.data.length; i++) {
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join("");
+            },
+        }
+    });
+    var myLegendContainer = document.getElementById("legend2");
+    // generate HTML legend
+    myLegendContainer.innerHTML = chart.generateLegend();
+}
+function porcentajeNorma(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_1;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
                 padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma1(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_2;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma2(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_3;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma3(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_4;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma4(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_5;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma5(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_6;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma6(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_7;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma7(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_8;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma8(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_9;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma9(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_10;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma10(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_11;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma11(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_12;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma12(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_14;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma13(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_15;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma14(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_16;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma15(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_17;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma16(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_18;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma17(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_18;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma18(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_19;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma19(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_20;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma20(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_21;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma21(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_22;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma22(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_23;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma23(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_24;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma24(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_25;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
+            },
+        }
+    });
+}
+function porcentajeNorma25(porcentaje_dis_nor) {
+    var codNor = porcentaje_dis_nor.map(
+        function (norma) {
+            return norma.cod_nor;
+        }
+    );
+    var valoresInstituciones = porcentaje_dis_nor.map(
+        function (institucion) {
+            return institucion.ins_26;
+        }
+    );
+    document.getElementById("chartContainer2").innerHTML = '<canvas id="chart9"></canvas>';
+    var ctx = document.getElementById("chart9").getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: codNor,
+            datasets: [{
+                label: "Porcentaje",
+                backgroundColor: colors,
+                borderColor: bordes,
+                borderWidth: 1.5,
+                hoverBackgroundColor: bordes,
+                data: valoresInstituciones
+
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Porcentaje de Discapacidad por Norma',
+                fontFamily: 'Lato',
+                fontColor: '#335574',
+                fontSize: 18,
+                padding: 10
+            },
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales:
+                {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        stacked: false,
+                        mirror: true,
+                    }]
+                },
+            legend: {
+                display: false
+
             },
         }
     });

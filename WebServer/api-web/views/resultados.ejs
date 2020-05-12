@@ -180,19 +180,14 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-4 col-xs well">
+            <div class="col-sm-6 col-xs well">
                 <div id= "ainfo1" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px" >
-                    <a  href="#info1" class="inf" alt="Porcentaje obtenido por Discapacidad" onclick="deshabilitaBoton(event)"></a>
+                    <a  href="#info1" class="inf" onclick="deshabilitaBoton(event)">Porcentaje obtenido por Discapacidad</a>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs well" >
-                <div id= "ainfo2" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                    <a  href="#info2" class="inf" alt="Porcentaje obtenido por Norma" onclick="deshabilitaBoton(event)"></a>
-                </div>
-            </div>
-            <div class="col-sm-4 col-xs well">
+            <div class="col-sm-6 col-xs well">
                 <div id= "ainfo3" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                    <a  href="#info3" class="inf" alt="Datos por Institución" onclick="deshabilitaBoton(event)"></a>
+                    <a  href="#info3" class="inf" onclick="deshabilitaBoton(event)">Datos por Institución</a>
                 </div>
             </div>
         </div>
@@ -230,14 +225,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="info2" class="col-sm-12 well oculto" style="justify-content: center">
-                <br>
-                <div class="chart-container">
-                    <canvas id="chart9"></canvas>
-                </div>
-                <br>
-                <script src="/js/porcentaje_Normas.js"></script>
             </div>
             <div id="info3" class="col-sm-12 well oculto" >
                 <br>
@@ -278,7 +265,23 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-sm-12">
+                        <div class="row ">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <br>
+                                <div class="chart-container" id="chartContainer2">
+                                    <canvas id="chart9"></canvas>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </div>
     </div>
@@ -303,36 +306,25 @@
         var globalActivo;
         function deshabilitaBoton(btnSelect) {
             var botonInfo1= document.getElementById("ainfo1");
-            var botonInfo2= document.getElementById("ainfo2");
             var botonInfo3= document.getElementById("ainfo3");
 
             var activo= btnSelect.srcElement.hash;
 
-            console.log(activo);
-            console.log(btnSelect);
             if (globalActivo){
                 globalActivo= undefined;
                 botonInfo1.style.display = "block";
-                botonInfo2.style.display = "block";
                 botonInfo3.style.display = "block";
             }
             else {
                 if (activo == "#info1")
                 {
-                    botonInfo2.style.display = "none";
                     botonInfo3.style.display = "none";
                     globalActivo = "#info1";
                 }
-                if (activo == "#info2")
-                {
-                    botonInfo1.style.display = "none";
-                    botonInfo3.style.display = "none";
-                    globalActivo = "#info2";
-                }
+
                 if (activo == "#info3")
                 {
                     botonInfo1.style.display = "none";
-                    botonInfo2.style.display = "none";
                     globalActivo = "#info3";
                 }
             }
@@ -369,44 +361,46 @@
         console.log();
     var tot_ins_nor = <%- JSON.stringify(tot_ins_nor) %>
         console.log();
-
+    var porcentaje_dis_nor = <%- JSON.stringify(porcentaje_dis_nor) %>
+        console.log();
 
     puntaje_Total(tot_val_ins);
     porcentajes_Totales(tot_val_ins);
     valoracion_Instituciones(tot_val_ins);
     porcentaje_Discapacidad(porcentaje_dis_ins);
-    porcentaje_Normas(tot_nor_ins);
+
+    // porcentaje_Normas(tot_nor_ins);
 
 
     function institucionSeleccionada(){
         select = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;
 
-        if (select==1) { archivoJS(tot_ins_nor);}
-        if (select==2) { archivoJS2(tot_ins_nor);}
-        if (select==3) { archivoJS3(tot_ins_nor);}
-        if (select==4) { archivoJS4(tot_ins_nor);}
-        if (select==5) { archivoJS5(tot_ins_nor);}
-        if (select==6) { archivoJS6(tot_ins_nor);}
-        if (select==7) { archivoJS7(tot_ins_nor);}
-        if (select==8) { archivoJS8(tot_ins_nor);}
-        if (select==9) { archivoJS9(tot_ins_nor);}
-        if (select==10) { archivoJS10(tot_ins_nor);}
-        if (select==11) { archivoJS11(tot_ins_nor);}
-        if (select==12) { archivoJS12(tot_ins_nor);}
-        if (select==13) { archivoJS13(tot_ins_nor);}
-        if (select==14) { archivoJS14(tot_ins_nor);}
-        if (select==15) { archivoJS15(tot_ins_nor);}
-        if (select==16) { archivoJS16(tot_ins_nor);}
-        if (select==17) { archivoJS17(tot_ins_nor);}
-        if (select==18) { archivoJS18(tot_ins_nor);}
-        if (select==19) { archivoJS19(tot_ins_nor);}
-        if (select==20) { archivoJS20(tot_ins_nor);}
-        if (select==21) { archivoJS21(tot_ins_nor);}
-        if (select==22) { archivoJS22(tot_ins_nor);}
-        if (select==23) { archivoJS23(tot_ins_nor);}
-        if (select==24) { archivoJS24(tot_ins_nor);}
-        if (select==25) { archivoJS25(tot_ins_nor);}
-        if (select==26) { archivoJS26(tot_ins_nor);}
+        if (select==1) { archivoJS(tot_ins_nor); porcentajeNorma(porcentaje_dis_nor);}
+        if (select==2) { archivoJS2(tot_ins_nor); porcentajeNorma1(porcentaje_dis_nor);}
+        if (select==3) { archivoJS3(tot_ins_nor);porcentajeNorma2(porcentaje_dis_nor);}
+        if (select==4) { archivoJS4(tot_ins_nor);porcentajeNorma3(porcentaje_dis_nor);}
+        if (select==5) { archivoJS5(tot_ins_nor);porcentajeNorma4(porcentaje_dis_nor);}
+        if (select==6) { archivoJS6(tot_ins_nor);porcentajeNorma5(porcentaje_dis_nor);}
+        if (select==7) { archivoJS7(tot_ins_nor);porcentajeNorma6(porcentaje_dis_nor);}
+        if (select==8) { archivoJS8(tot_ins_nor);porcentajeNorma7(porcentaje_dis_nor);}
+        if (select==9) { archivoJS9(tot_ins_nor);porcentajeNorma8(porcentaje_dis_nor);}
+        if (select==10) { archivoJS10(tot_ins_nor);porcentajeNorma9(porcentaje_dis_nor);}
+        if (select==11) { archivoJS11(tot_ins_nor);porcentajeNorma10(porcentaje_dis_nor);}
+        if (select==12) { archivoJS12(tot_ins_nor);porcentajeNorma11(porcentaje_dis_nor);}
+        if (select==13) { archivoJS13(tot_ins_nor);porcentajeNorma12(porcentaje_dis_nor);}
+        if (select==14) { archivoJS14(tot_ins_nor);porcentajeNorma13(porcentaje_dis_nor);}
+        if (select==15) { archivoJS15(tot_ins_nor);porcentajeNorma14(porcentaje_dis_nor);}
+        if (select==16) { archivoJS16(tot_ins_nor);porcentajeNorma15(porcentaje_dis_nor);}
+        if (select==17) { archivoJS17(tot_ins_nor);porcentajeNorma16(porcentaje_dis_nor);}
+        if (select==18) { archivoJS18(tot_ins_nor);porcentajeNorma17(porcentaje_dis_nor);}
+        if (select==19) { archivoJS19(tot_ins_nor);porcentajeNorma18(porcentaje_dis_nor);}
+        if (select==20) { archivoJS20(tot_ins_nor);porcentajeNorma19(porcentaje_dis_nor);}
+        if (select==21) { archivoJS21(tot_ins_nor);porcentajeNorma20(porcentaje_dis_nor);}
+        if (select==22) { archivoJS22(tot_ins_nor);porcentajeNorma21(porcentaje_dis_nor);}
+        if (select==23) { archivoJS23(tot_ins_nor);porcentajeNorma22(porcentaje_dis_nor);}
+        if (select==24) { archivoJS24(tot_ins_nor);porcentajeNorma23(porcentaje_dis_nor);}
+        if (select==25) { archivoJS25(tot_ins_nor);porcentajeNorma24(porcentaje_dis_nor);}
+        if (select==26) { archivoJS26(tot_ins_nor);porcentajeNorma25(porcentaje_dis_nor);}
 
     }
 </script>

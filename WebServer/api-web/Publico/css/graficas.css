@@ -125,10 +125,15 @@ canvas{
 a {
     text-decoration:none;
     text-align: center;
-    color:black;
+    color:#091c30;
 }
+a:hover {
+    color: #2A3B59;
+}
+
 .inf {
-    background-image: linear-gradient(90deg, #F4DAE2, #EDCEE5,  #DEC3E1, #BBD5F2, #D4E0F9);
+  /*  background-image: linear-gradient(90deg, #F4DAE2, #EDCEE5,  #DEC3E1, #BBD5F2, #D4E0F9);*/
+    background-image: linear-gradient(90deg, #a3c6ed, #8bb7e9,  #73a9e4, #5b9ae0, #438bdb, #2b7cd6, #256ec0, #256ec0, #2b7cd6, #438bdb, #5b9ae0,  #73a9e4, #8bb7e9, #a3c6ed);
     border-radius:10px;
     display:flex;
     align-items:center;

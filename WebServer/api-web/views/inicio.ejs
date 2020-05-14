@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Inicio-Accesibilidad Física</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
@@ -44,10 +45,10 @@
     <div class="text-black-50 text-center container-fluid embed-responsive-item">
         <!-- Texto sobrepuesto en Contenido -->
         <div id="cover">
-            <div class="row CoverImage contenedorP1">
+            <div class="row CoverImage contenedorP1" data-aos="fade-down" data-aos-duration="1000">
                 <div class="col-sm-12 colCabecera">
                     <div class="card text-center cardCabecera">
-                        <div class="card-body text-white" style="display: inline-block" >
+                        <div class="card-body text-white" style="display: inline-block" data-aos="zoom-in-down" data-aos-duration="2000">
                             <h2 class="card-title titulo h5Ed">Sistema Informativo de Accesibilidad al Medio Físico</h2>
                         </div>
                     </div>
@@ -62,23 +63,26 @@
 
 <!-- Contenido 1 Informativo -->
 <section>
+
     <div id="content1" class="container-fluid" style="background: white">
         <div class="row">
             <!-- IMAGEN Contenido 1 Informativo -->
             <div class="col-sm-4" >
                 <div class="card text-center imgCI1" >
-                    <div class="div-imgCI1" >
+                    <div class="div-imgCI1"  data-aos="fade-right" data-aos-duration="2000"  >
                         <div class="card-body cb-imgCI1" >
                             <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/06/12/00/29/building-2393978_960_720.png" alt="representación instituciones" style="width: 355px;">
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <!-- FIN IMAGEN Contenido 1 Informativo -->
             <!-- Información Contenido 1 -->
             <div class="col-sm-7" >
                 <div class="card text-center cardCI1" >
-                    <div class="div-txtCI1" >
+                    <div class="div-txtCI1" data-aos="fade-left" data-aos-duration="2000" >
                         <div class="card-body cb-txtCI1">
                             <h5 class="card-title frase" >Accesibilidad en cualquier momento y cualquier lugar.</h5>
                             <br>
@@ -103,7 +107,7 @@
         <div class="row row-CI2">
             <div class="col-sm-12" style ="text-align: center">
                 <div class="card text-center cardCI2" >
-                    <div class="div-txtCI2" >
+                    <div class="div-txtCI2" data-aos="zoom-in-up" data-aos-duration="2000" >
                         <div class="card-body cb-CI2" >
                             <h2 class="card-title frase2" >¿La accesibilidad está en todas las partes donde quieres estar?</h2>
                         </div>
@@ -113,7 +117,7 @@
                     <div class="col-sm-6" >
                         <div class="card text-center c1" >
                             <div class="divCards" >
-                                <div class="card-body cb6-CI2" >
+                                <div class="card-body cb6-CI2" data-aos="fade-up-right" data-aos-duration="2000" >
                                     <img class="card-img-top cit-CI2" src="../iconDashboard.png" alt="icono Dashboard">
                                     <h5 class="card-title cTitleCI2" >Dashboard</h5>
                                     <p class="card-text cTxtCI2">
@@ -126,10 +130,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card text-center c2" >
+                    <div class="col-sm-6" >
+                        <div class="card text-center c2"  >
                             <div class="divCards" >
-                                <div class="card-body cb6-CI2" >
+                                <div class="card-body cb6-CI2" data-aos="fade-up-left" data-aos-duration="2000">
                                     <img class="card-img-top cit-CI2" src="../iconAcerca.png" alt="icono Acerca" >
                                     <h5 class="card-title cTitleCI2" >Información</h5>
                                     <p class="card-text cTxtCI2 ">
@@ -161,6 +165,10 @@
     </footer>
 </div>
 <!-- FIN Pie de página -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </body>
 </html>

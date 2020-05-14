@@ -329,14 +329,6 @@
 
 /*---------------****PAGINA RESULTADOS****---------------*/
 
-.h2{
-    margin-top: 130px;
-    margin-bottom: 30px;
-   text-align: center;
-    font-family: 'Lato', sans-serif !important;
-    text-decoration-color: #2A3B59;
-}
-
 .align-items-stretch {
     align-items: stretch !important;
 }
@@ -407,7 +399,7 @@
 .sp{
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 

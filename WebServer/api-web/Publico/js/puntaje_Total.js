@@ -55,7 +55,7 @@ var newHover=['#792F4F','#947A7C','#A3B999','#C1AB55',
         options: {
             title : {
                 display : true,
-                text: 'Puntución Obtenida',
+                text: 'Puntución Total Obtenida de Formulario de Accesibilidad',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -82,40 +82,15 @@ var newHover=['#792F4F','#947A7C','#A3B999','#C1AB55',
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Instituciones</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Instituciones Evaluadas</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + '; border-color:' + ds.borderColor[i] +'">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato;background-color:' + ds.backgroundColor[i] + '; border-color:' + ds.borderColor[i] +'">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
                 return text.join("");
             },
-
-           /* plugins: {
-
-                afterDatasetsDraw: function (context, easing) {
-                    var ctx = context.chart.ctx;
-                    context.data.datasets.forEach(function (dataset) {
-                        for (var i = 0; i < dataset.data.length; i++) {
-                            if (dataset.data[i] != 0) {
-                                var model = dataset.object.keys(dataset)[0].data[i];
-                                var textY = model.y + (dataset.type == "line" ? -3 : 15);
-
-                                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
-                                ctx.textAlign = 'start';
-                                ctx.textBaseline = 'middle';
-                                ctx.fillStyle = dataset.type == "line" ? "black" : "black";
-                                ctx.save();
-                                ctx.translate(model.x, textY-15);
-                                ctx.rotate(4.7);
-                                ctx.fillText(dataset.data[i], 0, 0);
-                                ctx.restore();
-                            }
-                        }
-                    });
-                },
-            }*/
         }
     });
 

@@ -2,6 +2,10 @@ var colors=['#D6CC98','#CDE66E','#FFD3B5','#FFAAA6',
     '#FF8C94','#E49FD1','#9ED0C6','#D8728E',
     '#A3C7C7','#83708E','#8FE6CA'];
 
+var colorsO=['rgb(214, 204, 152,0.5)','rgb(205, 230, 110,0.5)','rgb(255, 211, 181,0.5)','rgb(255, 170, 166,0.5)',
+    'rgb(255, 140, 148,0.5)','rgb(131, 112, 142,0.5)','rgb(158, 208, 198,0.5)','rgb(216, 114, 142,0.5)',
+    'rgb(163, 199, 199,0.5)','rgb(131, 112, 142,0.5)','rgb(143, 230, 202,0.5)'];
+
 var bordes=['#BEB67D','#AFDB51','#FFC0A2','#FF868F',
     '#FF5B78','#D476C5','#65BCB7','#C14170',
     '#6DAFB8','#3A4070','#4DDBBC'];
@@ -28,7 +32,7 @@ function archivoJS(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -62,10 +66,10 @@ function archivoJS(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -100,7 +104,7 @@ function archivoJS2(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -133,10 +137,10 @@ function archivoJS2(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -170,7 +174,7 @@ function archivoJS3(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -204,10 +208,10 @@ function archivoJS3(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -241,7 +245,7 @@ function archivoJS4(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -274,10 +278,10 @@ function archivoJS4(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -311,7 +315,7 @@ function archivoJS5(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -344,10 +348,10 @@ function archivoJS5(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -382,7 +386,7 @@ function archivoJS6(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -415,10 +419,10 @@ function archivoJS6(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -452,7 +456,7 @@ function archivoJS7(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -485,10 +489,10 @@ function archivoJS7(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -522,7 +526,7 @@ function archivoJS8(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -555,10 +559,10 @@ function archivoJS8(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -593,7 +597,7 @@ function archivoJS9(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -626,10 +630,10 @@ function archivoJS9(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -663,7 +667,7 @@ function archivoJS10(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -696,10 +700,10 @@ function archivoJS10(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -733,7 +737,7 @@ function archivoJS11(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -766,10 +770,10 @@ function archivoJS11(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -803,7 +807,7 @@ function archivoJS12(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -836,10 +840,10 @@ function archivoJS12(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -873,7 +877,7 @@ function archivoJS13(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -906,10 +910,10 @@ function archivoJS13(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -943,7 +947,7 @@ function archivoJS14(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -976,10 +980,10 @@ function archivoJS14(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1013,7 +1017,7 @@ function archivoJS15(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1046,10 +1050,10 @@ function archivoJS15(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1083,7 +1087,7 @@ function archivoJS16(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1116,10 +1120,10 @@ function archivoJS16(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1153,7 +1157,7 @@ function archivoJS17(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1186,10 +1190,10 @@ function archivoJS17(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1223,7 +1227,7 @@ function archivoJS18(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1256,10 +1260,10 @@ function archivoJS18(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1293,7 +1297,7 @@ function archivoJS19(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1326,10 +1330,10 @@ function archivoJS19(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1363,7 +1367,7 @@ function archivoJS20(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1396,10 +1400,10 @@ function archivoJS20(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1433,7 +1437,7 @@ function archivoJS21(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1466,10 +1470,10 @@ function archivoJS21(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1503,7 +1507,7 @@ function archivoJS22(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1536,10 +1540,10 @@ function archivoJS22(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1573,7 +1577,7 @@ function archivoJS23(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1606,10 +1610,10 @@ function archivoJS23(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1643,7 +1647,7 @@ function archivoJS24(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1676,10 +1680,10 @@ function archivoJS24(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1713,7 +1717,7 @@ function archivoJS25(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1746,10 +1750,10 @@ function archivoJS25(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');
@@ -1783,7 +1787,7 @@ function archivoJS26(tot_ins_nor) {
         labels : nombreNorma,
 
         datasets : [{
-            backgroundColor: colors,
+            backgroundColor: colorsO,
             borderColor:bordes,
             data : valoresInstituciones
         }
@@ -1816,10 +1820,10 @@ function archivoJS26(tot_ins_nor) {
                 var text = [];
                 text.push('<ul class="0-legend">');
                 var ds = chart.data.datasets[0];
-                text.push('<h3>Normas</h3>');
+                text.push('<h4 style="font-family: Lato; text-align: center; margin-bottom: 15px; color: #335574">Normas Técnicas de Acesibilidad Física</h4>');
                 for (var i = 0; i < ds.data.length; i++) {
                     text.push('<li>');
-                    text.push('<span style="background-color:' + ds.backgroundColor[i] + ';">' + '</span>' + chart.data.labels[i]);
+                    text.push('<span style="font-family: Lato; background-color:' + ds.borderColor[i] + ';">' + '</span>' + chart.data.labels[i]);
                     text.push('</li>');
                 }
                 text.push('</ul>');

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Acerca-Accesibilidad Física</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
@@ -46,7 +47,7 @@
     <!-- IMAGEN contenida en Cabecera -->
     <div class="text-black-50 text-center container-fluid embed-responsive-item">
         <!-- Texto sobrepuesto en Contenido -->
-        <div id="cover">
+        <div id="cover" data-aos="fade-down" data-aos-duration="2000">
             <div class="row CoverImage contenedorP2"></div>
         </div>
         <!-- FIN Texto sobrepuesto en Contenido -->
@@ -64,9 +65,12 @@
                 <div class="card text-center c-CI">
                     <div class="d-CI">
                         <div class="card-body">
-                            <h5 class="card-title ct-CI" >El futuro es brillante si se cuenta con accesibilidad</h5>
+                            <div data-aos="fade-down-right" data-aos-duration="2000" >
+                                <h5 class="card-title ct-CI" >El futuro es brillante si se cuenta con accesibilidad</h5>
+                            </div>
+
                             <br>
-                            <div class="container">
+                            <div class="container" data-aos="fade-up-right" data-aos-duration="2000">
                                 <ul class="nav nav-tabs nav-justified justify-content-center n-CI">
                                     <li class="nav-item active"><a class="nav-link a-Menu" data-toggle="tab" href="#Acerca" > Acerca </a></li>
                                     <li class="nav-item"><a class="nav-link a-Menu" data-toggle="tab" href="#Objetivo" > Objetivo </a></li>
@@ -111,7 +115,7 @@
             <div class="col-sm-6" >
                 <div class="card text-center c-img" >
                     <div class="d-img" >
-                        <div class="card-body dc-img" >
+                        <div class="card-body dc-img" data-aos="zoom-out-down" data-aos-duration="2000">
 
                             <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
@@ -171,7 +175,7 @@
                     <div class="col-sm-3" >
                         <div class="card text-center c1" >
                             <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
+                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
                                     <img class="card-img-top cit-CI2" src="../icn-ins.png" alt="icono Institución" >
                                     <h2 class="timer count-number text-center h2T" data-to="26" data-speed="4000"></h2>
                                     <hr class="hr">
@@ -183,7 +187,7 @@
                     <div class="col-sm-3" >
                         <div class="card text-center c1" >
                             <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
+                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
                                     <img class="card-img-top cit-CI2" src="../icn-norm.png" alt="icono Norma" >
                                     <h2 class="timer count-number text-center h2T" data-to="11" data-speed="4000"></h2>
                                     <hr class="hr">
@@ -195,7 +199,7 @@
                     <div class="col-sm-3" >
                         <div class="card text-center c1" >
                             <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
+                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
                                     <img class="card-img-top cit-CI2" src="../icn-preg.png" alt="icono Pregunta" >
                                     <h2 class="timer count-number text-center h2T" data-to="181" data-speed="4000"></h2>
                                     <hr class="hr">
@@ -206,7 +210,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card text-center c2" >
+                        <div class="card text-center c2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
                             <div class="divCards" >
                                 <div class="card-body cb6-CI2-2" >
                                     <img class="card-img-top cit-CI2" src="../icn-dis.png" alt="icono Discapacidad" >
@@ -239,5 +243,11 @@
     </div>
     <!-- FIN Pie de página -->
 </section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>

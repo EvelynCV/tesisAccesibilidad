@@ -25,6 +25,7 @@
     "@nestjs/core": "^6.7.2",
     "@nestjs/platform-express": "^6.7.2",
     "@nestjs/typeorm": "^6.3.3",
+    "aos": "^2.3.4",
     "app-controller": "^0.5.1",
     "app-service": "^0.4.0",
     "chart.js": "^2.9.3",

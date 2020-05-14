@@ -125,7 +125,7 @@ canvas{
 a {
     text-decoration:none;
     text-align: center;
-    color:#091c30;
+    color:#dddddd;
 }
 a:hover {
     color: white;
@@ -134,7 +134,7 @@ a:hover {
 .inf {
   /*  background-image: linear-gradient(90deg, #F4DAE2, #EDCEE5,  #DEC3E1, #BBD5F2, #D4E0F9);*/
  /*   background-image: linear-gradient(90deg, #a3c6ed, #8bb7e9,  #73a9e4, #5b9ae0, #438bdb, #2b7cd6, #256ec0, #256ec0, #2b7cd6, #438bdb, #5b9ae0,  #73a9e4, #8bb7e9, #a3c6ed);*/
-    background-image: linear-gradient(90deg, #aaaaaa, #888888,#34495e, #335574, #2A3B59, #335574,#34495e,#888888, #aaaaaa);
+    background-image: linear-gradient(90deg, #2A3B59, #2A3B59);
     border-radius:10px;
     display:inline-flex;
     align-items:center;

@@ -44,11 +44,7 @@
 </section>
 <!-- FIN Menú - navbar -->
 
-<!-- Título -->
-<section>
-    <h2 class="h2"></h2>
-</section>
-<!-- FIN Título -->
+
 
 <!-- Información general -->
 <section>
@@ -187,12 +183,12 @@
             </div>
             <div class="col-md-6  ">
                 <div id= "ainfo3" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                    <a  href="#info3" class="inf" onclick="deshabilitaBoton(event)">Datos por Institución</a>
+                    <a  href="#info3" class="inf" onclick="deshabilitaBoton(event)">Datos por Norma</a>
                 </div>
             </div>
         </div>
 
-        <div class="row" style="min-height: 500px;">
+        <div class="row" style="min-height: 300px;">
             <div id="info1" class="col-sm-12 well oculto" >
                 <br>
                 <div id="content2" class="container-fluid">
@@ -231,9 +227,9 @@
                 <div id="content2" class="container-fluid">
                     <div class="row ">
                         <div class="col-sm-12" style ="text-align: center">
-                            <form name="formulario1" action="#"  >
-                                <select class=" dropdown-content select-items select-selected" type="button" name="institucion" onchange="institucionSeleccionada()" >
-                                    <option hidden selected>Selecciona una opción</option>
+                            <form name="formulario1" action="#" alt="Selector Instituciones" >
+                                <select alt="Selector Instituciones" class=" dropdown-content select-items select-selected" id="select" type="button" name="institucion" onchange="institucionSeleccionada()" >
+                                    <option hidden selected>Seleccione una institución</option>
                                     <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
                                         <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
                                     <% } %>
@@ -244,7 +240,7 @@
                 </div>
 
                 <br>
-                <div id="content2" class="container-fluid">
+                <div id="content6" class="container-fluid ocult">
                     <div class="row ">
                         <div class="col-sm-12">
                             <div class="row ">
@@ -285,6 +281,7 @@
             </div>
         </div>
     </div>
+    <!--Oculta-Muestra Botón-->
     <script>
         jQuery(document).ready(function(){
             $(".oculto").hide();
@@ -302,6 +299,7 @@
             });
         });
     </script>
+    <!--Bloquea Botón-->
     <script>
         var globalActivo;
         function deshabilitaBoton(btnSelect) {
@@ -329,6 +327,14 @@
                 }
             }
         }
+    </script>
+    <!--Muestra opcion seleccionada-->
+    <script>
+        $(".ocult").hide();
+        $('#select').click(function(){
+
+            $('#content6').show();
+        });
     </script>
 </section>
 <br>

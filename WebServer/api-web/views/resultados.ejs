@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
-    <title>Accesibilidad Física</title>
+    <title>Resultados-Accesibilidad Física</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/graficas.css">
     <link rel="stylesheet" href="/css/selector.css">
@@ -44,16 +45,12 @@
 </section>
 <!-- FIN Menú - navbar -->
 
-<!-- Título -->
-<section>
-    <h2 class="h2"></h2>
-</section>
-<!-- FIN Título -->
+
 
 <!-- Información general -->
 <section>
     <div class="row sp">
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-12" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div class="card">
                 <div class="card-content">
                     <div class="media align-items-stretch">
@@ -70,7 +67,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-12" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div class="card">
                 <div class="card-content">
                     <div class="media align-items-stretch">
@@ -87,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-12" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div class="card">
                 <div class="card-content">
                     <div class="media align-items-stretch">
@@ -104,7 +101,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-12" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div class="card">
                 <div class="card-content">
                     <div class="mediaI align-items-stretch">
@@ -135,13 +132,13 @@
             <div class="row ">
                 <div class="col-sm-12">
                     <div class="row ">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" data-aos="fade-down-right"  data-aos-duration="2000" data-aos-delay="600">
                             <div id="global" class="chart-container global">
                                 <div id="legend" ></div>
                             </div>
                             <br>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" data-aos="fade-down-left"  data-aos-duration="2000" data-aos-delay="600">
                             <div class="chart-container" >
                                 <canvas id="chart1"></canvas>
                             </div>
@@ -154,14 +151,14 @@
 
                 <div class="col-sm-12">
                     <div class="row ">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="300">
                             <div class="chart-container" >
                                 <canvas id="chart5"></canvas>
                             </div>
                             <script src="/js/porcentajes_Totales.js"></script>
                             <br>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" data-aos="fade-up-left" data-aos-duration="2000" data-aos-delay="300">
                             <div class="chart-container" >
                                 <canvas id="chart6"></canvas>
                             </div>
@@ -179,27 +176,27 @@
 
 <section>
     <div class="container-fluid">
-        <div class="row" style="justify-content: center" >
-            <div class="col-sm-6 well" >
-                <div id= "ainfo1" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px;" >
-                    <a  href="#info1" class="inf" onclick="deshabilitaBoton(event)">Porcentaje obtenido por Discapacidad</a>
+        <div class="row text-center" >
+            <div class="col-md-6 ">
+                <div id= "ainfo1" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px" data-aos="zoom-in-up" data-aos-duration="2000"  data-aos-delay="300">
+                    <a  href="#info1" class="inf" onclick="deshabilitaBoton(event)" >Porcentaje obtenido por Discapacidad</a>
                 </div>
             </div>
-            <div class="col-sm-6 well">
-                <div id= "ainfo3" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px">
-                    <a  href="#info3" class="inf" onclick="deshabilitaBoton(event)">Datos por Institución</a>
+            <div class="col-md-6  ">
+                <div id= "ainfo3" style="margin-right: 10px; margin-left: 10px; margin-bottom: 10px; margin-top: 10px" data-aos="zoom-in-up" data-aos-duration="2000"  data-aos-delay="300">
+                    <a  href="#info3" class="inf" onclick="deshabilitaBoton(event)">Datos por Norma</a>
                 </div>
             </div>
         </div>
 
-        <div class="row" style="min-height: 500px">
-            <div id="info1" class="col-sm-12 well oculto" >
+        <div class="row" style="min-height: 300px;">
+            <div id="info1" class="col-sm-12 well oculto"  >
                 <br>
-                <div id="content2" class="container-fluid">
+                <div id="content2" class="container-fluid" >
                     <div class="row ">
-                        <div class="col-sm-12" style ="text-align: center">
+                        <div class="col-sm-12" style ="text-align: center" >
                             <div class="row" >
-                                <div class="col-sm-4" >
+                                <div class="col-sm-4"  >
                                     <div class="chart-container">
                                         <canvas id="chart2" style="width: 700px; height: 500px"></canvas>
                                         <script src="/js/porcentaje_Discapacidad.js"></script>
@@ -226,14 +223,14 @@
                     </div>
                 </div>
             </div>
-            <div id="info3" class="col-sm-12 well oculto" >
+            <div id="info3" class="col-sm-12 oculto" >
                 <br>
                 <div id="content2" class="container-fluid">
                     <div class="row ">
                         <div class="col-sm-12" style ="text-align: center">
-                            <form name="formulario1" action="#"  >
-                                <select class=" dropdown-content select-items select-selected" type="button" name="institucion" onchange="institucionSeleccionada()" >
-                                    <option hidden selected>Selecciona una opción</option>
+                            <form name="formulario1" action="#" alt="Selector Instituciones" >
+                                <select alt="Selector Instituciones" class=" dropdown-content select-items select-selected" id="select" type="button" name="institucion" onchange="institucionSeleccionada()" >
+                                    <option hidden selected>Seleccione una institución</option>
                                     <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
                                         <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
                                     <% } %>
@@ -244,18 +241,18 @@
                 </div>
 
                 <br>
-                <div id="content2" class="container-fluid">
+                <div id="content6" class="container-fluid">
                     <div class="row ">
                         <div class="col-sm-12">
                             <div class="row ">
                                 <div class="col-sm-6">
-                                    <div id="global2" class="chart-container global2">
+                                    <div id="global2" class="chart-container global2 ocult" >
                                         <div id="legend2"></div>
                                     </div>
                                     <br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="chart-container" id="chartContainer" >
+                                    <div class="chart-container ocult" id="chartContainer" >
                                         <canvas id="chart"></canvas>
                                     </div>
                                     <script src="/js/puntaje_Total_Norma.js"></script>
@@ -271,7 +268,7 @@
                             <div class="col-sm-2"></div>
                             <div class="col-sm-8">
                                 <br>
-                                <div class="chart-container" id="chartContainer2">
+                                <div class="chart-container ocult" id="chartContainer2" >
                                     <canvas id="chart9"></canvas>
                                 </div>
                                 <br>
@@ -285,6 +282,7 @@
             </div>
         </div>
     </div>
+    <!--Oculta-Muestra Botón-->
     <script>
         jQuery(document).ready(function(){
             $(".oculto").hide();
@@ -302,6 +300,7 @@
             });
         });
     </script>
+    <!--Bloquea Botón-->
     <script>
         var globalActivo;
         function deshabilitaBoton(btnSelect) {
@@ -329,6 +328,15 @@
                 }
             }
         }
+    </script>
+    <!--Muestra opcion seleccionada-->
+    <script>
+        $(".ocult").hide();
+        $('#select').click(function(){
+            $('#global2').show();
+            $('#chartContainer').show();
+            $('#chartContainer2').show();
+        });
     </script>
 </section>
 <br>
@@ -406,6 +414,10 @@
 </script>
 
 <!-- FIN SCRIPTS para llamado de funciones -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </body>
 </html>

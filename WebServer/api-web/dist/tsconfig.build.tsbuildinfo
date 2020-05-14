@@ -2354,8 +2354,8 @@
         "signature": "e52b4d5580208ed963e2cc00cb6b9dc4bd81c81a35cc4b2fca1ea158cbfc9c7d"
       },
       "../src/app.controller.ts": {
-        "version": "e2d882dfa56cff85318a1de9d51cbccde10e76ae8327ffa2a48893692d578c32",
-        "signature": "dd86f757bbc1bdff02895977922fd629cda21c1c1070cf28350269873321ed82"
+        "version": "eb0a4d43c2456e3aaa279bf45dd9005cae8c4281ac3ec114ea2f913ba28c22bf",
+        "signature": "775796708c5d99c78eef15943d1e650e1d6dae9b1446aea364fc1fb10904f1b1"
       },
       "../src/institucion/institucion.module.ts": {
         "version": "dd95dead89e4614b89e6c30862145a39f0ec3e2ab974300aba15a70451a414f1",
@@ -15030,7 +15030,6 @@
       "../src/viewtotinsnor/viewtotinsnor.module.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.module.ts",
       "../src/viewporcentajedisnor/viewporcentajedisnor.module.ts",
-      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -15145,7 +15144,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts"
+      "../src/app.controller.ts",
+      "../src/app.module.ts"
     ]
   },
   "version": "3.7.4"

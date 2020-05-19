@@ -2,7 +2,7 @@
   "name": "api-web",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Evelyn Cisneros",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",

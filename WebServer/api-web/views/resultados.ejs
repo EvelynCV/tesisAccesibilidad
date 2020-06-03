@@ -229,12 +229,14 @@
                     <div class="row ">
                         <div class="col-sm-12" style ="text-align: center">
                             <form name="formulario1" action="#" alt="Selector Instituciones" >
-                                <select alt="Selector Instituciones" class=" dropdown-content select-items select-selected" id="select" type="button" name="institucion" onchange="institucionSeleccionada()" >
+                                <label>
+                                    <select alt="Selector Instituciones" class=" dropdown-content select-items select-selected" id="select" type="button" name="institucion" onchange="institucionSeleccionada()" >
                                     <option hidden selected>Seleccione una institución</option>
                                     <% for(var i = 0; i< tot_nor_ins.length; i++){ %>
-                                        <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %> </option>
+                                        <option id="seleccionado"  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %></option>
                                     <% } %>
-                                </select>
+                                    </select>
+                                </label>
                             </form>
                         </div>
                     </div>

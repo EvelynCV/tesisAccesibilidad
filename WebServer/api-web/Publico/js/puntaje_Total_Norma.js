@@ -1866,7 +1866,7 @@ function porcentajeNorma(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1924,7 +1924,7 @@ function porcentajeNorma1(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1982,7 +1982,7 @@ function porcentajeNorma2(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2040,7 +2040,7 @@ function porcentajeNorma3(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2098,7 +2098,7 @@ function porcentajeNorma4(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2156,7 +2156,7 @@ function porcentajeNorma5(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2214,7 +2214,7 @@ function porcentajeNorma6(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2272,7 +2272,7 @@ function porcentajeNorma7(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2330,7 +2330,7 @@ function porcentajeNorma8(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2388,7 +2388,7 @@ function porcentajeNorma9(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2446,7 +2446,7 @@ function porcentajeNorma10(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2504,7 +2504,7 @@ function porcentajeNorma11(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2562,7 +2562,7 @@ function porcentajeNorma12(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2620,7 +2620,7 @@ function porcentajeNorma13(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2678,7 +2678,7 @@ function porcentajeNorma14(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2736,7 +2736,7 @@ function porcentajeNorma15(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2794,7 +2794,7 @@ function porcentajeNorma16(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2852,7 +2852,7 @@ function porcentajeNorma17(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -2910,7 +2910,7 @@ function porcentajeNorma18(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -3026,7 +3026,7 @@ function porcentajeNorma20(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -3084,7 +3084,7 @@ function porcentajeNorma21(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -3142,7 +3142,7 @@ function porcentajeNorma22(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -3200,7 +3200,7 @@ function porcentajeNorma23(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -3258,7 +3258,7 @@ function porcentajeNorma24(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -3316,7 +3316,7 @@ function porcentajeNorma25(porcentaje_dis_nor) {
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Discapacidad por Norma',
+                text: 'Porcentaje General de Discapacidad por Norma',
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,

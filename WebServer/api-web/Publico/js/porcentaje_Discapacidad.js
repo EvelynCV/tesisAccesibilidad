@@ -82,7 +82,7 @@ function porcentaje_Discapacidad(porcentaje_dis_ins) {
             },
             title : {
                 display : true,
-                text : "Porcentaje obtenido para Discapacidad Motriz",
+                text : "Porcentaje de cumplimiento para Discapacidad Motriz por Institución",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -136,7 +136,7 @@ function porcentaje_Discapacidad(porcentaje_dis_ins) {
             },
             title : {
                 display : true,
-                text : "Porcentaje obtenido para Discapacidad Visual",
+                text : "Porcentaje de cumplimiento para Discapacidad Visual por Institución",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -190,7 +190,7 @@ function porcentaje_Discapacidad(porcentaje_dis_ins) {
             },
             title : {
                 display : true,
-                text : "Porcentaje obtenido para Discapacidad Auditiva",
+                text : "Porcentaje de cumplimiento para Discapacidad Auditiva por Institución",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -207,164 +207,4 @@ function porcentaje_Discapacidad(porcentaje_dis_ins) {
 
         }
     });
-/*
-    var datosG1 = {
-
-        labels: idInstituciones,
-
-        datasets: [{
-            label: "Motriz",
-            backgroundColor: "rgba(191,0,119,0.5)",
-            pointRadius: 6,
-            pointBorderWidth: 1,
-            pointBackgroundColor: newColors,
-            pointBorderColor: newBorders,
-            pointHoverRadius: 20,
-            data:motriz
-        }],
-
-    };
-    var datosG2 = {
-
-        labels: idInstituciones,
-        datasets: [{
-            label: "Visual",
-            backgroundColor: "rgba(0,99,177,0.5)",
-            pointRadius: 6,
-            pointBorderWidth: 1,
-            pointBackgroundColor: newColors,
-            pointBorderColor: newBorders,
-            pointHoverRadius: 20,
-            data:visual
-        }],
-
-    };
-    var datosG3 = {
-
-        labels: idInstituciones,
-        datasets: [{
-            label: "Auditiva",
-            backgroundColor: "rgba(0,204,106,0.5)",
-            pointRadius: 6,
-            pointBorderWidth: 1,
-            pointBackgroundColor: newColors,
-            pointBorderColor: newBorders,
-            pointHoverRadius: 20,
-            data:auditiva
-        }],
-
-    };
-
-    var canvas = document.getElementById('chart2').getContext('2d');
-
-    window.bar = new Chart(canvas, {
-        type : "radar",
-        data : datosG1,
-        options : {
-
-            legend: {
-                display: false // Ocultar legendas
-            },
-
-            responsive: true,
-            maintainAspectRatio: false,
-            layout: {
-                padding: {
-                    left: 30,
-                    right: 30,
-                    top: 0,
-                    bottom: 0
-                }
-            },
-            title : {
-                display : true,
-                text : "Porcentaje obtenido para Discapacidad Motriz",
-                fontFamily: 'Lato',
-                fontColor: '#335574',
-                fontSize: 18,
-                padding: 30
-            },
-            scale: {
-                ticks: {
-                    beginAtZero: true,
-                },
-
-                reverse: false,
-
-            },
-
-        }
-    });
-
-    var canvas = document.getElementById('chart3').getContext('2d');
-    window.bar = new Chart(canvas, {
-        type : "radar",
-        data : datosG2,
-        options : {
-            legend: {
-                display: false // Ocultar legendas
-            },
-
-            responsive: true,
-            maintainAspectRatio: false,
-            layout: {
-                padding: {
-                    left: 30,
-                    right: 30,
-                    top: 0,
-                    bottom: 0
-                }
-            },
-            title : {
-                display : true,
-                text : "Porcentaje obtenido para Discapacidad Visual",
-                fontFamily: 'Lato',
-                fontColor: '#335574',
-                fontSize: 18,
-                padding: 30
-            },
-            scale: {
-                ticks: {
-                    beginAtZero: true
-                },
-                reverse: false
-            },
-        }
-    });
-    var canvas = document.getElementById('chart4').getContext('2d');
-
-    window.bar = new Chart(canvas, {
-        type : "radar",
-        data : datosG3,
-        options : {
-            legend: {
-                display: false // Ocultar legendas
-            },
-
-            responsive: true,
-            maintainAspectRatio: false,
-            layout: {
-                padding: {
-                    left: 30,
-                    right: 30,
-                    top: 0,
-                    bottom: 0
-                }
-            },
-            title : {
-                display : true,
-                text : "Porcentaje obtenido para Discapacidad Auditiva",
-                fontFamily: 'Lato',
-                fontColor: '#335574',
-                fontSize: 18,
-                padding: 30
-            },
-            scale: {
-                ticks: {
-                    beginAtZero: true
-                },
-                reverse: false
-            },
-        }
-    });*/
 }

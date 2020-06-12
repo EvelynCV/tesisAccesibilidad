@@ -164,7 +164,7 @@
                             <div class="chart-container" tabindex="8">
                                 <canvas id="chart6" > </canvas>
                             </div>
-                            <script src="/js/valoracion_instituciones.js" alt="Valoración de Accesibilidad Física"></script>
+                            <script src="/js/valoracion_instituciones.js"></script>
                             <br>
                         </div>
                     </div>
@@ -201,21 +201,21 @@
                         <div class="col-sm-12" style="text-align: center">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <div class="chart-container" tabindex="10">
+                                    <div class="chart-container" tabindex="11">
                                         <canvas id="chart2" style="width: 700px; height: 500px" ></canvas>
                                         <script src="/js/porcentaje_Discapacidad.js"></script>
                                     </div>
                                     <br>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div class="chart-container" tabindex="11">
+                                    <div class="chart-container" tabindex="12">
                                         <canvas id="chart3" style="width: 700px; height: 500px" ></canvas>
                                         <script src="/js/porcentaje_Discapacidad.js"></script>
                                     </div>
                                     <br>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div class="chart-container" tabindex="12">
+                                    <div class="chart-container" tabindex="13">
                                         <canvas id="chart4" style="width: 700px; height: 500px" ></canvas>
                                         <script src="/js/porcentaje_Discapacidad.js"></script>
                                     </div>
@@ -235,7 +235,7 @@
                             <form name="formulario1" action="#"  >
                                 <label for="select" style="font-family: Lato; color: #2A3B59; font-size: 20px">Instituciones Públicas &nbsp; &nbsp; </label>
                                 <select class=" dropdown-content select-items select-selected" id="select"
-                                        tabindex="10" name="institucion" onchange="institucionSeleccionada()" >
+                                        tabindex="14" name="institucion" onchange="institucionSeleccionada()" >
                                     <option hidden selected  >Seleccione una institución</option>
                                     <% for(var i = 0; i < tot_nor_ins.length; i++){ %>
                                         <option  value="<%= tot_nor_ins[i].nom_ins %>"> <%= tot_nor_ins[i].nom_ins %></option>
@@ -252,13 +252,13 @@
                         <div class="col-sm-12">
                             <div class="row ">
                                 <div class="col-sm-6">
-                                    <div id="global2" class="chart-container global2 ocult" tabindex="12">
+                                    <div id="global2" class="chart-container global2 ocult" tabindex="15">
                                         <div id="legend2"></div>
                                     </div>
                                     <br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="chart-container ocult" id="chartContainer" tabindex="13">
+                                    <div class="chart-container ocult" id="chartContainer" tabindex="16">
                                         <canvas id="chart"></canvas>
                                     </div>
                                     <script src="/js/puntaje_Total_Norma.js"></script>
@@ -274,7 +274,7 @@
                             <div class="col-sm-2"></div>
                             <div class="col-sm-8">
                                 <br>
-                                <div class="chart-container ocult" id="chartContainer2" tabindex="14">
+                                <div class="chart-container ocult" id="chartContainer2" tabindex="17">
                                     <canvas id="chart9"></canvas>
                                 </div>
                                 <br>
@@ -358,7 +358,7 @@
     <div>
         <footer class="page-footer font-small container-fluid pg">
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3 pg-txt" tabindex="15">
+            <div class="footer-copyright text-center py-3 pg-txt" tabindex="18">
                 EPN © Todos los Derechos Reservados
             </div>
             <!-- Copyright -->
@@ -386,9 +386,6 @@
     porcentajes_Totales(tot_val_ins);
     valoracion_Instituciones(tot_val_ins);
     porcentaje_Discapacidad(porcentaje_dis_ins);
-
-    // porcentaje_Normas(tot_nor_ins);
-
 
     function institucionSeleccionada() {
         select = document.formulario1.institucion[document.formulario1.institucion.selectedIndex].index;

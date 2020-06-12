@@ -1,17 +1,17 @@
-var colors=['#D6CC98','#CDE66E','#FFD3B5','#FFAAA6',
-    '#FF8C94','#E49FD1','#9ED0C6','#D8728E',
-    '#A3C7C7','#83708E','#8FE6CA'];
+var colors = ['#D6CC98', '#CDE66E', '#FFD3B5', '#FFAAA6',
+    '#FF8C94', '#E49FD1', '#9ED0C6', '#D8728E',
+    '#A3C7C7', '#83708E', '#8FE6CA'];
 
-var colorsO=['rgb(214, 204, 152,0.5)','rgb(205, 230, 110,0.5)','rgb(255, 211, 181,0.5)','rgb(255, 170, 166,0.5)',
-    'rgb(255, 140, 148,0.5)','rgb(131, 112, 142,0.5)','rgb(158, 208, 198,0.5)','rgb(216, 114, 142,0.5)',
-    'rgb(163, 199, 199,0.5)','rgb(131, 112, 142,0.5)','rgb(143, 230, 202,0.5)'];
+var colorsO = ['rgb(214, 204, 152,0.5)', 'rgb(205, 230, 110,0.5)', 'rgb(255, 211, 181,0.5)', 'rgb(255, 170, 166,0.5)',
+    'rgb(255, 140, 148,0.5)', 'rgb(131, 112, 142,0.5)', 'rgb(158, 208, 198,0.5)', 'rgb(216, 114, 142,0.5)',
+    'rgb(163, 199, 199,0.5)', 'rgb(131, 112, 142,0.5)', 'rgb(143, 230, 202,0.5)'];
 
-var bordes=['#BEB67D','#AFDB51','#FFC0A2','#FF868F',
-    '#FF5B78','#D476C5','#65BCB7','#C14170',
-    '#6DAFB8','#3A4070','#4DDBBC'];
+var bordes = ['#BEB67D', '#AFDB51', '#FFC0A2', '#FF868F',
+    '#FF5B78', '#D476C5', '#65BCB7', '#C14170',
+    '#6DAFB8', '#3A4070', '#4DDBBC'];
 
 function archivoJS(tot_ins_nor) {
-   var codNor = tot_ins_nor.map(
+    var codNor = tot_ins_nor.map(
         function (norma) {
             return norma.cod_nor;
         }
@@ -29,12 +29,12 @@ function archivoJS(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -43,16 +43,16 @@ function archivoJS(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options : {
+        type: "polarArea",
+        data: datos,
+        options: {
 
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -81,6 +81,7 @@ function archivoJS(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS2(tot_ins_nor) {
 
     var codNor = tot_ins_nor.map(
@@ -101,12 +102,12 @@ function archivoJS2(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -115,16 +116,16 @@ function archivoJS2(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options : {
+        type: "polarArea",
+        data: datos,
+        options: {
 
             responsive: true,
             maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -152,6 +153,7 @@ function archivoJS2(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS3(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -171,12 +173,12 @@ function archivoJS3(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -185,16 +187,16 @@ function archivoJS3(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
 
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -223,6 +225,7 @@ function archivoJS3(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS4(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -242,12 +245,12 @@ function archivoJS4(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -256,15 +259,15 @@ function archivoJS4(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -293,6 +296,7 @@ function archivoJS4(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS5(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -312,12 +316,12 @@ function archivoJS5(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -326,15 +330,15 @@ function archivoJS5(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -363,6 +367,7 @@ function archivoJS5(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS6(tot_ins_nor) {
 
     var codNor = tot_ins_nor.map(
@@ -383,12 +388,12 @@ function archivoJS6(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -397,15 +402,15 @@ function archivoJS6(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -434,6 +439,7 @@ function archivoJS6(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS7(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -453,12 +459,12 @@ function archivoJS7(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -467,15 +473,15 @@ function archivoJS7(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -504,6 +510,7 @@ function archivoJS7(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS8(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -523,12 +530,12 @@ function archivoJS8(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -537,15 +544,15 @@ function archivoJS8(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -574,6 +581,7 @@ function archivoJS8(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS9(tot_ins_nor) {
 
     var codNor = tot_ins_nor.map(
@@ -594,12 +602,12 @@ function archivoJS9(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -608,15 +616,15 @@ function archivoJS9(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -645,6 +653,7 @@ function archivoJS9(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS10(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -664,12 +673,12 @@ function archivoJS10(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -678,15 +687,15 @@ function archivoJS10(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options : {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -715,6 +724,7 @@ function archivoJS10(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS11(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -734,12 +744,12 @@ function archivoJS11(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -748,15 +758,15 @@ function archivoJS11(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options : {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -785,6 +795,7 @@ function archivoJS11(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS12(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -804,12 +815,12 @@ function archivoJS12(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -818,15 +829,15 @@ function archivoJS12(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -855,6 +866,7 @@ function archivoJS12(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS13(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -874,12 +886,12 @@ function archivoJS13(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -888,15 +900,15 @@ function archivoJS13(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -925,6 +937,7 @@ function archivoJS13(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS14(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -944,12 +957,12 @@ function archivoJS14(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -958,15 +971,15 @@ function archivoJS14(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -995,6 +1008,7 @@ function archivoJS14(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS15(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1014,12 +1028,12 @@ function archivoJS15(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1028,15 +1042,15 @@ function archivoJS15(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1065,6 +1079,7 @@ function archivoJS15(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS16(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1084,12 +1099,12 @@ function archivoJS16(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1098,15 +1113,15 @@ function archivoJS16(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1135,6 +1150,7 @@ function archivoJS16(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS17(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1154,12 +1170,12 @@ function archivoJS17(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1168,15 +1184,15 @@ function archivoJS17(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1205,6 +1221,7 @@ function archivoJS17(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS18(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1224,12 +1241,12 @@ function archivoJS18(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1238,15 +1255,15 @@ function archivoJS18(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1275,6 +1292,7 @@ function archivoJS18(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS19(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1294,12 +1312,12 @@ function archivoJS19(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1308,15 +1326,15 @@ function archivoJS19(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1345,6 +1363,7 @@ function archivoJS19(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS20(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1364,12 +1383,12 @@ function archivoJS20(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1378,15 +1397,15 @@ function archivoJS20(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1415,6 +1434,7 @@ function archivoJS20(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS21(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1434,12 +1454,12 @@ function archivoJS21(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1448,15 +1468,15 @@ function archivoJS21(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1485,6 +1505,7 @@ function archivoJS21(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS22(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1504,12 +1525,12 @@ function archivoJS22(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1518,15 +1539,15 @@ function archivoJS22(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1555,6 +1576,7 @@ function archivoJS22(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS23(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1574,12 +1596,12 @@ function archivoJS23(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1588,15 +1610,15 @@ function archivoJS23(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1625,6 +1647,7 @@ function archivoJS23(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS24(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1644,12 +1667,12 @@ function archivoJS24(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1658,15 +1681,15 @@ function archivoJS24(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1695,6 +1718,7 @@ function archivoJS24(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS25(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1714,12 +1738,12 @@ function archivoJS25(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1728,15 +1752,15 @@ function archivoJS25(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1765,6 +1789,7 @@ function archivoJS25(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function archivoJS26(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
         function (norma) {
@@ -1784,12 +1809,12 @@ function archivoJS26(tot_ins_nor) {
 
     var datos = {
 
-        labels : nombreNorma,
+        labels: nombreNorma,
 
-        datasets : [{
+        datasets: [{
             backgroundColor: colorsO,
-            borderColor:bordes,
-            data : valoresInstituciones
+            borderColor: bordes,
+            data: valoresInstituciones
         }
         ]
     };
@@ -1798,15 +1823,15 @@ function archivoJS26(tot_ins_nor) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
     var canvas = document.getElementById('chart').getContext('2d');
     var chart = new Chart(canvas, {
-        type : "polarArea",
-        data : datos,
-        options :  {
+        type: "polarArea",
+        data: datos,
+        options: {
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
 
-            title : {
-                display : true,
-                text : "Puntaje total obtenido por Norma",
+            title: {
+                display: true,
+                text: "Puntaje total obtenido por Norma",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,
@@ -1835,6 +1860,7 @@ function archivoJS26(tot_ins_nor) {
     // generate HTML legend
     myLegendContainer.innerHTML = chart.generateLegend();
 }
+
 function porcentajeNorma(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -1893,6 +1919,7 @@ function porcentajeNorma(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma1(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -1951,6 +1978,7 @@ function porcentajeNorma1(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma2(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2009,6 +2037,7 @@ function porcentajeNorma2(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma3(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2067,6 +2096,7 @@ function porcentajeNorma3(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma4(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2125,6 +2155,7 @@ function porcentajeNorma4(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma5(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2183,6 +2214,7 @@ function porcentajeNorma5(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma6(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2241,6 +2273,7 @@ function porcentajeNorma6(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma7(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2299,6 +2332,7 @@ function porcentajeNorma7(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma8(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2357,6 +2391,7 @@ function porcentajeNorma8(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma9(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2415,6 +2450,7 @@ function porcentajeNorma9(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma10(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2473,6 +2509,7 @@ function porcentajeNorma10(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma11(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2531,6 +2568,7 @@ function porcentajeNorma11(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma12(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2589,6 +2627,7 @@ function porcentajeNorma12(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma13(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2647,6 +2686,7 @@ function porcentajeNorma13(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma14(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2705,6 +2745,7 @@ function porcentajeNorma14(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma15(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2763,6 +2804,7 @@ function porcentajeNorma15(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma16(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2821,6 +2863,7 @@ function porcentajeNorma16(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma17(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2879,6 +2922,7 @@ function porcentajeNorma17(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma18(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2937,6 +2981,7 @@ function porcentajeNorma18(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma19(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -2995,6 +3040,7 @@ function porcentajeNorma19(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma20(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -3053,6 +3099,7 @@ function porcentajeNorma20(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma21(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -3111,6 +3158,7 @@ function porcentajeNorma21(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma22(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -3169,6 +3217,7 @@ function porcentajeNorma22(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma23(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -3227,6 +3276,7 @@ function porcentajeNorma23(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma24(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {
@@ -3285,6 +3335,7 @@ function porcentajeNorma24(porcentaje_dis_nor) {
         }
     });
 }
+
 function porcentajeNorma25(porcentaje_dis_nor) {
     var codNor = porcentaje_dis_nor.map(
         function (norma) {

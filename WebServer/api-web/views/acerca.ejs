@@ -20,20 +20,21 @@
 <!-- Menú - navbar -->
 <section>
     <nav class="navbar fixed-top navbar-expand-sm nav-fill bg">
-        <a class="navbar-brand logo" ><img src="/imagenes/logo-epn.png" alt="logo EPN" style="height: 50px"></a>
-        <button class="navbar-toggler toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
+        <a class="navbar-brand logo"><img src="/imagenes/logo-epn.png" alt="logo EPN" style="height: 50px"></a>
+        <button class="navbar-toggler toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">☰
+        </button>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav ml-auto ">
-                <li class="nav-item"> <a class="nav-link textMenu" href="inicio">
-                        <img src="/imagenes/iconHome.png"  class="rounded-circle imgText" alt="icono Inicio" >
+                <li class="nav-item"><a class="nav-link textMenu" href="inicio">
+                        <img src="/imagenes/iconHome.png" class="rounded-circle imgText" alt="icono Inicio">
                         Inicio</a>
                 </li>
-                <li class="nav-item"> <a class="nav-link textMenu" href="resultados">
-                        <img src="/imagenes/iconDashboard.png"  class="rounded imgText" alt="icono Resultados">
+                <li class="nav-item"><a class="nav-link textMenu" href="resultados">
+                        <img src="/imagenes/iconDashboard.png" class="rounded imgText" alt="icono Resultados">
                         Resultados</a>
                 </li>
-                <li class="nav-item"> <a class="nav-link textMenu" href="acerca">
-                        <img src="/imagenes/iconAcerca.png"  class="rounded imgText" alt="icono Acerca">
+                <li class="nav-item"><a class="nav-link textMenu" href="acerca">
+                        <img src="/imagenes/iconAcerca.png" class="rounded imgText" alt="icono Acerca">
                         Acerca de</a>
                 </li>
             </ul>
@@ -45,7 +46,7 @@
 <!-- Cabecera -->
 <section>
     <!-- IMAGEN contenida en Cabecera -->
-    <div class="text-black-50 text-center container-fluid embed-responsive-item">
+    <div class="text-black-50 text-center container-fluid embed-responsive-item" tabindex="1">
         <!-- Texto sobrepuesto en Contenido -->
         <div id="cover" data-aos="fade-down" data-aos-duration="2000">
             <div class="row CoverImage contenedorP2"></div>
@@ -58,49 +59,67 @@
 
 <!-- Contenido 1 Informativo -->
 <section>
-    <div id="content1" class="container-fluid c" >
+    <div id="content1" class="container-fluid c" tabindex="2">
         <div class="row">
             <!-- Información Contenido 1 -->
-            <div class="col-sm-6">
+            <div class="col-sm-6" >
                 <div class="card text-center c-CI">
                     <div class="d-CI">
                         <div class="card-body">
-                            <div data-aos="fade-down-right" data-aos-duration="2000" >
-                                <h5 class="card-title ct-CI" >El futuro es brillante si se cuenta con accesibilidad.</h5>
+                            <div data-aos="fade-down-right" data-aos-duration="2000">
+                                <h5 class="card-title ct-CI">El futuro es brillante si se cuenta con accesibilidad.</h5>
                             </div>
 
                             <br>
                             <div class="container" data-aos="fade-up-right" data-aos-duration="2000">
                                 <ul class="nav nav-tabs nav-justified justify-content-center n-CI">
-                                    <li class="nav-item active"><a class="nav-link a-Menu" data-toggle="tab" href="#Acerca" > Acerca </a></li>
-                                    <li class="nav-item"><a class="nav-link a-Menu" data-toggle="tab" href="#Objetivo" > Objetivo </a></li>
-                                    <li class="nav-item"><a class="nav-link a-Menu" data-toggle="tab" href="#Meta" > Meta </a></li>
+                                    <li class="nav-item active"><a tabindex="3" class="nav-link active a-Menu" data-toggle="tab"
+                                                                   href="#Acerca"> Acerca </a></li>
+                                    <li class="nav-item"><a  tabindex="4" class="nav-link a-Menu" data-toggle="tab" href="#Objetivo">
+                                            Objetivo </a></li>
+                                    <li class="nav-item"><a tabindex="5" class="nav-link a-Menu" data-toggle="tab" href="#Meta">
+                                            Meta </a></li>
                                 </ul>
 
                                 <div class="tab-content">
                                     <div id="Acerca" class="tab-pane fade show active dcon">
                                         <br>
-                                        <p>La creciente incorporación de personas con discapacidades al medio laboral o a la vida social, evidencia cada vez
-                                            más la necesidad de adecuar los espacios urbanos, los servicios públicos, el transporte y los sistemas de comunicación,
-                                            a las necesidades reales y condiciones de vida necesarias para el desarrollo integral de las personas con discapacidad. </p>
-                                        <p> La accesibilidad al medio físico busca la eliminación de barreras que impiden la autonomía personal y el libre
-                                            desplazamiento de las personas, es por ello que este proyecto entrega a la comunidad información derivada del análisis
-                                            de un grupo de instituciones públicas que brindan servicios a la ciudadanía en el Distrito Metropolitano de Quito,
+                                        <p>La creciente incorporación de personas con discapacidades al medio laboral o
+                                            a la vida social, evidencia cada vez
+                                            más la necesidad de adecuar los espacios urbanos, los servicios públicos, el
+                                            transporte y los sistemas de comunicación,
+                                            a las necesidades reales y condiciones de vida necesarias para el desarrollo
+                                            integral de las personas con discapacidad. </p>
+                                        <p> La accesibilidad al medio físico busca la eliminación de barreras que
+                                            impiden la autonomía personal y el libre
+                                            desplazamiento de las personas, es por ello que este proyecto entrega a la
+                                            comunidad información derivada del análisis
+                                            de un grupo de instituciones públicas que brindan servicios a la ciudadanía
+                                            en el Distrito Metropolitano de Quito,
                                             con el fin de evidenciar la accesibilidad física que brindan. </p>
 
                                     </div>
                                     <div id="Objetivo" class="tab-pane fade dcon">
                                         <br><br><br>
-                                        <p>Implementar un aplicativo web que permita cooperar con las estrategias de difusión de la accesibilidad al medio físico en el
-                                            Distrito Metropolitano de Quito (DMQ), apoyando una política inclusiva que mejore la conciencia, el bienestar social
+                                        <p>Implementar un aplicativo web que permita cooperar con las estrategias de
+                                            difusión de la accesibilidad al medio físico en el
+                                            Distrito Metropolitano de Quito (DMQ), apoyando una política inclusiva que
+                                            mejore la conciencia, el bienestar social
                                             y la solidaridad ciudadana.</p>
                                     </div>
                                     <div id="Meta" class="tab-pane fade dcon">
-                                        <br><br><br>
-                                        <p>Actualmente Ecuador no cuenta con información pública centralizada sobre el cumplimiento de normas de accesibilidad física en
-                                            instituciones públicas. Por tanto, este proyecto tiene como meta, proporcionar dicha información sobre la accesibilidad que
-                                            se ofrece a personas con discapacidad motriz, visual y auditiva en instituciones públicas
-                                            que prestan atención a la ciudadanía en el Distrito Metropolitano de Quito (DMQ).</p>
+                                        <br><br>
+                                        <p>La creciente incorporación de personas con discapacidades al medio laboral u
+                                            a la vida social, evidencia cada vez más la
+                                            necesidad de adecuar los espacios urbanos, los servicios públicos, el
+                                            transporte y los sistemas de comunicación, a las
+                                            reales necesidades y condiciones de vida de este grupo poblacional. En este
+                                            contexto, este trabajo tiene como meta
+                                            proporcionar información sobre la accesibilidad al medio físico para
+                                            personas con discapacidad motriz, visual y auditiva
+                                            en instituciones públicas que prestan atención a la ciudadanía en el
+                                            Distrito Metropolitano de Quito (DMQ).
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -112,39 +131,47 @@
             <!-- FIN Información Contenido 1 -->
 
             <!-- IMAGEN Contenido 1 Informativo -->
-            <div class="col-sm-6" >
-                <div class="card text-center c-img" >
-                    <div class="d-img" >
+            <div class="col-sm-6">
+                <div class="card text-center c-img">
+                    <div class="d-img">
                         <div class="card-body dc-img" data-aos="zoom-out-down" data-aos-duration="2000">
 
-                            <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
+                            <div id="carouselIndicators" class="carousel slide" data-ride="carousel" >
+                                <ul class="carousel-indicators">
                                     <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
                                     <li data-target="#carouselIndicators" data-slide-to="1"></li>
                                     <li data-target="#carouselIndicators" data-slide-to="2"></li>
                                     <li data-target="#carouselIndicators" data-slide-to="3"></li>
-                                </ol>
+                                </ul>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="https://cdn.discordapp.com/attachments/689209569355890761/694375132982018089/buchen-wang-xJGFQagpOxc-unsplash.jpg" alt="accesibilidad aeropuerto">
+                                        <img class="d-block w-100"
+                                             src="https://cdn.discordapp.com/attachments/689209569355890761/694375132982018089/buchen-wang-xJGFQagpOxc-unsplash.jpg"
+                                             alt="accesibilidad aeropuerto">
                                         <div class="carousel-caption">
                                             Accesibilidad Física
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://www.elcomercio.com/files/content_thumbnail_large/uploads/2018/03/08/5aa1e8be26482.jpeg" alt="Plataforma Gubernamental de Desarrollo Social" >
+                                        <img class="d-block w-100"
+                                             src="https://www.elcomercio.com/files/content_thumbnail_large/uploads/2018/03/08/5aa1e8be26482.jpeg"
+                                             alt="Plataforma Gubernamental de Desarrollo Social">
                                         <div class="carousel-caption">
                                             Plataforma Gubernamental de Desarrollo Social
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2018/12/09/17/36/handicap-parking-3865315_960_720.jpg" alt="Espacio de estacionamiento para personas con discapacidad" >
+                                        <img class="d-block w-100"
+                                             src="https://cdn.pixabay.com/photo/2018/12/09/17/36/handicap-parking-3865315_960_720.jpg"
+                                             alt="Espacio de estacionamiento para personas con discapacidad">
                                         <div class="carousel-caption">
                                             Señalización de accesibilidad
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://www.ecuavisa.com/sites/default/files/fotos/2018/01/23/plataforma_finaciera-4.jpg" alt="Plataforma Gubernamental de Gestión Financiera"  >
+                                        <img class="d-block w-100"
+                                             src="https://www.ecuavisa.com/sites/default/files/fotos/2018/01/23/plataforma_finaciera-4.jpg"
+                                             alt="Plataforma Gubernamental de Gestión Financiera">
                                         <div class="carousel-caption">
                                             Plataforma Gubernamental de Gestión Financiera
                                         </div>
@@ -163,20 +190,21 @@
 <!-- FIN Contenido 1 Informativo -->
 
 
-
 <!-- Contador -->
 
 <section>
     <div id="content2" class="container-fluid ">
         <div class="row row-CI2-2 ">
-            <div class="col-sm-12" style ="text-align: center">
+            <div class="col-sm-12" style="text-align: center">
                 <br>
-                <div class="row" >
+                <div class="row">
                     <div class="col-sm-3" >
-                        <div class="card text-center c1" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
-                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-ins.png" alt="icono Institución" >
+                        <div class="card text-center c1">
+                            <div class="divCards" tabindex="6">
+                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                     data-aos-duration="2000">
+                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-ins.png"
+                                         alt="icono Institución">
                                     <h2 class="timer count-number text-center h2T" data-to="26" data-speed="4000"></h2>
                                     <hr class="hr">
                                     <p class="count-text-c ">Instituciones</p>
@@ -185,10 +213,11 @@
                         </div>
                     </div>
                     <div class="col-sm-3" >
-                        <div class="card text-center c1" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
-                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-norm.png" alt="icono Norma" >
+                        <div class="card text-center c1">
+                            <div class="divCards" tabindex="7">
+                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                     data-aos-duration="2000">
+                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-norm.png" alt="icono Norma">
                                     <h2 class="timer count-number text-center h2T" data-to="11" data-speed="4000"></h2>
                                     <hr class="hr">
                                     <p class="count-text-c ">Normas</p>
@@ -197,10 +226,11 @@
                         </div>
                     </div>
                     <div class="col-sm-3" >
-                        <div class="card text-center c1" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
-                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-preg.png" alt="icono Pregunta" >
+                        <div class="card text-center c1">
+                            <div class="divCards" tabindex="8">
+                                <div class="card-body cb6-CI2-2" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                     data-aos-duration="2000">
+                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-preg.png" alt="icono Pregunta">
                                     <h2 class="timer count-number text-center h2T" data-to="181" data-speed="4000"></h2>
                                     <hr class="hr">
                                     <p class="count-text-c ">Preguntas</p>
@@ -209,12 +239,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3">
-                        <div class="card text-center c2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
-                            <div class="divCards" >
-                                <div class="card-body cb6-CI2-2" >
-                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-dis.png" alt="icono Discapacidad" >
-                                    <h2 class="timer count-number text-center h2T" data-to="3" data-speed="4000">  <img src="../icn-ins.png"  class="rounded imgText"></h2>
+                    <div class="col-sm-3" >
+                        <div class="card text-center c2" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                             data-aos-duration="2000">
+                            <div class="divCards" tabindex="9">
+                                <div class="card-body cb6-CI2-2">
+                                    <img class="card-img-top cit-CI2" src="/imagenes/icn-dis.png"
+                                         alt="icono Discapacidad">
+                                    <h2 class="timer count-number text-center h2T" data-to="3" data-speed="4000"><img
+                                                src="../icn-ins.png" class="rounded imgText" alt="icono Discapacidad">
+                                    </h2>
                                     <hr class="hr">
                                     <p class="count-text-c ">Discapacidades</p>
                                 </div>
@@ -232,10 +266,10 @@
 
 <!-- Pie de página -->
 <section>
-    <div >
+    <div>
         <footer class="page-footer font-small container-fluid pg">
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3 pg-txt" >
+            <div class="footer-copyright text-center py-3 pg-txt" tabindex="10">
                 EPN © Todos los Derechos Reservados
             </div>
             <!-- Copyright -->

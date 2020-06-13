@@ -1,14 +1,24 @@
 var colors = ['#D6CC98', '#CDE66E', '#FFD3B5', '#FFAAA6',
     '#FF8C94', '#E49FD1', '#9ED0C6', '#D8728E',
     '#A3C7C7', '#83708E', '#8FE6CA'];
+var newcolors = [pattern.draw('plus', '#D6CC98'), pattern.draw('cross', '#CDE66E'), pattern.draw('dash', '#FFD3B5'), pattern.draw('cross-dash', '#FFAAA6'),
+    pattern.draw('dot', '#FF8C94'),pattern.draw('dot-dash', '#E49FD1'),pattern.draw('disc', '#9ED0C6'),pattern.draw('ring', '#D8728E'),
+    pattern.draw('line', '#A3C7C7'),pattern.draw('line-vertical', '#83708E'),pattern.draw('weave', '#8FE6CA')];
 
 var colorsO = ['rgb(214, 204, 152,0.5)', 'rgb(205, 230, 110,0.5)', 'rgb(255, 211, 181,0.5)', 'rgb(255, 170, 166,0.5)',
     'rgb(255, 140, 148,0.5)', 'rgb(131, 112, 142,0.5)', 'rgb(158, 208, 198,0.5)', 'rgb(216, 114, 142,0.5)',
     'rgb(163, 199, 199,0.5)', 'rgb(131, 112, 142,0.5)', 'rgb(143, 230, 202,0.5)'];
+var newcolorsO = [pattern.draw('plus', 'rgb(214, 204, 152,0.5)'), pattern.draw('cross', 'rgb(205, 230, 110,0.5)'), pattern.draw('dash', 'rgb(255, 211, 181,0.5)'), pattern.draw('cross-dash', 'rgb(255, 170, 166,0.5)'),
+    pattern.draw('dot', 'rgb(255, 140, 148,0.5)'),pattern.draw('dot-dash', 'rgb(131, 112, 142,0.5)'),pattern.draw('disc', 'rgb(158, 208, 198,0.5)'),pattern.draw('ring', 'rgb(216, 114, 142,0.5)'),
+    pattern.draw('line', 'rgb(163, 199, 199,0.5)'),pattern.draw('line-vertical', 'rgb(131, 112, 142,0.5)'),pattern.draw('weave', 'rgb(143, 230, 202,0.5)')];
+
 
 var bordes = ['#BEB67D', '#AFDB51', '#FFC0A2', '#FF868F',
     '#FF5B78', '#D476C5', '#65BCB7', '#C14170',
     '#6DAFB8', '#3A4070', '#4DDBBC'];
+var newbordes = [pattern.draw('plus', '#BEB67D'), pattern.draw('cross', '#AFDB51'), pattern.draw('dash', '#FFC0A2'), pattern.draw('cross-dash', '#FF868F'),
+    pattern.draw('dot', '#FF5B78'),pattern.draw('dot-dash', '#D476C5'),pattern.draw('disc', '#65BCB7'),pattern.draw('ring', '#C14170'),
+    pattern.draw('line', '#6DAFB8'),pattern.draw('line-vertical', '#3A4070'),pattern.draw('weave', '#4DDBBC')];
 
 function archivoJS(tot_ins_nor) {
     var codNor = tot_ins_nor.map(
@@ -32,7 +42,7 @@ function archivoJS(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -105,7 +115,7 @@ function archivoJS2(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -176,7 +186,7 @@ function archivoJS3(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -248,7 +258,7 @@ function archivoJS4(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -319,7 +329,7 @@ function archivoJS5(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -391,7 +401,7 @@ function archivoJS6(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -462,7 +472,7 @@ function archivoJS7(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -533,7 +543,7 @@ function archivoJS8(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -605,7 +615,7 @@ function archivoJS9(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -676,7 +686,7 @@ function archivoJS10(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -747,7 +757,7 @@ function archivoJS11(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -818,7 +828,7 @@ function archivoJS12(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -889,7 +899,7 @@ function archivoJS13(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -960,7 +970,7 @@ function archivoJS14(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1031,7 +1041,7 @@ function archivoJS15(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1102,7 +1112,7 @@ function archivoJS16(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1173,7 +1183,7 @@ function archivoJS17(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1244,7 +1254,7 @@ function archivoJS18(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1315,7 +1325,7 @@ function archivoJS19(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1386,7 +1396,7 @@ function archivoJS20(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1457,7 +1467,7 @@ function archivoJS21(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1528,7 +1538,7 @@ function archivoJS22(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1599,7 +1609,7 @@ function archivoJS23(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1670,7 +1680,7 @@ function archivoJS24(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1741,7 +1751,7 @@ function archivoJS25(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1812,7 +1822,7 @@ function archivoJS26(tot_ins_nor) {
         labels: nombreNorma,
 
         datasets: [{
-            backgroundColor: colorsO,
+            backgroundColor: newcolorsO,
             borderColor: bordes,
             data: valoresInstituciones
         }
@@ -1881,10 +1891,10 @@ function porcentajeNorma(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -1940,10 +1950,10 @@ function porcentajeNorma1(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -1999,10 +2009,10 @@ function porcentajeNorma2(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2058,10 +2068,10 @@ function porcentajeNorma3(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2117,10 +2127,10 @@ function porcentajeNorma4(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2176,10 +2186,10 @@ function porcentajeNorma5(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2235,10 +2245,10 @@ function porcentajeNorma6(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2294,10 +2304,10 @@ function porcentajeNorma7(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2353,10 +2363,10 @@ function porcentajeNorma8(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2412,10 +2422,10 @@ function porcentajeNorma9(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2471,10 +2481,10 @@ function porcentajeNorma10(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2530,10 +2540,10 @@ function porcentajeNorma11(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2589,10 +2599,10 @@ function porcentajeNorma12(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2648,10 +2658,10 @@ function porcentajeNorma13(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2707,10 +2717,10 @@ function porcentajeNorma14(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2766,10 +2776,10 @@ function porcentajeNorma15(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2825,10 +2835,10 @@ function porcentajeNorma16(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2884,10 +2894,10 @@ function porcentajeNorma17(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -2943,10 +2953,10 @@ function porcentajeNorma18(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -3002,10 +3012,10 @@ function porcentajeNorma19(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -3061,10 +3071,10 @@ function porcentajeNorma20(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -3120,10 +3130,10 @@ function porcentajeNorma21(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -3179,10 +3189,10 @@ function porcentajeNorma22(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -3238,10 +3248,10 @@ function porcentajeNorma23(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -3297,10 +3307,10 @@ function porcentajeNorma24(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]
@@ -3356,10 +3366,10 @@ function porcentajeNorma25(porcentaje_dis_nor) {
             labels: codNor,
             datasets: [{
                 label: "Porcentaje",
-                backgroundColor: colors,
+                backgroundColor: newcolors,
                 borderColor: bordes,
                 borderWidth: 1.5,
-                hoverBackgroundColor: bordes,
+                hoverBackgroundColor: newbordes,
                 data: valoresInstituciones
 
             }]

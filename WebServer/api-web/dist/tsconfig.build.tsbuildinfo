@@ -2702,7 +2702,7 @@
         "signature": "6e1c6fe784daeba017901db7766e6b872f535defe33b0e0196d2a12c26f50517"
       },
       "../src/main.ts": {
-        "version": "03e6296054dbc0a149be864924dcd5626b92a2757f15af45d9d5ef3824eb709d",
+        "version": "5ceb2b4106c60102ec7394d3a708533b400e13e52f5e69aa31f3293fe031015f",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../src/contenido/contenido.controller.ts": {
@@ -15003,6 +15003,7 @@
       "../src/viewporcentajedisins/viewporcentajedisins.service.ts",
       "../src/viewporcentajedisnor/viewporcentajedisnor.entity.ts",
       "../src/viewporcentajedisnor/viewporcentajedisnor.service.ts",
+      "../src/app.controller.ts",
       "../src/institucion/institucion.module.ts",
       "../src/formulario/formulario.module.ts",
       "../src/norma/norma.module.ts",
@@ -15030,6 +15031,7 @@
       "../src/viewtotinsnor/viewtotinsnor.module.ts",
       "../src/viewporcentajedisins/viewporcentajedisins.module.ts",
       "../src/viewporcentajedisnor/viewporcentajedisnor.module.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -15088,7 +15090,6 @@
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
-      "../src/main.ts",
       "../src/contenido/contenido.controller.ts",
       "../src/contenido/contenido.ts",
       "../src/discapacidad/discapacidad.ts",
@@ -15144,8 +15145,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts"
+      "../src/main.ts"
     ]
   },
   "version": "3.7.4"

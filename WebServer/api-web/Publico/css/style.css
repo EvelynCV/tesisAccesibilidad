@@ -181,8 +181,8 @@
 .cTxtCI3 {
     color: black;
     text-align: justify;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
 
 }
 .info {
@@ -308,10 +308,15 @@
 }
 
 .ct-CI {
-    font-family: 'Acme', sans-serif;
-    font-size: 2.5em;
-    color: #335574;
-    text-align: center;
+      font-family: 'Acme', sans-serif;
+      font-size: 2.5em;
+      color: #335574;
+      text-align: center;
+  }
+.ct-CI1{
+    color: black;
+    text-align: justify;
+    font-size: 1.3em;
 }
 
 .n-CI {
@@ -340,14 +345,13 @@
     border-color: #6d778d;
 }
 
-.tab-content > .active {
+.tab-content1 > .active {
     display: block;
     border-top: 2px solid #6d778d;
 }
 
 .dcon {
     text-align: justify;
-
 }
 
 .c-img {

@@ -1,0 +1,114 @@
+.tab-content > .active {
+    display: block;
+
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 1px 15px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 1px 5px;
+    word-break: normal;
+}
+
+.tg .tg-hod5 {
+    font-family: Arial, Helvetica, sans-serif !important;;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-3r42 {
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-tkc4 {
+    background-color: #8EA9DB;
+    border-color: inherit;
+    font-family: Arial, Helvetica, sans-serif !important;;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-s7q6 {
+    border-color: inherit;
+    font-family: Arial, Helvetica, sans-serif !important;;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-ncrr {
+    border-color: inherit;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-ij69 {
+    background-color: #8EA9DB;
+    font-family: Arial, Helvetica, sans-serif !important;;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-cly1 {
+    text-align: left;
+    vertical-align: middle
+}
+.tg .tg-rykj {
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+.tg .tg-ik57 {
+    background-color: #8EA9DB;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-x2i7 {
+    background-color: #8EA9DB;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-s4uo {
+    background-color: #8EA9DB;
+    font-family: Arial, Helvetica, sans-serif !important;;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.tg .tg-w7pk {
+    font-family: Arial, Helvetica, sans-serif !important;;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle
+}

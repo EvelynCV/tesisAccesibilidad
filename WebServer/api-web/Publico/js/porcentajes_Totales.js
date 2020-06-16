@@ -70,7 +70,7 @@ function porcentajes_Totales(tot_val_ins) {
         options: {
             title: {
                 display: true,
-                text: "Porcentajes de Accesibilidad Física",
+                text: "Porcentajes de Accesibilidad al medio Físico",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,

@@ -76,7 +76,7 @@ function valoracion_Instituciones(tot_val_ins) {
             },
             title: {
                 display: true,
-                text: "Valoración de Accesibilidad Física",
+                text: "Valoración de Accesibilidad al medio Físico",
                 fontFamily: 'Lato',
                 fontColor: '#335574',
                 fontSize: 18,

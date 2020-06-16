@@ -10,6 +10,7 @@
 
 /*---------------****PAGINA INICIO****---------------*/
 /*Menú*/
+
 .bg {
     background-color: #2A3B59;
 }
@@ -67,6 +68,7 @@
         color: #ffffff
     }
 }
+
 
 .cardCabecera {
     margin-top: 55px;
@@ -368,7 +370,7 @@
     background: rgba(0, 0, 0, 0.0);
     padding: 40px 35px;
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
